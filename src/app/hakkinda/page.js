@@ -109,7 +109,7 @@ export default function HakkindaPage() {
           </p>
           <div className={styles.links}>
             <a
-              href="https://github.com/canberkdoger/logo-tiger-sql-helper"
+              href="https://github.com/canberkdoger/logo-tiger-araclar"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.githubLink}
@@ -118,7 +118,7 @@ export default function HakkindaPage() {
               GitHub
             </a>
             <a
-              href="https://github.com/canberkdoger/logo-tiger-sql-helper/issues"
+              href="https://github.com/canberkdoger/logo-tiger-araclar/issues"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.issueLink}

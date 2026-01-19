@@ -154,7 +154,7 @@ export default function HomePage() {
         </div>
         <div className={styles.footerLinks}>
           <a
-            href="https://github.com/canberkdoger/logo-tiger-sql-helper"
+            href="https://github.com/canberkdoger/logo-tiger-araclar"
             target="_blank"
             rel="noopener noreferrer"
           >
