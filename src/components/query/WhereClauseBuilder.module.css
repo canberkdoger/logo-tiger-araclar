@@ -89,6 +89,13 @@
   gap: var(--spacing-sm);
 }
 
+.conditionWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
 .conditionRow {
   display: flex;
   align-items: center;
@@ -110,6 +117,12 @@
   color: var(--text-muted);
 }
 
+.fieldSelectors {
+  display: flex;
+  gap: 4px;
+}
+
+.tableSelect,
 .fieldSelect,
 .operatorSelect {
   padding: 8px 12px;
@@ -122,20 +135,31 @@
   transition: all var(--transition-fast);
 }
 
+.tableSelect {
+  min-width: 100px;
+}
+
 .fieldSelect {
-  min-width: 150px;
+  min-width: 130px;
+}
+
+.fieldSelect:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .operatorSelect {
   min-width: 140px;
 }
 
+.tableSelect:focus,
 .fieldSelect:focus,
 .operatorSelect:focus {
   outline: none;
   border-color: var(--accent-primary);
 }
 
+.tableSelect option,
 .fieldSelect option,
 .operatorSelect option {
   background: var(--bg-secondary);
@@ -163,6 +187,29 @@
   border-color: var(--accent-primary);
 }
 
+.valueSelect {
+  flex: 1;
+  min-width: 180px;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.valueSelect:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.valueSelect option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
 .removeButton {
   display: flex;
   align-items: center;
@@ -184,14 +231,21 @@
 }
 
 @media (max-width: 768px) {
+  .conditionWrapper,
   .conditionRow {
     flex-direction: column;
     align-items: stretch;
   }
 
+  .fieldSelectors {
+    flex-direction: column;
+  }
+
+  .tableSelect,
   .fieldSelect,
   .operatorSelect,
-  .valueInput {
+  .valueInput,
+  .valueSelect {
     width: 100%;
   }
 
@@ -218,9 +272,11 @@
     padding: var(--spacing-sm);
   }
 
+  .tableSelect,
   .fieldSelect,
   .operatorSelect,
-  .valueInput {
+  .valueInput,
+  .valueSelect {
     padding: 6px 10px;
     font-size: 12px;
   }

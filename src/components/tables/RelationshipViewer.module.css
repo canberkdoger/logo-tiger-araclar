@@ -61,10 +61,41 @@
   color: var(--text-muted);
 }
 
+/* Alan baglanti bilgisi */
+.fieldConnection {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(52, 152, 219, 0.1);
+  border: 1px solid rgba(52, 152, 219, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  margin-left: auto;
+  margin-right: var(--spacing-md);
+}
+
+.fieldConnection i {
+  color: #3498db;
+  font-size: 9px;
+}
+
+.sourceField {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+.targetField {
+  font-family: var(--font-mono);
+  color: #3498db;
+}
+
 .relationCard > i:last-child {
   color: var(--text-muted);
   font-size: 12px;
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .relationCard:hover > i:last-child {

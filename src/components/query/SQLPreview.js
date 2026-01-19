@@ -19,6 +19,11 @@ export default function SQLPreview({ sql = '', onCopy, onDownload }) {
     const tokens = tokenizeSQL(sql);
 
     return tokens.map((token, index) => {
+      // Newline token'i icin satir sonu
+      if (token.type === 'newline') {
+        return <br key={index} />;
+      }
+
       const className = styles[token.type] || '';
       return (
         <span key={index} className={className}>

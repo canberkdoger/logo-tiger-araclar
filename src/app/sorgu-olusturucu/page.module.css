@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   padding: var(--spacing-md);
   gap: var(--spacing-md);
 }
@@ -59,10 +59,111 @@
   flex: 1;
 }
 
-.builderContainer {
+/* Tablo Autocomplete */
+.tableAutocomplete {
+  position: relative;
+  min-width: 280px;
   flex: 1;
-  min-height: 0;
-  overflow: hidden;
+}
+
+.tableSearchInput {
+  width: 100%;
+  padding: 10px 40px 10px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.tableSearchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.tableSearchInput:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.clearTableButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.clearTableButton:hover {
+  color: var(--accent-primary);
+}
+
+.tableDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tableOption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.tableOption:last-child {
+  border-bottom: none;
+}
+
+.tableOption:hover {
+  background: var(--bg-tertiary);
+}
+
+.tableOption.selected {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.tableName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tableDisplayName {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.noResults {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.builderContainer {
+  flex: none;
 }
 
 .loading {
@@ -81,11 +182,6 @@
 }
 
 @media (max-width: 1024px) {
-  .container {
-    height: auto;
-    min-height: calc(100vh - 60px);
-  }
-
   .topBar {
     flex-direction: column;
     align-items: stretch;
@@ -96,21 +192,15 @@
   }
 
   .categorySelect,
-  .tableSelect {
+  .tableSelect,
+  .tableAutocomplete {
     width: 100%;
-  }
-
-  .builderContainer {
-    flex: none;
-    height: auto;
-    overflow: visible;
   }
 }
 
 @media (max-width: 640px) {
   .container {
     padding: var(--spacing-sm);
-    height: auto;
   }
 
   .topBar {
@@ -118,8 +208,25 @@
   }
 
   .categorySelect,
-  .tableSelect {
+  .tableSelect,
+  .tableSearchInput {
     padding: 8px 12px;
     font-size: 13px;
+  }
+
+  .tableSearchInput {
+    padding-right: 36px;
+  }
+
+  .tableOption {
+    padding: 8px 12px;
+  }
+
+  .tableName {
+    font-size: 12px;
+  }
+
+  .tableDisplayName {
+    font-size: 11px;
   }
 }

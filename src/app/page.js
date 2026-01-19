@@ -139,6 +139,7 @@ export default function HomePage() {
         <main className={styles.detail}>
           <TableDetail
             table={selectedTableData}
+            allTables={tables}
             onSelectTable={handleSelectTable}
             settings={settings}
           />

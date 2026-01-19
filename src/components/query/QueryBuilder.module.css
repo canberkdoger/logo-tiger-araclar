@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  height: 100%;
 }
 
 .tableInfo {
@@ -28,12 +27,95 @@
   color: var(--text-muted);
 }
 
+.joinCount {
+  padding: 4px 10px;
+  background: rgba(231, 76, 60, 0.15);
+  color: var(--accent-primary);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Iliskili Tablolar */
+.relatedTablesInfo {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.relatedHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-default);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.relatedHeader i {
+  color: #3498db;
+}
+
+.relatedList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.relatedItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+}
+
+.relatedConnection {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.relatedField {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+.relatedConnection i {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.relatedTable {
+  font-family: var(--font-mono);
+  color: #3498db;
+}
+
+.relatedTargetField {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.relatedDesc {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-style: italic;
+}
+
 .builderGrid {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: var(--spacing-md);
-  flex: 1;
-  min-height: 0;
 }
 
 .fieldsSection {
@@ -68,6 +150,78 @@
   color: var(--accent-primary);
 }
 
+.tableDropdown {
+  padding: 6px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 12px;
+  cursor: pointer;
+  max-width: 180px;
+}
+
+.tableDropdown:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.fieldSearch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px var(--spacing-md);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.fieldSearch i {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.fieldSearch input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.fieldSearch input:focus {
+  outline: none;
+}
+
+.fieldSearch input::placeholder {
+  color: var(--text-muted);
+}
+
+.clearSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.clearSearch:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.noFieldsFound {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
 .selectAllButton {
   padding: 4px 10px;
   background: var(--bg-tertiary);
@@ -85,14 +239,14 @@
 }
 
 .fieldsList {
-  flex: 1;
+  max-height: 300px;
   overflow-y: auto;
   padding: var(--spacing-sm);
 }
 
 .fieldItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   padding: 8px 10px;
   border-radius: var(--radius-sm);
@@ -106,10 +260,24 @@
 
 .fieldItem input[type="checkbox"] {
   accent-color: var(--accent-primary);
+  margin-top: 3px;
+}
+
+.fieldInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.fieldNameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .fieldName {
-  flex: 1;
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--text-primary);
@@ -121,13 +289,267 @@
   padding: 2px 6px;
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.fieldDescription {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.fieldValues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.fieldValueItem {
+  font-size: 10px;
+  color: var(--accent-primary);
+  background: rgba(231, 76, 60, 0.1);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Tablo Gruplari */
+.tableGroup {
+  margin-bottom: var(--spacing-sm);
+}
+
+.tableGroupHeader {
+  margin-bottom: 4px;
+}
+
+.tableGroupToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tableGroupToggle:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--accent-primary);
+}
+
+.tableGroupName {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tableGroupName i {
+  color: var(--accent-primary);
+  font-size: 10px;
+}
+
+.tableGroupCount {
+  font-size: 11px;
+  color: var(--text-muted);
+  padding: 2px 6px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.tableGroupFields {
+  padding-left: 8px;
+  border-left: 2px solid var(--border-default);
+  margin-left: 6px;
 }
 
 .conditionsSection {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+}
+
+/* Secili Sutunlar Yonetimi */
+.selectedFieldsSection {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.clearAllButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.clearAllButton:hover {
+  background: rgba(231, 76, 60, 0.15);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.selectedFieldsList {
+  padding: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 250px;
   overflow-y: auto;
+}
+
+.selectedFieldRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.selectedFieldRow:hover {
+  background: var(--bg-card-hover);
+}
+
+.fieldOrderControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.orderButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.orderButton:hover:not(:disabled) {
+  background: var(--bg-secondary);
+  color: var(--accent-primary);
+}
+
+.orderButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.fieldIndex {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 600;
+  min-width: 14px;
+  text-align: center;
+}
+
+.selectedFieldInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.selectedFieldName {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selectedFieldDesc {
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fieldAliasSection {
+  flex-shrink: 0;
+}
+
+.aliasInput {
+  width: 120px;
+  padding: 4px 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 12px;
+}
+
+.aliasInput:focus {
+  outline: none;
+}
+
+.aliasButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.aliasButton:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(231, 76, 60, 0.05);
+}
+
+.aliasButton i {
+  font-size: 10px;
+}
+
+.removeFieldButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.removeFieldButton:hover {
+  background: rgba(231, 76, 60, 0.15);
+  color: var(--accent-primary);
 }
 
 .orderBySection {
@@ -179,8 +601,18 @@
   cursor: pointer;
 }
 
-.orderByRow select:first-child {
+.orderByTableSelect {
+  min-width: 90px;
+}
+
+.orderByFieldSelect {
+  min-width: 120px;
   flex: 1;
+}
+
+.orderByFieldSelect:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .orderByRow button {
@@ -287,7 +719,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  min-height: 300px;
   padding: var(--spacing-xl);
   text-align: center;
   color: var(--text-muted);
@@ -310,38 +742,43 @@
 }
 
 /* Scrollbar */
-.fieldsList::-webkit-scrollbar,
-.conditionsSection::-webkit-scrollbar {
+.fieldsList::-webkit-scrollbar {
   width: 6px;
 }
 
-.fieldsList::-webkit-scrollbar-track,
-.conditionsSection::-webkit-scrollbar-track {
+.fieldsList::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.fieldsList::-webkit-scrollbar-thumb,
-.conditionsSection::-webkit-scrollbar-thumb {
+.fieldsList::-webkit-scrollbar-thumb {
   background: var(--border-default);
   border-radius: 3px;
 }
 
-.fieldsList::-webkit-scrollbar-thumb:hover,
-.conditionsSection::-webkit-scrollbar-thumb:hover {
+.fieldsList::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+.selectedFieldsList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selectedFieldsList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.selectedFieldsList::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 3px;
+}
+
+.selectedFieldsList::-webkit-scrollbar-thumb:hover {
   background: var(--border-hover);
 }
 
 @media (max-width: 1024px) {
-  .container {
-    height: auto;
-  }
-
   .builderGrid {
     grid-template-columns: 1fr;
-  }
-
-  .fieldsSection {
-    max-height: 300px;
   }
 
   .optionsSection {
@@ -377,10 +814,6 @@
     font-size: 13px;
   }
 
-  .fieldsSection {
-    max-height: 250px;
-  }
-
   .fieldItem {
     padding: 6px 8px;
   }
@@ -391,6 +824,15 @@
 
   .fieldType {
     font-size: 10px;
+  }
+
+  .fieldDescription {
+    font-size: 10px;
+  }
+
+  .fieldValueItem {
+    font-size: 9px;
+    padding: 1px 4px;
   }
 
   .orderByList {
@@ -437,5 +879,48 @@
 
   .empty p {
     font-size: 13px;
+  }
+
+  .selectedFieldsList {
+    padding: var(--spacing-sm);
+    max-height: 200px;
+  }
+
+  .selectedFieldRow {
+    padding: 6px 8px;
+    flex-wrap: wrap;
+  }
+
+  .selectedFieldInfo {
+    flex: 1 1 100%;
+    order: 1;
+    margin-bottom: 6px;
+  }
+
+  .fieldOrderControls {
+    order: 2;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .fieldAliasSection {
+    order: 3;
+    flex: 1;
+  }
+
+  .aliasInput {
+    width: 100%;
+  }
+
+  .removeFieldButton {
+    order: 4;
+  }
+
+  .selectedFieldName {
+    font-size: 11px;
+  }
+
+  .selectedFieldDesc {
+    font-size: 9px;
   }
 }

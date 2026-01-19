@@ -7,26 +7,14 @@
   "placeholders": ["XXX"],
   "indexCount": 7,
   "relatedTables": [
-    {
-      "table": "LG_XXX_XX_CLFICHE",
-      "description": "Cari hesap fisleri"
-    },
-    {
-      "table": "LG_XXX_XX_CLFLINE",
-      "description": "Cari hesap hareketleri"
-    },
-    {
-      "table": "LG_XXX_XX_CLTOTFIL",
-      "description": "Cari hesap toplumlari"
-    },
-    {
-      "table": "LG_XXX_CLINTEL",
-      "description": "Cari hesap istihbarat bilgileri"
-    },
-    {
-      "table": "LG_XXX_XX_CLRNUMS",
-      "description": "Cari hesap risk bilgileri"
-    }
+    {"table": "LG_XXX_XX_CLFICHE", "field": "CLIENTREF", "description": "Cari hesap fisleri"},
+    {"table": "LG_XXX_XX_CLFLINE", "field": "CLIENTREF", "description": "Cari hesap hareketleri"},
+    {"table": "LG_XXX_XX_CLTOTFIL", "field": "CLCARDREF", "description": "Cari hesap toplumlari"},
+    {"table": "LG_XXX_CLINTEL", "field": "CLCARDREF", "description": "Cari hesap istihbarat bilgileri"},
+    {"table": "LG_XXX_XX_CLRNUMS", "field": "CLCARDREF", "description": "Cari hesap risk bilgileri"},
+    {"table": "LG_XXX_XX_STFICHE", "field": "CLIENTREF", "description": "Stok fisleri"},
+    {"table": "LG_XXX_XX_STLINE", "field": "CLIENTREF", "description": "Stok hareketleri"},
+    {"table": "LG_XXX_XX_INVOICE", "field": "CLIENTREF", "description": "Faturalar"}
   ],
   "indexes": [
     { "no": 1, "fields": ["LOGICALREF"], "type": "Primary" },

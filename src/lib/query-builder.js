@@ -11,7 +11,9 @@
 export function buildSelectQuery(options) {
   const {
     tableName,
+    tableAlias = '',
     fields = ['*'],
+    joins = [],
     where = [],
     orderBy = [],
     limit = null,
@@ -20,18 +22,46 @@ export function buildSelectQuery(options) {
 
   const parts = [];
 
-  // SELECT
-  const selectFields = fields.length > 0 ? fields.join(', ') : '*';
-  parts.push(`SELECT ${distinct ? 'DISTINCT ' : ''}${selectFields}`);
+  // SELECT - birden fazla alan varsa her biri ayri satirda
+  const selectFields = fields.length > 0 ? fields : ['*'];
+  if (selectFields.length > 1) {
+    const fieldList = selectFields.map((f, i) => i === 0 ? f : `       ${f}`).join(',\n');
+    parts.push(`SELECT ${distinct ? 'DISTINCT ' : ''}${fieldList}`);
+  } else {
+    parts.push(`SELECT ${distinct ? 'DISTINCT ' : ''}${selectFields.join(', ')}`);
+  }
 
-  // FROM
-  parts.push(`FROM ${tableName}`);
+  // FROM (alias varsa ekle)
+  const fromClause = tableAlias ? `${tableName} ${tableAlias}` : tableName;
+  parts.push(`FROM ${fromClause}`);
+
+  // JOIN'leri ekle
+  if (joins.length > 0) {
+    for (const join of joins) {
+      const joinClause = buildJoin({
+        type: join.type || 'INNER',
+        table: join.tableAlias ? `${join.table} ${join.tableAlias}` : join.table,
+        on: `${join.leftAlias || join.leftTable}.${join.leftField} = ${join.rightAlias || join.rightTable}.${join.rightField}`
+      });
+      if (joinClause) {
+        parts.push(joinClause);
+      }
+    }
+  }
 
   // WHERE
   if (where.length > 0) {
     const whereClauses = where.map(buildWhereClause).filter(Boolean);
     if (whereClauses.length > 0) {
-      parts.push(`WHERE ${whereClauses.join(' AND ')}`);
+      if (whereClauses.length > 1) {
+        // Birden fazla kosul varsa her biri ayri satirda
+        parts.push(`WHERE ${whereClauses[0]}`);
+        for (let i = 1; i < whereClauses.length; i++) {
+          parts.push(`  AND ${whereClauses[i]}`);
+        }
+      } else {
+        parts.push(`WHERE ${whereClauses[0]}`);
+      }
     }
   }
 
@@ -229,28 +259,38 @@ export function tokenizeSQL(sql) {
     'TRIM', 'LTRIM', 'RTRIM', 'SUBSTRING', 'REPLACE', 'CHARINDEX'
   ];
 
-  // Basit tokenizer
-  const regex = /('[^']*'|"[^"]*"|\d+\.?\d*|\w+|[^\s])/g;
-  let match;
+  // Satir satir isle (newline'lari koru)
+  const lines = sql.split('\n');
 
-  while ((match = regex.exec(sql)) !== null) {
-    const word = match[0];
-    const upperWord = word.toUpperCase();
+  lines.forEach((line, lineIndex) => {
+    // Satirdaki tokenlari bul
+    const regex = /('[^']*'|"[^"]*"|\d+\.?\d*|\w+|[^\s])/g;
+    let match;
 
-    if (word.startsWith("'") || word.startsWith('"')) {
-      tokens.push({ type: 'string', value: word });
-    } else if (/^\d+\.?\d*$/.test(word)) {
-      tokens.push({ type: 'number', value: word });
-    } else if (keywords.includes(upperWord)) {
-      tokens.push({ type: 'keyword', value: word });
-    } else if (functions.includes(upperWord)) {
-      tokens.push({ type: 'function', value: word });
-    } else if (/^[(),;*=<>!]+$/.test(word)) {
-      tokens.push({ type: 'operator', value: word });
-    } else {
-      tokens.push({ type: 'identifier', value: word });
+    while ((match = regex.exec(line)) !== null) {
+      const word = match[0];
+      const upperWord = word.toUpperCase();
+
+      if (word.startsWith("'") || word.startsWith('"')) {
+        tokens.push({ type: 'string', value: word });
+      } else if (/^\d+\.?\d*$/.test(word)) {
+        tokens.push({ type: 'number', value: word });
+      } else if (keywords.includes(upperWord)) {
+        tokens.push({ type: 'keyword', value: word });
+      } else if (functions.includes(upperWord)) {
+        tokens.push({ type: 'function', value: word });
+      } else if (/^[(),;*=<>!]+$/.test(word)) {
+        tokens.push({ type: 'operator', value: word });
+      } else {
+        tokens.push({ type: 'identifier', value: word });
+      }
     }
-  }
+
+    // Satir sonuna newline ekle (son satir haric)
+    if (lineIndex < lines.length - 1) {
+      tokens.push({ type: 'newline', value: '\n' });
+    }
+  });
 
   return tokens;
 }

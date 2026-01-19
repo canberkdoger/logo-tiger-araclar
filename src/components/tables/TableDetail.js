@@ -11,11 +11,13 @@ import styles from './TableDetail.module.css';
  * Tablo detay componenti (sag panel)
  * @param {Object} props
  * @param {Object} props.table - Tablo verisi
+ * @param {Array} props.allTables - Tum tablolar (iliski bulmak icin)
  * @param {Function} props.onSelectTable - Baska tabloya gecis callback'i
  * @param {Object} props.settings - Placeholder ayarlari
  */
 export default function TableDetail({
   table,
+  allTables = [],
   onSelectTable,
   settings = { firmNo: '001', periodNo: '01' }
 }) {
@@ -145,7 +147,9 @@ export default function TableDetail({
 
         {activeTab === 'relations' && (
           <RelationshipViewer
+            currentTable={table}
             relatedTables={table.relatedTables || []}
+            allTables={allTables}
             onSelectTable={onSelectTable}
             settings={settings}
           />

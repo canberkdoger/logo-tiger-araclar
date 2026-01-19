@@ -7,14 +7,15 @@
   "placeholders": ["XXX"],
   "indexCount": 15,
   "relatedTables": [
-    {"table": "LG_XXX_XX_STFICHE", "description": "Stok fisleri"},
-    {"table": "LG_XXX_XX_STLINE", "description": "Stok hareketleri"},
-    {"table": "LG_XXX_INVDEF", "description": "Malzeme-ambar bilgileri"},
-    {"table": "LG_XXX_ITMUNITA", "description": "Malzeme-birim atamasi"},
-    {"table": "LG_XXX_PRCLIST", "description": "Fiyat listeleri"},
-    {"table": "LG_XXX_PAYPLANS", "description": "Odeme planlari"},
-    {"table": "LG_XXX_UNITSETF", "description": "Birim setleri"},
-    {"table": "LG_XXX_QCSET", "description": "Kalite kontrol setleri"}
+    {"table": "LG_XXX_XX_STLINE", "field": "STOCKREF", "description": "Stok hareketleri"},
+    {"table": "LG_XXX_INVDEF", "field": "ITEMREF", "description": "Malzeme-ambar bilgileri"},
+    {"table": "LG_XXX_ITMUNITA", "field": "ITEMREF", "description": "Malzeme-birim atamasi"},
+    {"table": "LG_XXX_PRCLIST", "field": "CARDREF", "description": "Fiyat listeleri"},
+    {"table": "LG_XXX_PAYPLANS", "field": "CARDREF", "description": "Odeme planlari"},
+    {"table": "LG_XXX_UNITSETF", "field": "ITEMREF", "description": "Birim setleri"},
+    {"table": "LG_XXX_QCSET", "field": "ITEMREF", "description": "Kalite kontrol setleri"},
+    {"table": "LG_XXX_CHAESSION", "field": "ITEMREF", "description": "Karakteristik atamalar"},
+    {"table": "LG_XXX_ITEMSUBS", "field": "MAINITEMREF", "description": "Ikame malzemeler"}
   ],
   "indexes": [
     {"no": 1, "fields": ["LOGICALREF"], "type": "Auto Increment", "property": "Modif"},
@@ -35,8 +36,11 @@
   ],
   "fields": [
     {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres", "isPrimaryKey": true},
-    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanim da, 1: Kullanim disi"},
-    {"name": "CARDTYPE", "type": "SmallInt", "description": "Kart turu", "values": [
+    {"name": "ACTIVE", "type": "smallint", "description": "Aktiflik durumu", "values": [
+      {"value": 0, "label": "Kullanim da"},
+      {"value": 1, "label": "Kullanim disi"}
+    ]},
+    {"name": "CARDTYPE", "type": "smallint", "description": "Kart turu", "values": [
       {"value": 1, "label": "Ticari mal"},
       {"value": 2, "label": "Karma koli"},
       {"value": 3, "label": "Depozitolu mal"},
@@ -47,77 +51,371 @@
       {"value": 13, "label": "Tuketim mali"},
       {"value": 20, "label": "M.sinifi (genel)"},
       {"value": 21, "label": "M.sinifi (tablolu)"},
-      {"value": 22, "label": "Firma dosyalari olusturulurken default olarak eklenen malzeme sinifi"}
+      {"value": 22, "label": "Default malzeme sinifi"}
     ]},
-    {"name": "CODE", "type": "VarChar", "description": "Malzeme kodu"},
-    {"name": "NAME", "type": "VarChar", "description": "Malzeme aciklamasi"},
-    {"name": "STGRPCODE", "type": "VarChar", "description": "Malzeme grup kodu"},
-    {"name": "PRODUCERCODE", "type": "VarChar", "description": "Uretici kodu"},
-    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
-    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu"},
-    {"name": "CLASSTYPE", "type": "SmallInt", "description": "0: Malzeme, 20: Malzeme sinifi"},
-    {"name": "PURCHBRWS", "type": "SmallInt", "description": "Kullanim yeri satinalma"},
-    {"name": "SALESBRWS", "type": "SmallInt", "description": "Kullanim yeri satis"},
-    {"name": "MTRLBRWS", "type": "SmallInt", "description": "Kullanim yeri malzeme yonetimi"},
-    {"name": "VAT", "type": "Float", "description": "KDV"},
+    {"name": "CODE", "type": "varchar", "description": "Malzeme kodu"},
+    {"name": "NAME", "type": "varchar", "description": "Malzeme aciklamasi"},
+    {"name": "STGRPCODE", "type": "varchar", "description": "Malzeme grup kodu"},
+    {"name": "PRODUCERCODE", "type": "varchar", "description": "Uretici kodu"},
+    {"name": "SPECODE", "type": "varchar", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "varchar", "description": "Yetki kodu"},
+    {"name": "CLASSTYPE", "type": "smallint", "description": "Sinif turu", "values": [
+      {"value": 0, "label": "Malzeme"},
+      {"value": 20, "label": "Malzeme sinifi"}
+    ]},
+    {"name": "PURCHBRWS", "type": "smallint", "description": "Satin alma kullanim", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "SALESBRWS", "type": "smallint", "description": "Satis kullanim", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "MTRLBRWS", "type": "smallint", "description": "Malzeme yonetimi kullanim", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "VAT", "type": "float", "description": "Alis KDV orani (%)"},
     {"name": "PAYMENTREF", "type": "int", "description": "Odeme plani referansi - PAYPLANS"},
-    {"name": "TRACKTYPE", "type": "SmallInt", "description": "Izleme yontemi", "values": [
-      {"value": 0, "label": "Izleme yapilmayacak"},
-      {"value": 1, "label": "Lot (parti) numarasi"},
-      {"value": 2, "label": "Seri numarasi"}
+    {"name": "TRACKTYPE", "type": "smallint", "description": "Izleme yontemi", "values": [
+      {"value": 0, "label": "Izleme yok"},
+      {"value": 1, "label": "Lot/Parti no"},
+      {"value": 2, "label": "Seri no"}
     ]},
-    {"name": "LOCTRACKING", "type": "SmallInt", "description": "Stok yeri takibi (1: Evet, 0: Hayir)"},
-    {"name": "TOOL", "type": "SmallInt", "description": "Arac (1: Evet, 0: Hayir)"},
-    {"name": "AUTOINCSL", "type": "SmallInt", "description": "Lot / seri no otomatik arttirilacak (1: Evet, 0: Hayir)"},
-    {"name": "DIVLOTSIZE", "type": "SmallInt", "description": "Lot buyuklukleri bolunebilir (1: Evet, 0: Hayir)"},
-    {"name": "SHELFLIFE", "type": "Float", "description": "Raf omru"},
-    {"name": "SHELFDATE", "type": "SmallInt", "description": "0: Gun, 1: Hafta, 2: Ay, 3: Yil"},
-    {"name": "DOMINANTREFS1", "type": "int", "description": "Genel bilgileri kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS2", "type": "int", "description": "Ambar parametreleri kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS3", "type": "int", "description": "Fabrika parametreleri kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS4", "type": "int", "description": "Is istasyonu parametreleri kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS5", "type": "int", "description": "Birimleri kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS6", "type": "int", "description": "Fiyatlari kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS7", "type": "int", "description": "(kullanilmiyor)"},
-    {"name": "DOMINANTREFS8", "type": "int", "description": "Musteri / tedarikci baglantilari kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS9", "type": "int", "description": "Muhasebe kodlari kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS10", "type": "int", "description": "Kalite kontrol kriterleri kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS11", "type": "int", "description": "Urun recetesi iliskisi kullanilan ust malzeme sinifi referansi - ITEMS"},
-    {"name": "DOMINANTREFS12", "type": "int", "description": "(kullanilmiyor)"},
-    {"name": "IMAGEINC", "type": "SmallInt", "description": "Resim var (1: Evet, 0: Hayir)"},
-    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1: Evet, 0: Hayir)"},
-    {"name": "DEPRTYPE", "type": "SmallInt", "description": "Amortisman turu"},
-    {"name": "DEPRRATE", "type": "Float", "description": "Amortisman orani"},
-    {"name": "DEPRDUR", "type": "SmallInt", "description": "Amortisman suresi"},
-    {"name": "SALVAGEVAL", "type": "Float", "description": "Hurda degeri"},
-    {"name": "REVALFLAG", "type": "SmallInt", "description": "Degerlenebilir"},
-    {"name": "REVDEPRFLAG", "type": "SmallInt", "description": "Degerleme amortismani"},
-    {"name": "PARTDEP", "type": "SmallInt", "description": "Kist. amortisman durumu"},
-    {"name": "DEPRTYPE2", "type": "SmallInt", "description": "Ulusal amortisman turu"},
-    {"name": "DEPRRATE2", "type": "Float", "description": "Ulusal amortisman orani"},
-    {"name": "DEPRDUR2", "type": "SmallInt", "description": "Ulusal amortisman suresi"},
-    {"name": "REVALFLAG2", "type": "SmallInt", "description": "Ulusal degerleme"},
-    {"name": "REVDEPRFLAG2", "type": "SmallInt", "description": "Ulusal degerleme amortismani"},
-    {"name": "PARTDEP2", "type": "SmallInt", "description": "Ulusal kist. amortisman"},
-    {"name": "APPROVED", "type": "SmallInt", "description": "Onay bilgisi"},
-    {"name": "UNITSETREF", "type": "int", "description": "Birim seti kaydi referansi - UNITSETF"},
+    {"name": "LOCTRACKING", "type": "smallint", "description": "Stok yeri takibi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "TOOL", "type": "smallint", "description": "Arac takibi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "AUTOINCSL", "type": "smallint", "description": "Lot/seri no otomatik arttir", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "DIVLOTSIZE", "type": "smallint", "description": "Lot buyuklukleri bolunebilir", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "SHELFLIFE", "type": "float", "description": "Raf omru suresi"},
+    {"name": "SHELFDATE", "type": "smallint", "description": "Raf omru birimi", "values": [
+      {"value": 0, "label": "Gun"},
+      {"value": 1, "label": "Hafta"},
+      {"value": 2, "label": "Ay"},
+      {"value": 3, "label": "Yil"}
+    ]},
+    {"name": "DOMINANTREFS1", "type": "int", "description": "Genel bilgiler ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS2", "type": "int", "description": "Ambar parametreleri ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS3", "type": "int", "description": "Fabrika parametreleri ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS4", "type": "int", "description": "Is istasyonu param. ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS5", "type": "int", "description": "Birimler ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS6", "type": "int", "description": "Fiyatlar ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS7", "type": "int", "description": "Rezerve (kullanilmiyor)"},
+    {"name": "DOMINANTREFS8", "type": "int", "description": "Musteri/tedarikci baglanti ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS9", "type": "int", "description": "Muhasebe kodlari ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS10", "type": "int", "description": "KKK kriterleri ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS11", "type": "int", "description": "Urun recetesi ust malz. sinifi ref."},
+    {"name": "DOMINANTREFS12", "type": "int", "description": "Rezerve (kullanilmiyor)"},
+    {"name": "IMAGEINC", "type": "smallint", "description": "Resim var mi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "TEXTINC", "type": "smallint", "description": "Detay aciklama var mi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "DEPRTYPE", "type": "smallint", "description": "Amortisman turu (UFRS)"},
+    {"name": "DEPRRATE", "type": "float", "description": "Amortisman orani (UFRS)"},
+    {"name": "DEPRDUR", "type": "smallint", "description": "Amortisman suresi (UFRS)"},
+    {"name": "SALVAGEVAL", "type": "float", "description": "Hurda degeri (UFRS)"},
+    {"name": "REVALFLAG", "type": "smallint", "description": "Degerlenebilir (UFRS)", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "REVDEPRFLAG", "type": "smallint", "description": "Degerleme amortismani (UFRS)", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "PARTDEP", "type": "smallint", "description": "Kist amortisman (UFRS)", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "DEPRTYPE2", "type": "smallint", "description": "Amortisman turu (VUK)"},
+    {"name": "DEPRRATE2", "type": "float", "description": "Amortisman orani (VUK)"},
+    {"name": "DEPRDUR2", "type": "smallint", "description": "Amortisman suresi (VUK)"},
+    {"name": "REVALFLAG2", "type": "smallint", "description": "Degerlenebilir (VUK)", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "REVDEPRFLAG2", "type": "smallint", "description": "Degerleme amortismani (VUK)", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "PARTDEP2", "type": "smallint", "description": "Kist amortisman (VUK)", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "APPROVED", "type": "smallint", "description": "Onay bilgisi", "values": [
+      {"value": 0, "label": "Onaysiz"},
+      {"value": 1, "label": "Onayli"}
+    ]},
+    {"name": "UNITSETREF", "type": "int", "description": "Birim seti referansi - UNITSETF"},
     {"name": "QCCSETREF", "type": "int", "description": "KKK seti referansi - QCSET"},
-    {"name": "DISTAMOUNT", "type": "Float", "description": "Tablolu malz. sinifi dagitim miktari"},
-    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
-    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
-    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
-    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
-    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
-    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
-    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
-    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
-    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
-    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
-    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "DISTAMOUNT", "type": "float", "description": "Tablolu malz. sinifi dagitim miktari"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "smallint", "description": "Olusturan kullanici kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "datetime", "description": "Olusturma tarihi"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "smallint", "description": "Olusturma saati"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "smallint", "description": "Olusturma dakikasi"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "smallint", "description": "Olusturma saniyesi"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "smallint", "description": "Degistiren kullanici kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "datetime", "description": "Degistirme tarihi"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "smallint", "description": "Degistirme saati"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "smallint", "description": "Degistirme dakikasi"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "smallint", "description": "Degistirme saniyesi"},
+    {"name": "SITEID", "type": "smallint", "description": "Bolge numarasi"},
+    {"name": "RECSTATUS", "type": "smallint", "description": "Kayit durumu"},
     {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"},
-    {"name": "UNIVID", "type": "VarChar", "description": "Kayit kodu (yabanci dil)"},
-    {"name": "DISTLOTUNITS", "type": "SmallInt", "description": "Lot Birimleri dagitilabilir"},
-    {"name": "COMBLOTUNITS", "type": "SmallInt", "description": "Lot Birimleri birlestirilebilir"}
+    {"name": "UNIVID", "type": "varchar", "description": "Kayit kodu (yabanci dil)"},
+    {"name": "DISTLOTUNITS", "type": "smallint", "description": "Lot birimleri dagitilabilir", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "COMBLOTUNITS", "type": "smallint", "description": "Lot birimleri birlestirilebilir", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "WFSTATUS", "type": "int", "description": "Is akisi durumu"},
+    {"name": "DISTPOINT", "type": "float", "description": "Dagitim puani"},
+    {"name": "CAMPPOINT", "type": "float", "description": "Kampanya puani"},
+    {"name": "CANUSEINTRNS", "type": "smallint", "description": "Transfer fisi kullanim", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "ISONR", "type": "varchar", "description": "ISO numarasi"},
+    {"name": "GROUPNR", "type": "varchar", "description": "Grup numarasi"},
+    {"name": "PRODCOUNTRY", "type": "varchar", "description": "Uretim ulkesi"},
+    {"name": "ADDTAXREF", "type": "int", "description": "Ek vergi referansi - ADDTAXES"},
+    {"name": "QPRODAMNT", "type": "float", "description": "Uretim miktari"},
+    {"name": "QPRODUOM", "type": "int", "description": "Uretim birimi"},
+    {"name": "QPRODSRCINDEX", "type": "smallint", "description": "Uretim kaynak indeksi"},
+    {"name": "EXTACCESSFLAGS", "type": "int", "description": "Dis erisim bayraklari"},
+    {"name": "PACKET", "type": "smallint", "description": "Paket malzeme", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "SALVAGEVAL2", "type": "float", "description": "Hurda degeri (VUK)"},
+    {"name": "SELLVAT", "type": "float", "description": "Satis KDV orani (%)"},
+    {"name": "RETURNVAT", "type": "float", "description": "Iade KDV orani (%)"},
+    {"name": "LOGOID", "type": "varchar", "description": "Logo ID"},
+    {"name": "LIDCONFIRMED", "type": "smallint", "description": "Logo ID onay durumu", "values": [
+      {"value": 0, "label": "Onaysiz"},
+      {"value": 1, "label": "Onayli"}
+    ]},
+    {"name": "GTIPCODE", "type": "varchar", "description": "GTIP kodu (Gumruk Tarife Istatistik Pozisyonu)"},
+    {"name": "EXPCTGNO", "type": "varchar", "description": "Ihracat kategori numarasi"},
+    {"name": "B2CCODE", "type": "varchar", "description": "B2C (e-ticaret) kodu"},
+    {"name": "MARKREF", "type": "int", "description": "Marka referansi - MARK"},
+    {"name": "IMAGE2INC", "type": "smallint", "description": "Ikinci resim var mi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "AVRWHDURATION", "type": "float", "description": "Ortalama depolama suresi"},
+    {"name": "EXTCARDFLAGS", "type": "int", "description": "Ek kart bayraklari"},
+    {"name": "MINORDAMOUNT", "type": "float", "description": "Minimum siparis miktari"},
+    {"name": "FREIGHTPLACE", "type": "varchar", "description": "Navlun yeri"},
+    {"name": "FREIGHTTYPCODE1", "type": "varchar", "description": "Navlun tipi kodu 1"},
+    {"name": "FREIGHTTYPCODE2", "type": "varchar", "description": "Navlun tipi kodu 2"},
+    {"name": "FREIGHTTYPCODE3", "type": "varchar", "description": "Navlun tipi kodu 3"},
+    {"name": "FREIGHTTYPCODE4", "type": "varchar", "description": "Navlun tipi kodu 4"},
+    {"name": "FREIGHTTYPCODE5", "type": "varchar", "description": "Navlun tipi kodu 5"},
+    {"name": "FREIGHTTYPCODE6", "type": "varchar", "description": "Navlun tipi kodu 6"},
+    {"name": "FREIGHTTYPCODE7", "type": "varchar", "description": "Navlun tipi kodu 7"},
+    {"name": "FREIGHTTYPCODE8", "type": "varchar", "description": "Navlun tipi kodu 8"},
+    {"name": "FREIGHTTYPCODE9", "type": "varchar", "description": "Navlun tipi kodu 9"},
+    {"name": "FREIGHTTYPCODE10", "type": "varchar", "description": "Navlun tipi kodu 10"},
+    {"name": "STATECODE", "type": "varchar", "description": "Eyalet/il kodu"},
+    {"name": "STATENAME", "type": "varchar", "description": "Eyalet/il adi"},
+    {"name": "EXPCATEGORY", "type": "varchar", "description": "Ihracat kategorisi"},
+    {"name": "LOSTFACTOR", "type": "float", "description": "Fire orani"},
+    {"name": "TEXTINCENG", "type": "smallint", "description": "Ingilizce aciklama var mi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "EANBARCODE", "type": "varchar", "description": "EAN barkod numarasi"},
+    {"name": "DEPRCLASSTYPE", "type": "varchar", "description": "Amortisman sinif turu"},
+    {"name": "WFLOWCRDREF", "type": "int", "description": "Is akisi karti referansi"},
+    {"name": "SELLPRVAT", "type": "float", "description": "Satis perakende KDV orani (%)"},
+    {"name": "RETURNPRVAT", "type": "float", "description": "Iade perakende KDV orani (%)"},
+    {"name": "LOWLEVELCODES1", "type": "int", "description": "Dusuk seviye kodu 1"},
+    {"name": "LOWLEVELCODES2", "type": "int", "description": "Dusuk seviye kodu 2"},
+    {"name": "LOWLEVELCODES3", "type": "int", "description": "Dusuk seviye kodu 3"},
+    {"name": "LOWLEVELCODES4", "type": "int", "description": "Dusuk seviye kodu 4"},
+    {"name": "LOWLEVELCODES5", "type": "int", "description": "Dusuk seviye kodu 5"},
+    {"name": "LOWLEVELCODES6", "type": "int", "description": "Dusuk seviye kodu 6"},
+    {"name": "LOWLEVELCODES7", "type": "int", "description": "Dusuk seviye kodu 7"},
+    {"name": "LOWLEVELCODES8", "type": "int", "description": "Dusuk seviye kodu 8"},
+    {"name": "LOWLEVELCODES9", "type": "int", "description": "Dusuk seviye kodu 9"},
+    {"name": "LOWLEVELCODES10", "type": "int", "description": "Dusuk seviye kodu 10"},
+    {"name": "ORGLOGOID", "type": "varchar", "description": "Orjinal Logo ID"},
+    {"name": "QPRODDEPART", "type": "smallint", "description": "Uretim departmani"},
+    {"name": "CANCONFIGURE", "type": "smallint", "description": "Konfigurasyona izin ver", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "CHARSETREF", "type": "int", "description": "Karakteristik seti referansi"},
+    {"name": "CANDEDUCT", "type": "smallint", "description": "Indirim uygulanabilir", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "CONSCODEREF", "type": "int", "description": "Tuketim kodu referansi"},
+    {"name": "SPECODE2", "type": "varchar", "description": "Ozel kod 2"},
+    {"name": "SPECODE3", "type": "varchar", "description": "Ozel kod 3"},
+    {"name": "SPECODE4", "type": "varchar", "description": "Ozel kod 4"},
+    {"name": "SPECODE5", "type": "varchar", "description": "Ozel kod 5"},
+    {"name": "EXPENSE", "type": "smallint", "description": "Masraf karti", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "ORIGIN", "type": "varchar", "description": "Mensei"},
+    {"name": "NAME2", "type": "varchar", "description": "Malzeme aciklamasi 2"},
+    {"name": "COMPKDVUSE", "type": "smallint", "description": "Kompozit KDV kullan", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "USEDINPERIODS", "type": "smallint", "description": "Kullanilan donemler"},
+    {"name": "EXIMTAX1", "type": "float", "description": "Ithalat/ihracat vergisi 1"},
+    {"name": "EXIMTAX2", "type": "float", "description": "Ithalat/ihracat vergisi 2"},
+    {"name": "EXIMTAX3", "type": "float", "description": "Ithalat/ihracat vergisi 3"},
+    {"name": "EXIMTAX4", "type": "float", "description": "Ithalat/ihracat vergisi 4"},
+    {"name": "EXIMTAX5", "type": "float", "description": "Ithalat/ihracat vergisi 5"},
+    {"name": "PRODUCTLEVEL", "type": "smallint", "description": "Urun seviyesi"},
+    {"name": "APPSPEVATMATRAH", "type": "smallint", "description": "Ozel matrah uygula", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "NAME3", "type": "varchar", "description": "Malzeme aciklamasi 3"},
+    {"name": "FACOSTKEYS", "type": "smallint", "description": "Maliyet anahtarlari"},
+    {"name": "KKLINESDISABLE", "type": "smallint", "description": "KK satirlari devre disi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "APPROVE", "type": "smallint", "description": "Onay", "values": [
+      {"value": 0, "label": "Onaysiz"},
+      {"value": 1, "label": "Onayli"}
+    ]},
+    {"name": "APPROVEDATE", "type": "datetime", "description": "Onay tarihi"},
+    {"name": "GLOBALID", "type": "varchar", "description": "Global ID"},
+    {"name": "SALEDEDUCTPART1", "type": "smallint", "description": "Satis tevkifat orani 1"},
+    {"name": "SALEDEDUCTPART2", "type": "smallint", "description": "Satis tevkifat orani 2"},
+    {"name": "PURCDEDUCTPART1", "type": "smallint", "description": "Satin alma tevkifat orani 1"},
+    {"name": "PURCDEDUCTPART2", "type": "smallint", "description": "Satin alma tevkifat orani 2"},
+    {"name": "CATEGORYID", "type": "varchar", "description": "Kategori ID"},
+    {"name": "CATEGORYNAME", "type": "varchar", "description": "Kategori adi"},
+    {"name": "KEYWORD1", "type": "varchar", "description": "Anahtar kelime 1"},
+    {"name": "KEYWORD2", "type": "varchar", "description": "Anahtar kelime 2"},
+    {"name": "KEYWORD3", "type": "varchar", "description": "Anahtar kelime 3"},
+    {"name": "KEYWORD4", "type": "varchar", "description": "Anahtar kelime 4"},
+    {"name": "KEYWORD5", "type": "varchar", "description": "Anahtar kelime 5"},
+    {"name": "GUID", "type": "varchar", "description": "Tekil kimlik numarasi (GUID)"},
+    {"name": "DEMANDMEETSORTFLD1", "type": "varchar", "description": "Talep karsilama siralama alani 1"},
+    {"name": "DEMANDMEETSORTFLD2", "type": "varchar", "description": "Talep karsilama siralama alani 2"},
+    {"name": "DEMANDMEETSORTFLD3", "type": "varchar", "description": "Talep karsilama siralama alani 3"},
+    {"name": "DEMANDMEETSORTFLD4", "type": "varchar", "description": "Talep karsilama siralama alani 4"},
+    {"name": "DEMANDMEETSORTFLD5", "type": "varchar", "description": "Talep karsilama siralama alani 5"},
+    {"name": "DEDUCTCODE", "type": "varchar", "description": "Tevkifat kodu"},
+    {"name": "PROJECTREF", "type": "int", "description": "Proje referansi - PROJECT"},
+    {"name": "NAME4", "type": "varchar", "description": "Malzeme aciklamasi 4"},
+    {"name": "QPRODSUBAMNT", "type": "float", "description": "Alt uretim miktari"},
+    {"name": "QPRODSUBUOM", "type": "int", "description": "Alt uretim birimi"},
+    {"name": "QPRODSUBSRCINDEX", "type": "smallint", "description": "Alt uretim kaynak indeksi"},
+    {"name": "QPRODSUBDEPART", "type": "smallint", "description": "Alt uretim departmani"},
+    {"name": "PORDAMNTTOLERANCE", "type": "float", "description": "Satin alma siparis miktar toleransi"},
+    {"name": "SORDAMNTTOLERANCE", "type": "float", "description": "Satis siparis miktar toleransi"},
+    {"name": "MULTIADDTAX", "type": "smallint", "description": "Coklu ek vergi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "CPACODE", "type": "varchar", "description": "CPA kodu (Urun Siniflandirmasi)"},
+    {"name": "PUBLICCOUNTRYREF", "type": "int", "description": "Ulke referansi"},
+    {"name": "FAUSEFULLIFECODE", "type": "varchar", "description": "Faydali omur kodu (UFRS)"},
+    {"name": "FAUSEFULLIFECODE2", "type": "varchar", "description": "Faydali omur kodu (VUK)"},
+    {"name": "MOLD", "type": "smallint", "description": "Kalip malzeme", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "MOLDLIFETRACKTYPE", "type": "smallint", "description": "Kalip omur takip tipi"},
+    {"name": "MOLDUSAGELIFE", "type": "float", "description": "Kalip kullanim omru"},
+    {"name": "MOLDFACTOR", "type": "smallint", "description": "Kalip faktoru"},
+    {"name": "MOLDMAINTNUMBER", "type": "int", "description": "Kalip bakim numarasi"},
+    {"name": "MOLDMAINTLIFETYPE", "type": "smallint", "description": "Kalip bakim omur tipi"},
+    {"name": "MOLDMAINTLIFE", "type": "float", "description": "Kalip bakim omru"},
+    {"name": "MOLDLIFEASRATIO", "type": "smallint", "description": "Kalip omru oran olarak", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "MOLDMAINTTYPE", "type": "smallint", "description": "Kalip bakim tipi"},
+    {"name": "MOLDMAINTBEGDATE", "type": "datetime", "description": "Kalip bakim baslangic tarihi"},
+    {"name": "MOLDMAINTPERIOD", "type": "float", "description": "Kalip bakim periyodu"},
+    {"name": "MOLDMAINTPERUNIT", "type": "smallint", "description": "Kalip bakim periyot birimi"},
+    {"name": "OBTAINTYPE", "type": "smallint", "description": "Temin tipi", "values": [
+      {"value": 0, "label": "Satin alma"},
+      {"value": 1, "label": "Uretim"}
+    ]},
+    {"name": "GAINTYPE", "type": "smallint", "description": "Kazanc tipi"},
+    {"name": "FORECASTCODE", "type": "varchar", "description": "Tahmin kodu"},
+    {"name": "SALESLIMITQUANTITY", "type": "float", "description": "Satis limit miktari"},
+    {"name": "NODISCOUNT", "type": "smallint", "description": "Indirim uygulanmaz", "values": [
+      {"value": 0, "label": "Indirim uygulanir"},
+      {"value": 1, "label": "Indirim uygulanmaz"}
+    ]},
+    {"name": "LEVELCONTROL", "type": "smallint", "description": "Seviye kontrolu", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "NOTIFYCRDREF", "type": "int", "description": "Bildirim karti referansi"},
+    {"name": "UETDSTRANSPORTTYPE", "type": "smallint", "description": "U-ETDS tasima turu"},
+    {"name": "UETDSLOADTYPE", "type": "varchar", "description": "U-ETDS yuk turu kodu"},
+    {"name": "UETDSLOADTYPEDEF", "type": "varchar", "description": "U-ETDS yuk turu tanimi"},
+    {"name": "UETDSTRANSPORTMODE", "type": "smallint", "description": "U-ETDS tasima modu"},
+    {"name": "UETDSUNCODE", "type": "varchar", "description": "U-ETDS UN tehlikeli madde kodu"},
+    {"name": "UETDSUNDEF", "type": "varchar", "description": "U-ETDS UN tehlikeli madde tanimi"},
+    {"name": "UETDSLOADUNIT", "type": "varchar", "description": "U-ETDS yuk birimi"},
+    {"name": "TSENR", "type": "varchar", "description": "TSE numarasi"},
+    {"name": "PAYERNAME", "type": "varchar", "description": "Odeyici adi"},
+    {"name": "PAYERSUBTITLE", "type": "varchar", "description": "Odeyici alt baslik"},
+    {"name": "PAYERBARCODE", "type": "varchar", "description": "Odeyici barkod"},
+    {"name": "PAYERPURCHPRICE", "type": "float", "description": "Odeyici alis fiyati"},
+    {"name": "PAYERSALESPRICE", "type": "float", "description": "Odeyici satis fiyati"},
+    {"name": "PAYERID", "type": "varchar", "description": "Odeyici ID"},
+    {"name": "PAYERACTIVE", "type": "smallint", "description": "Odeyici aktif", "values": [
+      {"value": 0, "label": "Pasif"},
+      {"value": 1, "label": "Aktif"}
+    ]},
+    {"name": "PURCHDEDUCTCODE", "type": "varchar", "description": "Satin alma tevkifat kodu"},
+    {"name": "EXIMREGTYPREF", "type": "int", "description": "Ithalat/ihracat rejim tip referansi"},
+    {"name": "PROFITMARGINRATE", "type": "float", "description": "Kar marji orani"},
+    {"name": "ORDCMPRICETYPECODE", "type": "varchar", "description": "Siparis kampanya fiyat tipi kodu"},
+    {"name": "PURCHDISPRATETOT", "type": "float", "description": "Satin alma toplam indirim orani"},
+    {"name": "SALESDISPRATETOT", "type": "float", "description": "Satis toplam indirim orani"},
+    {"name": "ADDTAXPURCHBRWS", "type": "smallint", "description": "Ek vergi satin alma kullanimi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "ADDTAXSALESBRWS", "type": "smallint", "description": "Ek vergi satis kullanimi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "DRAFTOFFERBRWS", "type": "smallint", "description": "Taslak teklif kullanimi", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "PRODCLREF", "type": "int", "description": "Urun sinifi referansi"},
+    {"name": "TIBBICIHAZ", "type": "smallint", "description": "Tibbi cihaz", "values": [
+      {"value": 0, "label": "Hayir"},
+      {"value": 1, "label": "Evet"}
+    ]},
+    {"name": "GTIN_UNO", "type": "varchar", "description": "GTIN/UNO numarasi (Global Ticari Tanimlama)"}
   ],
   "commonQueries": [
     {
