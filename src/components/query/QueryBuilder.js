@@ -395,31 +395,6 @@ export default function QueryBuilder({
         )}
       </div>
 
-      {/* Iliskili Tablolar Bilgisi */}
-      {table.relatedTables && table.relatedTables.length > 0 && (
-        <div className={styles.relatedTablesInfo}>
-          <div className={styles.relatedHeader}>
-            <i className="fas fa-project-diagram"></i>
-            <span>Iliskili Tablolar ({table.relatedTables.length})</span>
-          </div>
-          <div className={styles.relatedList}>
-            {table.relatedTables.map((rel, index) => (
-              <div key={index} className={styles.relatedItem}>
-                <div className={styles.relatedConnection}>
-                  <span className={styles.relatedField}>{rel.field}</span>
-                  <i className="fas fa-arrow-right"></i>
-                  <span className={styles.relatedTable}>{rel.table}</span>
-                  <span className={styles.relatedTargetField}>.LOGICALREF</span>
-                </div>
-                {rel.description && (
-                  <span className={styles.relatedDesc}>{rel.description}</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
       {/* JOIN Builder */}
       <JoinBuilder
         mainTable={table}
