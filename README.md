@@ -2,6 +2,8 @@
 
 Logo Tiger 3 ERP sistemi için geliştirilmiş açık kaynaklı geliştirici araçları. SQL sorgu oluşturma, veritabanı şema gezgini ve REST API dokümantasyonu içerir.
 
+🔗 **Canlı Demo:** [logo.canberkdoger.com](https://logo.canberkdoger.com)
+
 ![Logo Tiger 3 Araçları](https://img.shields.io/badge/Logo-Tiger%203-c53030)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![React](https://img.shields.io/badge/React-19-61dafb)
