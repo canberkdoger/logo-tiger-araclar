@@ -18,31 +18,57 @@ GET /api/schema/categories - Tablo kategorileri
 GET /api/schema/search?q=ARAMA_TERIMI - Tablo ve alan arama
 GET /api/schema/relationships?table=TABLO_ADI - Tablo iliskileri ve JOIN onerileri
 
+## ONEMLI: Tablo Isimleri ve Placeholder'lar
+
+API'yi cagirirken PLACEHOLDER formatini kullanin (XXX ve XX ile):
+- DOGRU: /api/schema/tables/LG_XXX_XX_STLINE
+- YANLIS: /api/schema/tables/LG_001_01_STLINE
+- YANLIS: /api/schema/tables/STLINE
+
+Placeholder Kurali:
+- XXX = Firma numarasi placeholder'i (API'de XXX olarak kalir)
+- XX = Donem numarasi placeholder'i (API'de XX olarak kalir)
+
+SQL yazarken ise gercek degerleri kullanin:
+- LG_XXX_XX_STFICHE -> LG_126_01_STFICHE (Firma 126, Donem 01)
+- LG_XXX_ITEMS -> LG_126_ITEMS (Donem bagimsiz tablo)
+
 ## Hizli Baslangiç
 
-1. Once /api/schema endpoint'ini cagirin - tum dokumantasyon ve kullanim kilavuzu orada
-2. Aranan bilgi icin /api/schema/search?q=TERIM kullanin
-3. Tablo detaylari icin /api/schema/tables/TABLO_ADI kullanin
-4. JOIN onerileri icin /api/schema/relationships?table=TABLO_ADI kullanin
+1. /api/schema -> Tum dokumantasyon ve kullanim kilavuzu
+2. /api/schema/search?q=stok -> Stok ile ilgili tablolari bul
+3. /api/schema/tables/LG_XXX_XX_STLINE -> STLINE tablo detaylari
+4. /api/schema/relationships?table=LG_XXX_XX_STLINE -> JOIN onerileri
 
-## Placeholder Bilgisi
+## Ornek Senaryo: Satis Irsaliyeleri
 
-Logo Tiger tablolarinda iki placeholder kullanilir:
-- XXX = Firma numarasi (ornek: 001, 126)
-- XX = Donem numarasi (ornek: 01, 02)
+1. GET /api/schema/tables/LG_XXX_XX_STFICHE - Fis bilgileri (TRCODE=8 satis irsaliyesi)
+2. GET /api/schema/tables/LG_XXX_XX_STLINE - Satir bilgileri
+3. GET /api/schema/tables/LG_XXX_ITEMS - Malzeme kartlari (donem bagimsiz, XX yok)
+4. GET /api/schema/relationships?table=LG_XXX_XX_STLINE - JOIN onerileri
 
-Ornek: LG_XXX_XX_STFICHE -> LG_126_01_STFICHE (Firma 126, Donem 01)
-
-## Ornek Senaryo
-
-Satis irsaliyelerini malzeme bazli getirmek icin:
-1. GET /api/schema/tables/LG_XXX_XX_STFICHE (Fis bilgileri)
-2. GET /api/schema/tables/LG_XXX_XX_STLINE (Satir bilgileri)
-3. GET /api/schema/relationships?table=LG_XXX_XX_STLINE (JOIN onerileri)
-
-SQL:
+SQL (Firma 126, Donem 01):
 SELECT sf.FICHENO, sf.DATE_, sl.AMOUNT, i.CODE, i.NAME
 FROM LG_126_01_STFICHE sf
 INNER JOIN LG_126_01_STLINE sl ON sf.LOGICALREF = sl.STFICHEREF
 INNER JOIN LG_126_ITEMS i ON sl.STOCKREF = i.LOGICALREF
-WHERE sf.TRCODE = 8  -- 8 = Satis irsaliyesi
+WHERE sf.TRCODE = 8
+
+## Sik Kullanilan Tablolar
+
+- LG_XXX_ITEMS - Malzeme kartlari
+- LG_XXX_CLCARD - Cari hesap kartlari
+- LG_XXX_XX_STFICHE - Stok fisleri (irsaliye, fatura vs)
+- LG_XXX_XX_STLINE - Stok fis satirlari
+- LG_XXX_XX_INVOICE - Faturalar
+- LG_XXX_XX_ORFICHE - Siparisler
+- LG_XXX_SPECODES - Ozel kod tanimlari
+
+## Onemli TRCODE Degerleri (Stok Fisleri)
+
+- 1 = Mal alim irsaliyesi
+- 8 = Satis irsaliyesi
+- 9 = Iade irsaliyesi
+- 13 = Uretimden giris fisi
+- 14 = Uretime cikis (sarf) fisi
+- 25 = Ambar fisi

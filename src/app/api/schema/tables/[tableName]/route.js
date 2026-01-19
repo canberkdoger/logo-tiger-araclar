@@ -24,33 +24,47 @@ export async function GET(request, { params }) {
     }
 
     // Iliskili tablolari zenginlestir
+    // Not: Bazi JSON'larda relatedTables string array, bazisinda obje array
     const enrichedRelations = (table.relatedTables || []).map(rel => {
+      // String mi obje mi kontrol et
+      const isString = typeof rel === 'string';
+      const relTableName = isString ? rel : rel.table;
+      const relField = isString ? null : rel.field;
+      const relDescription = isString ? null : rel.description;
+
+      // Iliskili tabloyu bul
       const relatedTable = tables.find(t => {
         // XXX ve XX placeholder'larini kontrol et
-        const normalizedRelTable = rel.table.replace(/XXX/g, '').replace(/XX/g, '');
-        const normalizedTableName = t.tableName.replace(/XXX/g, '').replace(/XX/g, '');
-        return normalizedRelTable === normalizedTableName;
+        const normalizedRelTable = relTableName.replace(/XXX/g, '').replace(/XX/g, '').replace(/^LG_/, '');
+        const normalizedTableName = t.tableName.replace(/XXX/g, '').replace(/XX/g, '').replace(/^LG_/, '');
+        return normalizedRelTable === normalizedTableName ||
+               normalizedTableName.endsWith(normalizedRelTable) ||
+               normalizedRelTable.endsWith(normalizedTableName);
       });
 
       // Field bilgisi: once dogrudan bak, yoksa ters yonden bul
-      let sourceField = rel.field;
+      let sourceField = relField;
       if (!sourceField && relatedTable?.relatedTables) {
-        const reverseRelation = relatedTable.relatedTables.find(
-          r => r.table === table.tableName
-        );
-        if (reverseRelation?.field) {
+        const reverseRelation = relatedTable.relatedTables.find(r => {
+          const rTable = typeof r === 'string' ? r : r.table;
+          return rTable === table.tableName ||
+                 rTable.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '') ===
+                 table.tableName.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+        });
+        if (reverseRelation && typeof reverseRelation !== 'string' && reverseRelation.field) {
           sourceField = reverseRelation.field;
         }
       }
 
       return {
-        ...rel,
-        field: sourceField || rel.field,
+        table: relatedTable?.tableName || relTableName,
+        field: sourceField || null,
+        description: relDescription,
         exists: !!relatedTable,
         category: relatedTable?.category,
         displayName: relatedTable?.displayName,
         joinClause: sourceField
-          ? `${table.tableName}.LOGICALREF = ${rel.table}.${sourceField}`
+          ? `${table.tableName}.${sourceField} = ${relatedTable?.tableName || relTableName}.LOGICALREF`
           : null
       };
     });

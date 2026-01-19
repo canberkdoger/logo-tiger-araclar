@@ -57,17 +57,23 @@ export async function GET(request) {
             sourceTable: table.tableName,
             sourceDisplayName: table.displayName,
             relations: table.relatedTables.map(rel => {
+              // String mi obje mi kontrol et
+              const isString = typeof rel === 'string';
+              const relTableName = isString ? rel : rel.table;
+              const relField = isString ? null : rel.field;
+              const relDescription = isString ? null : rel.description;
+
               // Field bilgisi: once dogrudan bak, yoksa ters yonden bul
-              let sourceField = rel.field;
+              let sourceField = relField;
               if (!sourceField) {
-                sourceField = findFieldFromReverse(table.tableName, rel.table, tableMap);
+                sourceField = findFieldFromReverse(table.tableName, relTableName, tableMap);
               }
 
               return {
-                targetTable: rel.table,
+                targetTable: relTableName,
                 sourceField: sourceField || null,
                 targetField: 'LOGICALREF',
-                description: rel.description,
+                description: relDescription,
                 joinType: 'LEFT'
               };
             })
@@ -101,14 +107,35 @@ export async function GET(request) {
  * hedef tablonun relatedTables'inda mevcut tabloyu arayarak field bul
  */
 function findFieldFromReverse(currentTableName, targetTableName, tableMap) {
-  const targetTable = tableMap.get(targetTableName);
+  // Hedef tabloyu bul (tam isim veya kisaltilmis isim ile)
+  let targetTable = tableMap.get(targetTableName);
+  if (!targetTable) {
+    // Kisaltilmis isim olabilir, ara
+    for (const [name, t] of tableMap) {
+      const normalizedTarget = targetTableName.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+      const normalizedName = name.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+      if (normalizedName.endsWith(normalizedTarget) || normalizedTarget.endsWith(normalizedName)) {
+        targetTable = t;
+        break;
+      }
+    }
+  }
   if (!targetTable?.relatedTables) return null;
 
-  const reverseRelation = targetTable.relatedTables.find(
-    r => r.table === currentTableName
-  );
+  const reverseRelation = targetTable.relatedTables.find(r => {
+    const rTable = typeof r === 'string' ? r : r.table;
+    const normalizedCurrent = currentTableName.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+    const normalizedR = rTable.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+    return rTable === currentTableName ||
+           normalizedR === normalizedCurrent ||
+           normalizedR.endsWith(normalizedCurrent) ||
+           normalizedCurrent.endsWith(normalizedR);
+  });
 
-  return reverseRelation?.field || null;
+  if (reverseRelation && typeof reverseRelation !== 'string') {
+    return reverseRelation.field || null;
+  }
+  return null;
 }
 
 /**
@@ -123,22 +150,40 @@ function buildRelationshipTree(table, tableMap, depth, visited) {
   const relations = [];
 
   for (const rel of table.relatedTables || []) {
-    const targetTable = tableMap.get(rel.table);
+    // String mi obje mi kontrol et
+    const isString = typeof rel === 'string';
+    const relTableName = isString ? rel : rel.table;
+    const relField = isString ? null : rel.field;
+    const relDescription = isString ? null : rel.description;
+
+    // Hedef tabloyu bul
+    let targetTable = tableMap.get(relTableName);
+    if (!targetTable) {
+      // Kisaltilmis isim olabilir
+      for (const [name, t] of tableMap) {
+        const normalizedRel = relTableName.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+        const normalizedName = name.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+        if (normalizedName.endsWith(normalizedRel) || normalizedRel.endsWith(normalizedName)) {
+          targetTable = t;
+          break;
+        }
+      }
+    }
 
     // Field bilgisi: once dogrudan bak, yoksa ters yonden bul
-    let sourceField = rel.field;
+    let sourceField = relField;
     if (!sourceField) {
-      sourceField = findFieldFromReverse(table.tableName, rel.table, tableMap);
+      sourceField = findFieldFromReverse(table.tableName, relTableName, tableMap);
     }
 
     const relation = {
-      targetTable: rel.table,
-      targetDisplayName: targetTable?.displayName || rel.table,
+      targetTable: targetTable?.tableName || relTableName,
+      targetDisplayName: targetTable?.displayName || relTableName,
       sourceField: sourceField || null,
       targetField: 'LOGICALREF',
-      description: rel.description,
+      description: relDescription,
       joinClause: sourceField
-        ? `${table.tableName}.${sourceField} = ${rel.table}.LOGICALREF`
+        ? `${table.tableName}.${sourceField} = ${targetTable?.tableName || relTableName}.LOGICALREF`
         : null,
       targetExists: !!targetTable,
       children: []
@@ -162,13 +207,31 @@ function generateJoinSuggestions(table, tableMap) {
   const suggestions = [];
 
   for (const rel of table.relatedTables || []) {
-    const targetTable = tableMap.get(rel.table);
+    // String mi obje mi kontrol et
+    const isString = typeof rel === 'string';
+    const relTableName = isString ? rel : rel.table;
+    const relField = isString ? null : rel.field;
+    const relDescription = isString ? null : rel.description;
+
+    // Hedef tabloyu bul
+    let targetTable = tableMap.get(relTableName);
+    if (!targetTable) {
+      // Kisaltilmis isim olabilir
+      for (const [name, t] of tableMap) {
+        const normalizedRel = relTableName.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+        const normalizedName = name.replace(/^LG_/, '').replace(/XXX/g, '').replace(/XX/g, '');
+        if (normalizedName.endsWith(normalizedRel) || normalizedRel.endsWith(normalizedName)) {
+          targetTable = t;
+          break;
+        }
+      }
+    }
 
     if (targetTable) {
       // Field bilgisi: once dogrudan bak, yoksa ters yonden bul
-      let sourceField = rel.field;
+      let sourceField = relField;
       if (!sourceField) {
-        sourceField = findFieldFromReverse(table.tableName, rel.table, tableMap);
+        sourceField = findFieldFromReverse(table.tableName, relTableName, tableMap);
       }
 
       // Hedef tablonun onemli alanlarini bul
@@ -188,15 +251,15 @@ function generateJoinSuggestions(table, tableMap) {
         }));
 
       suggestions.push({
-        targetTable: rel.table,
+        targetTable: targetTable.tableName,
         targetDisplayName: targetTable.displayName,
         sourceField: sourceField || null,
-        description: rel.description,
+        description: relDescription,
         recommendedJoinType: 'LEFT',
         usefulFieldsToSelect: usefulFields,
         sampleJoin: sourceField ? {
           type: 'LEFT JOIN',
-          clause: `${rel.table} ON ${table.tableName}.${sourceField} = ${rel.table}.LOGICALREF`
+          clause: `${targetTable.tableName} ON ${table.tableName}.${sourceField} = ${targetTable.tableName}.LOGICALREF`
         } : null
       });
     }
