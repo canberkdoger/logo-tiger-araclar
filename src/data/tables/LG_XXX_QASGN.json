@@ -1,0 +1,92 @@
+{
+  "tableName": "LG_XXX_QASGN",
+  "displayName": "Kalite Kontrol Atamalari",
+  "description": "Kalite kontrol seti ve satirlarina atama bilgilerini icerir. Kalite kontrol parametrelerinin eslestirilmesi icin kullanilir.",
+  "category": "Kalite Kontrol",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 9,
+  "relatedTables": [
+    "LG_XXX_QCSET",
+    "LG_XXX_QCLINE",
+    "LG_XXX_QCVAL",
+    "LG_XXX_ITEMS"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Int",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["ASGNREF", "SETREF", "LINENO_", "ASGNTYPE", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 3,
+      "fields": ["ASGNREF", "SETREF", "LINEREF", "LINENO_", "VALREF", "ASGNTYPE", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 4,
+      "fields": ["ASGNREF", "SETREF", "LINEREF", "VALREF", "ASGNTYPE", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 5,
+      "fields": ["SETREF", "LINEREF", "VALREF", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 6,
+      "fields": ["ASGNREF", "ASGNTYPE", "SETREF", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 7,
+      "fields": ["ASGNREF", "SETREF", "LINEREF", "REVISIONNO", "VALREF", "ASGNTYPE", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 8,
+      "fields": ["ASGNREF", "REVISIONNO", "ASGNTYPE", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 9,
+      "fields": ["ASGNREF", "REVISIONNO", "SETREF", "ASGNTYPE", "LOGICALREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "SETREF", "type": "int", "description": "Kalite kontrol seti referansi (QCSET)"},
+    {"name": "LINEREF", "type": "int", "description": "Kalite kontrol satiri referansi (QCLINE)"},
+    {"name": "IMPORTANCE", "type": "VarChar", "description": "Onem"},
+    {"name": "FREQUENCY", "type": "Float", "description": "Siklik"},
+    {"name": "COUNTER", "type": "Float", "description": "Sayac"},
+    {"name": "SAMPLESIZE", "type": "Float", "description": "Ornek buyukluk"},
+    {"name": "NOMVAL", "type": "Float", "description": "Nominal degeri"},
+    {"name": "MINVAL", "type": "Float", "description": "Minumum deger"},
+    {"name": "MINTOL", "type": "Float", "description": "Minumum tolerans"},
+    {"name": "MAXVAL", "type": "Float", "description": "Maxsimum degeri"},
+    {"name": "PLUSTOL", "type": "Float", "description": "Arti tolerans"},
+    {"name": "INSPPOINT", "type": "SmallInt", "description": "Kontrol noktasi"},
+    {"name": "INSPFICHES1", "type": "SmallInt", "description": "Kontrol fisi1"},
+    {"name": "INSPFICHES2", "type": "SmallInt", "description": "Kontrol fisi2"},
+    {"name": "INSPFICHES3", "type": "SmallInt", "description": "Kontrol fisi3"},
+    {"name": "ASGNREF", "type": "int", "description": "Atama referansi"},
+    {"name": "OPITEMREF", "type": "int", "description": "Ek malzeme referansi (ITEMS)"},
+    {"name": "ASGNTYPE", "type": "SmallInt", "description": "Atama tipi"},
+    {"name": "VALREF", "type": "int", "description": "Kalite kontrol degerleri referansi (QCVAL)"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Satir no"},
+    {"name": "REVISIONNO", "type": "int", "description": "Revizyon no"},
+    {"name": "CONFORMRATE", "type": "SmallInt", "description": "Uygunluk orani"},
+    {"name": "TOOLCODE", "type": "VarChar", "description": "Arac kodu"},
+    {"name": "CONTROLLER", "type": "SmallInt", "description": "Kontrol eden"},
+    {"name": "TOOLREF", "type": "int", "description": "Arac karti (ITEMS)"}
+  ],
+  "commonQueries": []
+}

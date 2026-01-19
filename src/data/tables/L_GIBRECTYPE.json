@@ -1,0 +1,54 @@
+{
+  "tableName": "L_GIBRECTYPE",
+  "displayName": "GIB Kayit Turleri",
+  "description": "",
+  "category": "E-Belge",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "GIBRECTYPE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SUBRECUSETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CONSTSUBRECTYPREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

@@ -1,0 +1,52 @@
+{
+  "tableName": "LG_XXX_XX_FICHEOBJECT",
+  "displayName": "FICHEOBJECT",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_FICHEOBJECT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OBJECTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

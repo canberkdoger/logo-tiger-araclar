@@ -1,0 +1,45 @@
+{
+  "tableName": "L_COUNTRY",
+  "displayName": "Ulkeler",
+  "description": "Ulke tanimlarinin tutuldugu tablo.",
+  "category": "Tanimlar",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 4,
+  "relatedTables": ["L_CITY", "L_POSTCODE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "CODE", "length": "13 bytes", "type": "VarChar" },
+        { "name": "STATESTR", "length": "13 bytes", "type": "VarChar" }
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        { "name": "NAME", "length": "41 bytes", "type": "VarChar" }
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        { "name": "COUNTRYNR", "length": "4 bytes", "type": "Integer" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "int", "description": "Fiziksel adres" },
+    { "name": "CODE", "type": "VarChar", "description": "Ulke kodu" },
+    { "name": "NAME", "type": "VarChar", "description": "Ulke adi" },
+    { "name": "COUNTRYNR", "type": "int", "description": "Ulke numarasi" },
+    { "name": "STATESTR", "type": "VarChar", "description": "Eyalet icin ayrilan alan" }
+  ],
+  "commonQueries": []
+}

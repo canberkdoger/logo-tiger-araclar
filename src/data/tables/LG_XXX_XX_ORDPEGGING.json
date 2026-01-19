@@ -1,0 +1,173 @@
+{
+  "tableName": "LG_XXX_XX_ORDPEGGING",
+  "displayName": "ORDPEGGING",
+  "description": "",
+  "category": "MRP",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_ORDPEGGING_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_ORDPEGGING_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PARENTTYPE",
+        "PARENTREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_ORDPEGGING_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PURORDLNREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PURORDLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PURORDFREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMALTER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UNITREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MAINITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MAINUNITREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MEETAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MAINMEETAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SUPPLIERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DETLINE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PREVLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PREVLINENO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MAINVARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SALEORDFREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

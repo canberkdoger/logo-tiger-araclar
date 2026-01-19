@@ -1,0 +1,54 @@
+{
+  "tableName": "L_ADLOGS",
+  "displayName": "ADLOGS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "ADLOGS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDATE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADTIME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADMSG",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADINFO",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

@@ -1,0 +1,64 @@
+{
+  "tableName": "L_USERSDEF",
+  "displayName": "USERSDEF",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "USERSDEF_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DIVNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPTNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WHNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

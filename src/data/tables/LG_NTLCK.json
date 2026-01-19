@@ -1,0 +1,179 @@
+{
+  "tableName": "LG_NTLCK",
+  "displayName": "NTLCK",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "NTLCK_000_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "NTLCK_000_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOCKSTR"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "NTLCK_122_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "NTLCK_122_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOCKSTR"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "NTLCK_124_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "NTLCK_124_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOCKSTR"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "NTLCK_125_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "NTLCK_125_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOCKSTR"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "NTLCK_126_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "NTLCK_126_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOCKSTR"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "NTLCK_924_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "NTLCK_924_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOCKSTR"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "NTLCK_999_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "NTLCK_999_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOCKSTR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOCKSTR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTER",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SESSIONCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PROGRAMNAME",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 14
+}

@@ -1,0 +1,44 @@
+{
+  "tableName": "L_GIBDOCLINETYPEREL",
+  "displayName": "GIBDOCLINETYPEREL",
+  "description": "",
+  "category": "E-Belge",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "GIBDOCLINETYPEREL_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBBOOKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GIBDOCTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBLINETYPREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

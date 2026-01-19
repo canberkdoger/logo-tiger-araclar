@@ -1,0 +1,46 @@
+{
+  "tableName": "LG_XXX_EMGRPASS",
+  "displayName": "Calisan Grup Atamalari",
+  "description": "Calisanlarin gruplara atanma bilgilerini iceren tablo. Calisan-grup iliskisini ve oncelik bilgisini saklar.",
+  "category": "Uretim",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": ["LG_XXX_EMPGROUP", "LG_XXX_EMPLOYEE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["EMPGRPREF", "PRIORITY", "EMPREF"],
+      "type": "int, SmallInt, int",
+      "properties": "Dup, Modif, Dup, Modif, Modif, Seg"
+    },
+    {
+      "no": 3,
+      "fields": ["EMPREF", "EMPGRPREF"],
+      "type": "int, int",
+      "properties": "Modif, Seg, Dup, Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "EMPGRPREF", "type": "Int", "description": "Calisan-Grup referansi - EMPGROUP"},
+    {"name": "PRIORITY", "type": "SmallInt", "description": "Oncelik"},
+    {"name": "EMPREF", "type": "Int", "description": "Calisanlar referansi - EMPLOYEE"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir gruptaki calisanlari listele",
+      "query": "SELECT eg.*, e.CODE AS CalisanKodu, e.NAME AS CalisanAdi FROM LG_XXX_EMGRPASS eg INNER JOIN LG_XXX_EMPLOYEE e ON eg.EMPREF = e.LOGICALREF WHERE eg.EMPGRPREF = @GrupRef ORDER BY eg.PRIORITY"
+    },
+    {
+      "description": "Belirli bir calisanin dahil oldugu gruplari listele",
+      "query": "SELECT eg.*, g.CODE AS GrupKodu, g.NAME AS GrupAdi FROM LG_XXX_EMGRPASS eg INNER JOIN LG_XXX_EMPGROUP g ON eg.EMPGRPREF = g.LOGICALREF WHERE eg.EMPREF = @CalisanRef"
+    }
+  ]
+}

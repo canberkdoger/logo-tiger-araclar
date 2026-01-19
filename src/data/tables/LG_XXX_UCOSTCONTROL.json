@@ -1,0 +1,71 @@
+{
+  "tableName": "LG_XXX_UCOSTCONTROL",
+  "displayName": "UCOSTCONTROL",
+  "description": "",
+  "category": "Maliyet",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_UCOSTCONTROL_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CONTROLTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "METHODNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CATEGORYNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SUCCESSTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIONTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

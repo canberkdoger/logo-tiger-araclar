@@ -1,0 +1,117 @@
+{
+  "tableName": "LG_XXX_XX_CLBRANCHPAYPLANS",
+  "displayName": "CLBRANCHPAYPLANS",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_CLBRANCHPAYPLANS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLCARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PAYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROJREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE11",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE12",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE13",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

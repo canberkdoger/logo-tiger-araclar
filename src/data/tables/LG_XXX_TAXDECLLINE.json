@@ -1,0 +1,918 @@
+{
+  "tableName": "LG_XXX_TAXDECLLINE",
+  "displayName": "TAXDECLLINE",
+  "description": "",
+  "category": "Vergi",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_TAXDECLLINE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_TAXDECLLINE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "TAXDECLREF",
+        "LISTTYP",
+        "LINENR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LISTTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR7",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR8",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR9",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR10",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR11",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR12",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR13",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR14",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR15",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR16",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR17",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR18",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR19",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR20",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR21",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR22",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR23",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR24",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TXTARR25",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DTARR1",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DTARR2",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DTARR3",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR9",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR10",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR11",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR12",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR13",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR14",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMARR15",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "INTARR1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INTARR2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INTARR3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INTARR4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INTARR5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INTARR6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INTARR7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR1_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR2_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR3_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR4_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR5_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR6_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR7_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR8_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR9_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCARR10_TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECCHCK1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECCHCK2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECCHCK3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECCHCK4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMDEFS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMAMOUNTS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXASSESSMENTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

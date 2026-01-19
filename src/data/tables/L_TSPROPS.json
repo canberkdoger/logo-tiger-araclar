@@ -1,0 +1,64 @@
+{
+  "tableName": "L_TSPROPS",
+  "displayName": "TSPROPS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "TSPROPS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TSID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USECUSTOMDIR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEREPORTNAME",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTOMDIR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

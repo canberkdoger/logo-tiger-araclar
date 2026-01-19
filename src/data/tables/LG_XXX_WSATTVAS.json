@@ -1,0 +1,65 @@
+{
+  "tableName": "LG_XXX_WSATTVAS",
+  "displayName": "Is Istasyonu Ozellik Deger Atamalari",
+  "description": "Is istasyonu ozellik degerlerinin atandigi tablo",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_WORKSTAT",
+      "field": "WSATTRIBASGNREF",
+      "description": "Is istasyonu referansi"
+    },
+    {
+      "tableName": "LG_XXX_WORKSTAT",
+      "field": "WSATTRIBVALREF",
+      "description": "Is istasyonu referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "WSATTRIBVALREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "WSATTRIBASGNREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "WSATTRIBASGNREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "WSATTRIBVALREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "Integer",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "WSATTRIBASGNREF",
+      "type": "Integer",
+      "description": "Is istasyonu referansi",
+      "relatedTable": "WORKSTAT"
+    },
+    {
+      "name": "WSATTRIBVALREF",
+      "type": "Integer",
+      "description": "Is istasyonu referansi",
+      "relatedTable": "WORKSTAT"
+    }
+  ],
+  "commonQueries": []
+}

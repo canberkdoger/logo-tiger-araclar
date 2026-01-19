@@ -1,0 +1,399 @@
+{
+  "tableName": "LG_EXCHANGE",
+  "displayName": "EXCHANGE",
+  "description": "",
+  "category": "Finans",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "EXCHANGE_124_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "EXCHANGE_124_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "DATE_"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "EXCHANGE_124_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "DATE_",
+        "CRTYPE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "EXCHANGE_124_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "EDATE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "EXCHANGE_124_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "EDATE",
+        "CRTYPE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "EXCHANGE_124_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "GLOBALID"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "EXCHANGE_125_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "EXCHANGE_125_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "DATE_"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "EXCHANGE_125_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "DATE_",
+        "CRTYPE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "EXCHANGE_125_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "EDATE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "EXCHANGE_125_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "EDATE",
+        "CRTYPE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "EXCHANGE_125_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "GLOBALID"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "EXCHANGE_126_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "EXCHANGE_126_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "DATE_"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "EXCHANGE_126_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "DATE_",
+        "CRTYPE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "EXCHANGE_126_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "EDATE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "EXCHANGE_126_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "EDATE",
+        "CRTYPE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "EXCHANGE_126_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "GLOBALID"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "EXCHANGE_924_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "EXCHANGE_924_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "DATE_"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "EXCHANGE_924_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "DATE_",
+        "CRTYPE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "EXCHANGE_924_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "EDATE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "EXCHANGE_924_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "EDATE",
+        "CRTYPE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "EXCHANGE_924_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "GLOBALID"
+      ]
+    },
+    {
+      "no": 1,
+      "name": "EXCHANGE_999_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "EXCHANGE_999_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "DATE_"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "EXCHANGE_999_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "DATE_",
+        "CRTYPE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "EXCHANGE_999_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "EDATE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "EXCHANGE_999_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "EDATE",
+        "CRTYPE",
+        "LREF"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "EXCHANGE_999_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "GLOBALID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RATES1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RATES2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RATES3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RATES4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "GLOBALID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVEDATE",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 30
+}

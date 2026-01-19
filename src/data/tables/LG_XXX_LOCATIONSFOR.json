@@ -1,0 +1,66 @@
+{
+  "tableName": "LG_XXX_LOCATIONSFOR",
+  "displayName": "LOCATIONSFOR",
+  "description": "",
+  "category": "Stok",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_LOCATIONSFOR_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODULENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

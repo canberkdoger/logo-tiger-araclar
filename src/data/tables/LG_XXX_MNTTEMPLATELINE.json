@@ -1,0 +1,167 @@
+{
+  "tableName": "LG_XXX_MNTTEMPLATELINE",
+  "displayName": "MNTTEMPLATELINE",
+  "description": "",
+  "category": "Bakim",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_MNTTEMPLATELINE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_MNTTEMPLATELINE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "TEMPLATEREF",
+        "LINENO_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TEMPLATEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TMPLGROUPNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TMPLCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TMPLNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TMPLDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TMPLDURATION",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TMPLDURATIONTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

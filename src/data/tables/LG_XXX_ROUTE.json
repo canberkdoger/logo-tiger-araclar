@@ -1,0 +1,51 @@
+{
+  "tableName": "LG_XXX_ROUTE",
+  "displayName": "Satis Rotalari",
+  "description": "Satis elemanlarina ait rota tanimlari. Musteri ziyaret planlamasi ve takibi icin kullanilir.",
+  "category": "Satis",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [
+    "LG_XXX_SLSMAN"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["SALESMANREF", "CODE"],
+      "type": "Composite"
+    },
+    {
+      "no": 3,
+      "fields": ["SALESMANREF", "DEFINITION_", "LOGICALREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Rota Kodu"},
+    {"name": "DEFINITION_", "type": "VarChar", "description": "Rota Aciklamasi"},
+    {"name": "SALESMANREF", "type": "int", "description": "Satis Elemani Referansi (SLSMAN)"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Rota Ozel Kodu"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Rota Yetki Kodu"},
+    {"name": "STATUS", "type": "SmallInt", "description": "Rota Gecerlilik Durumu"},
+    {"name": "PERIOD", "type": "VarChar", "description": "Rota Periyodu"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"}
+  ],
+  "commonQueries": []
+}

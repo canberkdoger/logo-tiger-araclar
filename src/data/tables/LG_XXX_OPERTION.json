@@ -1,0 +1,68 @@
+{
+  "tableName": "LG_XXX_OPERTION",
+  "displayName": "Operasyon Kartlari",
+  "description": "Uretim operasyonlarinin ana tanimlarini tutan tablo. Operasyon kodu, adi, ozel kod, yetki kodu ve kalite kontrol seti bilgilerini icerir.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_QCSET"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "CODE", "length": "12 bytes", "type": "VarChar", "property": "Modif, Seg"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "NAME", "length": "12 bytes", "type": "VarChar", "property": "Modif"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"field": "ACTIVE", "length": "5 bytes", "type": "SmallInt", "property": ""},
+        {"field": "CODE", "length": "12 bytes", "type": "VarChar", "property": "Modif, Seg"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"field": "NAME", "length": "12 bytes", "type": "VarChar", "property": "Modif"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "ACTIVE", "length": "5 bytes", "type": "SmallInt", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Operasyon kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Operasyon adi"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Operasyon ozel kodu"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Operasyon yetki kodu"},
+    {"name": "APPROVED", "type": "SmallInt", "description": "Onaylanmis"},
+    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanimda, 1: Kullanim disi"},
+    {"name": "QCCSETREF", "type": "int", "description": "KKK seti referansi - QCSET tablosuna baglanti"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1: Evet, 0: Hayir)"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,49 @@
+{
+  "tableName": "L_MAPCONFIG",
+  "displayName": "MAPCONFIG",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "MAPCONFIG_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INFOTECHID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CREATIONDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "WARNINGS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVATED",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

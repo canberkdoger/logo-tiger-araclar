@@ -1,0 +1,66 @@
+{
+  "tableName": "LG_XXX_FAYEARSTOP",
+  "displayName": "FAYEARSTOP",
+  "description": "",
+  "category": "Sabit Kiymet",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_FAYEARSTOP_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAREGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STARTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "EXPLANATION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STOPFORACC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STOPFORTAX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

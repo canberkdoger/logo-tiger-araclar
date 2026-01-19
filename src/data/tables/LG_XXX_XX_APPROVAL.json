@@ -1,0 +1,614 @@
+{
+  "tableName": "LG_XXX_XX_APPROVAL",
+  "displayName": "Onay Kayitlari",
+  "description": "",
+  "category": "Is Akisi",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_APPROVAL_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_APPROVAL_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "RECTYPE",
+        "FILENAME"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_APPROVAL_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "RECTYPE",
+        "TRCODE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_01_APPROVAL_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CUSTOMDATA1"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "I126_01_APPROVAL_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CUSTOMDATA2"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "I126_01_APPROVAL_I8",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "OPTYPE",
+        "STATUS"
+      ]
+    },
+    {
+      "no": 7,
+      "name": "I126_01_APPROVAL_I9",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "RECTYPE",
+        "STATUS",
+        "OPTYPE"
+      ]
+    },
+    {
+      "no": 8,
+      "name": "I126_01_APPROVAL_I10",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FILENAME"
+      ]
+    },
+    {
+      "no": 9,
+      "name": "I126_01_APPROVAL_I11",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "OPTYPE",
+        "FILENAME",
+        "ENVELOPEID"
+      ]
+    },
+    {
+      "no": 10,
+      "name": "I126_01_APPROVAL_I12",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ENVELOPEREF"
+      ]
+    },
+    {
+      "no": 11,
+      "name": "I126_01_APPROVAL_I13",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DOCNR"
+      ]
+    },
+    {
+      "no": 12,
+      "name": "I126_01_APPROVAL_I14",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "TRANSREF"
+      ]
+    },
+    {
+      "no": 13,
+      "name": "I126_01_APPROVAL_I15",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CURRENTDATE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "RECTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINECOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SENDER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXPLAIN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FILENAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ATTRIBUTE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ERRORCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SCROSS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SUBTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DECRYPTED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVERGROUPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTOMDATA1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTOMDATA2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTOMDATA3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTOMDATA4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PLUGID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "AUTOPACKREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OPTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DISPCOLOR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ARPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ENVELOPETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CONFIRMRES",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PROFILEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ENVELOPEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RESPCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "READFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GBLABEL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PKLABEL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "APPRFLOWSTAT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPRFLOWGRP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DOCEXPLAIN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "APPRFLOWACTION",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RESPONSECODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RESPONSEDESC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ENVELOPEID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "REFERENCEID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDERTITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RESPONSESTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DESPMATCHINGSTAT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SERVERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRINTCOUNT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DATATYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DATASIZE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EARCREPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OTHERWORKSP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GIBRESPONSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RCVRESPONSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LIFECYCLE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CURRENTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CURRENTTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EARCSENDMOD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CANCELLED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTAXTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTAXEXCLUSIVETOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DOCCURRENCY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SECONDKEY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTSTAT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTSTATDESC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPUSERTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CLRETAILDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CLRETAILVKN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CLRETAILEMAIL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DESPSHIPDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DESPSHIPTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVERUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EDOCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTOTALLOCAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DEPARTMENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WAREHOUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEMPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 13
+}

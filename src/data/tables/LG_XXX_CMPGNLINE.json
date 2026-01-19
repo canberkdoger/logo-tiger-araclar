@@ -1,0 +1,122 @@
+{
+  "tableName": "LG_XXX_CMPGNLINE",
+  "displayName": "Kampanya Satirlari",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_CMPGNLINE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_CMPGNLINE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CAMPCARDREF",
+        "LINENR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPCARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPLYTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CONDITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONDITION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROMISCLASS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PAYDEFREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

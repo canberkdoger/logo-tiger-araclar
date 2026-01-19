@@ -1,0 +1,81 @@
+{
+  "tableName": "LG_XXX_WSCHVAL",
+  "displayName": "Is Istasyonu Karakteristik Degerleri",
+  "description": "Is istasyonu karakteristik kodlarina ait degerlerin tutuldugu tablo",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_CHARCODE",
+      "field": "CHARCODEREF",
+      "description": "Ozellik kod referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "CHARCODEREF", "length": "25 bytes", "type": "VarChar"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "VALNO", "length": "51 bytes", "type": "VarChar"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "CHARCODEREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "CODE", "length": "25 bytes", "type": "VarChar"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "CHARCODEREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "NAME", "length": "51 bytes", "type": "VarChar"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "CHARCODEREF",
+      "type": "int",
+      "description": "Ozellik kod ref",
+      "relatedTable": "CHARCODE"
+    },
+    {
+      "name": "VALNO",
+      "type": "SmallInt",
+      "description": "Deger no"
+    },
+    {
+      "name": "CODE",
+      "type": "VarChar",
+      "description": "Kodu"
+    },
+    {
+      "name": "NAME",
+      "type": "VarChar",
+      "description": "Aciklamasi"
+    }
+  ],
+  "commonQueries": []
+}

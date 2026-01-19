@@ -1,0 +1,162 @@
+{
+  "tableName": "LG_XXX_XX_GIBACCFICHE",
+  "displayName": "GIBACCFICHE",
+  "description": "",
+  "category": "Muhasebe",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_GIBACCFICHE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHENO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DOCDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DOCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VATTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GROSSTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NETTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALACTIVE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALPASSIVE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBDOCTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBDOCSERIALNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBDOCROWNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCLCARDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCLCARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCLCARDNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCLCARDSURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCREDITCARDTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCOUNTRYREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEFICHETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PERIODICITYDOCREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

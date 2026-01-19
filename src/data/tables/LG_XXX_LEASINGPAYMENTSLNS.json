@@ -1,0 +1,221 @@
+{
+  "tableName": "LG_XXX_LEASINGPAYMENTSLNS",
+  "displayName": "LEASINGPAYMENTSLNS",
+  "description": "",
+  "category": "Leasing",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_LEASINGPAYMENTSLNS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "INTTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MAINREMAINED",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "BOSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VATINPAYMENTTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WFSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BNACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LEASINGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BNFCHREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NPVTODAYVAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TENANCY",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RENTOBL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DEPRECIATION",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PROFITLOSS",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACTACCREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

@@ -1,0 +1,142 @@
+{
+  "tableName": "LG_XXX_XX_UETDSVOYAGE",
+  "displayName": "UETDSVOYAGE",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_UETDSVOYAGE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PLATENR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERTCNO1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PLATENR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERTCNO2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VOYAGEBEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "VOYAGEBEGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VOYAGEENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "VOYAGEENDTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMVOYAGENO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VOYAGEID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

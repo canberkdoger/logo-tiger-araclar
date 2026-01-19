@@ -1,0 +1,66 @@
+{
+  "tableName": "LG_XXX_APPROVEUSER",
+  "displayName": "APPROVEUSER",
+  "description": "",
+  "category": "Is Akisi",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_APPROVEUSER_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECORDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECORDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

@@ -1,0 +1,65 @@
+{
+  "tableName": "L_FIRMPARAMS",
+  "displayName": "Firma Parametreleri",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "FIRMPARAMS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "FIRMPARAMS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "FIRMNR",
+        "CODE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MODULENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VALUE",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

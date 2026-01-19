@@ -1,0 +1,130 @@
+{
+  "tableName": "LG_SLSFILES",
+  "displayName": "SLSFILES",
+  "description": "",
+  "category": "Satis",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "SLSFILES_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "SLSFILES_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ACTREF",
+        "FILENAME_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PATH",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FILENAME_",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FILETYPE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INDISK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

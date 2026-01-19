@@ -1,0 +1,36 @@
+{
+  "tableName": "LG_XXX_ASCOND",
+  "displayName": "Alis/Satis Kosullari",
+  "description": "Malzemeler icin alis ve satis kosullarini tanimlar. Cari hesap ve odeme kodu eslesmeleri yapilir.",
+  "category": "Satis",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": [
+    { "table": "LG_XXX_ITEMS", "description": "Malzeme kartlari", "field": "CARDREF" }
+  ],
+  "indexes": [
+    { "no": 1, "fields": ["LOGICALREF"], "type": "Primary" },
+    { "no": 2, "fields": ["LINENO_", "USETYPE", "LOGICALREF"], "type": "Index" }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres (Primary Key)", "isPrimaryKey": true },
+    { "name": "USETYPE", "type": "SmallInt", "description": "Alis / Satis" },
+    { "name": "LINENO_", "type": "SmallInt", "description": "Satir no" },
+    { "name": "CARDREF", "type": "Int", "description": "Kart referansi (ITEMS)" },
+    { "name": "LINETYPE", "type": "SmallInt", "description": "Satir tipi" },
+    { "name": "ACTIVE", "type": "SmallInt", "description": "Durum (0: Kulanimda, 1: Kullanim disi)" },
+    { "name": "PRIORITY", "type": "SmallInt", "description": "Oncelik sirasi" },
+    { "name": "BEGDATE", "type": "DateTime", "description": "Baslangic tarihi" },
+    { "name": "ENDDATE", "type": "DateTime", "description": "Bitis tarihi" },
+    { "name": "CICODES", "type": "VarChar", "description": "Cari hesap kodu" },
+    { "name": "PAYCODES", "type": "VarChar", "description": "Odeme kodu" }
+  ],
+  "commonQueries": [
+    {
+      "name": "Malzeme Satis Kosullari",
+      "description": "Belirli bir malzemenin satis kosullarini listeler",
+      "sql": "SELECT LINENO_, PRIORITY, BEGDATE, ENDDATE, CICODES, PAYCODES FROM LG_{firmNo}_ASCOND WHERE CARDREF = {malzemeRef} AND USETYPE = 2 AND ACTIVE = 0"
+    }
+  ]
+}

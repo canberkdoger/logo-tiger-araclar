@@ -1,0 +1,195 @@
+{
+  "tableName": "LG_XXX_EMUHACC",
+  "displayName": "E-Muhasebe Hesap Kartlari",
+  "description": "E-Muhasebe hesap kodlari ve tanimlamalarini icerir. Muhasebe hesap plani ile entegrasyon saglar.",
+  "category": "Muhasebe",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_EMCENTER"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CODE"],
+      "type": "VarChar",
+      "property": "Dup, Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["DEFINITION_"],
+      "type": "VarChar",
+      "property": "Dup, Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["ACTIVE", "CODE", "DEFINITION_", "ACTIVE"],
+      "type": "Mixed",
+      "property": "ACTIVE, CODE, Dup Modif, ACTIVE"
+    },
+    {
+      "no": 5,
+      "fields": ["SITEID", "ORGLOGICREF"],
+      "type": "int",
+      "property": "Bolge no, Orjinal kayit referansi"
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "SmallInt",
+      "description": "0: Kullanim da, 1: Kullanim disi"
+    },
+    {
+      "name": "CODE",
+      "type": "VarChar",
+      "description": "Muhasebe kodu"
+    },
+    {
+      "name": "DEFINITION_",
+      "type": "VarChar",
+      "description": "Aciklama"
+    },
+    {
+      "name": "EXTNAME",
+      "type": "VarChar",
+      "description": "2. Aciklama"
+    },
+    {
+      "name": "SPECODE",
+      "type": "VarChar",
+      "description": "Ozel kod"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "VarChar",
+      "description": "Yetki kodu"
+    },
+    {
+      "name": "UNITS",
+      "type": "VarChar",
+      "description": "Birim"
+    },
+    {
+      "name": "ADDINFOPTR",
+      "type": "int",
+      "description": "Ek bilgi dosyasi referansi"
+    },
+    {
+      "name": "CENTERREF",
+      "type": "int",
+      "description": "Masraf merkezi referansi - EMCENTER"
+    },
+    {
+      "name": "CURRDIFREF",
+      "type": "int",
+      "description": "Kur farki hesabi referansi"
+    },
+    {
+      "name": "SUBACCOUNTS",
+      "type": "SmallInt",
+      "description": "Alt hesap sayisi (ic kullanim)"
+    },
+    {
+      "name": "LEVEL_",
+      "type": "SmallInt",
+      "description": "Seviye (ic kullanim)"
+    },
+    {
+      "name": "GROUPCODE",
+      "type": "SmallInt",
+      "description": "Grup kodu"
+    },
+    {
+      "name": "ACCTYPE",
+      "type": "SmallInt",
+      "description": "Hesap tipi (0: Borc, 1: Alacak, 2: Borc+Alacak)"
+    },
+    {
+      "name": "QUANCTRL",
+      "type": "SmallInt",
+      "description": "Seviye kontrolu"
+    },
+    {
+      "name": "CENTERCTRL",
+      "type": "SmallInt",
+      "description": "Masraf merkezi kontrolu"
+    },
+    {
+      "name": "EXTENREF",
+      "type": "int",
+      "description": "Ekstra dosya referansi"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Olusturan Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Olusturuldugu Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saat"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saniye"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Degistiren Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Degistirildigi Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saat"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saniye"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "Bolge no"
+    },
+    {
+      "name": "ORGLOGICALREF",
+      "type": "int",
+      "description": "Orjinal kayit referansi"
+    }
+  ],
+  "commonQueries": []
+}

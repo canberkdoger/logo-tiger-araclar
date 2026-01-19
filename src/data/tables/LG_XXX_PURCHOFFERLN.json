@@ -1,0 +1,1007 @@
+{
+  "tableName": "LG_XXX_PURCHOFFERLN",
+  "displayName": "PURCHOFFERLN",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_PURCHOFFERLN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_PURCHOFFERLN_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ORDFICHEREF",
+        "PURCHOFFNR",
+        "LINENO_"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_PURCHOFFERLN_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ORDFICHEREF",
+        "PURCHOFFNR",
+        "PREVLINEREF",
+        "PREVLINENO"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_PURCHOFFERLN_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FCTYP",
+        "ORDFICHEREF",
+        "PURCHOFFNR",
+        "DEMTRANSREF"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "I126_PURCHOFFERLN_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FCTYP",
+        "ORDFICHEREF",
+        "PURCHOFFNR",
+        "OFFTRANSREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STOCKREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORDFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLIENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PREVLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PREVLINENO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DETLINE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TIME_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GLOBTRANS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CALCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VATACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VATCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRVATACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRVATCENREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DELVRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SHIPPEDAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DISCPER",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DISTCOST",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DISTDISC",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DISTEXP",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DISTPROM",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VATAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VATMATRAH",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VATINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CLOSED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DORESERVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DUEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "BILLEDITEM",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PAYDEFREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXTENREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CPSTFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCECOSTGRP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPARTMENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENET",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SALESMANREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TRGFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORYNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WFSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NETDISCFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NETDISCPERC",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NETDISCAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CONDITIONREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRESERVED",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ONVEHICLE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS5",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPPOINT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PROMCLASITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REASONFORNOTSHP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GROSSUINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GROSSUINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CANCELLED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEMPEGGEDAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OFFERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORDERPARAM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMASGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "OFFTRANSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORDEREDAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "WITHPAYTRANS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREFS1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREFS2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREFS3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREFS4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPPOINTS1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPPOINTS2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPPOINTS3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPPOINTS4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREFS1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREFS2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREFS3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREFS4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRCLISTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AFFECTCOLLATRL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PURCHOFFNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEMFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DEMTRANSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ALTPROMFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REFLVATACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REFLVATOTHACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "AFFECTRISK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BOMREVREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ROUTINGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OPERATIONREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXCONVFACT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXAMNTISUPD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXDISCAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXCONVF",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EUVATSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXVATMATRAH",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPPAYDEFREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ORGDUEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ORGAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ORGPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RESERVEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CANDEDUCT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UNDERDEDUCTLIMIT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GLOBALID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEDUCTIONPART1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEDUCTIONPART2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTEXPVAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SHIPPEDAMNTSUGG",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RESERVEAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DEDUCTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BOMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEVIR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FAREGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VATEXCEPTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VATEXCEPTREASON",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ATAXEXCEPTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ATAXEXCEPTREASON",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPACODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GTIPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PUBLICCOUNTRYREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DISTDISCVAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ITMDISC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXEFFECTKDV",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXINLINENET",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DRAFTSTOCKNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRAFTSTOCKNAME2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRAFTSTOCKNAME3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTSTOCKREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PURCHOFFCAPTION",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 5
+}

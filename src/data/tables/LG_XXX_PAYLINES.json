@@ -1,0 +1,41 @@
+{
+  "tableName": "LG_XXX_PAYLINES",
+  "displayName": "Odeme Plani Satirlari",
+  "description": "Odeme planlarina ait satir detaylarini tutan tablo. Her odeme planinin vade tarihleri, formulleri ve indirim oranlari bu tabloda tutulur.",
+  "category": "Finans",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_PAYPLANS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "PAYPLANREF", "length": "4 bytes", "type": "int", "property": "Modif, Seg"},
+        {"field": "LINENO_", "length": "4 bytes", "type": "int", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "PAYPLANREF", "type": "int", "description": "Odeme plani referansi - PAYPLANS tablosuna baglanti"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Satir no"},
+    {"name": "AFTERDAYS", "type": "SmallInt", "description": "Tarihe eklenecek deger"},
+    {"name": "FORMULA", "type": "VarChar", "description": "Formul"},
+    {"name": "CONDITION", "type": "VarChar", "description": "Kosul"},
+    {"name": "DAY_", "type": "VarChar", "description": "Gun"},
+    {"name": "MOUNTH", "type": "VarChar", "description": "Ay"},
+    {"name": "YEAR_", "type": "VarChar", "description": "Yil"},
+    {"name": "RNDVALUE", "type": "int", "description": "Yuvarlama tabani"},
+    {"name": "ABSDATE", "type": "DateTime", "description": "Tarih"},
+    {"name": "DATETYPE", "type": "SmallInt", "description": "Tarih turu"},
+    {"name": "DISCRATE", "type": "Float", "description": "Indirim orani"}
+  ],
+  "commonQueries": []
+}

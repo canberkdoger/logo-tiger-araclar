@@ -1,0 +1,76 @@
+{
+  "tableName": "L_LOG",
+  "displayName": "LOG",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "LOG_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "LOG_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "LOGTYPE",
+        "SESSIONCODE",
+        "LINENR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOGTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MSGNUM1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MSGNUM2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SESSIONCODE",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

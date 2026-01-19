@@ -1,0 +1,65 @@
+{
+  "tableName": "LG_XXX_XX_EMFICHE",
+  "displayName": "Muhasebe Fisi",
+  "description": "EMFICHE tablosunda Muhasebe fislerinin baslik bilgileri tutulmaktadir. Muhasebe fis satirlari icin ise EMFLINE tablosu okunmalidir.",
+  "category": "Muhasebe",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_XX_EMFLINE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Modif, Seg"},
+        {"name": "FICHENO", "length": "9 bytes", "type": "ZString", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "DATE_", "length": "2 bytes", "type": "Date", "property": "Modif, Seg"},
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Modif, Seg"},
+        {"name": "FICHENO", "length": "9 bytes", "type": "ZString", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "MODULENR", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "CANCFREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "SITEID", "length": "4 bytes", "type": "int", "property": ""},
+        {"name": "ORGLOGICALREF", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "TRCODE", "type": "Integer", "description": "Fis turu (1:acilis 2:tahsil 3:tediye 4:mahsup 5:ozel 6:kur farki hesabi)"},
+    {"name": "FICHENO", "type": "ZString9", "description": "Fis numarasi"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "SPECODE", "type": "ZString11", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "ZString11", "description": "Yetki kodu"},
+    {"name": "DOCODE", "type": "ZString9", "description": "Belge no"},
+    {"name": "BRANCH", "type": "Integer", "description": "Is yeri"},
+    {"name": "DEPARTMENT", "type": "Integer", "description": "Bolum"},
+    {"name": "MODULENO", "type": "Byte", "description": "Modul numarasi (entegrasyon yapilan moduller)"},
+    {"name": "SOURCEFREF", "type": "LongInt", "description": "Ilgili moduldeki ilgili fisin referansi"},
+    {"name": "EXTENREF", "type": "LongInt", "description": "Extra dosya referansi"},
+    {"name": "GENEXP1", "type": "ZString51", "description": "Genel aciklama"},
+    {"name": "GENEXP2", "type": "ZString51", "description": "Genel aciklama"}
+  ],
+  "commonQueries": [],
+  "note": "YARIM KALAN TABLO: Bu tablo PDF'in sonunda kesilmis, GENEXP2 alanina kadar bilgi mevcut. Devami bir sonraki part'ta bulunabilir."
+}

@@ -1,0 +1,65 @@
+{
+  "tableName": "L_GTIP_DEF",
+  "displayName": "GTIP_DEF",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "GTIP_DEF_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "GTIP_DEF_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "GTIPREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "GTIP_DEF_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "GTIPREF",
+        "INDEX_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GTIPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INDEX_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DESCRIPTION",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

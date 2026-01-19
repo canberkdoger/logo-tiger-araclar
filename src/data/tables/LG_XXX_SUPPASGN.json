@@ -1,0 +1,148 @@
+{
+  "tableName": "LG_XXX_SUPPASGN",
+  "displayName": "Tedarikci/Musteri Atamalari",
+  "description": "Malzeme kartlarina atanan tedarikci ve musteri bilgilerinin tutuldugu tablo",
+  "category": "Tedarik Zinciri",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_ITEMS",
+      "field": "ITEMREF",
+      "description": "Malzeme karti referansi"
+    },
+    {
+      "tableName": "LG_XXX_CLCARD",
+      "field": "CLIENTREF",
+      "description": "Cari hesap referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "ITEMREF", "length": "4 bytes", "type": "Int"},
+        {"name": "LINENR", "length": "5 bytes", "type": "SmallInt"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "ITEMREF", "length": "4 bytes", "type": "Int"},
+        {"name": "CLIENTREF", "length": "4 bytes", "type": "Int"},
+        {"name": "CLCARDTYPE", "length": "5 bytes", "type": "SmallInt"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "CLIENTREF", "length": "4 bytes", "type": "Int"},
+        {"name": "SUPPLYTYPE", "length": "5 bytes", "type": "SmallInt"},
+        {"name": "ITEMREF", "length": "4 bytes", "type": "Int"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "Malzeme karti referansi",
+      "relatedTable": "ITEMS"
+    },
+    {
+      "name": "SUPPLYTYPE",
+      "type": "SmallInt",
+      "description": "Turu",
+      "values": [
+        {"value": 1, "description": "Musteri"},
+        {"value": 2, "description": "Tedarikci"}
+      ]
+    },
+    {
+      "name": "PRIORITY",
+      "type": "SmallInt",
+      "description": "Oncelik"
+    },
+    {
+      "name": "LINENR",
+      "type": "SmallInt",
+      "description": "Satir No"
+    },
+    {
+      "name": "CLIENTREF",
+      "type": "int",
+      "description": "Cari hesap referansi",
+      "relatedTable": "CLCARD"
+    },
+    {
+      "name": "CLCARDTYPE",
+      "type": "SmallInt",
+      "description": "Cari Hesap Turu",
+      "values": [
+        {"value": 0, "description": "Alici"},
+        {"value": 1, "description": "Satici"},
+        {"value": 2, "description": "Alici+Satici"}
+      ]
+    },
+    {
+      "name": "KKKCHECK",
+      "type": "SmallInt",
+      "description": "K.K. islemi Yapilmadiginda",
+      "values": [
+        {"value": 0, "description": "Isleme Devam Edilecek"},
+        {"value": 1, "description": "Kullanici Uyarilacak"},
+        {"value": 2, "description": "Islem Durdurulacak"}
+      ]
+    },
+    {
+      "name": "LEADTIME",
+      "type": "SmallInt",
+      "description": "Teslim/Temin Suresi"
+    },
+    {
+      "name": "MAXQUANTITY",
+      "type": "Float",
+      "description": "Azami Stok Seviyesi"
+    },
+    {
+      "name": "MINQUANTITY",
+      "type": "Float",
+      "description": "Asgari Stok Seviyesi"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "int",
+      "description": "Baslangic Tarihi"
+    },
+    {
+      "name": "SPECIALIZED",
+      "type": "SmallInt",
+      "description": "Ozellestirilmis",
+      "values": [
+        {"value": 0, "description": "Hayir"},
+        {"value": 1, "description": "Evet"}
+      ]
+    },
+    {
+      "name": "ICUSTSUPCODE",
+      "type": "VarChar",
+      "description": "Musteri/Tedarik Kodu"
+    }
+  ],
+  "commonQueries": []
+}

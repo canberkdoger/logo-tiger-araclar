@@ -1,0 +1,159 @@
+{
+  "tableName": "LG_XXX_XX_ANBDGTALLOCPRD",
+  "displayName": "ANBDGTALLOCPRD",
+  "description": "",
+  "category": "Butce",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_ANBDGTALLOCPRD_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_ANBDGTALLOCPRD_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "BDALLOCFCREF",
+        "BDALLOCLNREF",
+        "LINENO_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "FTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SRCBDGTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTBDGTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BDALLOCFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BDALLOCLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRCACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRCCRSACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRCCRSRACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTCRSACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTCRSRACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRDNO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRDBEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PRDENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DEBIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CREDIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGOID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

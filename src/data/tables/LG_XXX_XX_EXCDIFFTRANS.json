@@ -1,0 +1,92 @@
+{
+  "tableName": "LG_XXX_XX_EXCDIFFTRANS",
+  "displayName": "EXCDIFFTRANS",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_EXCDIFFTRANS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CLOSEDMODNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CLOSEDTRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CLOSEDSOURCEFREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLOSINGMODNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CLOSINGTRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CLOSINGSOURCEFREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DEBIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CREDIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CCURRENCY",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

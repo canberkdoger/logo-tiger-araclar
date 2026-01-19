@@ -1,0 +1,35 @@
+{
+  "tableName": "LG_XXX_XX_CLTOTFIL",
+  "displayName": "Cari Hesap Toplamlari",
+  "description": "CLTOTFIL tablosunda cari hesap kartlarina ait toplamlar aylik kayitlar halinde tutulmaktadir. Her hesap karti icin 14 adet toplam kaydi bulunmaktadir. Bu kayitlardan ilki devir ile aktarilan toplamlar icin, diger 13 kayit ise donem icerisindeki aylara ait toplam bilgileri icindir. Islem gormeyen aylar icin veri tabaninda kayit bulunmamaktadir. Cari hesap toplam kayitlarinda, toplamlar tum ayi kapsayan kayitlardir. Bir ayin belli bir bolumune ait toplamlari elde etmek icin cari hesap hareketleri taranmalidir.",
+  "category": "Cari Hesap",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_CLCARD"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "CARDREF", "length": "4 bytes", "type": "Integer", "property": "Modif"},
+        {"name": "TOTTYP", "length": "2 bytes", "type": "Integer", "property": "Modif"},
+        {"name": "MONTH_", "length": "2 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "CARDREF", "type": "LongInt", "description": "Kart referansi -> CLCARD"},
+    {"name": "TOTTYP", "type": "Integer", "description": "Toplam turu"},
+    {"name": "MONTH_", "type": "Integer", "description": "Ay"},
+    {"name": "DEBIT", "type": "Double", "description": "Borc"},
+    {"name": "CREDIT", "type": "Double", "description": "Alacak"}
+  ],
+  "commonQueries": []
+}

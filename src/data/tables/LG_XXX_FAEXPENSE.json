@@ -1,0 +1,86 @@
+{
+  "tableName": "LG_XXX_FAEXPENSE",
+  "displayName": "FAEXPENSE",
+  "description": "",
+  "category": "Sabit Kiymet",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_FAEXPENSE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAREGISTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAEXPITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAEXSTFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAEXSTLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAEXPTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAEXPBINDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "FAEXPFAREGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DEVIR",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

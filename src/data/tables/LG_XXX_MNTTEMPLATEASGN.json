@@ -1,0 +1,106 @@
+{
+  "tableName": "LG_XXX_MNTTEMPLATEASGN",
+  "displayName": "MNTTEMPLATEASGN",
+  "description": "",
+  "category": "Bakim",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_MNTTEMPLATEASGN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAREGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TEMPLATEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "MNTPREVENTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MNTINCIDENTAL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MNTPERIODICAL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORYNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

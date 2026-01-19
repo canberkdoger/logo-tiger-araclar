@@ -1,0 +1,919 @@
+{
+  "tableName": "L_CAPIUSER",
+  "displayName": "Kullanicilar",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIUSER_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIUSER_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "NR"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "CAPIUSER_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "NAME"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "KEY_",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS11",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS12",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS13",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS14",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS15",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS16",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS17",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS18",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS19",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS20",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS21",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS22",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS23",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS24",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS25",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS26",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS27",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS28",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS29",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS30",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS31",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS32",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS33",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS34",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS35",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS36",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS37",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS38",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS39",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS40",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS41",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS42",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS43",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS44",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS45",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS46",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS47",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS48",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS49",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS50",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS51",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS52",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS53",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS54",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS55",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS56",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS57",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS58",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS59",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS60",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS61",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS62",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS63",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS64",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS65",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS66",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS67",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS68",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS69",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS70",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS71",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS72",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS73",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS74",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS75",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS76",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS77",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS78",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS79",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS80",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS81",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS82",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS83",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS84",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS85",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS86",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS87",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS88",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS89",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS90",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS91",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS92",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS93",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS94",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS95",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS96",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS97",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS98",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS99",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPS100",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LANG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OPTIONS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BLOCKED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LOGFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INTFRES",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEFROLE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ROLES1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ROLES2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ROLES3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ROLES4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ROLES5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEREXT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UNIFLOG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DMCONN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WEBCONN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXTROLES1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXTROLES2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXTROLES3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXTROLES4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXTROLES5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SELLER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DIVNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPTNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WHNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KEYCDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DISABLED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRCLIMITGRP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BUDGETADMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PREVKEY1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREVKEY2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FOCUSADMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BLOCKEDTHEME",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVEDIRECTORYUSER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ADUSERCANNOTMODIFY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SINGLESIGNON",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WORKSPACE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LOCALCALDR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FORCERELOGIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FAILEDLOGINS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PHONENO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOGINBLCKCNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USERSURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MOBILSECURITYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FORCERELOGINMSG",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DONTSHOWLOGOBIPAGE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ONLYOBJECT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OBJECTFULLRIGHT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FAXUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAXUSERKEY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAXUSEREMAIL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "KEY_MD5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCESSTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KVKKUSER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USRPROJECTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SELLERADMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "IDMTRANSFERRED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEIDMUSER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "IDMLOGINNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYROLLUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYROLLUSERKEY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "IDMUSERID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FLOWUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LIMITADMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "B2BUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

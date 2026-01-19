@@ -1,0 +1,90 @@
+{
+  "tableName": "LG_XXX_XX_CLFICHE",
+  "displayName": "Cari Hesap Fisleri",
+  "description": "CLFICHE tablosunda cari hesap fislerinin baslik bilgileri bulunmaktadir. Cari hesap hareketleri bilgilerine ulasmak icin CLFLINE tablosu okunmalidir.",
+  "category": "Cari Hesap",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_XX_CLFLINE", "LG_XXX_XX_EMFICHE", "LG_XXX_XX_EMUHACC", "LG_XXX_XX_EMCENTER"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "FICHENO", "length": "9 bytes", "type": "ZString", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "DATE_", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "FICHENO", "length": "9 bytes", "type": "ZString", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "ACCFICHEREF", "length": "4 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "SITEID", "length": "4 bytes", "type": "Int", "property": ""},
+        {"name": "ORGLOGICREF", "length": "4 bytes", "type": "Int", "property": ""},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Longint", "description": "Fiziksel adres referansi"},
+    {"name": "FICHENO", "type": "ZString9", "description": "Fis Numarasi"},
+    {"name": "DATE_", "type": "Longint", "description": "Tarih"},
+    {"name": "DOCODE", "type": "ZString9", "description": "Belge no"},
+    {"name": "TRCODE", "type": "Integer", "description": "Hareket turu (1:Nakit tahsilat, 2:Borc odeme, 3:Borc dekontu, 4:Alacak dekontu, 5:Virman fisi, 6:Kur farki fisi, 12:Ozel fis, 14:Acilis fisi, 41:Verilen vade farki faturasi, 42:Alinan vade farki faturasi)"},
+    {"name": "SPECCODE", "type": "ZString11", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "ZString11", "description": "Yetki kodu"},
+    {"name": "BRANCH", "type": "Integer", "description": "Is yeri"},
+    {"name": "DEPARTMENT", "type": "Integer", "description": "Bolum"},
+    {"name": "GENEXP1", "type": "ZString51", "description": "Aciklama"},
+    {"name": "GENEXP2", "type": "ZString51", "description": "Aciklama"},
+    {"name": "GENEXP3", "type": "ZString51", "description": "Aciklama"},
+    {"name": "GENEXP4", "type": "ZString51", "description": "Aciklama"},
+    {"name": "DEBIT", "type": "Double", "description": "Borc"},
+    {"name": "CREDIT", "type": "Double", "description": "Alacak"},
+    {"name": "REPDEBIT", "type": "Double", "description": "Borc (Raporlama Dovizi)"},
+    {"name": "REPCREDIT", "type": "Double", "description": "Alacak (Raporlama Dovizi)"},
+    {"name": "CAPIBLOK_CREATEDBY", "type": "Integer", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_CREATEDDATE", "type": "LongInt", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOK_CREATEDHOUR", "type": "Integer", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOK_CREATEDMIN", "type": "Integer", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOK_CREATEDSEC", "type": "Integer", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOK_MODIFIEDBY", "type": "Integer", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_MODIFIEDDATE", "type": "LongInt", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOK_MODIFIEDHOUR", "type": "Integer", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOK_MODIFIEDMIN", "type": "Integer", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOK_MODIFIEDSEC", "type": "Integer", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "ACCOUNTED", "type": "Byte", "description": "Muhasebelesmis (E/H)"},
+    {"name": "INVOREF", "type": "Longint", "description": "Cari hesap istihbarat bilgileri referansi"},
+    {"name": "CASHACCREF", "type": "Longint", "description": "Kasa muhasebe hesabi referansi -> EMUHACC"},
+    {"name": "CASHCENREF", "type": "Longint", "description": "Kasa masraf merkezi referansi -> EMCENTER"},
+    {"name": "PRINTCNT", "type": "Integer", "description": "Toplam kac kez basildi"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal edilmis (0:Hayir 1:Evet)"},
+    {"name": "CANCELLEDACC", "type": "Byte", "description": "Muhasebelestirme iptal (0:Hayir 1:Evet)"},
+    {"name": "ACCFICHEREF", "type": "LongInt", "description": "Muhasebe Fisi Referansi -> EMFLINE"},
+    {"name": "GENEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Genel)"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Satir)"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1:Evet, 0:Hayir)"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": []
+}

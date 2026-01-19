@@ -1,0 +1,77 @@
+{
+  "tableName": "LG_XXX_XX_TMPACASGN",
+  "displayName": "TMPACASGN",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_TMPACASGN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DIIBLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INVEXIMLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLSDAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CLSDUOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLSDUSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLSDTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

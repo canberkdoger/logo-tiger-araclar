@@ -1,0 +1,33 @@
+{
+  "tableName": "LG_XXX_XX_PERDOC",
+  "displayName": "Periyodik Dokuman",
+  "description": "Periyodik dokuman bilgilerinin tutuldugu ic kullanim tablosu.",
+  "category": "Sistem",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LREF", "INFOTYP", "INFOREF", "DOCTYP", "DOCNR"],
+      "type": "Composite",
+      "properties": ""
+    },
+    {
+      "no": 2,
+      "fields": ["LREF"],
+      "type": "image",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LREF", "type": "int", "description": "Fiziksel Adres"},
+    {"name": "INFOTYP", "type": "SmallInt", "description": "Ic kullanim"},
+    {"name": "INFOREF", "type": "int", "description": "Ic kullanim"},
+    {"name": "DOCTYP", "type": "int", "description": "Ic kullanim"},
+    {"name": "DOCNR", "type": "int", "description": "Ic kullanim"},
+    {"name": "LDATA", "type": "image", "description": "Ic kullanim"}
+  ],
+  "commonQueries": []
+}

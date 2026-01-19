@@ -1,0 +1,77 @@
+{
+  "tableName": "LG_XXX_ITMBOMAS",
+  "displayName": "Malzeme Urun Recetesi Iliskileri",
+  "description": "Malzeme kartlari ile urun receteleri arasindaki iliskileri tanimlar. Hangi malzemenin hangi reçete ile kullanilabilecegini belirler.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_BOMASTER"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "int",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["ITEMREF", "BOMREF", "LOGICALREF"],
+      "type": "int",
+      "property": "Dup, Modif, Seg"
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "Malzeme karti referansi - ITEMS"
+    },
+    {
+      "name": "BOMREF",
+      "type": "int",
+      "description": "Urun recetesi atamasi - BOMASTER"
+    },
+    {
+      "name": "RELTYPE",
+      "type": "SmallInt",
+      "description": "Malzeme-Urun recetesi iliskisi Turu (0: Genel, 1: Muhendislik, 2: Uretim, 3: Maliyetlendirme)"
+    },
+    {
+      "name": "FACTORYNR",
+      "type": "SmallInt",
+      "description": "Fabrika no"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "SmallInt",
+      "description": "Oncelik"
+    },
+    {
+      "name": "LINENR",
+      "type": "SmallInt",
+      "description": "Satir no"
+    },
+    {
+      "name": "MAXQUANTITY",
+      "type": "Float",
+      "description": "Maksimum miktar"
+    },
+    {
+      "name": "MINQUANTITY",
+      "type": "Float",
+      "description": "Minimum miktar"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "DateTime",
+      "description": "Baslangic tarihi"
+    }
+  ],
+  "commonQueries": []
+}

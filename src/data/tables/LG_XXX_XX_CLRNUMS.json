@@ -1,0 +1,57 @@
+{
+  "tableName": "LG_XXX_XX_CLRNUMS",
+  "displayName": "Cari Hesap Risk Rakamlari Portu",
+  "description": "CLRNUMS tablosunda cari hesaba ait risk bilgileri ve o cari hesaba ait odenmeyen ya da protesto olan cek ya da senetlerinin toplamini gosteren bilgiler tutulmaktadir.",
+  "category": "Cari Hesap",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_CLCARD"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "CLCARDREF", "length": "4 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "CLCARDREF", "type": "LongInt", "description": "Cari hesap referansi -> CLCARD"},
+    {"name": "RISKTYPE", "type": "Byte", "description": "Risk turu"},
+    {"name": "RISKOVER", "type": "Byte", "description": "Risk kontrol"},
+    {"name": "PS", "type": "Double", "description": "Protestolu senetler"},
+    {"name": "KC", "type": "Double", "description": "Karsiliksis cekler"},
+    {"name": "RISKTOTAL", "type": "Double", "description": "Risk toplami"},
+    {"name": "DESPRISKTOTAL", "type": "Double", "description": "Irsaliye riski toplami"},
+    {"name": "RISKLIMIT", "type": "Double", "description": "Risk limiti"},
+    {"name": "RISKBALANCED", "type": "Double", "description": "Karsilanan risk"},
+    {"name": "CEKRISKFACTOR", "type": "Double", "description": "Cek risk carpani"},
+    {"name": "SENETRISKFACTOR", "type": "Double", "description": "Senet risk carpani"},
+    {"name": "CEK0_DEBIT", "type": "Double", "description": "Cek"},
+    {"name": "CEK0_CREDIT", "type": "Double", "description": "Cek"},
+    {"name": "CEK1_DEBIT", "type": "Double", "description": "Cek"},
+    {"name": "CEK1_CREDIT", "type": "Double", "description": "Cek"},
+    {"name": "SENET0_DEBIT", "type": "Double", "description": "Senet"},
+    {"name": "SENET0_CREDIT", "type": "Double", "description": "Senet"},
+    {"name": "SENET1_DEBIT", "type": "Double", "description": "Senet"},
+    {"name": "SENET1_CREDIT", "type": "Double", "description": "Senet"},
+    {"name": "CEKCURR0_DEBIT", "type": "Double", "description": "Cek"},
+    {"name": "CEKCURR0_CREDIT", "type": "Double", "description": "Cek"},
+    {"name": "CEKCURR1_DEBIT", "type": "Double", "description": "Cek"},
+    {"name": "CEKCURR1_CREDIT", "type": "Double", "description": "Cek"},
+    {"name": "SENETCURR0_DEBIT", "type": "Double", "description": "Senet"},
+    {"name": "SENETCURR0_CREDIT", "type": "Double", "description": "Senet"},
+    {"name": "SENETCURR1_DEBIT", "type": "Double", "description": "Senet"},
+    {"name": "SENETCURR1_CREDIT", "type": "Double", "description": "Senet"},
+    {"name": "ORDRISKOVER", "type": "Byte", "description": "Siparis Risk Asimi"},
+    {"name": "DESPRISKOVER", "type": "Byte", "description": "Irsaliye Risk Asimi"}
+  ],
+  "commonQueries": []
+}

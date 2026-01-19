@@ -1,0 +1,46 @@
+{
+  "tableName": "LG_XXX_PRVOPASG",
+  "displayName": "Onceki Operasyon Atamalari",
+  "description": "Uretim rotalari icin onceki operasyon atamalari tablosu. Operasyonlar arasi cakisma oranlari tanimlanir.",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": [
+    "LG_XXX_ROUTING",
+    "LG_XXX_RTNGLINE",
+    "LG_XXX_OPERTION"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["ROUTINGREF", "PREVOPREF", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 3,
+      "fields": ["ROUTLINEREF", "PREVOPREF", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 4,
+      "fields": ["PREVOPREF", "ROUTLINEREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "ROUTINGREF", "type": "int", "description": "Uretim rotalari karti (ROUTING)"},
+    {"name": "ROUTLINEREF", "type": "int", "description": "Uretim rotalari satirlari karti (RTNGLINE)"},
+    {"name": "LINEOPREF", "type": "int", "description": "Satir operasyon referansi (OPERTION)"},
+    {"name": "PREVOPREF", "type": "int", "description": "Onceki operasyon referansi (OPERTION)"},
+    {"name": "OVERLAPPER", "type": "Float", "description": "Cakisma orani"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,67 @@
+{
+  "tableName": "L_CAPIDO",
+  "displayName": "CAPIDO",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIDO_I2",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIDO_I1",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "INFOTYP",
+        "INFOREF",
+        "DOCTYP",
+        "DOCNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INFOTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INFOREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYP",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

@@ -1,0 +1,35 @@
+{
+  "tableName": "LG_XXX_LOGREP",
+  "displayName": "Log Kayitlari",
+  "description": "Sistem log kayitlarini tutan tablo. Farkli log tipleri ve satirlari icin aciklama ve genel amacli sayisal degerler icerir.",
+  "category": "Sistem",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "LOGTYPE", "length": "2 bytes", "type": "Integer", "property": "Modif, Seg"},
+        {"field": "LINENR", "length": "4 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "LOGTYPE", "type": "SmallInt", "description": "Tutulan log tipi"},
+    {"name": "LINENR", "type": "int", "description": "Satir numarasi"},
+    {"name": "LINETYPE", "type": "SmallInt", "description": "Log satiri tipi"},
+    {"name": "LINEEXP", "type": "VarChar", "description": "Log satiri aciklamasi"},
+    {"name": "MSGNUM1", "type": "int", "description": "Genel amacli LongInt1"},
+    {"name": "MSGNUM2", "type": "int", "description": "Genel amacli LongInt2"}
+  ],
+  "commonQueries": []
+}

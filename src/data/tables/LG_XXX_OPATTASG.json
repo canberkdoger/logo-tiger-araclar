@@ -1,0 +1,34 @@
+{
+  "tableName": "LG_XXX_OPATTASG",
+  "displayName": "Operasyon Ozellik Atamalari",
+  "description": "Operasyon ihtiyaclari ile is istasyonu ozellik atamalari arasindaki iliskiyi tutan tablo.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_WSATTASG", "LG_XXX_WSATTVAS", "LG_XXX_OPRTREQ"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "WSATTASGREF", "length": "4 bytes", "type": "Int", "property": "Modif, Seg"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"},
+        {"field": "OPREQREF", "length": "4 bytes", "type": "Int", "property": ""},
+        {"field": "WSATTVALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "WSATTASGREF", "type": "Int", "description": "Is istasyonu ozellik atamasi - WSATTASG tablosuna baglanti"},
+    {"name": "WSATTVALREF", "type": "Int", "description": "Is istasyonu ozellik degeri atamasi - WSATTVAS tablosuna baglanti"},
+    {"name": "OPREQREF", "type": "Int", "description": "Operasyon ihtiyaclari karti - OPRTREQ tablosuna baglanti"}
+  ],
+  "commonQueries": []
+}

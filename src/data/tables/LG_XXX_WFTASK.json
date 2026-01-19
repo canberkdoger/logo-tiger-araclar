@@ -1,0 +1,541 @@
+{
+  "tableName": "LG_XXX_WFTASK",
+  "displayName": "WFTASK",
+  "description": "",
+  "category": "Is Akisi",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_WFTASK_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_WFTASK_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CODE"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_WFTASK_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "USERNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WFCARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WFLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LEVEL_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TASKDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "BEGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ENDTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COMPLETEDPER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WFROLEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TASKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PROCESSTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PERTASKREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REMINDCOUNT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REMINDER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REMINDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "REMINDTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REMINDDAY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REMINDMINUTE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEFINITION_",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WORKPLACETYPE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECORDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECORDPERIOD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTTASKREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECORDCUROP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVESTAT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WARNED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TASKGRPNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ACTENDTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DELAYSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SENDWARN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WARNTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WARNUSERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WARNROLEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WARNSENDED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BEGINMAILGROUP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ENDMAILGROUP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BEGINALERT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ENDALERT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPEATTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REPTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REPMONTH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPDAY36",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPDAY7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPDAY6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPYEARSPIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPMONTHSPIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPDAYSPIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPHOURSPIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPMINSPIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BEGINREPEATINGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BEGINREPEATINGDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ENDREPEATINGTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ENDREPEATINGDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ENDREPEATINGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ENDREPEATINGCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TASKPARAMS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WAITTIME",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CARDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILTO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILCC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILBCC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILROLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILTO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILCC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILBCC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILROLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MAILTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ISSMS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SENDMAILREPORT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USESMS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BEGTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ENDTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ARRIVALS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "COLLECTIONS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROCUREMENTS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SALESMANREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

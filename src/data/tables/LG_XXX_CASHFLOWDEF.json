@@ -1,0 +1,51 @@
+{
+  "tableName": "LG_XXX_CASHFLOWDEF",
+  "displayName": "Nakit Akis Tanimlari",
+  "description": "",
+  "category": "Kasa",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_CASHFLOWDEF_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

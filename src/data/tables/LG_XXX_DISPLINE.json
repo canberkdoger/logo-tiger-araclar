@@ -1,0 +1,94 @@
+{
+  "tableName": "LG_XXX_DISPLINE",
+  "displayName": "Uretim Emri Operasyon Satirlari",
+  "description": "Uretim emirlerindeki operasyon satir bilgilerini iceren tablo. Her satir bir uretim operasyonunu ve onun planlama/gerceklesme bilgilerini icerir.",
+  "category": "Uretim",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_ROUTING", "LG_XXX_OPERATION", "LG_XXX_OPREQREF", "LG_XXX_WORKSTAT"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["PRODORDREF", "LINENO_"],
+      "type": "int, VarChar",
+      "properties": ""
+    },
+    {
+      "no": 3,
+      "fields": ["WSREF", "LOGICALREF", "DEFINITION_"],
+      "type": "int, Auto Increment, VarChar",
+      "properties": "Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["PRODORDREF", "ROUTLINEREF", "LOGICALREF"],
+      "type": "int, int, Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 5,
+      "fields": ["PRODORDREF", "LINENO_", "OPBEGDATE", "OPBEGTIME", "LOGICALREF"],
+      "type": "Int, VarChar, DateTime, Int, Int",
+      "properties": "Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "PRODORDREF", "type": "Int", "description": "Uretim emirler referansi"},
+    {"name": "LINENO_", "type": "VarChar", "description": "Satir No"},
+    {"name": "ROUTLINEREF", "type": "Int", "description": "Uretim rotasi referansi - ROUTING"},
+    {"name": "OPERATIONREF", "type": "int", "description": "Operasyon referansi - OPERATION"},
+    {"name": "QCOPOK", "type": "SmallInt", "description": "Kalite kontrol sonucu uygun"},
+    {"name": "OPREQREF", "type": "int", "description": "Operasyon ihtiyaclari referansi - OPREQREF"},
+    {"name": "WSREF", "type": "int", "description": "Is istasyonu referansi - WORKSTAT"},
+    {"name": "WSDAILYOPTIME", "type": "int", "description": "Is istasyonu gunluk calisma saati"},
+    {"name": "WSWORKINGDAYS", "type": "SmallInt", "description": "Is istasyonu calisma gunleri"},
+    {"name": "SCHEDULED", "type": "SmallInt", "description": "Cizelgelenmis"},
+    {"name": "RELEASED", "type": "SmallInt", "description": "Serbest birakilmis"},
+    {"name": "OPBEGDATE", "type": "DateTime", "description": "Planlanan operasyon baslangic tarihi"},
+    {"name": "OPBEGTIME", "type": "int", "description": "Planlanan operasyon baslangic saati"},
+    {"name": "OPDUEDATE", "type": "DateTime", "description": "Planlanan operasyon bitis tarihi"},
+    {"name": "OPDUETIME", "type": "int", "description": "Planlanan operasyon bitis saati"},
+    {"name": "SETUPTIME", "type": "Float", "description": "Hazirlik suresi"},
+    {"name": "RUNTIME", "type": "Float", "description": "Islem suresi (saat)"},
+    {"name": "ACTBEGDATE", "type": "DateTime", "description": "Gerceklesen operasyon baslangic tarihi"},
+    {"name": "ACTBEGTIME", "type": "int", "description": "Gerceklesen operasyon baslangic saati"},
+    {"name": "ACTDUEDATE", "type": "DateTime", "description": "Gerceklesen operasyon bitis tarihi"},
+    {"name": "ACTDUETIME", "type": "int", "description": "Gerceklesen operasyon bitis saati"},
+    {"name": "ACTDURATION", "type": "Float", "description": "Gerceklesen sure"},
+    {"name": "LINESTATUS", "type": "SmallInt", "description": "Durumu (0:Baslamadi, 1:Devam Ediyor, 2:Durduruldu, 3:Tamamlandi, 4:Kapandi)"},
+    {"name": "STDMATERIALCOST", "type": "Float", "description": "Standart malzeme maliyeti"},
+    {"name": "STDEQUIPTCOST", "type": "Float", "description": "Standart arac maliyeti"},
+    {"name": "STDWSCOST", "type": "Float", "description": "Standart is istasyonu maliyeti"},
+    {"name": "STDLABORCOST", "type": "Float", "description": "Standart iscilik maliyeti"},
+    {"name": "STDOVERHCOST", "type": "Float", "description": "Standart genel gider payi"},
+    {"name": "STDTOTALCOST", "type": "Float", "description": "Standart toplam maliyet"},
+    {"name": "ACTMATERIALCOST", "type": "Float", "description": "Gerceklesen malzeme maliyeti"},
+    {"name": "ACTEQUIPTCOST", "type": "Float", "description": "Gerceklesen arac maliyeti"},
+    {"name": "ACTWSCOST", "type": "Float", "description": "Gerceklesen is istasyonu maliyeti"},
+    {"name": "ACTLABORCOST", "type": "Float", "description": "Gerceklesen iscilik maliyeti"},
+    {"name": "ACTOVERHCOST", "type": "Float", "description": "Gerceklesen genel gider payi"},
+    {"name": "ACTTOTALCOST", "type": "Float", "description": "Gerceklesen toplam maliyet"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir uretim emrinin operasyonlarini listele",
+      "query": "SELECT * FROM LG_XXX_DISPLINE WHERE PRODORDREF = @UretimEmriRef ORDER BY LINENO_"
+    },
+    {
+      "description": "Devam eden operasyonlari listele",
+      "query": "SELECT * FROM LG_XXX_DISPLINE WHERE LINESTATUS = 1"
+    },
+    {
+      "description": "Belirli bir is istasyonundaki operasyonlari listele",
+      "query": "SELECT * FROM LG_XXX_DISPLINE WHERE WSREF = @IsIstasyonuRef ORDER BY OPBEGDATE"
+    }
+  ]
+}

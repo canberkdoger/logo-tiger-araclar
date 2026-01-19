@@ -1,0 +1,44 @@
+{
+  "tableName": "LG_XXX_COPRDBOM",
+  "displayName": "Yan Urun Recetesi",
+  "description": "Urun recetesindeki yan urun (co-product) bilgilerini iceren tablo. Uretim sirasinda ana urunle birlikte ortaya cikan yan urunleri tanimlar.",
+  "category": "Uretim",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": ["LG_XXX_BOMASTER", "LG_XXX_BOMREVSN", "LG_XXX_ITEMS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["BOMMASTERREF", "BOMREVREF", "COPRODREF"],
+      "type": "int, int, int",
+      "properties": ""
+    },
+    {
+      "no": 3,
+      "fields": ["COPRODREF", "BOMMASTERREF", "BOMREVREF"],
+      "type": "int, int, int",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "BOMMASTERREF", "type": "int", "description": "Urun recetesi referansi - BOMASTER"},
+    {"name": "BOMREVREF", "type": "int", "description": "Urun Recetesi Revizyon referansi - BOMREVSN"},
+    {"name": "COPRODREF", "type": "int", "description": "Yan urun referansi - ITEMS"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir recetenin yan urunlerini listele",
+      "query": "SELECT cb.*, i.CODE AS YanUrunKodu, i.NAME AS YanUrunAdi FROM LG_XXX_COPRDBOM cb INNER JOIN LG_XXX_ITEMS i ON cb.COPRODREF = i.LOGICALREF WHERE cb.BOMMASTERREF = @ReceteRef"
+    }
+  ]
+}

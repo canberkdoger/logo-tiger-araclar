@@ -1,0 +1,197 @@
+{
+  "tableName": "LG_XXX_XX_EXTRAINFO",
+  "displayName": "EXTRAINFO",
+  "description": "",
+  "category": "Sistem",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_EXTRAINFO_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WSNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DESCRIPTION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TIME_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT5",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT6",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT7",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT8",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT9",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_INT10",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR7",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR8",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR9",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VAR_STR10",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DAT_STR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DAT_STR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DAT_STR3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DAT_STR4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

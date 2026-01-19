@@ -1,0 +1,119 @@
+{
+  "tableName": "LG_HISTORY",
+  "displayName": "Tarihce",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "HISTORY_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "HISTORY_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TABLEID",
+        "DATAREF",
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "HISTORY_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "MODIFIEDDATE",
+        "MODIFIEDHOUR",
+        "MODIFIEDMIN",
+        "MODIFIEDSEC"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "HISTORY_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DATAGUID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TABLEID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATAREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MODIFTXT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATAGUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 4
+}

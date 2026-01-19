@@ -1,0 +1,58 @@
+{
+  "tableName": "LG_XXX_BNCARD",
+  "displayName": "Bankalar",
+  "description": "Banka tanım kartlarını içerir. Her banka için şube bilgileri ve iletişim bilgileri tutulur.",
+  "category": "Banka",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 6,
+  "relatedTables": [
+    { "table": "LG_XXX_BANKACC", "description": "Banka hesapları" },
+    { "table": "LG_XXX_XX_BNFICHE", "description": "Banka fişleri" }
+  ],
+  "indexes": [
+    { "no": 1, "fields": ["LOGICALREF"], "type": "Primary" },
+    { "no": 2, "fields": ["CODE"], "type": "Unique" },
+    { "no": 3, "fields": ["DEFINITION_", "LOGICALREF"], "type": "Index" }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres (Primary Key)", "isPrimaryKey": true },
+    { "name": "ACTIVE", "type": "SmallInt", "description": "Durum (0: Kullanımda, 1: Kullanım dışı)" },
+    { "name": "CODE", "type": "VarChar", "length": 12, "description": "Banka kodu" },
+    { "name": "DEFINITION_", "type": "VarChar", "description": "Banka adı" },
+    { "name": "BRANCH", "type": "VarChar", "description": "Şube adı" },
+    { "name": "SPECODE", "type": "VarChar", "description": "Özel kod" },
+    { "name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu" },
+    { "name": "BRANCHNO", "type": "VarChar", "description": "Şube numarası" },
+    { "name": "ADDR1", "type": "VarChar", "description": "Adres 1. Satır" },
+    { "name": "ADDR2", "type": "VarChar", "description": "Adres 2. Satır" },
+    { "name": "CITY", "type": "VarChar", "description": "Şehir" },
+    { "name": "COUNTRY", "type": "VarChar", "description": "Ülke" },
+    { "name": "POSTCODE", "type": "VarChar", "description": "Posta kodu" },
+    { "name": "TELNRS1", "type": "VarChar", "description": "Telefon numarası 1" },
+    { "name": "TELNRS2", "type": "VarChar", "description": "Telefon numarası 2" },
+    { "name": "FAXNR", "type": "VarChar", "description": "Faks numarası" },
+    { "name": "INCHARGE", "type": "VarChar", "description": "Yetkili" },
+    { "name": "EMAILADDR", "type": "VarChar", "description": "E-mail adresi" },
+    { "name": "WEBADDR", "type": "VarChar", "description": "İnternet adresi" },
+    { "name": "TEXTINC", "type": "SmallInt", "description": "Detay açıklama var" },
+    { "name": "SITEID", "type": "Int", "description": "Bölge no" },
+    { "name": "ORGLOGICREF", "type": "Int", "description": "Orijinal kayıt referansı" },
+    { "name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydı oluşturan kullanıcının kodu" },
+    { "name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydın oluşturulduğu tarih" },
+    { "name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydı değiştiren kullanıcının kodu" },
+    { "name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydın değiştirildiği tarih" }
+  ],
+  "commonQueries": [
+    {
+      "name": "Tüm Aktif Bankalar",
+      "description": "Kullanımda olan tüm bankaları listeler",
+      "sql": "SELECT CODE, DEFINITION_, BRANCH, BRANCHNO FROM LG_{firmNo}_BNCARD WHERE ACTIVE = 0 ORDER BY CODE"
+    },
+    {
+      "name": "Banka Detayı",
+      "description": "Belirli bir bankanın tüm bilgilerini getirir",
+      "sql": "SELECT * FROM LG_{firmNo}_BNCARD WHERE CODE = '{bankaKod}'"
+    }
+  ]
+}

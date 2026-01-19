@@ -1,0 +1,51 @@
+{
+  "tableName": "LG_XXX_ITEMOBTAINLIMIT",
+  "displayName": "ITEMOBTAINLIMIT",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_ITEMOBTAINLIMIT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OBTAINTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "OBTAINLIMIT",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

@@ -1,0 +1,358 @@
+{
+  "tableName": "LG_XXX_XX_EXIMWHTRANS",
+  "displayName": "EXIMWHTRANS",
+  "description": "",
+  "category": "Dis Ticaret",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_EXIMWHTRANS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_EXIMWHTRANS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF",
+        "LINENO_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMWHFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "FTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DESTINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AVAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GROSSUINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GROSSUINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PREVLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PREVLINENO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DETLINE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PRPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SRCACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRCCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "IMPPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UNITEXPENSE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "IMPCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "IMPRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAREGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADJPRICEUFRS",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADJREPPRICEUFRS",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMFILEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMPROCNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORIGINCNTRREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SRCEXPACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRCEXPCENREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTEXPACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTEXPCENREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

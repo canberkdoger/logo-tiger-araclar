@@ -1,0 +1,143 @@
+.container {
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Category Group */
+.categoryGroup {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.categoryGroup:last-child {
+  border-bottom: none;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-left: 3px solid transparent;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.categoryHeader i {
+  font-size: 0.875rem;
+}
+
+.count {
+  margin-left: auto;
+  background: var(--bg-tertiary);
+  padding: 0.125rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.625rem;
+}
+
+/* Endpoint List */
+.endpointList {
+  display: flex;
+  flex-direction: column;
+}
+
+.endpointItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.endpointItem:hover {
+  background: var(--bg-card-hover);
+}
+
+.endpointItem.selected {
+  background: var(--bg-card-hover);
+  border-left-color: var(--accent-primary);
+}
+
+/* Endpoint Info */
+.endpointInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.endpointName {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+  font-size: 0.8125rem;
+  color: var(--accent-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.endpointDesc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Method Badges */
+.methodBadges {
+  display: flex;
+  gap: 0.25rem;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.methodBadge {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.moreBadge {
+  font-size: 0.5625rem;
+  padding: 0.125rem 0.375rem;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  border-radius: 3px;
+}
+
+/* Empty State */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.empty i {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.5;
+}
+
+.empty p {
+  font-size: 0.875rem;
+  margin: 0;
+}

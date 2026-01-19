@@ -1,0 +1,67 @@
+{
+  "tableName": "LG_XXX_FICHESTATUS",
+  "displayName": "FICHESTATUS",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_FICHESTATUS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_FICHESTATUS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TYP",
+        "NAME"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEFAULT_",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

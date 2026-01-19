@@ -1,0 +1,312 @@
+{
+  "tableName": "LG_XXX_XX_EXIMWHFC",
+  "displayName": "EXIMWHFC",
+  "description": "",
+  "category": "Dis Ticaret",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_EXIMWHFC_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_EXIMWHFC_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TRCODE",
+        "FICHENO"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_EXIMWHFC_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TRCODE",
+        "DATE_",
+        "FTIME",
+        "FICHENO"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_01_EXIMWHFC_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "EXIMFILEREF",
+        "EXIMPROCNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FICHENO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "FTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMFILEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMPROCNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPARTMENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NETTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTEDCNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRINTCNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXPTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EISRVDSTTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRINTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FICIMPRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "FICIMPCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SHPAGNCOD",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 4
+}

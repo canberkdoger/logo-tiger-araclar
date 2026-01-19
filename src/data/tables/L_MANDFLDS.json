@@ -1,0 +1,606 @@
+{
+  "tableName": "L_MANDFLDS",
+  "displayName": "MANDFLDS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "MANDFLDS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "MANDFLDS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "MODULENR"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "MANDFLDS_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "MODULENR",
+        "LEVEL_",
+        "NR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODULENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LEVEL_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPTION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MANDATORY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE11",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE12",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE13",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE14",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE15",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE16",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE17",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE18",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE19",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE20",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE21",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE22",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE23",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE24",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE25",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE11",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE12",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE13",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE14",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE15",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE16",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE17",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE18",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE19",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE20",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE21",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE22",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE23",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE24",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRNTYPE25",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FRMSTRG1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FRMSTRG2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FRMSTRG3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FRMSTRG4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FRMSTRG5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FRMSTRCAP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LINEINFO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MANDMINLEN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MANDMAXLEN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MANDVALUETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPE10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EDESPATCHTYPE10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE11",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE12",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE13",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE14",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE15",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE16",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE17",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE18",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE19",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE20",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE21",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE22",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE23",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE24",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE25",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

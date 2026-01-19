@@ -1,0 +1,63 @@
+{
+  "tableName": "LG_XXX_CHARASGN",
+  "displayName": "Malzeme Karakteristik Atamalari",
+  "description": "Malzeme kartlarina atanan karakteristik deger bilgilerini iceren tablo. Malzeme ozelliklerinin tanimlanmasinda kullanilir.",
+  "category": "Stok",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 6,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_CHARCODE", "LG_XXX_CHARVAL"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CHARCODEREF", "ITEMREF", "CHARVALREF"],
+      "type": "int, int, int",
+      "properties": "Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["CHARVALREF", "ITEMREF", "CHARCODEREF"],
+      "type": "int, int, int",
+      "properties": "Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["ITEMREF", "LINENR", "LOGICALREF"],
+      "type": "Int, SmallInt, Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 5,
+      "fields": ["CHARVALREF", "ITEMREF", "CHARCODEREF"],
+      "type": "int, int, int",
+      "properties": "Modif"
+    },
+    {
+      "no": 6,
+      "fields": ["CHARCODEREF", "ITEMREF", "CHARVALREF"],
+      "type": "int, int, int",
+      "properties": "Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "ITEMREF", "type": "int", "description": "Malzeme karti referansi - ITEMS"},
+    {"name": "CHARCODEREF", "type": "int", "description": "Malzeme karakteristik referansi"},
+    {"name": "CHARVALREF", "type": "int", "description": "Malzeme karakteristik deger referansi"},
+    {"name": "LINENR", "type": "SmallInt", "description": "Satir No"},
+    {"name": "MATRIXLOC", "type": "SmallInt", "description": "0: Satir, 1: Sutun"},
+    {"name": "PRIORITY", "type": "SmallInt", "description": "Oncelik"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir malzemenin tum karakteristiklerini listele",
+      "query": "SELECT ca.*, cc.CODE AS KarakteristikKodu, cv.NAME AS DegerAdi FROM LG_XXX_CHARASGN ca INNER JOIN LG_XXX_CHARCODE cc ON ca.CHARCODEREF = cc.LOGICALREF INNER JOIN LG_XXX_CHARVAL cv ON ca.CHARVALREF = cv.LOGICALREF WHERE ca.ITEMREF = @MalzemeRef"
+    }
+  ]
+}

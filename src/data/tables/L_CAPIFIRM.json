@@ -1,0 +1,1204 @@
+{
+  "tableName": "L_CAPIFIRM",
+  "displayName": "Firmalar",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIFIRM_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIFIRM_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "NR"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "CAPIFIRM_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "NAME"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STREET",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ROAD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DOORNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ZIPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PHONE1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PHONE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAX",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXOFF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SECURNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DIRECT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPANAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPASTREET",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAROAD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPADOORNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPADISTRICT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPACITY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAPHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPATAXOFF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPATAXNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPACHAMBNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BEGMON",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BEGDAY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEREXT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTOFLEG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CTABLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WORKDAYFLGS1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WORKDAYFLGS2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WORKDAYFLGS3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WORKDAYFLGS4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WORKDAYFLGS5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WORKDAYFLGS6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WORKDAYFLGS7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LOCALCTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMREPCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SEPEXCHTABLE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VATROUNDMTD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMEUVATNUMBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MAJVERSNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MINVERSNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RELVERSNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGCHART",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOCALCALDR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMLANG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXOFFCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LONGPERIODS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LOGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WEBADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MODDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "MODTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TRADEREGISNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMPLOYERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMPLOYERSURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMPLOYERIDTCNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMPLOYEREMAIL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMYTLSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "YTLSOURCEFIRM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ZUSATZNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXOFFSTATECD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXOFFSTATENM",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATENAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAOCCUPATION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAEXTENSION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAEMAIL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPASURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAIDTCNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOFFICECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADVANCEDPRODUCT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BAGKURNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DBNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PASSWORD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACTAREA",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTOR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SRCCRITERIA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONSCODEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TCELLAPPID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TCELLAPPPW",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DNCNSTLEN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USESERVERDATE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USECHANGELOG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MOBUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MOBPASSWORD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MOBFIRMALIAS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCEPTEINV",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICEID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PROFILEID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USECOMMONPARAM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PASSIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAROLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PASSWORDTAXDECL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMEMAILADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NACECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPACOUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAZIPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAFAXNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPACNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USEEBOOK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CONTRACTDESC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONTRACTTYPE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONTRACTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CONTRACTNUMBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "HASHVERS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TIMESTAMPUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TIMESTAMPPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TIMESTAMPSERVER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USEPROXY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PTIMESTAMPUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PTIMESTAMPPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PTIMESTAMPHOST",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PTIMESTAMPPORT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TIMESTAMPPORT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TIMESTAMPAPPPTH",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "JGSERVERURL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "JGUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "JGPASSWORD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "JGCOMPANYNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "JGPERIODNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "JGHRFIRMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEDUCTLIMIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "POSTLABELCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDERLABELCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EINVCONTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EBOOKCONTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MERSISNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OFFICALTITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USEEARCHIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INTSALESADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAXUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAXUSERKEY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAXEMAILADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EBOOKSTARTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "EBOOKCURRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EARCENTSEND",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EARCENTUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EARCENTPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EARCENTDEFADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPATITLE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ISEBOOKKEPTBYFIRM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ISYMMCONTRACTMADE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "YMMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMSURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMCONTDESC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMCONTTYPE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMCONTDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "YMMCONTNUMBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LASTCONTROLNO",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LASTJOURNALNO",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LASTGLOBLINENO",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BACKUPEBOOKS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVCUSTOM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "YMMPHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMFAXNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMEMAIL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPSGK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXPAYERCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXPAYERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMCHAMBNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMTCNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMTAXNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USEEDESPATCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "POSTLABELCODEDESP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDERLABELCODEDESP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SHAALGORITHM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEPRODUCERREC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEETRADESMANINV",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CPAUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPAKDSPASSWORD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GETCPAFROMDIV",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LIQUIDATIONTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LIQUIDATINGDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LIQUIDATEDFIRM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEPAPERINV",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CPATCKN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SHPAGNCOD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USERCODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAROLE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PASSWORDTAXDECL2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMUTENTSEND",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EMUTENTUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMUTENTPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMUTENTDEFADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GETWHREXCHCUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXCHCURRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ISCCCLIENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WEBNAVISVCURL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ETURMOBTOKEN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MMGIBBOOKINTEG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MMGIBBOOKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MMGIBCLIENTID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MMGIBWORKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERWHNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERPASSWORD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSUSER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSDEFADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FLOWADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ESVCENTAPIKEY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILSERVERPORT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USEFIRMEMAIL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SSLTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USETLS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CARGOPASSWORD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CARGOUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USEOFFICIALFIRMTITLE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILADDRSMTP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILSERVERADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ORDCOMMITMENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "B2BUSERNAME2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "B2BPASSWORD1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "B2BPASSWORD2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "B2BADDRESS1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "B2BADDRESS2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "B2BUSERNAME1",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

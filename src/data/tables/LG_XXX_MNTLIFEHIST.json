@@ -1,0 +1,101 @@
+{
+  "tableName": "LG_XXX_MNTLIFEHIST",
+  "displayName": "MNTLIFEHIST",
+  "description": "",
+  "category": "Bakim",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_MNTLIFEHIST_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAREGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORDERFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "LIFETRACKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LIFETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LIFEVALUE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "OLDUSAGELIFE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NEWUSAGELIFE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

@@ -1,0 +1,67 @@
+{
+  "tableName": "L_FRMOD",
+  "displayName": "FRMOD",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "FRMOD_I2",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "FRMOD_I1",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "MODULE_",
+        "INFOTYPE",
+        "OBJID",
+        "INSTID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODULE_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INFOTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OBJID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INSTID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

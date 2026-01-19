@@ -1,0 +1,42 @@
+{
+  "tableName": "LG_XXX_XX_TRANSAC",
+  "displayName": "Mali Doneme Ait Parametreler",
+  "description": "Mali donemlerin onaylanmasindan sonra onay tarihlerinin saklandigi tablodur.",
+  "category": "Sistem",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 1,
+  "relatedTables": [],
+  "indexes": [
+    {"no": 1, "fields": [{"name": "LOGICALREF", "length": "4 bytes", "type": "Integer", "property": "Modif"}]}
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Longint", "description": "Fiziksel adres"},
+    {"name": "APPRDATES1", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES2", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES3", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES4", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES5", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES6", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES7", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES8", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES9", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES10", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES11", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES12", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES13", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES14", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES15", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES16", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES17", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES18", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES19", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "APPRDATES20", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "LASTJNDATE", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "LASTJNUMBER", "type": "Longint", "description": "Onaylama tarihi"},
+    {"name": "PERIODNR", "type": "Integer", "description": "Donem no"},
+    {"name": "PERIODBEGDATE", "type": "Longint", "description": "Donem basi tarihi"},
+    {"name": "PERIODENDDATE", "type": "Longint", "description": "Donem sonu tarihi"}
+  ],
+  "commonQueries": []
+}

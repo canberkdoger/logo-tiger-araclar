@@ -1,0 +1,33 @@
+{
+  "tableName": "L_SHPAGENT",
+  "displayName": "Sevkiyat Firmalari",
+  "description": "Sevkiyat firmasi tanimlarinin tutuldugu tablo.",
+  "category": "Sevkiyat",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "CODE", "length": "13 bytes", "type": "VarChar" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "int", "description": "Fiziksel adres" },
+    { "name": "CODE", "type": "VarChar", "description": "Sevkiyat firmasi kodu" },
+    { "name": "TITLE", "type": "VarChar", "description": "Sevkiyat firmasi unvani" },
+    { "name": "EMAIL", "type": "VarChar", "description": "E-mail adresi" },
+    { "name": "WEBADDR", "type": "VarChar", "description": "Internet adresi" },
+    { "name": "TRACKINGFORM", "type": "VarChar", "description": "Izleme formu" }
+  ],
+  "commonQueries": []
+}

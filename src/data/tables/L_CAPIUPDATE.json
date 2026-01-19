@@ -1,0 +1,69 @@
+{
+  "tableName": "L_CAPIUPDATE",
+  "displayName": "CAPIUPDATE",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIUPDATE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIUPDATE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "UPDATES"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "HR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MIN_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATES",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

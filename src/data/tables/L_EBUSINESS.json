@@ -1,0 +1,84 @@
+{
+  "tableName": "L_EBUSINESS",
+  "displayName": "EBUSINESS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "EBUSINESS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROGID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROGSERIALNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROFILESENDED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PROFILEACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COMPANYDEPLOYED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COMPANYACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRYCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REMINDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "BLASTDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BWEEKCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

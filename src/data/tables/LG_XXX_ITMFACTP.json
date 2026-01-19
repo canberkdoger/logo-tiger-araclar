@@ -1,0 +1,162 @@
+{
+  "tableName": "LG_XXX_ITMFACTP",
+  "displayName": "Malzeme Fabrika Parametreleri",
+  "description": "Malzeme kartlarinin fabrika bazli uretim ve planlama parametrelerini icerir. MRP, lot boyutlandirma ve temin sekli bilgileri.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_ITEMS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "int",
+      "property": ""
+    },
+    {
+      "no": 2,
+      "fields": ["ITEMREF", "FACTORYNR"],
+      "type": "int, SmallInt",
+      "property": ""
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "FACTORYNR",
+      "type": "SmallInt",
+      "description": "Fabrika no"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "Malzeme karti referansi - ITEMS"
+    },
+    {
+      "name": "SPECIALIZED",
+      "type": "SmallInt",
+      "description": "(0: Hayir, 1: Evet)"
+    },
+    {
+      "name": "PROCURECLASS",
+      "type": "SmallInt",
+      "description": "Temin sekli (0: Satinalma, 1: Uretim)"
+    },
+    {
+      "name": "LOWLEVELCODE",
+      "type": "int",
+      "description": "Dusuk seviye kodu"
+    },
+    {
+      "name": "DIVLOTSIZE",
+      "type": "SmallInt",
+      "description": "Uretimden girislerde lot buyuklugu (URETIM MIKTARI)"
+    },
+    {
+      "name": "MRPCNTRL",
+      "type": "SmallInt",
+      "description": "Su anda kullanilmiyor"
+    },
+    {
+      "name": "PLANPOLICY",
+      "type": "SmallInt",
+      "description": "Planlama yontemi"
+    },
+    {
+      "name": "LOTSIZINGMTD",
+      "type": "SmallInt",
+      "description": "Lot belirleme yontemi"
+    },
+    {
+      "name": "FIXEDLOTSIZE",
+      "type": "Float",
+      "description": "Sabit lot buyuklugu"
+    },
+    {
+      "name": "YIELD",
+      "type": "Float",
+      "description": "Verim"
+    },
+    {
+      "name": "MINORDERQTY",
+      "type": "Float",
+      "description": "Minimum siparis miktari"
+    },
+    {
+      "name": "MAXORDERQTY",
+      "type": "Float",
+      "description": "Maksimum siparis miktari"
+    },
+    {
+      "name": "MULTORDERQTY",
+      "type": "Float",
+      "description": "Siparis miktari carpani"
+    },
+    {
+      "name": "MINORDERDAY",
+      "type": "Float",
+      "description": "Minimum siparis gunu"
+    },
+    {
+      "name": "MAXORDERDAY",
+      "type": "Float",
+      "description": "Maksimum siparis gunu"
+    },
+    {
+      "name": "REORDERPOINT",
+      "type": "Float",
+      "description": "Yeniden siparis noktasi"
+    },
+    {
+      "name": "AUTOMTRISSUE",
+      "type": "SmallInt",
+      "description": "Otomatik malzeme cekisi"
+    },
+    {
+      "name": "PLANNERREF",
+      "type": "VarChar",
+      "description": "Planlayici referansi"
+    },
+    {
+      "name": "BUYERREF",
+      "type": "VarChar",
+      "description": "Alici (musteri) referansi"
+    },
+    {
+      "name": "SELADMINREF",
+      "type": "VarChar",
+      "description": "Satis yoneticisi referansi"
+    },
+    {
+      "name": "CSTANALYSTREF",
+      "type": "VarChar",
+      "description": "Maliyetten sorumlu personel referansi"
+    },
+    {
+      "name": "DEFSERILOTNO",
+      "type": "VarChar",
+      "description": "Lot seri no ilk degeri"
+    },
+    {
+      "name": "AUTOLOTOUTMTD",
+      "type": "SmallInt",
+      "description": "Sarf ve firelerde lot/seri belirleme yontemi (0: FIFO, 1: LIFO)"
+    },
+    {
+      "name": "LOTPARTY",
+      "type": "SmallInt",
+      "description": "Uretimden girislerde parti buyuklugu"
+    },
+    {
+      "name": "OUTLOTSIZE",
+      "type": "Float",
+      "description": "Cikis lot buyuklugu"
+    }
+  ],
+  "commonQueries": []
+}

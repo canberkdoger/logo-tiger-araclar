@@ -1,0 +1,86 @@
+{
+  "tableName": "LG_SATI",
+  "displayName": "SATI",
+  "description": "",
+  "category": "Satis",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "SATI_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "SATI_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "USERID",
+        "ITEMTYP"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "SATI_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "USERID",
+        "ITEMEXP"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USERID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTOM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "HASCHILD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FILTERREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

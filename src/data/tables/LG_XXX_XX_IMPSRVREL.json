@@ -1,0 +1,47 @@
+{
+  "tableName": "LG_XXX_XX_IMPSRVREL",
+  "displayName": "IMPSRVREL",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_IMPSRVREL_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRVCRDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INVOICEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DISTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

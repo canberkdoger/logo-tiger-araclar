@@ -1,0 +1,102 @@
+{
+  "tableName": "L_POSDEFS",
+  "displayName": "POSDEFS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "POSDEFS_I3",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "POSDEFS_I1",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CHARTREF",
+        "WORKID"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "POSDEFS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CHARTREF",
+        "UPID",
+        "CODE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CHARTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WORKID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UPID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DEPTNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNITNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ASSISTANT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXPCENTER",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

@@ -1,0 +1,163 @@
+{
+  "tableName": "LG_XXX_TARGETS",
+  "displayName": "Satis Hedefleri",
+  "description": "Satis elemanlari icin tanimlanan hedeflerin tutuldugu tablo",
+  "category": "Satis",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_SLSMAN",
+      "field": "SALESMANREF",
+      "description": "Satis elemani referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "SALESMANREF", "length": "4 bytes", "type": "int"},
+        {"name": "CODE", "length": "12 bytes", "type": "VarChar"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "SALESMANREF", "length": "4 bytes", "type": "int"},
+        {"name": "DEFINITION_", "length": "12 bytes", "type": "VarChar"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "int"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "CODE",
+      "type": "VarChar",
+      "description": "Hedef Kodu"
+    },
+    {
+      "name": "DEFINITION_",
+      "type": "VarChar",
+      "description": "Hedef Aciklamasi"
+    },
+    {
+      "name": "TYP",
+      "type": "SmallInt",
+      "description": "Hedef Tipi"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "int",
+      "description": "Baslangic Tarihi"
+    },
+    {
+      "name": "ENDDATE",
+      "type": "int",
+      "description": "Bitis Tarihi"
+    },
+    {
+      "name": "SALESMANREF",
+      "type": "int",
+      "description": "Satis Elemani Referansi",
+      "relatedTable": "SLSMAN"
+    },
+    {
+      "name": "STCODE",
+      "type": "VarChar",
+      "description": "Stok Kodu"
+    },
+    {
+      "name": "STGROUPCODE",
+      "type": "VarChar",
+      "description": "Stok Grup Kodu"
+    },
+    {
+      "name": "TARGETSALEAMOUNT",
+      "type": "Float",
+      "description": "Hedef Satis Miktari"
+    },
+    {
+      "name": "SALEAMOUNTLIMIT",
+      "type": "Float",
+      "description": "Miktar Siniri"
+    },
+    {
+      "name": "NETSALEAMOUNT",
+      "type": "Float",
+      "description": "Net Satis Miktari"
+    },
+    {
+      "name": "SALEDISCOUNTLIMIT",
+      "type": "Float",
+      "description": "Satis Indirim Limiti"
+    },
+    {
+      "name": "SALEEXPENSELIMIT",
+      "type": "Float",
+      "description": "Satis Masraf Limiti"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Olusturan Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Olusturuldugu Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saat"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saniye"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Degistiren Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Degistirildigi Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saat"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saniye"
+    }
+  ],
+  "commonQueries": []
+}

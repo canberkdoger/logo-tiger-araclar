@@ -1,0 +1,82 @@
+{
+  "tableName": "LG_XXX_XX_FCACCREF",
+  "displayName": "FCACCREF",
+  "description": "",
+  "category": "Muhasebe",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_FCACCREF_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_FCACCREF_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FICHEREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDTRANTYP",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

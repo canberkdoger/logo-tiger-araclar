@@ -1,0 +1,44 @@
+{
+  "tableName": "L_LBSLOADGRPRIGHTS",
+  "displayName": "LBSLOADGRPRIGHTS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "LBSLOADGRPRIGHTS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DLLNM",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

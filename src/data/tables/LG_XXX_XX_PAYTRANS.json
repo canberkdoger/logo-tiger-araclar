@@ -1,0 +1,58 @@
+{
+  "tableName": "LG_XXX_XX_PAYTRANS",
+  "displayName": "Odeme Hareketi",
+  "description": "Fatura, cari hesap, cek/senet, banka islemlerinde sonra odeme hareketleri olusmaktadir. Fatura geneli ya da satirlarinin odeme plani kartlarina baglanmasi durumunda odeme hareketleri odeme plani kartinda belirtilen formule gore olusturulur. Borc kapama isleminden sonra tum odeme hareketi kapanmamis ise kalan miktar icin yeni bir odeme hareketi olusturulmaktadir.",
+  "category": "Odeme",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 4,
+  "relatedTables": ["PAYPLANS", "STFICHE", "STLINE", "PAYTRANS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CARDREF", "TRCURR", "DATE_", "SIGN", "MODULENR", "FICHEREF"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 3,
+      "fields": ["MODULENR", "FICHEREF", "SIGN"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 4,
+      "fields": ["DATE_"],
+      "type": "Date",
+      "properties": "Dup, Modif, Seg"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel Adres"},
+    {"name": "CARDREF", "type": "LongInt", "description": "Ilgili kart referansi PAYPLANS"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "MODULENR", "type": "Integer", "description": "Kart modul numarasi (4:fatura 5:cari hesap 6:cek/senet 7:banka 10:kasa hareketi 61-62:cek/senet - cari hesap hareketi)"},
+    {"name": "SIGN", "type": "Integer", "description": "Borc / alacak"},
+    {"name": "FICHEREF", "type": "LongInt", "description": "Fis referansi STFICHE"},
+    {"name": "FICHELINEREF", "type": "LongInt", "description": "Fis satir referansi STLINE"},
+    {"name": "TRCODE", "type": "Integer", "description": "Ilgili fis turu"},
+    {"name": "TOTAL", "type": "Double", "description": "Tutar"},
+    {"name": "PAID", "type": "Double", "description": "Odenen tutar"},
+    {"name": "EARLYINTRATE", "type": "Double", "description": "Erken odeme faiz orani"},
+    {"name": "LATELYINTRATE", "type": "Double", "description": "Gec odeme faiz orani"},
+    {"name": "CROSSREF", "type": "LongInt", "description": "Karsi islem referansi PAYTRANS"},
+    {"name": "PAIDINCASH", "type": "Byte", "description": "Pesin odenmis (E/H)"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal edilmis (E/H)"},
+    {"name": "PROCDATE", "type": "LongInt", "description": "Islem tarihi"},
+    {"name": "TRCURR", "type": "Integer", "description": "Islem doviz turu"},
+    {"name": "TRRATE", "type": "Double", "description": "Islem doviz kuru"},
+    {"name": "REPORTRATE", "type": "Double", "description": "Raporlama doviz kuru"}
+  ],
+  "commonQueries": []
+}

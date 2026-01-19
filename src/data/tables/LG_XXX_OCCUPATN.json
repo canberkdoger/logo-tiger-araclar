@@ -1,0 +1,55 @@
+{
+  "tableName": "LG_XXX_OCCUPATN",
+  "displayName": "Kaynak Atamalari",
+  "description": "Uretim emirleri ve is emirleri icin calisan ve arac kaynak atamalarini tutan tablo. Planlanan ve gerceklesen baslangic/bitis tarihleri ile sure bilgilerini icerir.",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": ["LG_XXX_PRODORD", "LG_XXX_DISPLINE", "LG_XXX_EMPLOYEE", "LG_XXX_TOOLREQ"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "PRODORDREF", "length": "4 bytes", "type": "int", "property": "Modif, Seg"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "POLINEREF", "length": "4 bytes", "type": "Int", "property": "Modif"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "PRODORDREF", "type": "Int", "description": "Uretim emirleri karti - PRODORD tablosuna baglanti"},
+    {"name": "POLINEREF", "type": "Int", "description": "Is emri referansi - DISPLINE tablosuna baglanti"},
+    {"name": "OCCTYPE", "type": "SmallInt", "description": "Kaynak tipi (1: Calisan, 2: Arac)"},
+    {"name": "OCCEXP", "type": "VarChar", "description": "Kaynak aciklamasi"},
+    {"name": "LABORREQREF", "type": "int", "description": "Calisan ihtiyaclari karti - EMPLOYEE tablosuna baglanti"},
+    {"name": "EMPREF", "type": "Int", "description": "Calisan karti referansi - EMPLOYEE tablosuna baglanti"},
+    {"name": "TOOLREQREF", "type": "Int", "description": "Arac ihtiyaclari referansi - TOOLREQ tablosuna baglanti"},
+    {"name": "TOOLREF", "type": "Int", "description": "Arac karti referansi - TOOLREQ tablosuna baglanti"},
+    {"name": "BEGDATE", "type": "DateTime", "description": "Baslangic tarihi"},
+    {"name": "BEGTIME", "type": "Int", "description": "Baslangic saati"},
+    {"name": "ENDDATE", "type": "DateTime", "description": "Bitis tarihi"},
+    {"name": "ENDTIME", "type": "Int", "description": "Bitis saati"},
+    {"name": "DURATION", "type": "Float", "description": "Sure"},
+    {"name": "ACTBEGDATE", "type": "DateTime", "description": "Gerceklesen baslangic tarihi"},
+    {"name": "ACTBEGTIME", "type": "Int", "description": "Gerceklesen baslangic zamani"},
+    {"name": "ACTENDDATE", "type": "DateTime", "description": "Gerceklesen bitis tarihi"},
+    {"name": "ACTENDTIME", "type": "Int", "description": "Gerceklesen bitis zamani"},
+    {"name": "ACTDURATION", "type": "Float", "description": "Gerceklesen sure"},
+    {"name": "AMOUNT", "type": "Float", "description": "Miktar"}
+  ],
+  "commonQueries": []
+}

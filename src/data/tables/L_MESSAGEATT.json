@@ -1,0 +1,64 @@
+{
+  "tableName": "L_MESSAGEATT",
+  "displayName": "MESSAGEATT",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "MESSAGEATT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "MESSAGEATT_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "MESSAGEREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MESSAGEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ATTIDX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FILENAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FILESIZE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

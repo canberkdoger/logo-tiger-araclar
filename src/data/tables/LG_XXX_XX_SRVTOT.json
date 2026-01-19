@@ -1,0 +1,30 @@
+{
+  "tableName": "LG_XXX_XX_SRVTOT",
+  "displayName": "Hizmet Karti Toplamlari",
+  "description": "SRVTOT tablosunda hizmet kartlarinin aylik borc ve alacak hesap toplamlari tutulmaktadir. Her hizmet karti icin 14 adet toplam kaydi bulunmaktadir. Bu kayitlardan ilki devir ile aktarilan toplamlar icin, diger 13 kayit ise donem icerisindeki aylara ait toplam bilgileri icindir.",
+  "category": "Hizmet",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": [
+    {"table": "LG_XXX_SRVCARD", "field": "CARDREF", "description": "Hizmet karti referansi"}
+  ],
+  "indexes": [
+    {"no": 1, "fields": [{"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}]},
+    {"no": 2, "fields": [
+      {"name": "CARDREF", "length": "4 bytes", "type": "Integer", "property": "Modif"},
+      {"name": "INVENNO", "length": "2 bytes", "type": "Integer", "property": "Modif"},
+      {"name": "MONTH_", "length": "2 bytes", "type": "Integer", "property": "Modif"}
+    ]}
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "CARDREF", "type": "LongInt", "description": "Hizmet kart referansi SRVCARD"},
+    {"name": "INVENNO", "type": "Integer", "description": "Ambar numarasi"},
+    {"name": "MONTH_", "type": "Integer", "description": "Ay"},
+    {"name": "TOTALS_AMOUNT", "type": "Double", "description": "Aylik toplam satis tutarlari (tum aylar icin)"},
+    {"name": "TOTALS_CAHAMNT", "type": "Double", "description": "Aylik toplam satis tutarlari (tum aylar icin)"},
+    {"name": "TOTALS_CURRAMNT", "type": "Double", "description": "Aylik toplam satis tutarlari (tum aylar icin)"}
+  ],
+  "commonQueries": []
+}

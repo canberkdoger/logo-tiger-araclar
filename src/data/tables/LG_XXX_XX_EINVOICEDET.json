@@ -1,0 +1,497 @@
+{
+  "tableName": "LG_XXX_XX_EINVOICEDET",
+  "displayName": "E-Fatura Detaylari",
+  "description": "",
+  "category": "Fatura",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_EINVOICEDET_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_EINVOICEDET_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "INVOICEREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_EINVOICEDET_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "STFREF"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_01_EINVOICEDET_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ORDFCREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INVOICEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STFREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PROFILEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ESTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ESTARTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "EENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "EDESCRIPTION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EDURATION",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EDURATIONTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TUNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUSURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUPASSPORTNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUPASSPORTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TUNATIONALITY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUNATIONALITYNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUBANKNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUBNACCOUNTNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUBNBRANCH",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUPAYMENTNOTE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TUBNCURR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWNCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXITTOWN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXITGATECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXITGATE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENCYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENCY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXITCOUNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXITCOUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSPORTTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSPORTTYPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSPORTTYPNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXITDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "EXITTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FLIGHTNUMBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GUIDE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TURETPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SENDEINVCUSTOM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVOICETYPSGK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXPAYERCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXPAYERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DOCUMENTNOSGK",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERNAME1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERNAME2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERNAME3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERSURNAME1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERSURNAME2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERSURNAME3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERTCKNO1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERTCKNO2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DRIVERTCKNO3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PLATENUM1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PLATENUM2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PLATENUM3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CHASSISNUM1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CHASSISNUM2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CHASSISNUM3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RESPONSECODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RESPONSESTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STATUSDESC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RESPONSECODEDESP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RESPONSESTATUSDESP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STATUSDESCDESP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ORDFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CHAINDELIVERY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SELLERCLIENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TAXNRTOPAY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ENRGPLATENUM",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ENRGCARID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CHRGBEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CHRGBEGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CHRGENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CHRGENDTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ESURAPORID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ESURAPORIDDATE",
+      "type": "datetime",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 4
+}

@@ -1,0 +1,450 @@
+{
+  "tableName": "LG_XXX_XX_DEMANDLINE",
+  "displayName": "Talep Satirlari",
+  "description": "",
+  "category": "MRP",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_DEMANDLINE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_DEMANDLINE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DEMANDFICHEREF",
+        "LINENO_"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_DEMANDLINE_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PROCUREDATE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_01_DEMANDLINE_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DEMANDFICHEREF",
+        "PREVLINEREF",
+        "PREVLINENO"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "I126_01_DEMANDLINE_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FICHEDATE"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "I126_01_DEMANDLINE_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "BOMREVREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DEMANDFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLIENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MEETAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CANCAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MEETTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PROCUREDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPARTMENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORYNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BOMMASTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BOMREVREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WFSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PAYDEFREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CPSTFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DETLINE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PREVLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PREVLINENO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FICHEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "MRPLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MRPHEADREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ALTITEMUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MRPHEADTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORDPEGUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORDPEGAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PROCURETIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INVUSEPARAM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRODORDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DISPLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PLNSTFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PLNSTLREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PLNFICHEPER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REALSRCINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CRSACCOUNTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CRSCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CRSPROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MEETWITHSTOCK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FICHETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRODORDTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BOMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRCLISTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FRCLINEREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 6
+}

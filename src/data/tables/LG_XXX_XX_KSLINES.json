@@ -1,0 +1,106 @@
+{
+  "tableName": "LG_XXX_XX_KSLINES",
+  "displayName": "Kasa Hareketi",
+  "description": "KSLINES tablosunda kasadan yapilan cari hesap, canka, fatura, cek/senet ya da kasa islemleri gibi islemlerden sonra olusan hareketler tutulmaktadir.",
+  "category": "Kasa",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 7,
+  "relatedTables": ["KSCARD", "EMUHACC", "EMCENTER", "EMFICHE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CARDREF", "DATE_", "HOUR_", "MINUTE_", "FICHENO"],
+      "type": "Composite",
+      "properties": "Modif, Seg"
+    },
+    {
+      "no": 3,
+      "fields": ["CARDREF", "FICHENO"],
+      "type": "Composite",
+      "properties": "Modif, Seg"
+    },
+    {
+      "no": 4,
+      "fields": ["TRANSREF"],
+      "type": "Integer",
+      "properties": "Dup, Modif"
+    },
+    {
+      "no": 5,
+      "fields": ["SIGN"],
+      "type": "Integer",
+      "properties": "Dup, Modif"
+    },
+    {
+      "no": 6,
+      "fields": ["ACCFICHEREF"],
+      "type": "Longint",
+      "properties": ""
+    },
+    {
+      "no": 7,
+      "fields": ["SITEID", "ORGLOGICREF"],
+      "type": "Composite",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "CARDREF", "type": "LongInt", "description": "Kasa kart referansi KSCARD"},
+    {"name": "VCARDREF", "type": "LongInt", "description": "Virman yapilan kasa kart referansi KSCARD"},
+    {"name": "TRANSREF", "type": "LongInt", "description": "Ilgili modulun ilgili islem referansi"},
+    {"name": "ACCREF", "type": "LongInt", "description": "Muhasebe hesabi referansi EMUHACC"},
+    {"name": "CENTERREF", "type": "LongInt", "description": "Masraf Merkez Referansi EMCENTER"},
+    {"name": "CSACCREF", "type": "LongInt", "description": "Karsi kasanin Muhasebe Referansi EMUHACC"},
+    {"name": "CSCENTERREF", "type": "LongInt", "description": "Karsi kasanin Masraf Merkezi Ref. EMCENTER"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "HOUR_", "type": "Integer", "description": "Saat"},
+    {"name": "MINUTE_", "type": "Integer", "description": "Dakika"},
+    {"name": "TRCODE", "type": "Integer", "description": "Islem turu (11:Cari hesap Tahsilat, 12:Cari hesap Odeme, 21-22: Banka, 31-39: Fatura, 61-64: cek/senet, 71-74 Kasa)"},
+    {"name": "BRANCH", "type": "Integer", "description": "Is yeri"},
+    {"name": "DEPARTMENT", "type": "Integer", "description": "Bolum"},
+    {"name": "DESTBRANCH", "type": "Integer", "description": "Gonderilen is yeri"},
+    {"name": "DESTDEPARTMENT", "type": "Integer", "description": "Gonderilen bolum"},
+    {"name": "SPECODE", "type": "ZString11", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "ZString11", "description": "Yetki kodu"},
+    {"name": "FICHENO", "type": "ZString9", "description": "Fis numarasi"},
+    {"name": "CUSTTITLE", "type": "ZString51", "description": "Kasa aciklamasi"},
+    {"name": "LINEEXP", "type": "ZString51", "description": "Satir aciklamasi"},
+    {"name": "AMOUNT", "type": "Double", "description": "Tutar"},
+    {"name": "REPORTRATE", "type": "Double", "description": "Raporlama doviz kuru"},
+    {"name": "REPORTNET", "type": "Double", "description": "Raporlama doviz tutari"},
+    {"name": "TRRATE", "type": "Double", "description": "Islem doviz kuru"},
+    {"name": "TRNET", "type": "Double", "description": "Islem doviz tutari"},
+    {"name": "TRCURR", "type": "Integer", "description": "Islem doviz turu"},
+    {"name": "SIGN", "type": "Byte", "description": "Borc / alacak"},
+    {"name": "ACCOUNTED", "type": "Byte", "description": "Muhasebeleşmiş"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal edilmis"},
+    {"name": "ACCFICHEREF", "type": "Longint", "description": "Muhasebe fis referansi EMFICHE"},
+    {"name": "PRINTCNT", "type": "Integer", "description": "Toplam kac kez basildigi"},
+    {"name": "CAPIBLOK_CREATEDBY", "type": "Integer", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_CREATEDDATE", "type": "LongInt", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOK_CREATEDHOUR", "type": "Integer", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOK_CREATEDMIN", "type": "Integer", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOK_CREATEDSEC", "type": "Integer", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOK_MODIFIEDBY", "type": "Integer", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_MODIFIEDDATE", "type": "LongInt", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOK_MODIFIEDHOUR", "type": "Integer", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOK_MODIFIEDMIN", "type": "Integer", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOK_MODIFIEDSEC", "type": "Integer", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "CANCELLEDACC", "type": "Byte", "description": "Muhasebeletirme iptal(0:Hayir 1:Evet)"},
+    {"name": "GENEXCTYP", "type": "SmallInt", "description": "Doviz Turu(Genel)"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu(Satir)"},
+    {"name": "TRADINGGRP", "type": "VarChar", "description": "Ticari islem grubu"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1:Evet, 0:Hayir)"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,57 @@
+{
+  "tableName": "LG_XXX_FIRMDOC",
+  "displayName": "Firma Dokumanlari",
+  "description": "Firma bazli dokuman ve belge verilerini icerir. Ic kullanim amacli sistem tablosu.",
+  "category": "Sistem",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["INFOTYP", "INFOREF", "DOCTYP", "DOCNR", "LREF"],
+      "type": "SmallInt, int, int, int, int",
+      "property": "Modif, Dup Modif Seg"
+    },
+    {
+      "no": 2,
+      "fields": ["LREF"],
+      "type": "int",
+      "property": ""
+    }
+  ],
+  "fields": [
+    {
+      "name": "LREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "INFOTYP",
+      "type": "SmallInt",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "INFOREF",
+      "type": "int",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "DOCTYP",
+      "type": "int",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "DOCNR",
+      "type": "int",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "Ic kullanim"
+    }
+  ],
+  "commonQueries": []
+}

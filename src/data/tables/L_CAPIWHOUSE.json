@@ -1,0 +1,229 @@
+{
+  "tableName": "L_CAPIWHOUSE",
+  "displayName": "Depolar",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIWHOUSE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIWHOUSE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "COSTGRP",
+        "VIRTUALINVEN",
+        "FIRMNR",
+        "NR"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "CAPIWHOUSE_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FIRMNR",
+        "NAME"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "CAPIWHOUSE_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "VIRTUALINVEN",
+        "NR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DIVISNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COSTGRP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEREXT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "MODTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VIRTUALINVEN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LONGITUDE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LATITUTE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWNCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELCODES1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELCODES2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELNRS1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELNRS2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELEXTNUMS1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELEXTNUMS2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SHPAGNCOD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AREACODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "POSTCODE",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 4
+}

@@ -1,0 +1,78 @@
+{
+  "tableName": "LG_XXX_KSCARD",
+  "displayName": "Kasa Kartlari",
+  "description": "Kasa hesap kartlarinin tanimi. Kasa kodu, ismi, adresi ve diger bilgileri icerir.",
+  "category": "Finans",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 6,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "CODE", "length": "12 bytes", "type": "VarChar", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "NAME", "length": "12 bytes", "type": "VarChar", "property": ""},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"field": "ACTIVE", "length": "5 bytes", "type": "SmallInt", "property": "ACTIVE"},
+        {"field": "CODE", "length": "12 bytes", "type": "VarChar", "property": "CODE"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"},
+        {"field": "ACTIVE", "length": "5 bytes", "type": "SmallInt", "property": "ACTIVE"},
+        {"field": "NAME", "length": "12 bytes", "type": "VarChar", "property": ""}
+      ]
+    },
+    {
+      "no": 6,
+      "fields": [
+        {"field": "SITEID", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "ORGLOGICREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel Adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Hesap kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Hesap ismi"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu"},
+    {"name": "EXPLAIN", "type": "VarChar", "description": "Aciklama"},
+    {"name": "ADDR1", "type": "VarChar", "description": "Adres satiri"},
+    {"name": "ADDR2", "type": "VarChar", "description": "Adres satiri"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanimda, 1: Kullanim disi"},
+    {"name": "SITEID", "type": "Int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "Int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": []
+}

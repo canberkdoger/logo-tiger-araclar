@@ -1,0 +1,484 @@
+{
+  "tableName": "LG_XXX_STDBOMCOST",
+  "displayName": "STDBOMCOST",
+  "description": "",
+  "category": "Maliyet",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_STDBOMCOST_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_STDBOMCOST_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PERIODREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_STDBOMCOST_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FACTORYNR"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_STDBOMCOST_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "BOMREF"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "I126_STDBOMCOST_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "BOMREVREF"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "I126_STDBOMCOST_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PERIODREF",
+        "STOCKREF",
+        "VARIANTREF"
+      ]
+    },
+    {
+      "no": 7,
+      "name": "I126_STDBOMCOST_I7",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "STOCKREF",
+        "VARIANTREF",
+        "PERIODREF",
+        "FACTORYNR",
+        "BOMREF",
+        "BOMREVREF",
+        "BOMTYPE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORYNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PERIODREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STOCKREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BOMREVREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRCURRDATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDMTRCOSTLOCAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDMTRCOSTTRCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDMTRCOSTREPCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDLBRCOSTLOCAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDLBRCOSTTRCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDLBRCOSTREPCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDWSCOSTLOCAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDWSCOSTTRCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDWSCOSTREPCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STDUNITCOSTLOCAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDUNITCOSTTRCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDUNITCOSTREPCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BOMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL9",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTLOCAL10",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR9",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTTRCURR10",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR9",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "STDOVHDCOSTREPCURR10",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA7",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA8",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA9",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTFORMULA10",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA7",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA8",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA9",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCOSTREPFORMULA10",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 7
+}

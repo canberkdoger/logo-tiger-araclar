@@ -1,0 +1,65 @@
+{
+  "tableName": "L_CAPIROLEOBJ",
+  "displayName": "CAPIROLEOBJ",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIROLEOBJ_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIROLEOBJ_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ROLENR",
+        "OBJID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ROLENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OBJTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MDLID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OBJID",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

@@ -1,0 +1,69 @@
+{
+  "tableName": "L_MDEVICES",
+  "displayName": "MDEVICES",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "MDEVICES_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "MDEVICES_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "IDMUSERID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "IDMUSERID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEVICEID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MODEL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VERSION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OSTYPE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOKEN",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

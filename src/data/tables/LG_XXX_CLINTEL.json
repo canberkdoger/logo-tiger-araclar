@@ -1,0 +1,40 @@
+{
+  "tableName": "LG_XXX_CLINTEL",
+  "displayName": "Cari Hesap Istihbarat Bilgileri",
+  "description": "Cari hesap istihbarat bilgilerini iceren tablo. Musteriler hakkinda ek bilgi ve notlarin saklanmasinda kullanilir.",
+  "category": "Cari Hesap",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_CLCARD"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CLIENTREF", "LINENUM"],
+      "type": "int, SmallInt",
+      "properties": "Modif, Seg, Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CLIENTREF", "type": "int", "description": "Cari hesap referansi - CLCARD"},
+    {"name": "LINENUM", "type": "SmallInt", "description": "Satir numarasi"},
+    {"name": "INTELLINE", "type": "VarChar", "description": "Istihbarat bilgileri satiri"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir cari hesabin tum istihbarat bilgilerini listele",
+      "query": "SELECT * FROM LG_XXX_CLINTEL WHERE CLIENTREF = @CariRef ORDER BY LINENUM"
+    },
+    {
+      "description": "Cari hesap ile birlikte istihbarat bilgilerini getir",
+      "query": "SELECT c.CODE, c.DEFINITION_, ci.INTELLINE FROM LG_XXX_CLCARD c INNER JOIN LG_XXX_CLINTEL ci ON c.LOGICALREF = ci.CLIENTREF WHERE c.CODE = @CariKodu"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "tableName": "LG_XXX_XX_BNFICHE",
+  "displayName": "Banka Fis Portu",
+  "description": "BNFICHE tablosunda banka fislerinin baslik kayitlari tutulmaktadir. Banka fislerinin satirlarina ulasabilmek icin BNFLINE tablosu okunmalidir.",
+  "category": "Banka",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_XX_BNFLINE", "LG_XXX_XX_EMFICHE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 Bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "TRCODE", "length": "2 Bytes", "type": "Integer", "property": "Modif"},
+        {"name": "FICHENO", "length": "9 Bytes", "type": "ZString", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "DATE_", "length": "4 Bytes", "type": "Integer", "property": "Modif"},
+        {"name": "TRCODE", "length": "2 Bytes", "type": "Integer", "property": "Modif"},
+        {"name": "FICHENO", "length": "9 Bytes", "type": "ZString", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "ACCFICHEREF", "length": "4 Bytes", "type": "LongInt", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "SITEID", "length": "4 Bytes", "type": "Integer", "property": "Modif"},
+        {"name": "ORGLOGICREF", "length": "4 Bytes", "type": "Integer", "property": "Modif"},
+        {"name": "LOGICALREF", "length": "4 Bytes", "type": "Integer", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres referansi"},
+    {"name": "DATE_", "type": "DateTime", "description": "Tarih"},
+    {"name": "FICHENO", "type": "VarChar", "description": "Fis numarasi"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu"},
+    {"name": "BRANCH", "type": "SmallInt", "description": "Is yeri"},
+    {"name": "DEPARMENT", "type": "SmallInt", "description": "Bolum"},
+    {"name": "TRCODE", "type": "SmallInt", "description": "Islem turu (1:Banka islem fisi, 2:Virman Fisi, 3:Gelen havaleler, 4:Gonderilen havaleler)"},
+    {"name": "MODULENR", "type": "SmallInt", "description": "Modul numarasi"},
+    {"name": "SOURCEFREF", "type": "int", "description": "Bagli Fis Referansi"},
+    {"name": "ACCOUNTED", "type": "SmallInt", "description": "Muhasebelesmis (E/H)"},
+    {"name": "CANCELLED", "type": "SmallInt", "description": "Iptal edilmis (E/H)"},
+    {"name": "SIGN", "type": "SmallInt", "description": "Borc / Alacak (0 / 1)"},
+    {"name": "DEBITTOT", "type": "Float", "description": "Borc toplami"},
+    {"name": "CREDITTOT", "type": "Float", "description": "Alacak toplami"},
+    {"name": "GENEXP1", "type": "VarChar", "description": "Aciklama"},
+    {"name": "GENEXP2", "type": "VarChar", "description": "Aciklama"},
+    {"name": "GENEXP3", "type": "VarChar", "description": "Aciklama"},
+    {"name": "GENEXP4", "type": "VarChar", "description": "Aciklama"},
+    {"name": "PRINTCNT", "type": "SmallInt", "description": "Kac kez basildi"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "ACCFICHEREF", "type": "int", "description": "Muhasebe fisi ref"},
+    {"name": "GENEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Genel)"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Satir)"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"},
+    {"name": "REPDEBIT", "type": "Float", "description": "Borc (Raporlama Dovizi)"},
+    {"name": "REPCREDIT", "type": "Float", "description": "Alacak (Raporlama Dovizi)"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1:Evet, 0:Hayir)"}
+  ],
+  "commonQueries": []
+}

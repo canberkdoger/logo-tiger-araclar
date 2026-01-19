@@ -1,0 +1,101 @@
+{
+  "tableName": "L_DEFNFLDSD",
+  "displayName": "DEFNFLDSD",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "DEFNFLDSD_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "DEFNFLDSD_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "MODULENR",
+        "LEVEL_",
+        "NR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODULENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LEVEL_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPTION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMSTRG1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMSTRG2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMSTRG3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMSTRG4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMSTRG5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMSTRCAP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LINEINFO",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

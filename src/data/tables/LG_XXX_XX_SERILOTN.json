@@ -1,0 +1,34 @@
+{
+  "tableName": "LG_XXX_XX_SERILOTN",
+  "displayName": "Seri/Lot Tanimlari",
+  "description": "Malzemelere ait seri ve lot numaralarinin tanimlari bu tabloda tutulmaktadir.",
+  "category": "Stok",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 3,
+  "relatedTables": [
+    {"table": "LG_XXX_ITEMS", "field": "ITEMREF", "description": "Malzeme karti referansi"}
+  ],
+  "indexes": [
+    {"no": 1, "fields": [{"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}]},
+    {"no": 2, "fields": [
+      {"name": "ITEMREF", "type": "int"},
+      {"name": "SLTYPE", "type": "SmallInt"},
+      {"name": "CODE", "type": "VarChar"}
+    ]},
+    {"no": 3, "fields": [
+      {"name": "ITEMREF", "type": "int"},
+      {"name": "SLTYPE", "type": "SmallInt"},
+      {"name": "CODE", "type": "VarChar"}
+    ]}
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "ITEMREF", "type": "int", "description": "Malzeme karti referansi ITEMS"},
+    {"name": "SLTYPE", "type": "SmallInt", "description": "Seri lot turu 1: Seri 2:Lot"},
+    {"name": "CODE", "type": "VarChar", "description": "Seri/Lot Kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Seri/Lot Aciklamasi"},
+    {"name": "STATE", "type": "SmallInt", "description": "Durumu"}
+  ],
+  "commonQueries": []
+}

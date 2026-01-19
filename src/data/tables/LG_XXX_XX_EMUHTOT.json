@@ -1,0 +1,36 @@
+{
+  "tableName": "LG_XXX_XX_EMUHTOT",
+  "displayName": "Muhasebe Hesap Toplamlari",
+  "description": "EMUHTOT tablosunda muhasebe hesap kartlarinin ve masraf merkezlerinin aylik borc ve alacak hesap toplamlari tutulmaktadir. Her hesap karti icin 14 adet toplam kaydi bulunmaktadir. Bu kayitlardan ilki devir ile aktarilan toplamlar icin, diger 13 kayit ise donem icerisindeki aylara ait toplam bilgileri icindir.",
+  "category": "Muhasebe",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": ["EMUHACC"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["ACCOUNTREF", "TOTTYPE", "MONTH_"],
+      "type": "Composite",
+      "properties": "Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Longint", "description": "Fiziksel adres"},
+    {"name": "ACCOUNTREF", "type": "Longint", "description": "Muhasebe hesabi referansi EMUHACC"},
+    {"name": "TRANCOUNT", "type": "Longint", "description": "Hareket sayaci"},
+    {"name": "TOTTYPE", "type": "Integer", "description": "Toplam turu (1:muhasebe tl toplam, 2:muh. dovizli toplam, 3:muh. Birimli toplam, 4:mas.mer. tl toplam, 5: mas.mer. dovizli toplam)"},
+    {"name": "MONTH_", "type": "Integer", "description": "Ay"},
+    {"name": "DEBIT", "type": "Double", "description": "Borc"},
+    {"name": "CREDIT", "type": "Double", "description": "Alacak"},
+    {"name": "DEBITREM", "type": "Double", "description": "Bakiye borc"},
+    {"name": "CREDITREM", "type": "Double", "description": "Bakiye alacak"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,107 @@
+{
+  "tableName": "LG_XXX_EXPCREDITLN",
+  "displayName": "EXPCREDITLN",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_EXPCREDITLN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_EXPCREDITLN_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "EXCREDITREF",
+        "LINENO_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXCREDITREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GTIPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNITSETREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

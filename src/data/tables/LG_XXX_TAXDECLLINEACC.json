@@ -1,0 +1,56 @@
+{
+  "tableName": "LG_XXX_TAXDECLLINEACC",
+  "displayName": "TAXDECLLINEACC",
+  "description": "",
+  "category": "Muhasebe",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_TAXDECLLINEACC_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLHDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIELDNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ISSUBACC",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

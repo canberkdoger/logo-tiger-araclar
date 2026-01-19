@@ -1,0 +1,88 @@
+{
+  "tableName": "LG_XXX_PRCLIST",
+  "displayName": "Fiyat Listeleri",
+  "description": "Alis ve satis fiyat listelerini tutan tablo. Malzeme bazinda fiyat, birim, doviz turu ve gecerlilik tarihleri bilgilerini icerir.",
+  "category": "Satis",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 7,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_UNITSETL"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "PTYPE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"},
+        {"field": "CLIENTCODE", "length": "17 bytes", "type": "ZString", "property": "Dup, Modif, AltS"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "PTYPE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"field": "CARDREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"},
+        {"field": "MTRLTYPE", "length": "5 bytes", "type": "SmallInt", "property": "Dup, Modif, AltS"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"field": "PTYPE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"field": "CARDREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"field": "BEGDATE", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"field": "ENDDATE", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"field": "UOMREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 6,
+      "fields": [
+        {"field": "CARDREF", "length": "4 bytes", "type": "Integer", "property": ""},
+        {"field": "MTRLTYPE", "length": "5 bytes", "type": "SmallInt", "property": ""},
+        {"field": "PTYPE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"},
+        {"field": "SPECIALIZED", "length": "5 bytes", "type": "SmallInt", "property": "Dup, Modif, AltS"}
+      ]
+    },
+    {
+      "no": 7,
+      "fields": [
+        {"field": "SITEID", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "ORGLOGICREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "CARDREF", "type": "VarChar", "description": "Kart referansi - ITEMS tablosuna baglanti"},
+    {"name": "CLIENTCODE", "type": "VarChar", "description": "Stok kodu"},
+    {"name": "CLSPECODE", "type": "int", "description": "Hizmet kart kodu"},
+    {"name": "PAYPLANREF", "type": "Float", "description": "Cari hesap kodu"},
+    {"name": "PRICE", "type": "int", "description": "Cari hesap ozel kodu"},
+    {"name": "UOMREF", "type": "SmallInt", "description": "Birim referansi - UNITSETL tablosuna baglanti"},
+    {"name": "INCVAT", "type": "SmallInt", "description": "Birim fiyat"},
+    {"name": "CURRENCY", "type": "SmallInt", "description": "Birimler"},
+    {"name": "PRIORITY", "type": "SmallInt", "description": "KDV (0: Haric, 1: Dahil)"},
+    {"name": "PTYPE", "type": "SmallInt", "description": "Doviz turu"},
+    {"name": "MTRLTYPE", "type": "int", "description": "Oncelik sirasi"},
+    {"name": "LEADTIME", "type": "DateTime", "description": "Fiyat turu (1: Alim fiyatlari, 2: Satis fiyatlari)"},
+    {"name": "BEGDATE", "type": "DateTime", "description": "Temin suresi"}
+  ],
+  "commonQueries": [],
+  "note": "YARIM KALAN TABLO: Bu tablonun alan listesi PDF'in sonunda tamamlanmamistir. Sonraki part'ta devam etmektedir."
+}

@@ -1,0 +1,75 @@
+{
+  "tableName": "L_BRWSSTAT",
+  "displayName": "BRWSSTAT",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "BRWSSTAT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "BRWSSTAT_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "OWNER",
+        "BRWNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OWNER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BRWNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVATED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CURREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "IDXNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STATTYPE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

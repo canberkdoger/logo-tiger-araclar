@@ -1,0 +1,35 @@
+{
+  "tableName": "LG_XXX_XX_BNTOTFIL",
+  "displayName": "Banka Toplamlari",
+  "description": "BNTOTFIL tablosunda banka kartlarina (BNCARD) ait hesaplarin (BANKACC) aylik bakiye bilgileri tutulmaktadir. Her hesap karti icin 14 adet toplam kaydi bulunmaktadir. Bu kayitlardan ilki devir ile aktarilan toplamlar icin, diger 13 kayit ise donem icerisindeki aylara ait toplam bilgileri icindir. Isle gormeyen aylar icin veri tabaninda kayit bulunmamaktadir.",
+  "category": "Banka",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_BNCARD", "LG_XXX_BANKACC"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "CARDREF", "length": "4 bytes", "type": "Integer", "property": "Modif"},
+        {"name": "TOTTYP", "length": "2 bytes", "type": "Integer", "property": "Modif"},
+        {"name": "MONTH_", "length": "2 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "CARDREF", "type": "LongInt", "description": "Kart referansi -> BNCARD"},
+    {"name": "TOTTYP", "type": "Integer", "description": "Toplam turu"},
+    {"name": "MONTH_", "type": "Integer", "description": "Ay"},
+    {"name": "DEBIT", "type": "Double", "description": "Borc"},
+    {"name": "CREDIT", "type": "Double", "description": "Alacak"}
+  ],
+  "commonQueries": []
+}

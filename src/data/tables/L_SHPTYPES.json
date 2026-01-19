@@ -1,0 +1,30 @@
+{
+  "tableName": "L_SHPTYPES",
+  "displayName": "Sevkiyat Turleri",
+  "description": "Sevkiyat turu tanimlarinin tutuldugu tablo.",
+  "category": "Sevkiyat",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "SCODE", "length": "13 bytes", "type": "VarChar" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "int", "description": "Fiziksel adres" },
+    { "name": "SCODE", "type": "VarChar", "description": "Sevkiyat turu kodu" },
+    { "name": "SDEF", "type": "VarChar", "description": "Sevkiyat turu aciklamasi" }
+  ],
+  "commonQueries": []
+}

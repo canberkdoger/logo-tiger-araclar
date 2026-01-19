@@ -1,0 +1,151 @@
+{
+  "tableName": "LG_XXX_LEASINGPAYMENTS",
+  "displayName": "LEASINGPAYMENTS",
+  "description": "",
+  "category": "Leasing",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_LEASINGPAYMENTS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTSTARTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "INTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTPERIOD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VATRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CASHAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "INTERESTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WFSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LEASINGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

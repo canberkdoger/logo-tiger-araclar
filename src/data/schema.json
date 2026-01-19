@@ -1,0 +1,290 @@
+{
+  "version": "1.2.0",
+  "lastUpdated": "2025-01-19",
+  "source": "Logo Unity Data Dictionary Files Ver. 1.0 + SQL Server Metadata",
+  "totalTables": 557,
+  "categories": [
+    {
+      "id": "Cari Hesap",
+      "name": "Cari Hesap",
+      "icon": "fa-users",
+      "color": "#3498db"
+    },
+    {
+      "id": "Stok",
+      "name": "Stok / Malzeme",
+      "icon": "fa-boxes-stacked",
+      "color": "#27ae60"
+    },
+    {
+      "id": "Fatura",
+      "name": "Fatura",
+      "icon": "fa-file-invoice",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Siparis",
+      "name": "Siparis",
+      "icon": "fa-shopping-cart",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "Muhasebe",
+      "name": "Muhasebe",
+      "icon": "fa-calculator",
+      "color": "#f39c12"
+    },
+    {
+      "id": "Banka",
+      "name": "Banka",
+      "icon": "fa-building-columns",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "Kasa",
+      "name": "Kasa",
+      "icon": "fa-cash-register",
+      "color": "#e67e22"
+    },
+    {
+      "id": "Cek/Senet",
+      "name": "Cek / Senet",
+      "icon": "fa-money-check",
+      "color": "#8e44ad"
+    },
+    {
+      "id": "Uretim",
+      "name": "Uretim",
+      "icon": "fa-industry",
+      "color": "#34495e"
+    },
+    {
+      "id": "Satis",
+      "name": "Satis",
+      "icon": "fa-chart-line",
+      "color": "#16a085"
+    },
+    {
+      "id": "Sistem",
+      "name": "Sistem",
+      "icon": "fa-cog",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "Finans",
+      "name": "Finans",
+      "icon": "fa-money-bill-wave",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Kalite Kontrol",
+      "name": "Kalite Kontrol",
+      "icon": "fa-check-circle",
+      "color": "#3498db"
+    },
+    {
+      "id": "Tanimlar",
+      "name": "Tanimlar",
+      "icon": "fa-list",
+      "color": "#95a5a6"
+    },
+    {
+      "id": "Hizmet",
+      "name": "Hizmet",
+      "icon": "fa-tools",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "Birim Yonetimi",
+      "name": "Birim Yonetimi",
+      "icon": "fa-balance-scale",
+      "color": "#f1c40f"
+    },
+    {
+      "id": "Sevkiyat",
+      "name": "Sevkiyat",
+      "icon": "fa-truck",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Sabit Kiymet",
+      "name": "Sabit Kiymet",
+      "icon": "fa-building",
+      "color": "#8e44ad"
+    },
+    {
+      "id": "Raporlama",
+      "name": "Raporlama",
+      "icon": "fa-chart-bar",
+      "color": "#3498db"
+    },
+    {
+      "id": "Dagitim",
+      "name": "Dagitim",
+      "icon": "fa-sitemap",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "Tedarik Zinciri",
+      "name": "Tedarik Zinciri",
+      "icon": "fa-link",
+      "color": "#27ae60"
+    },
+    {
+      "id": "Satin Alma",
+      "name": "Satin Alma",
+      "icon": "fa-cart-plus",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Risk Yonetimi",
+      "name": "Risk Yonetimi",
+      "icon": "fa-exclamation-triangle",
+      "color": "#f39c12"
+    },
+    {
+      "id": "Odeme",
+      "name": "Odeme",
+      "icon": "fa-credit-card",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Maliyet",
+      "name": "Maliyet",
+      "icon": "fa-coins",
+      "color": "#f1c40f"
+    },
+    {
+      "id": "Genel",
+      "name": "Genel",
+      "icon": "fa-folder",
+      "color": "#95a5a6"
+    },
+    {
+      "id": "Dokuman Takip",
+      "name": "Dokuman Takip",
+      "icon": "fa-file-alt",
+      "color": "#3498db"
+    },
+    {
+      "id": "Diger",
+      "name": "Diger",
+      "icon": "fa-ellipsis-h",
+      "color": "#bdc3c7"
+    },
+    {
+      "id": "MRP",
+      "name": "MRP / Malzeme Planlama",
+      "icon": "fa-project-diagram",
+      "color": "#e91e63"
+    },
+    {
+      "id": "E-Belge",
+      "name": "E-Belge",
+      "icon": "fa-file-signature",
+      "color": "#00bcd4"
+    },
+    {
+      "id": "Butce",
+      "name": "Butce",
+      "icon": "fa-piggy-bank",
+      "color": "#4caf50"
+    },
+    {
+      "id": "Teminat",
+      "name": "Teminat",
+      "icon": "fa-shield-alt",
+      "color": "#ff5722"
+    },
+    {
+      "id": "Is Akisi",
+      "name": "Is Akisi / Workflow",
+      "icon": "fa-random",
+      "color": "#673ab7"
+    },
+    {
+      "id": "Varyant",
+      "name": "Varyant",
+      "icon": "fa-cubes",
+      "color": "#795548"
+    },
+    {
+      "id": "Bakim",
+      "name": "Bakim / Maintenance",
+      "icon": "fa-wrench",
+      "color": "#607d8b"
+    },
+    {
+      "id": "Leasing",
+      "name": "Leasing",
+      "icon": "fa-handshake",
+      "color": "#009688"
+    },
+    {
+      "id": "Dis Ticaret",
+      "name": "Dis Ticaret",
+      "icon": "fa-globe",
+      "color": "#3f51b5"
+    },
+    {
+      "id": "Vardiya",
+      "name": "Vardiya",
+      "icon": "fa-clock",
+      "color": "#ff9800"
+    },
+    {
+      "id": "Karakteristik",
+      "name": "Karakteristik / Ozellikler",
+      "icon": "fa-tags",
+      "color": "#9c27b0"
+    },
+    {
+      "id": "Durus",
+      "name": "Durus",
+      "icon": "fa-pause-circle",
+      "color": "#f44336"
+    },
+    {
+      "id": "Proje",
+      "name": "Proje",
+      "icon": "fa-tasks",
+      "color": "#2196f3"
+    },
+    {
+      "id": "Nakit Akis",
+      "name": "Nakit Akis",
+      "icon": "fa-stream",
+      "color": "#4db6ac"
+    },
+    {
+      "id": "Vergi",
+      "name": "Vergi",
+      "icon": "fa-percentage",
+      "color": "#c62828"
+    },
+    {
+      "id": "Tedarikci",
+      "name": "Tedarikci",
+      "icon": "fa-truck-loading",
+      "color": "#5d4037"
+    },
+    {
+      "id": "CRM",
+      "name": "CRM / Musteri Iliskileri",
+      "icon": "fa-handshake-angle",
+      "color": "#e91e63"
+    }
+  ],
+  "placeholders": {
+    "XXX": {
+      "description": "Firma numarasi (3 haneli)",
+      "example": "001",
+      "pattern": "\\d{3}"
+    },
+    "XX": {
+      "description": "Donem numarasi (2 haneli)",
+      "example": "01",
+      "pattern": "\\d{2}"
+    }
+  }
+}

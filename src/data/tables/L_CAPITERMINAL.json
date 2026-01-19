@@ -1,0 +1,154 @@
+{
+  "tableName": "L_CAPITERMINAL",
+  "displayName": "CAPITERMINAL",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPITERMINAL_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPITERMINAL_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "NR"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "CAPITERMINAL_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CODE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TATTRIB",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRNNR1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRNNR2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRNFILES1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRNFILES2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRNFILES3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRNFILES4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRNFILES5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USEREXT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TASKCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GATEWAYADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "KEY_",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PROGID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SERIAL",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LICENCESTR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TERMINFO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TERMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

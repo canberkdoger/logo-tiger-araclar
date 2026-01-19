@@ -1,0 +1,544 @@
+{
+  "tableName": "L_LBSLOADUSRRIGHTS",
+  "displayName": "LBSLOADUSRRIGHTS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "LBSLOADUSRRIGHTS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USRNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DLLNM",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR11",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR12",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR13",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR14",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR15",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR16",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR17",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR18",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR19",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR20",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR21",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR22",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR23",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR24",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR25",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR26",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR27",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR28",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR29",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR30",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR31",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR32",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR33",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR34",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR35",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR36",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR37",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR38",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR39",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR40",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR41",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR42",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR43",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR44",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR45",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR46",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR47",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR48",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR49",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR50",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR51",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR52",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR53",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR54",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR55",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR56",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR57",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR58",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR59",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR60",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR61",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR62",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR63",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR64",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR65",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR66",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR67",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR68",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR69",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR70",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR71",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR72",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR73",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR74",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR75",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR76",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR77",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR78",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR79",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR80",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR81",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR82",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR83",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR84",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR85",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR86",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR87",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR88",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR89",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR90",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR91",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR92",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR93",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR94",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR95",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR96",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR97",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR98",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR99",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRPNR100",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

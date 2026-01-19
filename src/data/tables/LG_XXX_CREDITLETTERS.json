@@ -1,0 +1,397 @@
+{
+  "tableName": "LG_XXX_CREDITLETTERS",
+  "displayName": "CREDITLETTERS",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_CREDITLETTERS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_CREDITLETTERS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TYP",
+        "LETTERNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LETTERNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ISSUEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DUEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DOCDELIVERYDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "POLICYDUE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXPLAIN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CURRENCYTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CURRENCYRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CURRTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTNET",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SENDLTDFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSFERFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RETURNFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CONFIRMFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INSURANCERANGE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USAGETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BANKREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BNACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REFERENCENR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "INFOBANKNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "INFOBANKADDR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "INFOBANKADDR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONFBANKNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONFBANKADDR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONFBANKADDR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RAMSBANKNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RAMSBANKADDR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RAMSBANKADDR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXPINFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXPOUTFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INFOBANKCOMMFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COMMASTBANK",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "COMINFOBANK",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DELIVERYPLACE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DELIVERYDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DELIVERYADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CREDITREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CREDITTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CREDITCRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "FRGTYPCOD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REVOLVING",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BACKTOBACK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STANDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REDCLAUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GREENCLAUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "INSTALLDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "LASTINSTALLDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CLIENTREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

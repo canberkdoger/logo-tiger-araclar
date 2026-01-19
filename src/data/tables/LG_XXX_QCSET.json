@@ -1,0 +1,50 @@
+{
+  "tableName": "LG_XXX_QCSET",
+  "displayName": "Kalite Kontrol Setleri",
+  "description": "Kalite kontrol setleri ana karti. Kalite kontrol parametreleri ve kriterleri burada tanimlanir.",
+  "category": "Kalite Kontrol",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CODE"],
+      "type": "VarChar"
+    },
+    {
+      "no": 3,
+      "fields": ["NAME", "LOGICALREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Kalite Kontol kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Aciklamasi"},
+    {"name": "ITYPE", "type": "SmallInt", "description": "Turu"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel Kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki Kodu"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1:Evet, 0:Hayir)"}
+  ],
+  "commonQueries": []
+}

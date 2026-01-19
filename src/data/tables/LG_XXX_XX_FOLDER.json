@@ -1,0 +1,30 @@
+{
+  "tableName": "LG_XXX_XX_FOLDER",
+  "displayName": "Folder Portu",
+  "description": "Dokuman takip sisteminde fis ya da kayitlarin dokumanlarinin bulundugu tablodur.",
+  "category": "Dokuman Takip",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Integer",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["LINETYPE"],
+      "type": "Integer",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres referansi"},
+    {"name": "LINETYPE", "type": "Integer", "description": "Satir tipi"},
+    {"name": "FPATH", "type": "ZString201", "description": "Dosyanin bulundugu yer"}
+  ],
+  "commonQueries": []
+}

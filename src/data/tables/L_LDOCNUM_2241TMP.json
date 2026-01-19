@@ -1,0 +1,18 @@
+{
+  "tableName": "L_LDOCNUM_2241TMP",
+  "displayName": "LDOCNUM_2241TMP",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [],
+  "fields": [
+    {
+      "name": "FIRMNR",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 0
+}

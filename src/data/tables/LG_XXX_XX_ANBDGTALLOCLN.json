@@ -1,0 +1,278 @@
+{
+  "tableName": "LG_XXX_XX_ANBDGTALLOCLN",
+  "displayName": "ANBDGTALLOCLN",
+  "description": "",
+  "category": "Butce",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_ANBDGTALLOCLN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_ANBDGTALLOCLN_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "BDALLOCFCREF",
+        "LINENO_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "FTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SRCBDGTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTBDGTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BDALLOCFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SRCACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRCCRSACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRCCRSRACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SACCCORPCODE1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCCORPCODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCCORPCODE3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCCORPCODE4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCFUNCCODE1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCFUNCCODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCFUNCCODE3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCFUNCCODE4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCFINCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCECOCODE1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCECOCODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCECOCODE3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SACCECOCODE4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DSTACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTCRSACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DSTCRSRACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DACCCORPCODE1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCCORPCODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCCORPCODE3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCCORPCODE4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCFUNCCODE1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCFUNCCODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCFUNCCODE3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCFUNCCODE4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCFINCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCECOCODE1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCECOCODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCECOCODE3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DACCECOCODE4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEBIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CREDIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

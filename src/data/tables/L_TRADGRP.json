@@ -1,0 +1,30 @@
+{
+  "tableName": "L_TRADGRP",
+  "displayName": "Ticari Islem Gruplari",
+  "description": "Ticari islem grubu tanimlarinin tutuldugu tablo.",
+  "category": "Tanimlar",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "GCODE", "length": "12 bytes", "type": "VarChar" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "int", "description": "Fiziksel adres" },
+    { "name": "GCODE", "type": "VarChar", "description": "Ticari islem grubu kodu" },
+    { "name": "GDEF", "type": "VarChar", "description": "Ticari islem grubu aciklamasi" }
+  ],
+  "commonQueries": []
+}

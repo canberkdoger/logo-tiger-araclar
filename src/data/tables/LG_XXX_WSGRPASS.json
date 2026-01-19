@@ -1,0 +1,71 @@
+{
+  "tableName": "LG_XXX_WSGRPASS",
+  "displayName": "Is Istasyonu Grup Atamalari",
+  "description": "Is istasyonlarinin gruplara atanma bilgilerinin tutuldugu tablo",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_WORKSTAT",
+      "field": "WSGRPREF",
+      "description": "Is istasyonu referansi"
+    },
+    {
+      "tableName": "LG_XXX_WORKSTAT",
+      "field": "WSREF",
+      "description": "Is istasyonu referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "WSGRPREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "PRIORITY", "length": "4 bytes", "type": "Integer"},
+        {"name": "WSREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "WSGRPREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "WSREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "WSGRPREF",
+      "type": "int",
+      "description": "Is istasyonu referansi",
+      "relatedTable": "WORKSTAT"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "SmallInt",
+      "description": "Oncelik"
+    },
+    {
+      "name": "WSREF",
+      "type": "int",
+      "description": "Is istasyonu referansi",
+      "relatedTable": "WORKSTAT"
+    }
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,68 @@
+{
+  "tableName": "LG_XXX_SRVCARD",
+  "displayName": "Hizmet Kartlari",
+  "description": "Alinan ve verilen hizmet kartlari tanimlari. Hizmet bazli islemler icin kullanilir.",
+  "category": "Hizmet",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 6,
+  "relatedTables": [
+    "LG_XXX_PAYPLANS",
+    "LG_XXX_UNITSETF"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CARDTYPE", "CODE"],
+      "type": "Composite"
+    },
+    {
+      "no": 3,
+      "fields": ["CARDTYPE", "DEFINITION_", "LOGICALREF"],
+      "type": "Composite",
+      "property": "Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["CARDTYPE", "ACTIVE", "CODE"],
+      "type": "Composite"
+    },
+    {
+      "no": 5,
+      "fields": ["CARDTYPE", "ACTIVE", "DEFINITION_", "LOGICALREF"],
+      "type": "Composite",
+      "property": "Modif"
+    },
+    {
+      "no": 6,
+      "fields": ["UNITSETREF", "LOGICALREF", "SITEID", "ORGLOGICREF"],
+      "type": "Composite",
+      "property": "Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanimda, 1: Kullanim disi"},
+    {"name": "CARDTYPE", "type": "SmallInt", "description": "Kart tipi (1: Alinan hizmet kartlari, 2: Verilen hizmet kartlari)"},
+    {"name": "CODE", "type": "VarChar", "description": "Hizmet kodu"},
+    {"name": "DEFINITION_", "type": "VarChar", "description": "Hizmet aciklamasi"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu"},
+    {"name": "VAT", "type": "Float", "description": "KDV orani"},
+    {"name": "EXTENREF", "type": "int", "description": "Extra dosya referansi"},
+    {"name": "PAYMENTREF", "type": "int", "description": "Odeme plani referansi (PAYPLANS)"},
+    {"name": "UNITSETREF", "type": "int", "description": "Birim seti kaydi referansi (UNITSETF)"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"}
+  ],
+  "commonQueries": []
+}

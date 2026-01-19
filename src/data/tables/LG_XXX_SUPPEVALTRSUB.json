@@ -1,0 +1,96 @@
+{
+  "tableName": "LG_XXX_SUPPEVALTRSUB",
+  "displayName": "SUPPEVALTRSUB",
+  "description": "",
+  "category": "Tedarikci",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_SUPPEVALTRSUB_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPEVALFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPEVALTRANSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPEVALTRSETREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPEVALCRSETREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPEVALCRSETLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPEVALCRREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPEVALCRLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLIENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WEIGHT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SCORE",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

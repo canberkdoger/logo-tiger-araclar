@@ -1,0 +1,59 @@
+{
+  "tableName": "LG_XXX_ITMCLSAS",
+  "displayName": "Malzeme Sinifi Atamalari",
+  "description": "Malzeme siniflari arasindaki hiyerarsik iliskileri tanimlar. Ust-alt malzeme sinifi atamalari bu tabloda tutulur.",
+  "category": "Stok",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_ITEMS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "int",
+      "property": ""
+    },
+    {
+      "no": 2,
+      "fields": ["UPLEVEL", "PARENTREF", "CHILDREF"],
+      "type": "SmallInt, int, int",
+      "property": ""
+    },
+    {
+      "no": 3,
+      "fields": ["UPLEVEL", "PARENTREF", "CHILDREF"],
+      "type": "SmallInt, int, int",
+      "property": ""
+    },
+    {
+      "no": 4,
+      "fields": ["UPLEVEL", "PARENTREF", "CHILDREF"],
+      "type": "SmallInt, int, int",
+      "property": ""
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "PARENTREF",
+      "type": "int",
+      "description": "Ust malzeme sinifi karti referansi - ITEMS"
+    },
+    {
+      "name": "CHILDREF",
+      "type": "int",
+      "description": "Alt malzeme sinifi karti referansi - ITEMS"
+    },
+    {
+      "name": "UPLEVEL",
+      "type": "SmallInt",
+      "description": "Atama seviyesi"
+    }
+  ],
+  "commonQueries": []
+}

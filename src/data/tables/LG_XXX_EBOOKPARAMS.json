@@ -1,0 +1,281 @@
+{
+  "tableName": "LG_XXX_EBOOKPARAMS",
+  "displayName": "EBOOKPARAMS",
+  "description": "",
+  "category": "E-Belge",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_EBOOKPARAMS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MODULENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE11",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE12",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE13",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE14",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE15",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE16",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE17",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE18",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE19",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE20",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE21",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE22",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE23",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE24",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE25",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE26",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE27",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE28",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE29",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE30",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE31",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE32",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE33",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE34",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE35",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE36",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE37",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE38",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE39",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSTYPE40",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVTYPE1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVTYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVTYPE3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EINVTYPE4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCNOFOREBOOK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCDATEFOREBOOK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMTHD",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

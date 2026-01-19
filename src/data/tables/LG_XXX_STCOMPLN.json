@@ -1,0 +1,83 @@
+{
+  "tableName": "LG_XXX_STCOMPLN",
+  "displayName": "Karma Koli Satirlari",
+  "description": "Karma koli kartlarinin satir bilgilerinin tutuldugu tablo",
+  "category": "Stok",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_ITEMS",
+      "field": "STCREF",
+      "description": "Stok karti referansi"
+    },
+    {
+      "tableName": "LG_XXX_ITEMS",
+      "field": "MAINCREF",
+      "description": "Karma koli kart referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "MAINCREF", "length": "4 bytes", "type": "int"},
+        {"name": "LINENO_", "length": "5 bytes", "type": "SmallInt"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "STCREF", "length": "4 bytes", "type": "int"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "STCREF",
+      "type": "int",
+      "description": "Stok karti referansi",
+      "relatedTable": "ITEMS"
+    },
+    {
+      "name": "AMNT",
+      "type": "Float",
+      "description": "Miktar"
+    },
+    {
+      "name": "PRICE",
+      "type": "Float",
+      "description": "Fiyat"
+    },
+    {
+      "name": "PERC",
+      "type": "Float",
+      "description": "Yuzde"
+    },
+    {
+      "name": "MAINCREF",
+      "type": "int",
+      "description": "Karma koli kart referansi",
+      "relatedTable": "ITEMS"
+    },
+    {
+      "name": "LINENO_",
+      "type": "SmallInt",
+      "description": "Satir no"
+    }
+  ],
+  "commonQueries": []
+}

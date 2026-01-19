@@ -1,0 +1,112 @@
+{
+  "tableName": "LG_XXX_XX_CSPAYMENT",
+  "displayName": "CSPAYMENT",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_CSPAYMENT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PAYTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BNACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CSHACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CASHTRNSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BNFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DUEDIFFAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TRNET",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTNET",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DEVIR",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

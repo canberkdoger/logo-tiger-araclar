@@ -1,0 +1,352 @@
+{
+  "tableName": "LG_XXX_MNTORDERFICHE",
+  "displayName": "MNTORDERFICHE",
+  "description": "",
+  "category": "Siparis",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_MNTORDERFICHE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_MNTORDERFICHE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "FICHENO"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_MNTORDERFICHE_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DATE_",
+        "TIME_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHENO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TIME_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPARTMENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORYNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEMANDLREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTFAREGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTWSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTTMPLREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTDURATION",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MAINTDURATIONTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PLNBEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PLNBEGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PLNENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PLNENDTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACTBEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ACTBEGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACTENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ACTENDTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ISEXPENSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTMTRLCOST",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACTSRVCOST",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACTEMPCOST",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WFSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRINTCNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WFLOWCRDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRINTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CANCELLED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTMTRLRPCOST",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACTSRVRPCOST",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACTEMPRPCOST",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

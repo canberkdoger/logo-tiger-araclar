@@ -1,0 +1,283 @@
+{
+  "tableName": "LG_CONTACTS",
+  "displayName": "Kisiler",
+  "description": "",
+  "category": "CRM",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CONTACTS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CONTACTS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CSTVNDREF",
+        "NAME",
+        "FAMNAME"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "CONTACTS_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CSTVNDREF",
+        "FAMNAME",
+        "NAME"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MIDINIT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CSTVNDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "JOBTITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WORKPHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "HOMEPHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MOBPHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ASSTPHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OFFICEFAX",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "POSTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONTCAT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWNCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WORKPHCOD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "HOMEPHCOD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MOBPHCOD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ASSTPHCOD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OFFFAXCOD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

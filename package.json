@@ -1,0 +1,29 @@
+{
+  "name": "logo-tiger-araclar",
+  "version": "1.0.0",
+  "description": "Logo Tiger 3 ERP için geliştirici araçları - SQL yardımcısı, REST API rehberi",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "logo",
+    "tiger",
+    "erp",
+    "sql",
+    "rest-api",
+    "database",
+    "schema",
+    "query-builder"
+  ],
+  "author": "Canberk Doger",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^16.1.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}

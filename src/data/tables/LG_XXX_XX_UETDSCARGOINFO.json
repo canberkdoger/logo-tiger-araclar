@@ -1,0 +1,202 @@
+{
+  "tableName": "LG_XXX_XX_UETDSCARGOINFO",
+  "displayName": "UETDSCARGOINFO",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_UETDSCARGOINFO_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VOYAGEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSPORTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LOADCNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOADCNTRYDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOADCITYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOADCITYDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOADDSTRCTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOADDSTRCTDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNLOADCNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNLOADCNTRYDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNLOADCITYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNLOADCITYDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNLOADDSTRCTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNLOADDSTRCTDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOADDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "LOADTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UNLOADDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "UNLOADTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOADTYPE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOADTYPEDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOADAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LOADUNIT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSPORTMODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UNCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UNDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDERTITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDERTAXNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BUYERTITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BUYERTAXNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMCARGONO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CARGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

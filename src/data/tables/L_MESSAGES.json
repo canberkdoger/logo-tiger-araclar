@@ -1,0 +1,151 @@
+{
+  "tableName": "L_MESSAGES",
+  "displayName": "MESSAGES",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "MESSAGES_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "MESSAGES_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FROMUSERNR"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "MESSAGES_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "TOUSERNR"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "MESSAGES_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DATE_",
+        "TIME_",
+        "PRIORITY"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "READFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SENDEDCOPY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "FROMUSERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FROMUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOUSERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TOUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SUBJECT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TIME_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    },
+    {
+      "name": "RELATEDNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RELATEDTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CARDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RELATEDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OPERATIONMSG",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OPERATIONTYP",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 4
+}

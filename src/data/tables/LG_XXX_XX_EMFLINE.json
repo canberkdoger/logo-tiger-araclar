@@ -1,0 +1,72 @@
+{
+  "tableName": "LG_XXX_XX_EMFLINE",
+  "displayName": "Muhasebe Hareketi",
+  "description": "EMFLINE tablosunda Muhasebe fislerinin satir bilgileri tutulmaktadir. Muhasebe fislerinin her bir satiri icin birer satir olusmaktadir. Muhasebe fis baslik kaydi icin ise EMFICHE tablosu okunmalidir.",
+  "category": "Muhasebe",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 5,
+  "relatedTables": ["EMUHACC", "EMFICHE", "EMCENTER"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["KEBIRCODE", "DATE_", "SIGN", "ACCOUNTCODE"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 3,
+      "fields": ["CENTERREF", "DATE_", "SIGN"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 4,
+      "fields": ["ACCFICHEREF", "LINENO_"],
+      "type": "Composite",
+      "properties": "Modif, Seg"
+    },
+    {
+      "no": 5,
+      "fields": ["ACCOUNTREF", "DATE_", "SIGN"],
+      "type": "Composite",
+      "properties": "Dup, Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "SIGN", "type": "Integer", "description": "Borc / alacak"},
+    {"name": "ACCOUNTREF", "type": "LongInt", "description": "Muhasebe hesabi referansi EMUHACC"},
+    {"name": "ACCFICHEREF", "type": "LongInt", "description": "Muhasebe fisi referansi EMFLINE"},
+    {"name": "CENTERREF", "type": "LongInt", "description": "Masraf merkezi referansi EMCENTER"},
+    {"name": "TRCODE", "type": "Integer", "description": "Fis turu (1:acilis 2:tahsil 3:tediye 4:mahsup 5:ozel 6:kur farki hesabi)"},
+    {"name": "BRANCH", "type": "Integer", "description": "Is yeri"},
+    {"name": "KEBIRCODE", "type": "ZString25", "description": "Kebir kodu"},
+    {"name": "ACCOUNTCODE", "type": "ZString25", "description": "Muhasebe kodu"},
+    {"name": "SPECODE", "type": "ZString17", "description": "Ozel kod"},
+    {"name": "DEBIT", "type": "Double", "description": "Borc"},
+    {"name": "CREDIT", "type": "Double", "description": "Alacak"},
+    {"name": "LINENO_", "type": "Integer", "description": "Satir numarasi"},
+    {"name": "LINEEXP", "type": "ZString51", "description": "Satir aciklamasi"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal edilmis"},
+    {"name": "TRCURR", "type": "Byte", "description": "Islem doviz turu"},
+    {"name": "CURRDIFFCALC", "type": "Byte", "description": "Kur farki hesabi"},
+    {"name": "REPORTRATE", "type": "Double", "description": "Raporlama dovizi kuru"},
+    {"name": "REPORTNET", "type": "Double", "description": "Raporlama dovizi tutari"},
+    {"name": "TRRATE", "type": "Double", "description": "Islem dovizi kuru"},
+    {"name": "TRNET", "type": "Double", "description": "Islem dovizi tutari"},
+    {"name": "AMNT", "type": "Double", "description": "Miktar"},
+    {"name": "EXTENREF", "type": "LongInt", "description": "Extra dosya referansi"},
+    {"name": "EMUDEBIT", "type": "Float", "description": "Borc (EURO)"},
+    {"name": "EMUCREDIT", "type": "Float", "description": "Alacak (EURO)"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu(Satir)"}
+  ],
+  "commonQueries": []
+}

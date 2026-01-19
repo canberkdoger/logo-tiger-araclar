@@ -1,0 +1,246 @@
+{
+  "tableName": "LG_XXX_WHLIST",
+  "displayName": "WHLIST",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_WHLIST_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_WHLIST_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TYP"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST7",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST8",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST9",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST10",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST11",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST12",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST13",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST14",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST15",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST16",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST17",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST18",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST19",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST20",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST21",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST22",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST23",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST24",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST25",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST26",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST27",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST28",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST29",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST30",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST31",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST32",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST33",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST34",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST35",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST36",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST37",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST38",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST39",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WHLIST40",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

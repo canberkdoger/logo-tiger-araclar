@@ -1,0 +1,431 @@
+{
+  "tableName": "LG_XXX_XX_DISTORDLINE",
+  "displayName": "DISTORDLINE",
+  "description": "",
+  "category": "Dagitim",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_DISTORDLINE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_DISTORDLINE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DISTORDERREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_DISTORDLINE_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ORDFICHEREF"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_01_DISTORDLINE_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ORDLINEREF",
+        "CLIENTREF"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "I126_01_DISTORDLINE_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DUEDATE"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "I126_01_DISTORDLINE_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DISTORDERREF",
+        "ITEMREF",
+        "VARIANTREF",
+        "LINETYPE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DISTORDERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORDFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORDLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLIENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SALESMAN",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DUEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ORDERAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SHIPAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REMAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWNCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPARTMENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTORY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RISKSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPAIGNREFS5",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTRACKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LOCTRACKING",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REASONFORNOTSHP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DORDSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DORDGODATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DORDRETURNDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UINFO8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GROSSUINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GROSSUINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ORDLNWITHPAY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREFS1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREFS2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREFS3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "POINTCAMPREFS4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREFS1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREFS2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREFS3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CMPGLINEREFS4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AFFECTCOLLATRL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AFFECTRISK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PLNSHIPDAY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PLNSHIPTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACTSHIPDAY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTSHIPTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DISTANCE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PREPSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DISTROUTELNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 6
+}

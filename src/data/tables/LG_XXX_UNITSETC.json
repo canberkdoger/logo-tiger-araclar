@@ -1,0 +1,66 @@
+{
+  "tableName": "LG_XXX_UNITSETC",
+  "displayName": "Birim Cevrim Bilgileri",
+  "description": "Birimler arasi cevrim bilgilerinin tutuldugu tablo",
+  "category": "Birim Yonetimi",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_UNITSETL",
+      "field": "PARENTUSREF",
+      "description": "Ana birim referansi"
+    },
+    {
+      "tableName": "LG_XXX_UNITSETL",
+      "field": "CHILDUSREF",
+      "description": "Alt birim referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "PARENTUSREF", "length": "4 bytes", "type": "int"},
+        {"name": "CHILDUSREF", "length": "4 bytes", "type": "int"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "PARENTUSREF",
+      "type": "int",
+      "description": "Ana birim Ref",
+      "relatedTable": "UNITSETL"
+    },
+    {
+      "name": "CHILDUSREF",
+      "type": "int",
+      "description": "Alt Birim Ref",
+      "relatedTable": "UNITSETL"
+    },
+    {
+      "name": "CONVFACT1",
+      "type": "Float",
+      "description": "Cevrim Katsayisi"
+    },
+    {
+      "name": "CONVFACT2",
+      "type": "Float",
+      "description": "Cevrim Katsayisi"
+    }
+  ],
+  "commonQueries": []
+}

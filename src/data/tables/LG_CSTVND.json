@@ -1,0 +1,310 @@
+{
+  "tableName": "LG_CSTVND",
+  "displayName": "CSTVND",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CSTVND_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CSTVND_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CARDTYPE",
+        "CODE"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "CSTVND_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CARDTYPE",
+        "TITLE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "CSTVND_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "ACTIVE",
+        "CARDTYPE",
+        "CODE"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "CSTVND_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ACTIVE",
+        "CARDTYPE",
+        "TITLE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CARDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ORIGIN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "POSTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELNR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELNR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAXNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CLANGUAGE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CCURRENCY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WEBURL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTCAT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPORG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTORG",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRIMARYCONTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWNCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOWN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTRICT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RIVALFIRM",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELCODES1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELCODES2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAXCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 5
+}

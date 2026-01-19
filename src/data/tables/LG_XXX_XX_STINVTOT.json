@@ -1,0 +1,70 @@
+{
+  "tableName": "LG_XXX_XX_STINVTOT",
+  "displayName": "Ambar Toplamlari (Detayli)",
+  "description": "Stok hareketleri islendigi zaman ambardaki kumulatif ve gunluk toplamlari tutan tablodur. Planlanan ve gerceklesen hareketler ayri ayri izlenmektedir.",
+  "category": "Stok",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 4,
+  "relatedTables": [
+    {"table": "LG_XXX_ITEMS", "field": "STOCKREF", "description": "Malzeme karti referansi"}
+  ],
+  "indexes": [
+    {"no": 1, "fields": [{"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}]},
+    {"no": 2, "fields": [
+      {"name": "STOCKREF", "length": "4 bytes", "type": "Integer", "property": "Modif"},
+      {"name": "INVENNO", "length": "2 bytes", "type": "Integer", "property": "Modif"},
+      {"name": "DATE_", "length": "16", "type": "DateTime"}
+    ]},
+    {"no": 3, "fields": [
+      {"name": "INVENNO", "length": "2 bytes", "type": "Integer"},
+      {"name": "STOCKREF", "length": "4 bytes", "type": "Integer"},
+      {"name": "DATE_", "length": "16", "type": "DateTime"}
+    ]},
+    {"no": 4, "fields": [
+      {"name": "SITEID", "length": "4", "type": "Integer"},
+      {"name": "ORGLOGICREF", "length": "4", "type": "Integer"}
+    ]}
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "STOCKREF", "type": "int", "description": "Malzeme karti referansi ITEMS"},
+    {"name": "INVENNO", "type": "SmallInt", "description": "Ambar no (-1: tum ambarlar)"},
+    {"name": "DATE_", "type": "DateTime", "description": "Tarih ('19.05.1919': Kumulatif toplam)"},
+    {"name": "PLNPRODIN", "type": "Float", "description": "Planlanan uretimden girisler"},
+    {"name": "PLNPRODOUT", "type": "Float", "description": "Planlanan sarf, fireler"},
+    {"name": "PLNOTHERIN", "type": "Float", "description": "Planlanan diger girisler"},
+    {"name": "PLNOTHEROUT", "type": "Float", "description": "Planlanan diger cikislar"},
+    {"name": "PLNWHOUSEIN", "type": "Float", "description": "Planlanan ambar girisleri"},
+    {"name": "PLNWHOUSEOUT", "type": "Float", "description": "Planlanan ambar cikislari"},
+    {"name": "TEMPIN", "type": "Float", "description": "Konsinye girisler"},
+    {"name": "TEMPOUT", "type": "Float", "description": "Konsinye cikislar"},
+    {"name": "RESERVED", "type": "Float", "description": "Rezervasyon miktari"},
+    {"name": "ACTPORDER", "type": "Float", "description": "Alinan siparisler"},
+    {"name": "RECEIVED", "type": "Float", "description": "Teslim alinan alim siparisleri"},
+    {"name": "ACTPRODIN", "type": "Float", "description": "Gerceklesen uretimden girisler"},
+    {"name": "ACTOTHERIN", "type": "Float", "description": "Gerceklesen diger girisler"},
+    {"name": "ACTSORDER", "type": "Float", "description": "Satis siparisleri"},
+    {"name": "SHIPPED", "type": "Float", "description": "Sevkedilen satis siparisleri"},
+    {"name": "ACTWASTE", "type": "Float", "description": "Gerceklesen sarflar fireler"},
+    {"name": "ACTOTHEROUT", "type": "Float", "description": "Gerceklesen diger cikislar"},
+    {"name": "TRANSFERRED", "type": "Float", "description": "Onceki donem devri"},
+    {"name": "AVGVALUE", "type": "Float", "description": "Ortalama deger"},
+    {"name": "AVGCURRVAL", "type": "Float", "description": "Ortalama deger - raporlama dovizi"},
+    {"name": "PURAMNT", "type": "Float", "description": "Satinalma miktari"},
+    {"name": "PURCASH", "type": "Float", "description": "Satinalma tutari"},
+    {"name": "PURCURR", "type": "Float", "description": "Satinalma tutari - raporlama dovizi"},
+    {"name": "SALAMNT", "type": "Float", "description": "Satis miktari"},
+    {"name": "SALCASH", "type": "Float", "description": "Satis tutari"},
+    {"name": "SALCURR", "type": "Float", "description": "Satis tutari - raporlama dovizi"},
+    {"name": "LASTTRDATE", "type": "DateTime", "description": "Son hareket tarihi"},
+    {"name": "ONHAND", "type": "Float", "description": "Eldekiler"},
+    {"name": "ACTWHOUSEIN", "type": "Float", "description": "Gerceklesen ambar girisleri"},
+    {"name": "ACTWHOUSEOUT", "type": "Float", "description": "Gerceklesen ambar cikislari"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"},
+    {"name": "COUNTADD", "type": "Float", "description": "Sayim Fazlasi"},
+    {"name": "COUNTDEC", "type": "Float", "description": "Sayim Eksigi"}
+  ],
+  "commonQueries": []
+}

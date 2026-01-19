@@ -1,0 +1,62 @@
+{
+  "tableName": "LG_XXX_QCLVAL",
+  "displayName": "Kalite Kontrol Satir Degerleri",
+  "description": "Kalite kontrol seti satirlarinin degerlerini icerir.",
+  "category": "Kalite Kontrol",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 7,
+  "relatedTables": [
+    "LG_XXX_QCSET",
+    "LG_XXX_QCSLINE"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CODE", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 3,
+      "fields": ["NAME", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 4,
+      "fields": ["LINEREF", "TARGETFLAG", "LINENO_", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 5,
+      "fields": ["TARGETFLAG", "SETREF", "LINENO_", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 6,
+      "fields": ["TARGETFLAG", "LINEREF", "SETREF", "LINENO_", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 7,
+      "fields": ["LINEREF", "SETREF", "CODE", "LOGICALREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Aciklamasi"},
+    {"name": "SETREF", "type": "int", "description": "Kalite kontrol seti referansi (QCSET)"},
+    {"name": "LINEREF", "type": "int", "description": "Kalite kontrol satiri referansi (QCSLINE)"},
+    {"name": "TARGETFLAG", "type": "SmallInt", "description": "Hedef isareti (bayragi)"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var/yok (1/0)"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Satir no"}
+  ],
+  "commonQueries": []
+}

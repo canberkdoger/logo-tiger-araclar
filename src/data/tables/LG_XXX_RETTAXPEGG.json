@@ -1,0 +1,196 @@
+{
+  "tableName": "LG_XXX_RETTAXPEGG",
+  "displayName": "RETTAXPEGG",
+  "description": "",
+  "category": "Vergi",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_RETTAXPEGG_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RETTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PINVREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SINVREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SLINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALVAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PINVDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PINVDOCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PINVFICHENO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PPERIODNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPERIODNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXPORTVATAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTDOCNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RETTRANSCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLIENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PEXIMFCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SEXIMFCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PLINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPLOADTYPE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DOCDISPER",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCUPLPER",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SMAINAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VREGNUMBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VIDENNUMBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALBASEDSLP",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALVATBASEDSLP",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

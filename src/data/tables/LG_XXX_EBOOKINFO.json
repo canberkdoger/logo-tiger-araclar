@@ -1,0 +1,361 @@
+{
+  "tableName": "LG_XXX_EBOOKINFO",
+  "displayName": "EBOOKINFO",
+  "description": "",
+  "category": "E-Belge",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_EBOOKINFO_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CONTROLNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATEOFCREATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PERMONTH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PERYEAR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FTELNRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FTELCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FTELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTSTARTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "SMMTELNRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SMMTELCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SMMTELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BOOKSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FILESIZE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CONTROLNOBEG",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FILECOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WITHTIMESTAMP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TIMESTAMPDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TIMESTAMPTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WITHGROUP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPNO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARTLYSENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SENDSTATUSSTR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BJOURNALNO",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EJOURNALNO",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BGLOBLINENO",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EGLOBLINENO",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALDEBIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALCREDIT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CURRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORJREPSTARTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINGCNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BACKUPSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES9",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ACCVALUES10",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "JOURNALCOUNT",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

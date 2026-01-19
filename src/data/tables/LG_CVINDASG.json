@@ -1,0 +1,90 @@
+{
+  "tableName": "LG_CVINDASG",
+  "displayName": "CVINDASG",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CVINDASG_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CVINDASG_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CSTVNDREF",
+        "INDREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CSTVNDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRIMARYFLG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ANNVOLUME",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VOLCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ANNVOLUMERC",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EMPLOYEECNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

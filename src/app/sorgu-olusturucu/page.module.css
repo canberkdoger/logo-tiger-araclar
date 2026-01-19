@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+  padding: var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+}
+
+.searchSection {
+  display: flex;
+  gap: var(--spacing-md);
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.categorySelect,
+.tableSelect {
+  padding: 10px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.categorySelect:focus,
+.tableSelect:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.categorySelect option,
+.tableSelect option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.categorySelect {
+  min-width: 160px;
+}
+
+.tableSelect {
+  min-width: 280px;
+  flex: 1;
+}
+
+.builderContainer {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  gap: var(--spacing-md);
+  color: var(--text-muted);
+}
+
+.loading i {
+  font-size: 32px;
+  color: var(--accent-primary);
+}
+
+@media (max-width: 1024px) {
+  .topBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchSection {
+    flex-direction: column;
+  }
+
+  .categorySelect,
+  .tableSelect {
+    width: 100%;
+  }
+}

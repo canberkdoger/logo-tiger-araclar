@@ -1,0 +1,449 @@
+{
+  "tableName": "L_CAPIESHOP",
+  "displayName": "CAPIESHOP",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIESHOP_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIESHOP_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "NR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FRMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ESHOPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PASSWORD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FOUNDDATE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ADR1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADR2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ZIPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CITY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRYCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAX",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WEBADR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILADR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AUTHNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AUTHSNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AUTHPHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AUTHMPHONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MISSION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AUTHEMAIL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MARK",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WORKERCNT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAPACITY",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXPTOT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MEXPMARK",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "QUALITYDOC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDSAMPLE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SENDCOLLECT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS5",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS6",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS7",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS8",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS9",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS10",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS11",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS12",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS13",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS14",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS15",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS16",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS17",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS18",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS19",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS20",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS21",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS22",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS23",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS24",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS25",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS26",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS27",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS28",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS29",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS30",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS31",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS32",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS33",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS34",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS35",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS36",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS37",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS38",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS39",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS40",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS41",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS42",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS43",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS44",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS45",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS46",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS47",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS48",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS49",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SECTORS50",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINCTR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINCENG",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

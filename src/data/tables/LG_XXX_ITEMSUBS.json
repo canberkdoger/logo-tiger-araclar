@@ -1,0 +1,94 @@
+{
+  "tableName": "LG_XXX_ITEMSUBS",
+  "displayName": "Malzeme Ikame Tanimlari",
+  "description": "Malzeme ikame (yedek) tanimlarini icerir. Ana malzeme bulunmadiginda yerine kullanilabilecek alternatif malzemelerin tanimi.",
+  "category": "Stok",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_ITEMS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["MAINITEMREF", "SUBITEMREF", "PRIORITY", "LOGICALREF"],
+      "type": "int, int, SmallInt, Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["LOGICALREF", "MAINITEMREF", "SUBITEMREF", "PRIORITY"],
+      "type": "Auto Increment, int, int, SmallInt",
+      "property": "Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["MAINITEMREF", "LINENO_", "LOGICALREF"],
+      "type": "int, SmallInt, int",
+      "property": "Modif"
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "MAINITEMREF",
+      "type": "int",
+      "description": "Ana malzeme sinifi referansi"
+    },
+    {
+      "name": "SUBITEMREF",
+      "type": "int",
+      "description": "Alt malzeme sinifi referansi"
+    },
+    {
+      "name": "LINENO_",
+      "type": "SmallInt",
+      "description": "Satir no"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "SmallInt",
+      "description": "Oncelik"
+    },
+    {
+      "name": "CONVFACT1",
+      "type": "Float",
+      "description": "Carpan 1"
+    },
+    {
+      "name": "CONVFACT2",
+      "type": "Float",
+      "description": "Carpan 2"
+    },
+    {
+      "name": "MAXQUANTITY",
+      "type": "Float",
+      "description": "Azami miktar"
+    },
+    {
+      "name": "MINQUANTITY",
+      "type": "Float",
+      "description": "Asgari miktar"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "DateTime",
+      "description": "Baslangic tarihi"
+    },
+    {
+      "name": "ENDDATE",
+      "type": "DateTime",
+      "description": "Bitis tarihi"
+    }
+  ],
+  "commonQueries": []
+}

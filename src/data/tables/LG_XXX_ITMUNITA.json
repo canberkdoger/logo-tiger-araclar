@@ -1,0 +1,100 @@
+{
+  "tableName": "LG_XXX_ITMUNITA",
+  "displayName": "Malzeme Birim Atamalari",
+  "description": "Malzeme kartlarina atanan birim ve barkod bilgilerini icerir. Kullanim yerleri (satis, satinalma, malzeme yonetimi) bazinda birim oncelikleri.",
+  "category": "Stok",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_UNITSETL"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "int",
+      "property": ""
+    },
+    {
+      "no": 2,
+      "fields": ["ITEMREF", "LINENR", "LOGICALREF"],
+      "type": "int, SmallInt, int",
+      "property": ""
+    },
+    {
+      "no": 3,
+      "fields": ["BARCODE", "LOGICALREF"],
+      "type": "VarChar, int",
+      "property": ""
+    },
+    {
+      "no": 4,
+      "fields": ["UNITLINEREF", "ITEMREF"],
+      "type": "int",
+      "property": ""
+    },
+    {
+      "no": 5,
+      "fields": ["UNITLINEREF", "LOGICALREF"],
+      "type": "int",
+      "property": ""
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "Malzeme karti referansi - ITEMS"
+    },
+    {
+      "name": "LINENR",
+      "type": "SmallInt",
+      "description": "Satir no"
+    },
+    {
+      "name": "UNITLINEREF",
+      "type": "int",
+      "description": "Birim referansi - UNITSETL"
+    },
+    {
+      "name": "BARCODE",
+      "type": "VarChar",
+      "description": "Barkod"
+    },
+    {
+      "name": "MTRLCLAS",
+      "type": "SmallInt",
+      "description": "Kullanim yeri malzeme yonetimi"
+    },
+    {
+      "name": "PURCHCLAS",
+      "type": "SmallInt",
+      "description": "Kullanim yeri satinalma"
+    },
+    {
+      "name": "SALESCLAS",
+      "type": "SmallInt",
+      "description": "Kullanim yeri satis"
+    },
+    {
+      "name": "MTRLPRIORITY",
+      "type": "SmallInt",
+      "description": "Malzeme yonetimi onceligi"
+    },
+    {
+      "name": "PURCHPRIORTY",
+      "type": "SmallInt",
+      "description": "Satinalma onceligi"
+    },
+    {
+      "name": "SALESPRIORITY",
+      "type": "SmallInt",
+      "description": "Satis onceligi"
+    }
+  ],
+  "commonQueries": []
+}

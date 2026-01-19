@@ -1,0 +1,46 @@
+{
+  "tableName": "L_GOUSERS",
+  "displayName": "Aktif Kullanicilar",
+  "description": "Programa giris yapan aktif kullanicilarin oturum bilgilerinin tutuldugu tablo.",
+  "category": "Sistem",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 3,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "USRNR", "length": "2 bytes", "type": "Integer" },
+        { "name": "TERMNR", "length": "2 bytes", "type": "Integer" },
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "TERMNR", "length": "2 bytes", "type": "Integer" },
+        { "name": "USRNR", "length": "2 bytes", "type": "Integer" },
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "int", "description": "Fiziksel adres" },
+    { "name": "USRNR", "type": "SmallInt", "description": "Kullanici No" },
+    { "name": "TERMNR", "type": "SmallInt", "description": "Terminal No" },
+    { "name": "LLOGINDATE", "type": "int", "description": "Programa giris tarihi" },
+    { "name": "LLOGINTIME", "type": "int", "description": "Programa giris saati" },
+    { "name": "LLOGOUTDATE", "type": "int", "description": "Programdan cikis tarihi" },
+    { "name": "LLOGOUTTIME", "type": "int", "description": "Programdan cikis saati" },
+    { "name": "ABNTERMS", "type": "int", "description": "Ic kullanim" },
+    { "name": "TDEFERRORS", "type": "int", "description": "Ic kullanim" }
+  ],
+  "commonQueries": []
+}

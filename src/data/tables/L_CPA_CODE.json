@@ -1,0 +1,69 @@
+{
+  "tableName": "L_CPA_CODE",
+  "displayName": "CPA_CODE",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CPA_CODE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CPA_CODE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CODE"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "CPA_CODE_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "LEVEL_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LEVEL_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CODEEMPTY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SELECTABLE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

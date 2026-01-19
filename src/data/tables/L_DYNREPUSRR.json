@@ -1,0 +1,70 @@
+{
+  "tableName": "L_DYNREPUSRR",
+  "displayName": "DYNREPUSRR",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "DYNREPUSRR_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "DYNREPUSRR_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "USERNR",
+        "FIRMNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ALLOWCUSTDSGN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ALLOWCUSTDSGNSEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ALLOWUSEREPORT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

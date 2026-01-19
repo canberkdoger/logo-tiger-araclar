@@ -1,0 +1,165 @@
+{
+  "tableName": "LG_XXX_XX_INVOICE",
+  "displayName": "Fatura",
+  "description": "INVOICE tablosunda veri tabanina kaydedilen faturalarin baslik bilgileri tutulmaktadir. Faturanin satir bilgilerine ulasmak icin STLINE tablosu okunmalidir.",
+  "category": "Fatura",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 9,
+  "relatedTables": ["CLCARD", "EMCENTER", "EMUHACC", "KSLINES", "PAYPLANS", "EMFICHE", "SLSMAN", "STLINE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["GRPCODE", "TRCODE", "FICHENO"],
+      "type": "Composite",
+      "properties": "Modif, Seg"
+    },
+    {
+      "no": 3,
+      "fields": ["GRPCODE", "DATE_", "TRCODE"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 4,
+      "fields": ["TRCODE", "FICHENO"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 5,
+      "fields": ["DATE_", "TRCODE"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 6,
+      "fields": ["ACCFICHEREF"],
+      "type": "Integer",
+      "properties": "Dup, Modif"
+    },
+    {
+      "no": 7,
+      "fields": ["CLIENTREF", "DATE_"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 8,
+      "fields": ["SALESMANREF", "DATE_"],
+      "type": "Composite",
+      "properties": "Dup, Modif, Seg"
+    },
+    {
+      "no": 9,
+      "fields": ["SITEID", "ORGLOGICREF"],
+      "type": "Composite",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "GRPCODE", "type": "Integer", "description": "Grup kodu (1:alim faturasi, 2:satis faturasi)"},
+    {"name": "TRCODE", "type": "Integer", "description": "Fatura turu (1: Mal alim faturasi, 2: Perakende satis iade faturasi, 3: Toptan satis iade faturasi, 4: Alinan hizmet faturasi, 5: Alinan proforma fatura, 6: alim iade faturasi, 7: Perakende satis faturasi, 8: Toptan satis faturasi, 9: Verilen hizmet faturasi, 10: Verilen proforma fatura, 13: Alinan Fiyat farki faturasi, 14: Verilen fiyat farki faturasi, 26: Mustahsil makbuzu)"},
+    {"name": "FICHENO", "type": "ZString17", "description": "Fatura numarasi"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "DOCODE", "type": "ZString9", "description": "Belge no"},
+    {"name": "SPECODE", "type": "ZString11", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "ZString11", "description": "Yetki kodu"},
+    {"name": "CLIENTREF", "type": "LongInt", "description": "Cari hesap referansi CLCARD"},
+    {"name": "RECVREF", "type": "LongInt", "description": "Alici(sevkiyat) cari hesap referansi CLCARD"},
+    {"name": "CENTERREF", "type": "LongInt", "description": "Masraf merkezi referansi EMCENTER"},
+    {"name": "ACCOUNTREF", "type": "LongInt", "description": "Muhasebe hesabi referansi EMUHACC"},
+    {"name": "SOURCEINDEX", "type": "Integer", "description": "Ambar no"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal (E/H)"},
+    {"name": "ACCOUNTED", "type": "Byte", "description": "Muhasebeleştirilmiş (E/H)"},
+    {"name": "PAIDINCASH", "type": "Byte", "description": "Pesin odenmis (E/H)"},
+    {"name": "FROMKASA", "type": "Byte", "description": "Kasadan fatura (E/H)"},
+    {"name": "ENTEGSET", "type": "Byte", "description": "1. bit -> Indirimler dagilmis, 2. bit -> Masraflar dagilmis, 3. bit -> Promosyonlar dagilmis"},
+    {"name": "VAT", "type": "Double", "description": "KDV orani"},
+    {"name": "ADDDISCOUNTS", "type": "Double", "description": "Satira uygulanan ek indirimler"},
+    {"name": "TOTALDISCOUNTS", "type": "Double", "description": "Toplam indirimler"},
+    {"name": "TOTALDISCOUNTED", "type": "Double", "description": "Satir indirimleri dusulmus tutar"},
+    {"name": "ADDEXPENSES", "type": "Double", "description": "Satira uygulanan ek masraflar"},
+    {"name": "TOTALEXPENSES", "type": "Double", "description": "Toplam masraflar"},
+    {"name": "DISTEXPENSE", "type": "Double", "description": "Stok maliyetine dagilacak masraf"},
+    {"name": "TOTALDEPOZITO", "type": "Double", "description": "Toplam depozito"},
+    {"name": "TOTALPROMOTIONS", "type": "Double", "description": "Toplam promosyonlar"},
+    {"name": "VATINCGROSS", "type": "Double", "description": "KDV dahil tutar"},
+    {"name": "TOTALVAT", "type": "Double", "description": "Toplam KDV"},
+    {"name": "GROSSTOTAL", "type": "Double", "description": "Toplam"},
+    {"name": "NETTOTAL", "type": "Double", "description": "Net tutar"},
+    {"name": "GENEXP1", "type": "ZString51", "description": "Fis genel aciklamasi"},
+    {"name": "GENEXP2", "type": "ZString51", "description": "Fis genel aciklamasi"},
+    {"name": "GENEXP3", "type": "ZString51", "description": "Fis genel aciklamasi"},
+    {"name": "GENEXP4", "type": "ZString51", "description": "Fis genel aciklamasi"},
+    {"name": "GENEXP5", "type": "ZString51", "description": "Fis genel aciklamasi"},
+    {"name": "INTERESTAPP", "type": "Double", "description": "Kapanan vade farki"},
+    {"name": "TRCURR", "type": "Byte", "description": "Islem doviz turu"},
+    {"name": "TRRATE", "type": "Double", "description": "Islem doviz kuru"},
+    {"name": "TRNET", "type": "Double", "description": "Islem net tutari"},
+    {"name": "REPORTRATE", "type": "Double", "description": "Raporlama doviz kuru"},
+    {"name": "REPORTNET", "type": "Double", "description": "Raporlama net tutari"},
+    {"name": "ONLYONEPAYLINE", "type": "Byte", "description": "Tek satirli odeme plani"},
+    {"name": "KASTRANSREF", "type": "LongInt", "description": "Kasa hareketi referansi KSLINES"},
+    {"name": "PAYDEFREF", "type": "LongInt", "description": "Odeme plani referansi PAYPLANS"},
+    {"name": "PRINTCNT", "type": "Integer", "description": "Toplam kac kez yazildigi"},
+    {"name": "GVATINC", "type": "Byte", "description": "KDV (0:Dahil, 1:Haric)"},
+    {"name": "BRANCH", "type": "Integer", "description": "Is yeri"},
+    {"name": "DEPARTMENT", "type": "Integer", "description": "Bolum"},
+    {"name": "ACCFICHEREF", "type": "LongInt", "description": "Muhasebe fis referansi EMFICHE"},
+    {"name": "ADDEXPACCREF", "type": "LongInt", "description": "Ek masraf muhasebe referansi EMUHACC"},
+    {"name": "ADDEXPCENTREF", "type": "LongInt", "description": "Ek masraf muhasebe masraf merkezi referansi EMCENTER"},
+    {"name": "DECPRDIFF", "type": "Byte", "description": ""},
+    {"name": "CAPIBLOK_CREATEDBY", "type": "Integer", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_CREATEDDATE", "type": "LongInt", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOK_CREATEDHOUR", "type": "Integer", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOK_CREATEDMIN", "type": "Integer", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOK_CREATEDSEC", "type": "Integer", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOK_MODIFIEDBY", "type": "Integer", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_MODIFIEDDATE", "type": "LongInt", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOK_MODIFIEDHOUR", "type": "Integer", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOK_MODIFIEDMIN", "type": "Integer", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOK_MODIFIEDSEC", "type": "Integer", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "SALESMANREF", "type": "LongInt", "description": "Satici (plasiyer) karti referansi SLSMAN"},
+    {"name": "CANCELLEDACC", "type": "Byte", "description": "Muhasebeletirme iptal(0:Hayir 1:Evet)"},
+    {"name": "SHPTYPCOD", "type": "VarChar", "description": "Sevkiyat Turu"},
+    {"name": "SHPAGNCOD", "type": "VarChar", "description": "Tasiyici Kodu"},
+    {"name": "TRACKNR", "type": "VarChar", "description": "Paket/Koli No"},
+    {"name": "GENEXCTYP", "type": "SmallInt", "description": "Doviz Turu(Genel)"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu(Satir)"},
+    {"name": "TRADINGGRP", "type": "VarChar", "description": "Ticari islem Grubu"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1:Evet, 0:Hayir)"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"},
+    {"name": "FACTORYNR", "type": "SmallInt", "description": "Fabrika no"}
+  ],
+  "commonQueries": [
+    {
+      "name": "Tum Satis Faturalari",
+      "description": "Belirli tarih araligindaki tum satis faturalarini listeler",
+      "sql": "SELECT FICHENO, DATE_, CLIENTREF, NETTOTAL, TOTALVAT FROM LG_{firmNo}_{donemNo}_INVOICE WHERE TRCODE IN (7, 8) AND DATE_ BETWEEN '{basTarih}' AND '{bitTarih}' ORDER BY DATE_ DESC"
+    },
+    {
+      "name": "Tum Alis Faturalari",
+      "description": "Belirli tarih araligindaki tum alis faturalarini listeler",
+      "sql": "SELECT FICHENO, DATE_, CLIENTREF, NETTOTAL, TOTALVAT FROM LG_{firmNo}_{donemNo}_INVOICE WHERE TRCODE = 1 AND DATE_ BETWEEN '{basTarih}' AND '{bitTarih}' ORDER BY DATE_ DESC"
+    },
+    {
+      "name": "Cariye Ait Faturalar",
+      "description": "Belirli bir cariye ait tum faturalari listeler",
+      "sql": "SELECT FICHENO, DATE_, TRCODE, NETTOTAL FROM LG_{firmNo}_{donemNo}_INVOICE WHERE CLIENTREF = {cariRef} ORDER BY DATE_ DESC"
+    },
+    {
+      "name": "Fatura Detayi",
+      "description": "Belirli bir faturanin tum bilgilerini getirir",
+      "sql": "SELECT * FROM LG_{firmNo}_{donemNo}_INVOICE WHERE FICHENO = '{faturaNo}'"
+    }
+  ]
+}

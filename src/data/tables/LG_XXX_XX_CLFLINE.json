@@ -1,0 +1,112 @@
+{
+  "tableName": "LG_XXX_XX_CLFLINE",
+  "displayName": "Cari Hesap Hareketi",
+  "description": "CLFLINE tablosunda cari hesap fisleri ile ve cari hesabi borclardiran ya da alacaklandiran fatura, cek/senet bordrosu, banka havale fisi gibi fislerden sonra olusan cari hesap harekti kayitlari yer almaktadir. Belli bir ayin belli bir araligina ait cari hesap toplami almak icin ay icerisinde belirtilen araliga ait tarihkerdeki kayitlar incelenmelidir.",
+  "category": "Cari Hesap",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 7,
+  "relatedTables": ["LG_XXX_CLCARD", "LG_XXX_XX_EMUHACC", "LG_XXX_XX_EMCENTER", "LG_XXX_PAYPLANS", "LG_XXX_XX_EMFICHE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Modif, Seg"},
+        {"name": "TRANNO", "length": "9 bytes", "type": "ZString", "property": "Modif, Seg"},
+        {"name": "LINENR", "length": "2 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "DATE_", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "TRANNO", "length": "9 bytes", "type": "ZString", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "CLIENTREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "DATE_", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "MODULENR", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "MODULENR", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "SOURCEFREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 6,
+      "fields": [
+        {"name": "ACCFICHEREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 7,
+      "fields": [
+        {"name": "SOURCEFREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "LINENR", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "CLIENTREF", "type": "LongInt", "description": "Cari hesap referansi -> CLCARD"},
+    {"name": "CLACCREF", "type": "LongInt", "description": "Cari hesap muhasebe hesabi referansi -> EMUHACC"},
+    {"name": "CLCENTERREF", "type": "LongInt", "description": "Cari hesap Masraf merkezi referansi -> EMCENTER"},
+    {"name": "CASHCENTERREF", "type": "LongInt", "description": "Kasa masraf merkezi referansi -> EMCENTER"},
+    {"name": "CASHACCOUNTREF", "type": "LongInt", "description": "Kasa muhasebe hesabi referansi -> EMUHACC"},
+    {"name": "VIRMANREF", "type": "LongInt", "description": "Virman satiri referansi"},
+    {"name": "SOURCEFREF", "type": "LongInt", "description": "Ilgili moduldeki ilgili fisin referansi"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "DEPARTMENT", "type": "Integer", "description": "Departman"},
+    {"name": "BRANCH", "type": "Integer", "description": "Sube"},
+    {"name": "MODULENR", "type": "Integer", "description": "Modul numarasi (4: Fatura, 5: Cari Hesap, 6:cek/senet, 7:banka 10:kasa)"},
+    {"name": "TRCODE", "type": "Integer", "description": "Hareket turu (01:Nakit tahsilat, 02:Nakit odeme, 03:Borc dekontu, 04:Alacak dekontu, 05:Virman Islemi, 06:Kur farki islemi, 12:Ozel islem, 20:Gelen havaleler, 21:Gonderilen havaleler, 31:Mal alim fat., 32:Perakende satis iade fat. 33:Toptan satis iade fat., 34:Alinan hizmet fat., 35:Alinan proforma fat., 36:Alim iade fat., 37:Perakende satis fat., 38:Toptan satis fat., 39:Verilen hizmet faturasi, 40:Verilen proforma fat., 41:Verilen vade farki fat., 42:Alinan Vade farki fat., 43:Alinan fiyat farki fat., 44:Verilen fiyat farki fat., 56:Musthsil makbuzu, 61:Cek girisi, 62:Senet girisi, 63:Cek cikis cari hesaba, 64:Senet cikis cari hesaba)"},
+    {"name": "LINENR", "type": "Integer", "description": "Hareket turu virman (E/H)"},
+    {"name": "SPECODE", "type": "ZString11", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "ZString11", "description": "Yetki kodu"},
+    {"name": "TRANNO", "type": "ZString9", "description": "Islem no"},
+    {"name": "DOCODE", "type": "ZString9", "description": "Belge no"},
+    {"name": "LINEEXP", "type": "ZString51", "description": "Hareket aciklamasi"},
+    {"name": "ACCOUNTED", "type": "Byte", "description": "Muhasebelesmis (E/H)"},
+    {"name": "SIGN", "type": "Integer", "description": "Borc-alacak isareti (0:Borc,1:Alacak)"},
+    {"name": "AMOUNT", "type": "Double", "description": "Tutar"},
+    {"name": "TRCURR", "type": "Byte", "description": "Islem doviz turu"},
+    {"name": "TRRATE", "type": "Double", "description": "Islem doviz kuru"},
+    {"name": "TRNET", "type": "Double", "description": "Islem net tutari"},
+    {"name": "REPORTRATE", "type": "Double", "description": "Raporlama doviz kuru"},
+    {"name": "REPORTNET", "type": "Double", "description": "Raporlama net tutari"},
+    {"name": "EXTENREF", "type": "LongInt", "description": "Extra dosya referansi"},
+    {"name": "PAYDEFREF", "type": "LongInt", "description": "Odeme plani referansi -> PAYPLANS"},
+    {"name": "ACCFICHEREF", "type": "LongInt", "description": "Muhasebe fis referansi -> EMFICHE"},
+    {"name": "PRINTCNT", "type": "Integer", "description": "Toplam kac kez basildigi"},
+    {"name": "CAPIBLOK_CREATEDBY", "type": "Integer", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_CREATEDDATE", "type": "LongInt", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOK_CREATEDHOUR", "type": "Integer", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOK_CREATEDMIN", "type": "Integer", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOK_CREATEDSEC", "type": "Integer", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOK_MODIFIEDBY", "type": "Integer", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_MODIFIEDDATE", "type": "LongInt", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOK_MODIFIEDHOUR", "type": "Integer", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOK_MODIFIEDMIN", "type": "Integer", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOK_MODIFIEDSEC", "type": "Integer", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal edilmis"},
+    {"name": "TRGFLAG", "type": "Byte", "description": "Trigger Bayragi (0:Trigger kullanilacak 1:Trigger kullanilmayacak)"},
+    {"name": "TRADINGGRP", "type": "VarChar", "description": "Ticari islem grubu"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Satir)"},
+    {"name": "ONLYONEPAYLINE", "type": "SmallInt", "description": ""}
+  ],
+  "commonQueries": []
+}

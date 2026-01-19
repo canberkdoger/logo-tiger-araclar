@@ -1,0 +1,162 @@
+{
+  "tableName": "LG_XXX_UNITSETF",
+  "displayName": "Birim Setleri",
+  "description": "Birim seti tanimlarinin tutuldugu ana tablo",
+  "category": "Birim Yonetimi",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 6,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "CODE", "length": "12 bytes", "type": "VarChar"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "NAME", "length": "12 bytes", "type": "VarChar"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "CARDTYPE", "length": "5 bytes", "type": "SmallInt"},
+        {"name": "CODE", "length": "12 bytes", "type": "VarChar"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "CARDTYPE", "length": "5 bytes", "type": "SmallInt"},
+        {"name": "NAME", "length": "12 bytes", "type": "VarChar"}
+      ]
+    },
+    {
+      "no": 6,
+      "fields": [
+        {"name": "SITEID", "length": "4 bytes", "type": "int"},
+        {"name": "ORGLOGICREF", "length": "4 bytes", "type": "int"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "CODE",
+      "type": "VarChar",
+      "description": "Birim seti kodu"
+    },
+    {
+      "name": "NAME",
+      "type": "VarChar",
+      "description": "Birim seti aciklamasi"
+    },
+    {
+      "name": "CARDTYPE",
+      "type": "SmallInt",
+      "description": "Kayit turu",
+      "values": [
+        {"value": 1, "description": "Uzunluk olculeri"},
+        {"value": 2, "description": "Alan olculeri"},
+        {"value": 3, "description": "Hacim olculeri"},
+        {"value": 4, "description": "Agirlik olculeri"},
+        {"value": 5, "description": "Kullanici tanimli olculer"}
+      ]
+    },
+    {
+      "name": "SPECITEM",
+      "type": "SmallInt",
+      "description": "Malzeme/hizmet kartina ozel",
+      "values": [
+        {"value": 0, "description": "Hayir"},
+        {"value": 1, "description": "Evet"}
+      ]
+    },
+    {
+      "name": "SPECODE",
+      "type": "VarChar",
+      "description": "Ozel kod"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "VarChar",
+      "description": "Yetki kodu"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Olusturan Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Olusturuldugu Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saat"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saniye"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Degistiren Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Degistirildigi Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saat"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saniye"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "Bolge no"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "Orjinal kayit referansi"
+    }
+  ],
+  "commonQueries": []
+}

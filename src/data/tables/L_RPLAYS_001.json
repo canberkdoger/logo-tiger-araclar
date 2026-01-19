@@ -1,0 +1,60 @@
+{
+  "tableName": "L_RPLAYS_001",
+  "displayName": "Rapor Yerlesim Sablonlari",
+  "description": "Rapor yerlesim (layout) tasarim sablonlarinin tutuldugu tablo.",
+  "category": "Raporlama",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 3,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "DATATYPE", "length": "2 bytes", "type": "Integer" },
+        { "name": "OWNERID", "length": "4 bytes", "type": "Integer" },
+        { "name": "INSTANCE", "length": "4 bytes", "type": "Integer" },
+        { "name": "DEFAULTFLG", "length": "4 bytes", "type": "Integer" },
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        { "name": "DATATYPE", "length": "2 bytes", "type": "Integer" },
+        { "name": "OWNERID", "length": "4 bytes", "type": "Integer" },
+        { "name": "INSTANCE", "length": "4 bytes", "type": "Integer" },
+        { "name": "TEMPNAME", "length": "51 bytes", "type": "VarChar" },
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres" },
+    { "name": "DATATYPE", "type": "SmallInt", "description": "Tasarim tipi" },
+    { "name": "OWNERID", "type": "Int", "description": "Tasarim no" },
+    { "name": "INSTANCE", "type": "Int", "description": "Ornek no" },
+    { "name": "DEFAULTFLG", "type": "SmallInt", "description": "Default bayragi 1:Default 0:Degil" },
+    { "name": "TEMPNAME", "type": "VarChar", "description": "Tasarim adi" },
+    { "name": "EXPLANATION", "type": "VarChar", "description": "Tasarim aciklamasi" },
+    { "name": "DATASIZE", "type": "Int", "description": "Veri uzunlugu" },
+    { "name": "UPDATEINFO_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu" },
+    { "name": "UPDATEINFO_CREATEDDATE", "type": "Int", "description": "Kaydin Olusturuldugu Tarih" },
+    { "name": "UPDATEINFO_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat" },
+    { "name": "UPDATEINFO_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika" },
+    { "name": "UPDATEINFO_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye" },
+    { "name": "UPDATEINFO_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu" },
+    { "name": "UPDATEINFO_MODIFIEDDATE", "type": "int", "description": "Kaydin Degistirildigi Tarih" },
+    { "name": "UPDATEINFO_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat" },
+    { "name": "UPDATEINFO_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika" },
+    { "name": "UPDATEINFO_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye" },
+    { "name": "LDATA", "type": "image", "description": "Ic kullanim" }
+  ],
+  "commonQueries": []
+}

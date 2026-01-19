@@ -1,0 +1,54 @@
+{
+  "tableName": "L_SMSUSER",
+  "displayName": "SMSUSER",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "SMSUSER_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TELONE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVESTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SUPPLIERCONFIRMED",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

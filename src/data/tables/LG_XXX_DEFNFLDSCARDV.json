@@ -1,0 +1,579 @@
+{
+  "tableName": "LG_XXX_DEFNFLDSCARDV",
+  "displayName": "DEFNFLDSCARDV",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_DEFNFLDSCARDV_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_DEFNFLDSCARDV_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "MODULENR",
+        "LEVEL_",
+        "PARENTREF",
+        "OWNERREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODULENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LEVEL_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OWNERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS7",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS8",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS9",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS10",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS11",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS12",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS13",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS14",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS15",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS16",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS17",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS18",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS19",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS20",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS21",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS22",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS23",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS24",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS25",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS26",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS27",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS28",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS29",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS30",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS31",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS32",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS33",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS34",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS35",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS36",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS37",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS38",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS39",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS40",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS41",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS42",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS43",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS44",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS45",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS46",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS47",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS48",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS49",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTFLDS50",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS9",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS10",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS11",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS12",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS13",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS14",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS15",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS16",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS17",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS18",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS19",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS20",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS21",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS22",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS23",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS24",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS25",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS26",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS27",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS28",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS29",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS30",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS31",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS32",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS33",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS34",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS35",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS36",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS37",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS38",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS39",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS40",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS41",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS42",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS43",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS44",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS45",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS46",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS47",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS48",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS49",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NUMFLDS50",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

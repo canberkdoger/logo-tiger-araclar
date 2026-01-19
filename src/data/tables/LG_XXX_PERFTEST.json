@@ -1,0 +1,1426 @@
+{
+  "tableName": "LG_XXX_PERFTEST",
+  "displayName": "PERFTEST",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_PERFTEST_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_PERFTEST_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CODE"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_PERFTEST_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "NAME"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_PERFTEST_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PRODUCERCODE"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "I126_PERFTEST_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "STGRPCODE"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "I126_PERFTEST_I6",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CLASSTYPE",
+        "ACTIVE",
+        "CODE"
+      ]
+    },
+    {
+      "no": 7,
+      "name": "I126_PERFTEST_I7",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CLASSTYPE",
+        "ACTIVE",
+        "NAME"
+      ]
+    },
+    {
+      "no": 8,
+      "name": "I126_PERFTEST_I8",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PURCHBRWS",
+        "CLASSTYPE",
+        "ACTIVE",
+        "CODE"
+      ]
+    },
+    {
+      "no": 9,
+      "name": "I126_PERFTEST_I9",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "SALESBRWS",
+        "CLASSTYPE",
+        "ACTIVE",
+        "CODE"
+      ]
+    },
+    {
+      "no": 10,
+      "name": "I126_PERFTEST_I10",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "MTRLBRWS",
+        "CLASSTYPE",
+        "ACTIVE",
+        "CODE"
+      ]
+    },
+    {
+      "no": 11,
+      "name": "I126_PERFTEST_I11",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "UNITSETREF"
+      ]
+    },
+    {
+      "no": 12,
+      "name": "I126_PERFTEST_I12",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PURCHBRWS",
+        "CLASSTYPE",
+        "ACTIVE",
+        "NAME"
+      ]
+    },
+    {
+      "no": 13,
+      "name": "I126_PERFTEST_I13",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "SALESBRWS",
+        "CLASSTYPE",
+        "ACTIVE",
+        "NAME"
+      ]
+    },
+    {
+      "no": 14,
+      "name": "I126_PERFTEST_I14",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "MTRLBRWS",
+        "CLASSTYPE",
+        "ACTIVE",
+        "NAME"
+      ]
+    },
+    {
+      "no": 15,
+      "name": "I126_PERFTEST_I15",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "LOGOID"
+      ]
+    },
+    {
+      "no": 16,
+      "name": "I126_PERFTEST_I16",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ACTIVE",
+        "CODE"
+      ]
+    },
+    {
+      "no": 17,
+      "name": "I126_PERFTEST_I17",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ACTIVE",
+        "NAME"
+      ]
+    },
+    {
+      "no": 18,
+      "name": "I126_PERFTEST_I18",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DOMINANTREFS5"
+      ]
+    },
+    {
+      "no": 19,
+      "name": "I126_PERFTEST_I19",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "CARDTYPE",
+        "DOMINANTREFS5"
+      ]
+    },
+    {
+      "no": 20,
+      "name": "I126_PERFTEST_I20",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ACTIVE",
+        "CARDTYPE"
+      ]
+    },
+    {
+      "no": 21,
+      "name": "I126_PERFTEST_I21",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CLASSTYPE",
+        "DOMINANTREFS5",
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 22,
+      "name": "I126_PERFTEST_I22",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "LOWLEVELCODES1",
+        "LOWLEVELCODES2",
+        "LOWLEVELCODES3",
+        "LOWLEVELCODES4",
+        "LOWLEVELCODES5",
+        "LOWLEVELCODES6",
+        "LOWLEVELCODES7",
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CARDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STGRPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRODUCERCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CLASSTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PURCHBRWS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SALESBRWS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MTRLBRWS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PAYMENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TRACKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LOCTRACKING",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TOOL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "AUTOINCSL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DIVLOTSIZE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SHELFLIFE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SHELFDATE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS5",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS6",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS7",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS8",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS9",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS10",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS11",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOMINANTREFS12",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "IMAGEINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DEPRDUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SALVAGEVAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REVALFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REVDEPRFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARTDEP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPRTYPE2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPRRATE2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DEPRDUR2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REVALFLAG2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REVDEPRFLAG2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARTDEP2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UNITSETREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "QCCSETREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DISTAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UNIVID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DISTLOTUNITS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COMBLOTUNITS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WFSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DISTPOINT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CAMPPOINT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CANUSEINTRNS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ISONR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRODCOUNTRY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "QPRODAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "QPRODUOM",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "QPRODSRCINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXTACCESSFLAGS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PACKET",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SALVAGEVAL2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SELLVAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RETURNVAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LOGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LIDCONFIRMED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GTIPCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXPCTGNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "B2CCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MARKREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "IMAGE2INC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "AVRWHDURATION",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXTCARDFLAGS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MINORDAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTPLACE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE7",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE8",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE9",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FREIGHTTYPCODE10",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STATENAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXPCATEGORY",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LOSTFACTOR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINCENG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EANBARCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEPRCLASSTYPE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WFLOWCRDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SELLPRVAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RETURNPRVAT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES2",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES4",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES5",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES6",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES7",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES8",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES9",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LOWLEVELCODES10",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "QPRODDEPART",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CANCONFIGURE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHARSETREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CANDEDUCT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CONSCODEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXPENSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORIGIN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "NAME2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COMPKDVUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEDINPERIODS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMTAX1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMTAX2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMTAX3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMTAX4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMTAX5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PRODUCTLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPSPEVATMATRAH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NAME3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FACOSTKEYS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KKLINESDISABLE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "GLOBALID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SALEDEDUCTPART1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SALEDEDUCTPART2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PURCDEDUCTPART1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PURCDEDUCTPART2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CATEGORYID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CATEGORYNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "KEYWORD1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "KEYWORD2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "KEYWORD3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "KEYWORD4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "KEYWORD5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEMANDMEETSORTFLD1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEMANDMEETSORTFLD2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEMANDMEETSORTFLD3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEMANDMEETSORTFLD4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEMANDMEETSORTFLD5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEDUCTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NAME4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "QPRODSUBAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "QPRODSUBUOM",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "QPRODSUBSRCINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "QPRODSUBDEPART",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PORDAMNTTOLERANCE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SORDAMNTTOLERANCE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MULTIADDTAX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CPACODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PUBLICCOUNTRYREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FAUSEFULLIFECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAUSEFULLIFECODE2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MOLD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDLIFETRACKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDUSAGELIFE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDFACTOR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDMAINTNUMBER",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDMAINTLIFETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDMAINTLIFE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDLIFEASRATIO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDMAINTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDMAINTBEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDMAINTPERIOD",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "MOLDMAINTPERUNIT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OBTAINTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GAINTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FORECASTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SALESLIMITQUANTITY",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "NODISCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LEVELCONTROL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NOTIFYCRDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSTRANSPORTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSLOADTYPE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSLOADTYPEDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSTRANSPORTMODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSUNCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSUNDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "UETDSLOADUNIT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TSENR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERSUBTITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERBARCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERPURCHPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERSALESPRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PURCHDEDUCTCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMREGTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROFITMARGINRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ORDCMPRICETYPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PURCHDISPRATETOT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SALESDISPRATETOT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXPURCHBRWS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXSALESBRWS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DRAFTOFFERBRWS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRODCLREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TIBBICIHAZ",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GTIN_UNO",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 22
+}

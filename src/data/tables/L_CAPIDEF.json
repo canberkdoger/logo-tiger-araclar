@@ -1,0 +1,26 @@
+{
+  "tableName": "L_CAPIDEF",
+  "displayName": "Program Bagimsiz Tanimlar",
+  "description": "Logo programlarindan bagimsiz olarak ic kullanim icin kullanilan tablo.",
+  "category": "Sistem",
+  "type": "period-independent",
+  "placeholders": [],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {"no": 1, "fields": [
+      {"name": "TYP", "length": "2 bytes", "type": "Integer"},
+      {"name": "OWNER", "length": "2 bytes", "type": "Integer"},
+      {"name": "ID", "length": "2 bytes", "type": "Integer"}
+    ]},
+    {"no": 2, "fields": [{"name": "LREF", "length": "4 bytes", "type": "Integer"}]}
+  ],
+  "fields": [
+    {"name": "LREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "TYP", "type": "SmallInt", "description": "Ic kullanim"},
+    {"name": "OWNER", "type": "SmallInt", "description": "Ic kullanim"},
+    {"name": "ID", "type": "SmallInt", "description": "Ic kullanim"},
+    {"name": "LDATA", "type": "image", "description": "Ic kullanim"}
+  ],
+  "commonQueries": []
+}

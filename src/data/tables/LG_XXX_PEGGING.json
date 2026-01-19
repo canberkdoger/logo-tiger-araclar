@@ -1,0 +1,64 @@
+{
+  "tableName": "LG_XXX_PEGGING",
+  "displayName": "Islem Baglantilari",
+  "description": "Uretim emirleri ile siparisler arasindaki baglantilari tutan tablo. Pegging (izlenebilirlik) bilgilerini icerir.",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_PRODORD", "LG_XXX_ITEMS", "LG_XXX_UNITSETL"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "PEGTYPE", "length": "5 bytes", "type": "SmallInt", "property": "Modif, Seg"},
+        {"field": "PEGREF", "length": "4 bytes", "type": "int", "property": "Modif"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "PEGTYPE", "length": "5 bytes", "type": "SmallInt", "property": "Modif, Seg"},
+        {"field": "PEGREF", "length": "4 bytes", "type": "int", "property": "Modif"},
+        {"field": "RELTYPE", "length": "5 bytes", "type": "SmallInt", "property": "Modif, Seg"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"field": "PORDFICHEREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"field": "PORDLINEREF", "length": "4 bytes", "type": "int", "property": "Modif"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "PEGTYPE", "type": "SmallInt", "description": "Islem baglantisi tipi"},
+    {"name": "PEGREF", "type": "int", "description": "Islem baglantisi referansi"},
+    {"name": "RELTYPE", "type": "SmallInt", "description": "pegType 0 ise (0: Uretim emri, 1: Verilen Siparis), pegType 1 ise (0: Uretim emri, 1: Alinan Siparis)"},
+    {"name": "PRODORDREF", "type": "int", "description": "Uretim emirleri karti - PRODORD tablosuna baglanti"},
+    {"name": "SUBCONTREF", "type": "int", "description": "Fason referansi"},
+    {"name": "PORDFICHEREF", "type": "int", "description": "Siparis fisi referansi"},
+    {"name": "PORDLINEREF", "type": "int", "description": "Siparis satiri referansi"},
+    {"name": "ITEMREF", "type": "int", "description": "Malzeme karti referansi - ITEMS tablosuna baglanti"},
+    {"name": "AMOUNT", "type": "Float", "description": "Miktar"},
+    {"name": "UOMREF", "type": "int", "description": "Birim referansi - UNITSETL tablosuna baglanti"},
+    {"name": "CANCHANGE", "type": "SmallInt", "description": "Degistirilebilir"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,63 @@
+{
+  "tableName": "LG_XXX_OPRTREQ",
+  "displayName": "Operasyon Ihtiyaclari",
+  "description": "Operasyon kartlari icin tanimlanan is istasyonu ve zaman ihtiyaclarini tutan tablo. Hazirlik suresi, islem suresi, kuyruk suresi gibi uretim planlama parametrelerini icerir.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_WORKSTAT"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "OPERATIONREF", "length": "4 bytes", "type": "int", "property": "Modif, Seg"},
+        {"field": "LINENO_", "length": "4 bytes", "type": "int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "OPERATIONREF", "length": "4 bytes", "type": "int", "property": "Modif, Seg"},
+        {"field": "GROUP_", "length": "5 bytes", "type": "SmallInt", "property": ""},
+        {"field": "WSREF", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"field": "FIXEDSETUPTIME", "length": "4 bytes", "type": "int", "property": "Modif, Seg"},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "OPERATIONREF", "type": "int", "description": "Operasyon karti referansi - ITEMS tablosuna baglanti"},
+    {"name": "LINENO_", "type": "int", "description": "Satir no"},
+    {"name": "GROUP_", "type": "SmallInt", "description": "Is istasyonu grup kodu"},
+    {"name": "WSREF", "type": "int", "description": "Is istasyonu referansi - WORKSTAT tablosuna baglanti"},
+    {"name": "BEGDATE", "type": "DateTime", "description": "Baslangic tarihi"},
+    {"name": "FIXEDSETUPTIME", "type": "int", "description": "Sabit hazirlik suresi"},
+    {"name": "BATCHQUANTITY", "type": "Float", "description": "Islem partisi"},
+    {"name": "RUNTIME", "type": "int", "description": "Islem suresi"},
+    {"name": "TRANSBATCHQTY", "type": "Float", "description": "Tasima partisi"},
+    {"name": "TRANSBATCHTIME", "type": "int", "description": "Tasima suresi"},
+    {"name": "INSPTIME", "type": "int", "description": "Kontrol suresi"},
+    {"name": "QUETIME", "type": "int", "description": "Kuyruk suresi"},
+    {"name": "HEADTIME", "type": "int", "description": "Operasyon oncesi bekleme suresi"},
+    {"name": "TAILTIME", "type": "int", "description": "Operasyon sonrasi bekleme suresi"},
+    {"name": "USAGEPER", "type": "Float", "description": "Kullanilan personel"},
+    {"name": "EFFICIENCY", "type": "Float", "description": "Verimlilik"},
+    {"name": "PRIORITY", "type": "SmallInt", "description": "Oncelik"},
+    {"name": "MINAMOUNT", "type": "Float", "description": "Asgari miktar"},
+    {"name": "MAXAMOUNT", "type": "Float", "description": "Azami miktar"}
+  ],
+  "commonQueries": []
+}

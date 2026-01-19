@@ -1,0 +1,141 @@
+{
+  "tableName": "L_CURRENCYLIST",
+  "displayName": "Doviz Listesi",
+  "description": "",
+  "category": "Finans",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CURRENCYLIST_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CURRENCYLIST_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "FIRMNR",
+        "CURTYPE"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "CURRENCYLIST_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "FIRMNR",
+        "CURCODE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "CURRENCYLIST_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "GLOBALID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CURTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CURCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COEF",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SUBDIGITS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SUBNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DIVFLAG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EMUCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EURORATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SUBLIMIT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CURSYMBOL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ROUNDMTD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRIEXCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CURINUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GLOBALID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 4
+}

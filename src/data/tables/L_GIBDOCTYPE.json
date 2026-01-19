@@ -1,0 +1,64 @@
+{
+  "tableName": "L_GIBDOCTYPE",
+  "displayName": "GIB Belge Turleri",
+  "description": "",
+  "category": "E-Belge",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "GIBDOCTYPE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SIMPLEMETHOD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "IDACCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SELFEMP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SERIALREQUIRED",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

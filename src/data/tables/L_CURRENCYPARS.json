@@ -1,0 +1,169 @@
+{
+  "tableName": "L_CURRENCYPARS",
+  "displayName": "CURRENCYPARS",
+  "description": "",
+  "category": "Finans",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CURRENCYPARS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CURRENCYPARS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "FIRMNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXCTYPHEADS1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXCTYPHEADS2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXCTYPHEADS3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXCTYPHEADS4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PTOLERPERC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NTOLERPERC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHKTOLER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHKTOLEREXC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHKTOLERTRN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MONFRAC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPEITM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPEPRCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPESALE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPECL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPECS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPEBN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPECASH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPEIMPORT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USEEXCTYPEEXPORT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHSEXCCOL3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHSEXCCOL4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHSEXCCOL1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHSEXCCOL2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHKCURRTRNS",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

@@ -1,0 +1,74 @@
+{
+  "tableName": "L_CAPIEXTINFO",
+  "displayName": "CAPIEXTINFO",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIEXTINFO_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIRMNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEFAULT_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PASSWORD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SUBSCRIBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDERDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "COUNTRYTYPE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

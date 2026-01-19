@@ -1,0 +1,233 @@
+{
+  "tableName": "LG_XXX_FAREGIST",
+  "displayName": "Sabit Kiymet Kayitlari",
+  "description": "Sabit kiymet (duran varlik) kayitlarini icerir. Amortisman hesaplamalari, yeniden degerleme ve sabit kiymet takibi icin kullanilir.",
+  "category": "Sabit Kiymet",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_STFICHE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CRDREF", "DATEIN"],
+      "type": "Unsigned",
+      "property": "Dup, Modif, Seg"
+    },
+    {
+      "no": 3,
+      "fields": ["REGCODE"],
+      "type": "ZString",
+      "property": "Modif"
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "REGCODE",
+      "type": "VarChar",
+      "description": "Kayit kodu"
+    },
+    {
+      "name": "BRANCH",
+      "type": "SmallInt",
+      "description": "Isyeri"
+    },
+    {
+      "name": "DEPARTMENT",
+      "type": "SmallInt",
+      "description": "Bolum"
+    },
+    {
+      "name": "TRANSFER",
+      "type": "SmallInt",
+      "description": "1: Devir, 0: Yeni kayit"
+    },
+    {
+      "name": "CRDREF",
+      "type": "int",
+      "description": "Kart referansi - ITEMS"
+    },
+    {
+      "name": "FICHEREF",
+      "type": "int",
+      "description": "Hareket referansi (stok fisi/irsaliye) - STFICHE"
+    },
+    {
+      "name": "DATEIN",
+      "type": "DateTime",
+      "description": "Alim tarihi"
+    },
+    {
+      "name": "DATEOFDEPR",
+      "type": "DateTime",
+      "description": "Amortisman baslangici"
+    },
+    {
+      "name": "QUANTITY",
+      "type": "Float",
+      "description": "Miktar"
+    },
+    {
+      "name": "TOTOUT",
+      "type": "Float",
+      "description": "Dusulen miktar"
+    },
+    {
+      "name": "INVALUE",
+      "type": "Float",
+      "description": "Giris maliyeti"
+    },
+    {
+      "name": "VATAMOUNT",
+      "type": "Float",
+      "description": "Odenecek KDV"
+    },
+    {
+      "name": "VATDUR",
+      "type": "SmallInt",
+      "description": "KDV odeme suresi"
+    },
+    {
+      "name": "DEPRRATE",
+      "type": "Float",
+      "description": "Amortisman orani"
+    },
+    {
+      "name": "DEPRDUR",
+      "type": "SmallInt",
+      "description": "Amortisman suresi"
+    },
+    {
+      "name": "DEPRTYPE",
+      "type": "SmallInt",
+      "description": "Amortisman turu"
+    },
+    {
+      "name": "REVFLAG",
+      "type": "SmallInt",
+      "description": "Yeniden degerlenecek (E/H)"
+    },
+    {
+      "name": "REVDEPFLAG",
+      "type": "SmallInt",
+      "description": "Degerleme amortismani (E/H)"
+    },
+    {
+      "name": "PARTDEP",
+      "type": "SmallInt",
+      "description": "Kist amortismani"
+    },
+    {
+      "name": "CANCELLED",
+      "type": "SmallInt",
+      "description": "Iptal (E/H)"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "Float",
+      "description": "Raporlama dovizi kuru"
+    },
+    {
+      "name": "INVALUEX",
+      "type": "Float",
+      "description": "Giris maliyeti (Rap. Dov.)"
+    },
+    {
+      "name": "EXPTOTAL",
+      "type": "Float",
+      "description": "Gider toplami"
+    },
+    {
+      "name": "ACCUMDEPR",
+      "type": "Float",
+      "description": "Toplam amortisman"
+    },
+    {
+      "name": "ACCUMREVAL",
+      "type": "Float",
+      "description": "Toplam yeniden degerleme"
+    },
+    {
+      "name": "EXPTOTALX",
+      "type": "Float",
+      "description": "Gider toplami (Rap. Dov.)"
+    },
+    {
+      "name": "ACCUMDEPRX",
+      "type": "Float",
+      "description": "Birikmis amortisman (Rap. Dov.)"
+    },
+    {
+      "name": "ACCUMREVALX",
+      "type": "Float",
+      "description": "Yeniden degerleme (Rap. Dov.)"
+    },
+    {
+      "name": "DEPRTYPE2",
+      "type": "SmallInt",
+      "description": "Alternatif amortisman turu"
+    },
+    {
+      "name": "DEPRRATE2",
+      "type": "Float",
+      "description": "Alternatif amortisman orani"
+    },
+    {
+      "name": "DEPRDUR2",
+      "type": "SmallInt",
+      "description": "Alternatif amortisman suresi"
+    },
+    {
+      "name": "REVALFLAG2",
+      "type": "SmallInt",
+      "description": "Alt. Yeniden degerlenecek (E/H)"
+    },
+    {
+      "name": "REVDEPRFLAG2",
+      "type": "SmallInt",
+      "description": "Alt. Degerleme amortismani (E/H)"
+    },
+    {
+      "name": "BEGREVAL",
+      "type": "Float",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "BEGDEPR",
+      "type": "Float",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "BEGREVDEPR",
+      "type": "Float",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "BEGREVALX",
+      "type": "Float",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "BEGDEPRX",
+      "type": "Float",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "BEGREVDEPRX",
+      "type": "Float",
+      "description": "Ic kullanim"
+    }
+  ],
+  "commonQueries": []
+}

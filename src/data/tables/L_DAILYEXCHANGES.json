@@ -1,0 +1,35 @@
+{
+  "tableName": "L_DAILYEXCHANGES",
+  "displayName": "Gunluk Doviz Kurlari",
+  "description": "Gunluk doviz kuru bilgilerinin tutuldugu tablo.",
+  "category": "Finans",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "CRTYPE", "length": "2 bytes", "type": "SmallInt" },
+        { "name": "DATE_", "length": "4 bytes", "type": "Integer" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LREF", "type": "Int", "description": "Fiziksel adres" },
+    { "name": "DATE_", "type": "Int", "description": "Tarih" },
+    { "name": "CRTYPE", "type": "SmallInt", "description": "Doviz turu" },
+    { "name": "RATES1", "type": "Float", "description": "Oran1" },
+    { "name": "RATES2", "type": "Float", "description": "Oran2" },
+    { "name": "RATES3", "type": "Float", "description": "Oran3" },
+    { "name": "RATES4", "type": "Float", "description": "Oran4" }
+  ],
+  "commonQueries": []
+}

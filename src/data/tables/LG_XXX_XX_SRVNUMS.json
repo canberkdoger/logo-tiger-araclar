@@ -1,0 +1,29 @@
+{
+  "tableName": "LG_XXX_XX_SRVNUMS",
+  "displayName": "Hizmet Kartlari Ambar Rakamlari",
+  "description": "Hizmet kartlarinin da toplamlari kayitlar halinde tutulmakta SRVNUMS tablosunda tutulmaktadir.",
+  "category": "Hizmet",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": [
+    {"table": "LG_XXX_SRVCARD", "field": "CARDREF", "description": "Hizmet karti referansi"}
+  ],
+  "indexes": [
+    {"no": 1, "fields": [{"name": "LOGICALREF", "length": "4 Bytes", "type": "Auto Increment", "property": "Modif"}]},
+    {"no": 2, "fields": [
+      {"name": "CARDREF", "length": "4 Bytes", "type": "Integer", "property": "Modif"},
+      {"name": "INVENNO", "length": "2 Bytes", "type": "Integer", "property": "Modif"}
+    ]}
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Longint", "description": "Fiziksel adres referansi"},
+    {"name": "CARDREF", "type": "Longint", "description": "Hizmet karti referansi SRVCARD"},
+    {"name": "INVENNO", "type": "Integer", "description": "Ambar no"},
+    {"name": "DURATION", "type": "Integer", "description": "Sure"},
+    {"name": "ORDERED", "type": "Double", "description": "Siparis verismis miktar"},
+    {"name": "SHIPPED", "type": "Double", "description": "Sevk edilmis miktar"},
+    {"name": "LAST TRDATE", "type": "Longint", "description": "Hareket gordugu son tarih"}
+  ],
+  "commonQueries": []
+}

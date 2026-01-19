@@ -1,0 +1,181 @@
+{
+  "tableName": "LG_XXX_RECKEEPING",
+  "displayName": "RECKEEPING",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_RECKEEPING_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PURCHCREXML",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PURCHCREEXCEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PURCHCREXPRL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SALESCREXML",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SALESCREEXCEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SALESCREXPRL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "IMPORTCREXML",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "IMPORTCREEXCEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "IMPORTCREXPRL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXPORTCREXML",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXPORTCREEXCEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXPORTCREXPRL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRODUCECREXML",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRODUCECREEXCEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRODUCECREXPRL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STOCKCREXML",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STOCKCREEXCEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STOCKCREXPRL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

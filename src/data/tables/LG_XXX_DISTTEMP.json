@@ -1,0 +1,73 @@
+{
+  "tableName": "LG_XXX_DISTTEMP",
+  "displayName": "Dagitim Sablonlari",
+  "description": "Dagitim sablonu tanimlarini iceren tablo. Malzemelerin dagitim kurallari ve periyotlarini tanimlar.",
+  "category": "Dagitim",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_UNITSETL", "LG_XXX_DISTLINE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "int",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["UOMREF", "ITEMREF", "CODE"],
+      "type": "int, int, VarChar",
+      "properties": "Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["UOMREF", "ITEMREF", "NAME"],
+      "type": "Int, Int, VarChar",
+      "properties": "Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["BEGDATE", "ENDDATE", "ITEMREF", "UOMREF", "LOGICALREF"],
+      "type": "DateTime, DateTime, int, int, Int",
+      "properties": "Modif"
+    },
+    {
+      "no": 5,
+      "fields": ["UOMREF", "LOGICALREF"],
+      "type": "int, int",
+      "properties": "Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Dagitim sablon kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Dagitim sablon aciklamasi"},
+    {"name": "ITEMREF", "type": "Int", "description": "Malzeme referansi - ITEMS"},
+    {"name": "UOMREF", "type": "Int", "description": "Birim referansi - UNITSETL"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu"},
+    {"name": "BEGDATE", "type": "DateTime", "description": "Baslangic tarihi"},
+    {"name": "ENDDATE", "type": "DateTime", "description": "Bitis tarihi"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Tum dagitim sablonlarini listele",
+      "query": "SELECT * FROM LG_XXX_DISTTEMP ORDER BY CODE"
+    },
+    {
+      "description": "Belirli bir malzemenin dagitim sablonlarini listele",
+      "query": "SELECT * FROM LG_XXX_DISTTEMP WHERE ITEMREF = @MalzemeRef AND GETDATE() BETWEEN BEGDATE AND ENDDATE"
+    }
+  ]
+}

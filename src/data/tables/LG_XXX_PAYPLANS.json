@@ -1,0 +1,64 @@
+{
+  "tableName": "LG_XXX_PAYPLANS",
+  "displayName": "Odeme Planlari",
+  "description": "Odeme planlarinin ana tanimlarini tutan tablo. Plan kodu, aciklamasi, erken/gec odeme faiz oranlari gibi bilgileri icerir.",
+  "category": "Finans",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_PAYLINES"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "CODE", "length": "12 bytes", "type": "VarChar", "property": "Modif, Seg"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "ACTIVE", "length": "5 bytes", "type": "SmallInt", "property": "Modif"},
+        {"field": "CODE", "length": "12 bytes", "type": "VarChar", "property": "Modif, Seg"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": "Modif"},
+        {"field": "SITEID", "length": "4 bytes", "type": "int", "property": "Modif"},
+        {"field": "ORGLOGICREF", "length": "4 bytes", "type": "int", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Plan kodu"},
+    {"name": "DEFINITION_", "type": "VarChar", "description": "Plan aciklamasi"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu"},
+    {"name": "EARLYINTEREST", "type": "Float", "description": "Erken odeme faiz orani"},
+    {"name": "LATEINTEREST", "type": "Float", "description": "Gec odeme faiz orani"},
+    {"name": "COUNTER", "type": "int", "description": "Kac kere basildigi"},
+    {"name": "WRKDAYS", "type": "SmallInt", "description": "Calisma gunleri"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanimda, 1: Kullanim disi"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": []
+}

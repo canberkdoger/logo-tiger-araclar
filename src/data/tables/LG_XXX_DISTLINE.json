@@ -1,0 +1,43 @@
+{
+  "tableName": "LG_XXX_DISTLINE",
+  "displayName": "Dagitim Sablonu Satirlari",
+  "description": "Dagitim sablonu satir bilgilerini iceren tablo. Her satir, dagitilacak malzemeyi ve dagitim katsayisini icerir.",
+  "category": "Dagitim",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": ["LG_XXX_DISTTEMP", "LG_XXX_ITEMS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["DISTTEMPREF", "LINENO_"],
+      "type": "int, VarChar",
+      "properties": ""
+    },
+    {
+      "no": 3,
+      "fields": ["ITEMREF", "LOGICALREF"],
+      "type": "int, Int",
+      "properties": "Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "DISTTEMPREF", "type": "int", "description": "Dagitim sablonu referansi - DISTTEMP"},
+    {"name": "ITEMREF", "type": "int", "description": "Malzeme karti referansi - ITEMS"},
+    {"name": "DISTFACT", "type": "Float", "description": "Dagitim katsayisi"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Satir no"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir dagitim sablonunun tum satirlarini listele",
+      "query": "SELECT dl.*, i.CODE AS MalzemeKodu, i.NAME AS MalzemeAdi FROM LG_XXX_DISTLINE dl INNER JOIN LG_XXX_ITEMS i ON dl.ITEMREF = i.LOGICALREF WHERE dl.DISTTEMPREF = @SablonRef ORDER BY dl.LINENO_"
+    }
+  ]
+}

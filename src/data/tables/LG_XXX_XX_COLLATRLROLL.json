@@ -1,0 +1,325 @@
+{
+  "tableName": "LG_XXX_XX_COLLATRLROLL",
+  "displayName": "COLLATRLROLL",
+  "description": "",
+  "category": "Teminat",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_COLLATRLROLL_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_COLLATRLROLL_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TRCODE",
+        "ROLLNO"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_COLLATRLROLL_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "DATE_",
+        "TRCODE",
+        "ROLLNO"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_01_COLLATRLROLL_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ACCFICHEREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLCARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ROLLNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEPARTMENT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PROCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCCNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRINTCNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TRCURR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TRNET",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTNET",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP5",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXP6",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACCFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CANCELLED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CANCELLEDACC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRADINGGRP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GENEXCTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXCTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WFSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GUID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRINTDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "APPROVEDATE",
+      "type": "datetime",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 4
+}

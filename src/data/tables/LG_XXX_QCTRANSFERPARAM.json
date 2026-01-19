@@ -1,0 +1,61 @@
+{
+  "tableName": "LG_XXX_QCTRANSFERPARAM",
+  "displayName": "QCTRANSFERPARAM",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_QCTRANSFERPARAM_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DIVNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FACTNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WHNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DESTWHNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "QCRESULTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

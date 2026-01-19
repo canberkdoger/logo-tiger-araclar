@@ -1,0 +1,142 @@
+{
+  "tableName": "LG_XXX_XX_PACKAGEFCLN",
+  "displayName": "PACKAGEFCLN",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_PACKAGEFCLN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PACKFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TIME_",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTPACKLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INGREDIENTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INGREDIENTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LINEBARCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PACKAGENUMBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINEINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PACKUINFO1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PACKUINFO2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PACKUINFO3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PACKUINFO4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PACKUINFO5",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PACKUINFO6",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PACKUINFO7",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "PACKUINFO8",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FILLEDRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VARIANTREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

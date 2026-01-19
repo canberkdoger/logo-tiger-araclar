@@ -1,0 +1,72 @@
+{
+  "tableName": "LG_XXX_TOOLREQ",
+  "displayName": "Operasyon Arac Gereksinimleri",
+  "description": "Operasyon kartlarina ait arac gereksinimlerinin tutuldugu tablo",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_UNITSETL",
+      "field": "UOMREF",
+      "description": "Birim referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "OPREQREF", "length": "4 bytes", "type": "int"},
+        {"name": "LINENO_", "length": "4 bytes", "type": "int"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "OPREQREF", "length": "4 bytes", "type": "int"},
+        {"name": "TOOLREF", "length": "4 bytes", "type": "int"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "OPREQREF",
+      "type": "int",
+      "description": "Operasyon karti ref"
+    },
+    {
+      "name": "LINENO_",
+      "type": "int",
+      "description": "Satir numarasi"
+    },
+    {
+      "name": "TOOLREF",
+      "type": "int",
+      "description": "Arac karti ref"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "Float",
+      "description": "Miktar"
+    },
+    {
+      "name": "UOMREF",
+      "type": "int",
+      "description": "Birim referansi",
+      "relatedTable": "UNITSETL"
+    }
+  ],
+  "commonQueries": []
+}

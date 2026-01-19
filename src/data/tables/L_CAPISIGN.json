@@ -1,0 +1,219 @@
+{
+  "tableName": "L_CAPISIGN",
+  "displayName": "CAPISIGN",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPISIGN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SIGN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VERS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "KEY1",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KEY2",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KEY3",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KEY4",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WEBACC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WEBSERVER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "MTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OTHERPRGPATH",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ESLIBRARY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NOTUSEHINT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USESITEBTERM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LCONNUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LCONNUSERPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WEBLINK",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILSERVERADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILADDR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILUSERNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EMAILSERVERPORT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USETLS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SSLTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPUSER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPUSERPASS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPDOMAIN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPDOMAINIP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPDATASETID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPDATASETNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPEXECAVREG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPWEBSRVURL",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDBBACKUPREPORTLINK",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TIGERHR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MAXDOPNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LICCHECKDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TIGERHRABSENCE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EBOOKVERS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EBEYANNAMEVERS",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

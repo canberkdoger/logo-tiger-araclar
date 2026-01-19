@@ -1,0 +1,138 @@
+{
+  "tableName": "LG_XXX_OVHDTRANS",
+  "displayName": "OVHDTRANS",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_OVHDTRANS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_OVHDTRANS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "OVHDCLNREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_OVHDTRANS_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "PRODORDREF",
+        "TRANTYPE"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_OVHDTRANS_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "WORKORDREF",
+        "TRANTYPE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PRODORDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WORKORDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OVHDCLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OPACTIVITYREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTED",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVITY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANBEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TRANENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "UNITCOST",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "RDTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CREATEDBYACT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 4
+}

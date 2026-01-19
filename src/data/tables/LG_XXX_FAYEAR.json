@@ -1,0 +1,232 @@
+{
+  "tableName": "LG_XXX_FAYEAR",
+  "displayName": "Sabit Kiymet Yillik Kayitlari",
+  "description": "Sabit kiymetlerin yillik amortisman ve degerleme bilgilerini icerir. Yerel para ve raporlama dovizi uzerinden detayli mali hesaplama verileri.",
+  "category": "Sabit Kiymet",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_FAREGIST"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["TABLETY", "FREGREF", "YEAR_"],
+      "type": "Integer, Unsigned, Integer",
+      "property": "Dup, Modif, Seg"
+    }
+  ],
+  "fields": [
+    {
+      "name": "LREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "TABLETY",
+      "type": "SmallInt",
+      "description": "Tablo turu (0: Yerel, 1: Dovizli)"
+    },
+    {
+      "name": "FREGREF",
+      "type": "int",
+      "description": "S.K. kayit referansi - FAREGIST"
+    },
+    {
+      "name": "YEAR_",
+      "type": "SmallInt",
+      "description": "Yil"
+    },
+    {
+      "name": "DRATE",
+      "type": "Float",
+      "description": "Amortisman orani"
+    },
+    {
+      "name": "REVRATE",
+      "type": "Float",
+      "description": "Yeniden degerleme orani"
+    },
+    {
+      "name": "DTYPE",
+      "type": "SmallInt",
+      "description": "Amortisman turu (1: Normal, 2: Azalan Bakiyeler)"
+    },
+    {
+      "name": "QUANOUT",
+      "type": "Float",
+      "description": "Dusulen miktar"
+    },
+    {
+      "name": "LOCFIGS_COSTOP",
+      "type": "Float",
+      "description": "Yerel para uzerinden baslangic rakamlari"
+    },
+    {
+      "name": "LOCFIGS_EXPUSUAL",
+      "type": "Float",
+      "description": "Yerel para uzerinden degerlemeye tabi giderler rakamlari"
+    },
+    {
+      "name": "LOCFIGS_EXPOUTREV",
+      "type": "Float",
+      "description": "Yerel para uzerinden degerleme harici giderler rakamlari"
+    },
+    {
+      "name": "LOCFIGS_CUMEXPOR",
+      "type": "Float",
+      "description": "Yerel para uzerinden birikmis degerleme disi gideler rakamlari"
+    },
+    {
+      "name": "LOCFIGS_AMOUNTOUT",
+      "type": "Float",
+      "description": "Yerel para uzerinden dusulen deger rakami"
+    },
+    {
+      "name": "LOCFIGS_AMOUNTOUTR",
+      "type": "Float",
+      "description": "Yerel para uzerinden dusulen degerleme disi tutar rakamlari"
+    },
+    {
+      "name": "LOCFIGS_BOOKVALOP",
+      "type": "Float",
+      "description": "Yerel para uzerinden degerleme oncesi S.K. degeri"
+    },
+    {
+      "name": "LOCFIGS_ACCDEPROP",
+      "type": "Float",
+      "description": "Yerel para uzerinden degerleme oncesi birikmis amortisman rakamlar"
+    },
+    {
+      "name": "LOCFIGS_ACCDPOUT",
+      "type": "Float",
+      "description": "Yerel para uzerinden birikmis amortismandan dusulecek tutar"
+    },
+    {
+      "name": "LOCFIGS_BOOKVALRV",
+      "type": "Float",
+      "description": "Yerel para uzerinden degerlendirme sonrasi S.K. degeri"
+    },
+    {
+      "name": "LOCFIGS_ACCDEPRRV",
+      "type": "Float",
+      "description": "Yerel para uzerinden degerlendirme sonrasi birikmis amortisman"
+    },
+    {
+      "name": "LOCFIGS_DEPRANN",
+      "type": "Float",
+      "description": "Yerel para uzerinden yillik amortisman tutari"
+    },
+    {
+      "name": "LOCFIGS_ACCDEPREOY",
+      "type": "Float",
+      "description": "Yerel para uzerinden yil sonu birikmis amortisman"
+    },
+    {
+      "name": "LOCFIGS_ACCDEPRCST",
+      "type": "Float",
+      "description": "Yerel para uzerinden maliyet uzerinden birikmis amortisman"
+    },
+    {
+      "name": "CURFIGS_COSTOP",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden baslangic rakamlari"
+    },
+    {
+      "name": "CURFIGS_EXPUSUAL",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden degerlemeye tabi giderler rakamlari"
+    },
+    {
+      "name": "CURFIGS_EXPOUTREV",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden degerleme harici giderler rakamlari"
+    },
+    {
+      "name": "CURFIGS_CUMEXPOR",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden birikmis degerleme disi gideler rakamlari"
+    },
+    {
+      "name": "CURFIGS_AMOUNTOUT",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden dusulen deger rakami"
+    },
+    {
+      "name": "CURFIGS_AMOUNTOUTR",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden dusulen degerleme disi tutar rakamlari"
+    },
+    {
+      "name": "CURFIGS_BOOKVALOP",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden degerleme oncesi S.K. degeri"
+    },
+    {
+      "name": "CURFIGS_ACCDEPROP",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden degerleme oncesi birikmis amortisman rakamlar"
+    },
+    {
+      "name": "CURFIGS_ACCDPOUT",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden birikmis amortismandan dusulecek tutar"
+    },
+    {
+      "name": "CURFIGS_BOOKVALRV",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden degerlendirme sonrasi S.K. degeri"
+    },
+    {
+      "name": "CURFIGS_ACCDEPRRV",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden degerlendirme sonrasi birikmis amortisman"
+    },
+    {
+      "name": "CURFIGS_DEPRANN",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden yillik amortisman tutari"
+    },
+    {
+      "name": "CURFIGS_ACCDEPREOY",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden yil sonu birikmis amortisman"
+    },
+    {
+      "name": "CURFIGS_ACCDEPRCST",
+      "type": "Float",
+      "description": "Raporlama dovizi uzerinden maliyet uzerinden birikmis amortisman"
+    },
+    {
+      "name": "VATPOSTED",
+      "type": "Float",
+      "description": "Muhasebellesen KDV"
+    },
+    {
+      "name": "DACCFLAG",
+      "type": "SmallInt",
+      "description": "Amortisman muhasebelesmis (0/1)"
+    },
+    {
+      "name": "RACCFLAG",
+      "type": "SmallInt",
+      "description": "Yeniden deg. Muhasebelesmis (0/1)"
+    },
+    {
+      "name": "VACCFLAG",
+      "type": "SmallInt",
+      "description": "KDV muhasebelesmis (0/1)"
+    },
+    {
+      "name": "CALCMON",
+      "type": "SmallInt",
+      "description": "Hesaplanan Donem Sonu"
+    }
+  ],
+  "commonQueries": []
+}

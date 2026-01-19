@@ -1,0 +1,42 @@
+{
+  "tableName": "LG_NET_XXX",
+  "displayName": "Ag Kilit Tablosu",
+  "description": "Ic kullanim icin ag kilit bilgilerinin tutuldugu tablo",
+  "category": "Sistem",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "LOCKSTR", "length": "25 bytes", "type": "VarChar"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "LOCKSTR",
+      "type": "VarChar",
+      "description": "Ic kullanim"
+    },
+    {
+      "name": "COUNTER",
+      "type": "int",
+      "description": "Ic kullanim"
+    }
+  ],
+  "commonQueries": []
+}

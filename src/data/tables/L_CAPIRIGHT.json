@@ -1,0 +1,67 @@
+{
+  "tableName": "L_CAPIRIGHT",
+  "displayName": "Yetkiler",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIRIGHT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIRIGHT_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TYP",
+        "OWNER",
+        "ID",
+        "ITEM"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OWNER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RIGHTS",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

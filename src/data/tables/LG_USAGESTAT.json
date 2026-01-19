@@ -1,0 +1,59 @@
+{
+  "tableName": "LG_USAGESTAT",
+  "displayName": "Kullanim Istatistikleri",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "USAGESTAT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "USAGESTAT_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "OBJHASHID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OBJHASHID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "USAGECOUNT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OBJTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OBJNAME",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

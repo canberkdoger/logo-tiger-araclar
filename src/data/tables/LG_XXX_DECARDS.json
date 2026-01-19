@@ -1,0 +1,85 @@
+{
+  "tableName": "LG_XXX_DECARDS",
+  "displayName": "Indirim/Masraf Kartlari",
+  "description": "Alis ve satis islemlerinde kullanilan indirim ve masraf karti tanimlarini iceren tablo.",
+  "category": "Satis",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 6,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CARDTYPE", "CODE"],
+      "type": "SmallInt, VarChar",
+      "properties": ""
+    },
+    {
+      "no": 3,
+      "fields": ["CARDTYPE", "LOGICALREF", "DEFINITION_"],
+      "type": "SmallInt, Auto Increment, VarChar",
+      "properties": "Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["ACTIVE", "CODE", "CARDTYPE"],
+      "type": "SmallInt, VarChar, SmallInt",
+      "properties": ""
+    },
+    {
+      "no": 5,
+      "fields": ["CARDTYPE", "ACTIVE", "DEFINITION_", "LOGICALREF"],
+      "type": "SmallInt, SmallInt, VarChar, Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 6,
+      "fields": ["SITEID", "LOGICALREF", "ORGLOGICREF"],
+      "type": "Int, Auto Increment, Int",
+      "properties": "Modif, Modif, Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "CARDTYPE", "type": "SmallInt", "description": "Kart tipi (1:Alis Ind., 2: Satis Ind., 3: Alis Masraf, 4: Satis Masraf)"},
+    {"name": "CODE", "type": "VarChar", "description": "Kart kodu"},
+    {"name": "DEFINITION_", "type": "VarChar", "description": "Aciklama"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu"},
+    {"name": "FORMULA", "type": "VarChar", "description": "Formul"},
+    {"name": "RNDVAL", "type": "Float", "description": "Yuvarlama tabani"},
+    {"name": "VAT", "type": "Float", "description": "KDV orani"},
+    {"name": "COUNTER", "type": "Int", "description": "Sayac"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "UNITSTR", "type": "VarChar", "description": "Birim"},
+    {"name": "LPRODSTAT", "type": "SmallInt", "description": "Uretim durumu"},
+    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanimda, 1: Kullanim disi"},
+    {"name": "SITEID", "type": "Int", "description": "Bolge No"},
+    {"name": "ORGLOGICREF", "type": "Int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Tum aktif satis indirim kartlarini listele",
+      "query": "SELECT * FROM LG_XXX_DECARDS WHERE CARDTYPE = 2 AND ACTIVE = 0 ORDER BY CODE"
+    },
+    {
+      "description": "Tum aktif alis masraf kartlarini listele",
+      "query": "SELECT * FROM LG_XXX_DECARDS WHERE CARDTYPE = 3 AND ACTIVE = 0 ORDER BY CODE"
+    }
+  ]
+}

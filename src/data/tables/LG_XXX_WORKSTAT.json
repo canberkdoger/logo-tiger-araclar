@@ -1,0 +1,222 @@
+{
+  "tableName": "LG_XXX_WORKSTAT",
+  "displayName": "Is Istasyonlari",
+  "description": "Is istasyonu tanimlarinin tutuldugu tablo",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 6,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_EMUHACC",
+      "field": "ACCOUNTREF",
+      "description": "Muhasebe hesabi referansi"
+    },
+    {
+      "tableName": "LG_XXX_EMCENTER",
+      "field": "CENTERREF",
+      "description": "Masraf merkezi referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "CODE", "length": "25 bytes", "type": "VarChar"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "NAME", "length": "51 bytes", "type": "VarChar"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "ACTIVE", "length": "2 bytes", "type": "Integer"},
+        {"name": "CODE", "length": "25 bytes", "type": "VarChar"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "ACTIVE", "length": "2 bytes", "type": "Integer"},
+        {"name": "NAME", "length": "51 bytes", "type": "VarChar"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    },
+    {
+      "no": 6,
+      "fields": [
+        {"name": "SITEID", "length": "4 bytes", "type": "Integer"},
+        {"name": "ORGLOGICREF", "length": "4 bytes", "type": "Integer"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "CODE",
+      "type": "VarChar",
+      "description": "Kodu"
+    },
+    {
+      "name": "NAME",
+      "type": "VarChar",
+      "description": "Aciklamasi"
+    },
+    {
+      "name": "SPECODE",
+      "type": "VarChar",
+      "description": "Ozel Kodu"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "VarChar",
+      "description": "Yetki Kodu"
+    },
+    {
+      "name": "FACTORYDIVNR",
+      "type": "SmallInt",
+      "description": "Fabrika Bolum No"
+    },
+    {
+      "name": "FACTORYNR",
+      "type": "SmallInt",
+      "description": "Fabrika no"
+    },
+    {
+      "name": "CALENDARREF",
+      "type": "int",
+      "description": "Takvim referansi"
+    },
+    {
+      "name": "APPROVED",
+      "type": "SmallInt",
+      "description": "Onay durumu",
+      "values": [
+        {"value": 0, "description": "Onayli"},
+        {"value": 1, "description": "Onaysiz"}
+      ]
+    },
+    {
+      "name": "OPERATIONTIME",
+      "type": "int",
+      "description": "Gunluk Calisma Saati"
+    },
+    {
+      "name": "HOURLYSTDCOST",
+      "type": "Float",
+      "description": "Saatlik Maliyet"
+    },
+    {
+      "name": "HOURLYSTDRPCOST",
+      "type": "Float",
+      "description": "Saatlik Maliyet"
+    },
+    {
+      "name": "ACCOUNTREF",
+      "type": "int",
+      "description": "Muhasebe hesabi referansi",
+      "relatedTable": "EMUHACC"
+    },
+    {
+      "name": "CENTERREF",
+      "type": "int",
+      "description": "Masraf merkezi referansi",
+      "relatedTable": "EMCENTER"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "SmallInt",
+      "description": "Kullanim durumu",
+      "values": [
+        {"value": 0, "description": "Kullanimda"},
+        {"value": 1, "description": "Kullanim disi"}
+      ]
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Olusturan Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Olusturuldugu Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saat"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saniye"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Degistiren Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Degistirildigi Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saat"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saniye"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "Bolge no"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "Orjinal kayit referansi"
+    },
+    {
+      "name": "TEXTINC",
+      "type": "SmallInt",
+      "description": "Detay aciklama var",
+      "values": [
+        {"value": 0, "description": "Hayir"},
+        {"value": 1, "description": "Evet"}
+      ]
+    }
+  ],
+  "commonQueries": []
+}

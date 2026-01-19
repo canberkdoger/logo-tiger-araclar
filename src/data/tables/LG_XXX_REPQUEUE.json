@@ -1,0 +1,81 @@
+{
+  "tableName": "LG_XXX_REPQUEUE",
+  "displayName": "REPQUEUE",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_REPQUEUE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TASKID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "QUEUEID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DEVTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GRIDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CUSTDSGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FILTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "QUEUEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "QUEUETIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RESULT",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

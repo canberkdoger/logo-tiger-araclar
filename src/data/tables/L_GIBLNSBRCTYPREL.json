@@ -1,0 +1,39 @@
+{
+  "tableName": "L_GIBLNSBRCTYPREL",
+  "displayName": "GIBLNSBRCTYPREL",
+  "description": "",
+  "category": "E-Belge",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "GIBLNSBRCTYPREL_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBLINERECTYPRELREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBSUBRECTYPREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

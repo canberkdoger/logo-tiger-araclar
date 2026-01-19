@@ -1,0 +1,142 @@
+{
+  "categories": [
+    {
+      "id": "cari-hesap",
+      "name": "Cari Hesap Sorgulari",
+      "icon": "fa-users",
+      "queries": [
+        {
+          "id": "cari-liste",
+          "name": "Tum Cari Hesaplar",
+          "description": "Tum aktif cari hesaplari listeler",
+          "sql": "SELECT CODE, DEFINITION_, ADDR1, CITY, TELNRS1\nFROM LG_{firmNo}_CLCARD\nWHERE ACTIVE = 0\nORDER BY CODE"
+        },
+        {
+          "id": "cari-bakiye",
+          "name": "Cari Bakiye Ozeti",
+          "description": "Cari hesaplarin borc/alacak bakiyelerini gosterir",
+          "sql": "SELECT \n  c.CODE,\n  c.DEFINITION_,\n  SUM(CASE WHEN f.TRCODE IN (1,2,3) THEN f.AMOUNT ELSE 0 END) as BORC,\n  SUM(CASE WHEN f.TRCODE IN (4,5,6) THEN f.AMOUNT ELSE 0 END) as ALACAK\nFROM LG_{firmNo}_CLCARD c\nLEFT JOIN LG_{firmNo}_{donemNo}_CLFLINE f ON c.LOGICALREF = f.CLIENTREF\nWHERE c.ACTIVE = 0\nGROUP BY c.CODE, c.DEFINITION_\nORDER BY c.CODE"
+        },
+        {
+          "id": "cari-ekstre",
+          "name": "Cari Ekstre",
+          "description": "Belirli bir carinin tum hareketlerini listeler",
+          "sql": "SELECT \n  f.DATE_,\n  f.TRCODE,\n  f.AMOUNT,\n  f.LINEEXP\nFROM LG_{firmNo}_{donemNo}_CLFLINE f\nINNER JOIN LG_{firmNo}_CLCARD c ON c.LOGICALREF = f.CLIENTREF\nWHERE c.CODE = '{cariKod}'\nORDER BY f.DATE_"
+        }
+      ]
+    },
+    {
+      "id": "stok",
+      "name": "Stok Sorgulari",
+      "icon": "fa-boxes-stacked",
+      "queries": [
+        {
+          "id": "stok-liste",
+          "name": "Tum Stok Kartlari",
+          "description": "Tum aktif stok kartlarini listeler",
+          "sql": "SELECT CODE, NAME, STGRPCODE, UNITSETREF\nFROM LG_{firmNo}_ITEMS\nWHERE ACTIVE = 0\nORDER BY CODE"
+        },
+        {
+          "id": "stok-bakiye",
+          "name": "Stok Bakiyeleri",
+          "description": "Stok kartlarinin mevcut bakiyelerini gosterir",
+          "sql": "SELECT \n  i.CODE,\n  i.NAME,\n  SUM(CASE WHEN s.IOCODE IN (1,2) THEN s.AMOUNT ELSE -s.AMOUNT END) as BAKIYE\nFROM LG_{firmNo}_ITEMS i\nLEFT JOIN LG_{firmNo}_{donemNo}_STLINE s ON i.LOGICALREF = s.STOCKREF\nWHERE i.ACTIVE = 0\nGROUP BY i.CODE, i.NAME\nHAVING SUM(CASE WHEN s.IOCODE IN (1,2) THEN s.AMOUNT ELSE -s.AMOUNT END) <> 0\nORDER BY i.CODE"
+        },
+        {
+          "id": "stok-hareket",
+          "name": "Stok Hareketleri",
+          "description": "Belirli bir stokun tum hareketlerini listeler",
+          "sql": "SELECT \n  s.DATE_,\n  s.IOCODE,\n  s.AMOUNT,\n  s.PRICE,\n  s.LINENET\nFROM LG_{firmNo}_{donemNo}_STLINE s\nINNER JOIN LG_{firmNo}_ITEMS i ON i.LOGICALREF = s.STOCKREF\nWHERE i.CODE = '{stokKod}'\nORDER BY s.DATE_"
+        }
+      ]
+    },
+    {
+      "id": "fatura",
+      "name": "Fatura Sorgulari",
+      "icon": "fa-file-invoice",
+      "queries": [
+        {
+          "id": "fatura-liste",
+          "name": "Tum Faturalar",
+          "description": "Tum faturalari listeler",
+          "sql": "SELECT \n  i.FICHENO,\n  i.DATE_,\n  i.TRCODE,\n  c.CODE as CARI_KOD,\n  c.DEFINITION_ as CARI_ADI,\n  i.NETTOTAL\nFROM LG_{firmNo}_{donemNo}_INVOICE i\nLEFT JOIN LG_{firmNo}_CLCARD c ON c.LOGICALREF = i.CLIENTREF\nORDER BY i.DATE_ DESC"
+        },
+        {
+          "id": "satis-faturalari",
+          "name": "Satis Faturalari",
+          "description": "Sadece satis faturalarini listeler",
+          "sql": "SELECT \n  i.FICHENO,\n  i.DATE_,\n  c.CODE as CARI_KOD,\n  c.DEFINITION_ as CARI_ADI,\n  i.NETTOTAL\nFROM LG_{firmNo}_{donemNo}_INVOICE i\nLEFT JOIN LG_{firmNo}_CLCARD c ON c.LOGICALREF = i.CLIENTREF\nWHERE i.TRCODE IN (7, 8)\nORDER BY i.DATE_ DESC"
+        },
+        {
+          "id": "alis-faturalari",
+          "name": "Alis Faturalari",
+          "description": "Sadece alis faturalarini listeler",
+          "sql": "SELECT \n  i.FICHENO,\n  i.DATE_,\n  c.CODE as CARI_KOD,\n  c.DEFINITION_ as CARI_ADI,\n  i.NETTOTAL\nFROM LG_{firmNo}_{donemNo}_INVOICE i\nLEFT JOIN LG_{firmNo}_CLCARD c ON c.LOGICALREF = i.CLIENTREF\nWHERE i.TRCODE IN (1, 2)\nORDER BY i.DATE_ DESC"
+        },
+        {
+          "id": "fatura-detay",
+          "name": "Fatura Detayi",
+          "description": "Belirli bir faturanin satirlarini listeler",
+          "sql": "SELECT \n  s.LINENO_,\n  i.CODE as STOK_KOD,\n  i.NAME as STOK_ADI,\n  s.AMOUNT,\n  s.PRICE,\n  s.LINENET\nFROM LG_{firmNo}_{donemNo}_STLINE s\nINNER JOIN LG_{firmNo}_{donemNo}_INVOICE inv ON inv.LOGICALREF = s.INVOICEREF\nINNER JOIN LG_{firmNo}_ITEMS i ON i.LOGICALREF = s.STOCKREF\nWHERE inv.FICHENO = '{faturaNo}'\nORDER BY s.LINENO_"
+        }
+      ]
+    },
+    {
+      "id": "banka",
+      "name": "Banka Sorgulari",
+      "icon": "fa-building-columns",
+      "queries": [
+        {
+          "id": "banka-liste",
+          "name": "Banka Tanimlari",
+          "description": "Tum banka tanimlarini listeler",
+          "sql": "SELECT CODE, DEFINITION_, BRANCH, BRANCHNO\nFROM LG_{firmNo}_BNCARD\nWHERE ACTIVE = 0\nORDER BY CODE"
+        },
+        {
+          "id": "banka-hesaplari",
+          "name": "Banka Hesaplari",
+          "description": "Tum banka hesaplarini listeler",
+          "sql": "SELECT \n  ba.CODE,\n  ba.DEFINITION_,\n  ba.ACCOUNTNO,\n  b.DEFINITION_ as BANKA\nFROM LG_{firmNo}_BANKACC ba\nINNER JOIN LG_{firmNo}_BNCARD b ON b.LOGICALREF = ba.BANKREF\nWHERE ba.ACTIVE = 0\nORDER BY ba.CODE"
+        }
+      ]
+    },
+    {
+      "id": "kasa",
+      "name": "Kasa Sorgulari",
+      "icon": "fa-cash-register",
+      "queries": [
+        {
+          "id": "kasa-liste",
+          "name": "Kasa Tanimlari",
+          "description": "Tum kasa tanimlarini listeler",
+          "sql": "SELECT CODE, DEFINITION_, CURTYPE\nFROM LG_{firmNo}_KSCARD\nWHERE ACTIVE = 0\nORDER BY CODE"
+        },
+        {
+          "id": "kasa-hareket",
+          "name": "Kasa Hareketleri",
+          "description": "Belirli bir kasanin hareketlerini listeler",
+          "sql": "SELECT \n  l.DATE_,\n  l.TRCODE,\n  l.SIGN,\n  l.AMOUNT,\n  l.LINEEXP\nFROM LG_{firmNo}_{donemNo}_KSLINES l\nINNER JOIN LG_{firmNo}_KSCARD k ON k.LOGICALREF = l.CARDREF\nWHERE k.CODE = '{kasaKod}'\nORDER BY l.DATE_"
+        }
+      ]
+    },
+    {
+      "id": "muhasebe",
+      "name": "Muhasebe Sorgulari",
+      "icon": "fa-calculator",
+      "queries": [
+        {
+          "id": "hesap-plani",
+          "name": "Hesap Plani",
+          "description": "Muhasebe hesap planini listeler",
+          "sql": "SELECT CODE, DEFINITION_, ACCTYPE\nFROM LG_{firmNo}_EMUHACC\nWHERE ACTIVE = 0\nORDER BY CODE"
+        },
+        {
+          "id": "mizan",
+          "name": "Mizan",
+          "description": "Hesaplarin borc/alacak toplamlarini gosterir",
+          "sql": "SELECT \n  h.CODE,\n  h.DEFINITION_,\n  SUM(CASE WHEN l.SIGN = 0 THEN l.AMOUNT ELSE 0 END) as BORC,\n  SUM(CASE WHEN l.SIGN = 1 THEN l.AMOUNT ELSE 0 END) as ALACAK\nFROM LG_{firmNo}_EMUHACC h\nLEFT JOIN LG_{firmNo}_{donemNo}_EMFLINE l ON h.LOGICALREF = l.ACCOUNTREF\nWHERE h.ACTIVE = 0\nGROUP BY h.CODE, h.DEFINITION_\nHAVING SUM(l.AMOUNT) <> 0\nORDER BY h.CODE"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "tableName": "LG_XXX_MULTIADDTAX",
+  "displayName": "MULTIADDTAX",
+  "description": "",
+  "category": "Vergi",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_MULTIADDTAX_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CARDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

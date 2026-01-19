@@ -1,0 +1,34 @@
+{
+  "tableName": "LG_XXX_SPECODES",
+  "displayName": "Ozel Kodlar",
+  "description": "Ozel kod ve yetki kodu tanimlari. Farkli moduller icin ozel kod tanimlamasi yapmaya yarar.",
+  "category": "Genel",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CODETYPE", "SPECODE", "SPECODETYPE", "LOGICALREF"],
+      "type": "Composite",
+      "property": "Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CODETYPE", "type": "SmallInt", "description": "Kod tipi (1: Ozel kod, 2: Yetki kodu, 4: Satis Hedefi Stok Kodu, 5: Satici Pozisyon Kodu)"},
+    {"name": "SPECODETYPE", "type": "SmallInt", "description": "Ozel kod tipi (1:Stok karti, 2:Stok fisi, 3:Stok fisi satiri, 4:Alinan hizmet kartlari, 5:Verilen hizmet kartlari, 6:Alis indirim kartlari, 7:Alis masraf kartlari, 8:Satis indirim kartlari, 9:Satis masraf kartlari, 10:Alis promosyon kartlari, 11:Satis prom. Kartlari, 14:Alinan siparisler, 15:Verilen siparisler, 16:Alinan sip.fis satirlari, 17:Verilen sip.fis satirlari, 18:Alim irsaliyeleri, 19:Satis irsaliyeleri, 20:Alim irsaliye satirlari, 21:Satis irsaliye satirlari, 22:Alim faturalari, 23:Satis faturalari, 24:Alim faturalari satirlari, 25:Satis fatura satirlari, 26:Cari hesap kartlari, 27:Cari hes. fis sat., 28:Odeme tahsilat satirlari, 29:Cek/Senet kartlari, 30:Cek/Senet bordrolari, 31:Banka kartlari, 32:Banka hesaplari, 33:Banka fisi satirlari, 34:Kasa karti, 35:Muhasebe hesaplari, 36:Masraf merkezi, 37:Muhasebe fisleri, 38:Muh. fisi satirlari, 40:Kasa islemleri, 43:Banka fisleri, 44:Cari hesap fisleri, 50:Satis Elemani, 51:Satis Rotasi)"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel Kod"},
+    {"name": "DEFINITION_", "type": "VarChar", "description": "Aciklama"},
+    {"name": "COLOR", "type": "SmallInt", "description": "Renk"},
+    {"name": "WINCOLOR", "type": "int", "description": "Pencere Rengi"}
+  ],
+  "commonQueries": []
+}

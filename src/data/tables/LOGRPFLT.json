@@ -1,0 +1,165 @@
+{
+  "tableName": "LOGRPFLT",
+  "displayName": "LOGRPFLT",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "LOGRPFLT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "LOGRPFLT_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DATATYPE",
+        "OWNERID",
+        "INSTANCE",
+        "DEFAULTFLG"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "LOGRPFLT_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "DATATYPE",
+        "OWNERID",
+        "INSTANCE",
+        "TEMPNAME"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATATYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "OWNERID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INSTANCE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DEFAULTFLG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TEMPNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXPLANATION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DATASIZE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_CREATEDDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_MODIFIEDDATE",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "UPDATEINFO_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERDEFAULT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "AUTHCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "WEBDEFFLG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

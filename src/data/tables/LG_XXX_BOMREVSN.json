@@ -1,0 +1,52 @@
+{
+  "tableName": "LG_XXX_BOMREVSN",
+  "displayName": "Urun Recetesi Revizyonlari",
+  "description": "Urun recetesi revizyon bilgilerini iceren tablo. Her revizyon, recetenin belirli bir versiyonunu temsil eder.",
+  "category": "Uretim",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": ["LG_XXX_BOMASTER", "LG_XXX_ROUTING", "LG_XXX_ENGCLINE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["BOMMASTERREF", "CODE"],
+      "type": "Int, VarChar",
+      "properties": ""
+    },
+    {
+      "no": 3,
+      "fields": ["LOGICALREF", "NAME"],
+      "type": "Auto Increment, VarChar",
+      "properties": "Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Revizyon kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Revizyon aciklamasi"},
+    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanim disi, 1: Kullanim disi"},
+    {"name": "BOMMASTERREF", "type": "Int", "description": "Urun Recetesi Referansi - BOMASTER"},
+    {"name": "ROUTINGREF", "type": "Int", "description": "Uretim Rotasi Referansi - ROUTING"},
+    {"name": "ENGCHGREF", "type": "Int", "description": "Muhendislik Referansi - ENGCLINE"},
+    {"name": "REVDATE", "type": "DateTime", "description": "Gecerlilik tarihi"},
+    {"name": "SITEID", "type": "Int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "Int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir recetenin tum revizyonlarini listele",
+      "query": "SELECT * FROM LG_XXX_BOMREVSN WHERE BOMMASTERREF = @ReceteRef ORDER BY REVDATE DESC"
+    },
+    {
+      "description": "Aktif revizyonlari listele",
+      "query": "SELECT * FROM LG_XXX_BOMREVSN WHERE ACTIVE = 0"
+    }
+  ]
+}

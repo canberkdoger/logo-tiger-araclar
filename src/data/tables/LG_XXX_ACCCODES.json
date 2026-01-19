@@ -1,0 +1,48 @@
+{
+  "tableName": "LG_XXX_ACCCODES",
+  "displayName": "Entegrasyon Baglanti Kodlari",
+  "description": "Muhasebe entegrasyonu icin baglanti kodlarini icerir. Modul bazinda muhasebe hesabi ve masraf merkezi atamalari yapilir.",
+  "category": "Muhasebe",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": [
+    { "table": "LG_XXX_EMUHACC", "description": "Muhasebe hesaplari", "field": "ACCOUNTREF" },
+    { "table": "LG_XXX_EMCENTER", "description": "Masraf merkezleri", "field": "CENTERREF" }
+  ],
+  "indexes": [
+    { "no": 1, "fields": ["LOGICALREF"], "type": "Primary" },
+    { "no": 2, "fields": ["MODNR", "LOGICALREF"], "type": "Index" },
+    { "no": 3, "fields": ["INDEXCODE", "LOGICALREF", "MODNR"], "type": "Index" },
+    { "no": 4, "fields": ["MODNR", "LOGICALREF", "PREVALUE"], "type": "Index" }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres (Primary Key)", "isPrimaryKey": true },
+    { "name": "MODNR", "type": "SmallInt", "description": "Modul numarasi" },
+    { "name": "GRPFILTER", "type": "Image", "description": "Grup Filtre Kaydi" },
+    { "name": "VATRATE", "type": "Float", "description": "KDV orani" },
+    { "name": "ACCOUNTREF", "type": "Int", "description": "Muhasebe hesabi referansi (EMUHACC)" },
+    { "name": "CENTERREF", "type": "Int", "description": "Masraf merkezi referansi (EMCENTER)" },
+    { "name": "LINEEXP", "type": "VarChar", "description": "Satir aciklamasi" },
+    { "name": "CALCFORMULA", "type": "VarChar", "description": "Hesap formulu" },
+    { "name": "INDEXCODE", "type": "VarChar", "description": "Indeks kodu" },
+    { "name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi olusturan kullanicinin kodu" },
+    { "name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin olusturuldugu tarih" },
+    { "name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin olusturuldugu saat" },
+    { "name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin olusturuldugu dakika" },
+    { "name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin olusturuldugu saniye" },
+    { "name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi degistiren kullanicinin kodu" },
+    { "name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin degistirildigi tarih" },
+    { "name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin degistirildigi saat" },
+    { "name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin degistirildigi dakika" },
+    { "name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin degistirildigi saniye" },
+    { "name": "PREVALUE", "type": "SmallInt", "description": "Ondeger olarak kullanilacak" }
+  ],
+  "commonQueries": [
+    {
+      "name": "Modul Entegrasyon Kodlari",
+      "description": "Belirli bir modulun entegrasyon kodlarini listeler",
+      "sql": "SELECT ac.INDEXCODE, ac.LINEEXP, e.CODE as HesapKod FROM LG_{firmNo}_ACCCODES ac LEFT JOIN LG_{firmNo}_EMUHACC e ON ac.ACCOUNTREF = e.LOGICALREF WHERE ac.MODNR = {modulNo}"
+    }
+  ]
+}

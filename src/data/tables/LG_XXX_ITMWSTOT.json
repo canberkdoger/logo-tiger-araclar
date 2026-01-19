@@ -1,0 +1,48 @@
+{
+  "tableName": "LG_XXX_ITMWSTOT",
+  "displayName": "Malzeme Is Istasyonu Toplamlari",
+  "description": "Malzeme karti bazinda is istasyonu uretim ve stok hareketlerinin toplam bilgilerini tutan tablo. Planlanan ve gerceklesen uretim, sarf, fire, ambar giris/cikis bilgilerini icerir.",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_WORKSTAT"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": ""}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "ITEMREF", "length": "4 bytes", "type": "Int", "property": ""},
+        {"field": "WSREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "ITEMREF", "type": "int", "description": "Malzeme karti referansi - ITEMS tablosuna baglanti"},
+    {"name": "WSREF", "type": "int", "description": "Is istasyonu karti referansi - WORKSTAT tablosuna baglanti (-1 tum is istasyonlari)"},
+    {"name": "DATE_", "type": "DateTime", "description": "Tarih ('19.05.1919' : Kumulatif toplam)"},
+    {"name": "PLNPRODIN", "type": "Float", "description": "Planlanan uretimden girisler"},
+    {"name": "PLNPRODOUT", "type": "Float", "description": "Planlanan sarf ve fireler"},
+    {"name": "PLNOTHERIN", "type": "Float", "description": "Planlanan diger girisler"},
+    {"name": "PLNOTHEROUT", "type": "Float", "description": "Planlanan diger cikislar"},
+    {"name": "PLNWHOUSEIN", "type": "Float", "description": "Planlanan ambar girisleri"},
+    {"name": "PLNWHOUSEOUT", "type": "Float", "description": "Planlanan ambar cikislari"},
+    {"name": "ACTPRODIN", "type": "Float", "description": "Gerceklesen uretimden girisler"},
+    {"name": "ACTPRODOUT", "type": "Float", "description": "Gerceklesen sarf ve fireler"},
+    {"name": "ACTOTHERIN", "type": "Float", "description": "Gerceklesen diger girisler"},
+    {"name": "ACTOTHEROUT", "type": "Float", "description": "Gerceklesen diger cikislar"},
+    {"name": "ACTWHOUSEIN", "type": "Float", "description": "Gerceklesen ambar girisleri"},
+    {"name": "ACTWHOUSEOUT", "type": "Float", "description": "Gerceklesen ambar cikislari"},
+    {"name": "ONHAND", "type": "Float", "description": "Eldeki"},
+    {"name": "LASTTRDATE", "type": "DateTime", "description": "Son hareket tarihi"},
+    {"name": "RESERVED", "type": "Float", "description": "Fiili stok"}
+  ],
+  "commonQueries": []
+}

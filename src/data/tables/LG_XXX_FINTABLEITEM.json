@@ -1,0 +1,166 @@
+{
+  "tableName": "LG_XXX_FINTABLEITEM",
+  "displayName": "FINTABLEITEM",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_FINTABLEITEM_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SIDE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMLEVEL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CALCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TOTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRINTINREPORT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CURRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALTL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TOTALCURR",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BEGCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ENDCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FORMULA",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RATES1",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RATES2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RATES3",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "RATES4",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TABLEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLLNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIELDNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KDV1TXT",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

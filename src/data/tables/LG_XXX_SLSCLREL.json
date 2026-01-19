@@ -1,0 +1,44 @@
+{
+  "tableName": "LG_XXX_SLSCLREL",
+  "displayName": "Satici Cari Hesap Iliskisi",
+  "description": "Satis elemanlari ile cari hesaplar arasindaki iliskiyi tutan tablo. Hangi satici hangi musterilere atanmis bilgisi.",
+  "category": "Satis",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": [
+    "LG_XXX_SLSMAN",
+    "LG_XXX_CLCARD"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["SALESMANREF", "CLIENTREF", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 3,
+      "fields": ["SALESMANREF", "CLIENTREF", "LOGICALREF"],
+      "type": "Composite",
+      "property": "Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["SALESMANREF", "LINENO_", "LOGICALREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "SALESMANREF", "type": "int", "description": "Satis Elemani Referansi (SLSMAN)"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Satici Satir Numarasi"},
+    {"name": "CLIENTREF", "type": "int", "description": "Satici Cari Hesap Referansi (CLCARD)"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,42 @@
+{
+  "tableName": "LG_XXX_LABORREQ",
+  "displayName": "Calisan Ihtiyaclari",
+  "description": "Operasyon kartlari icin tanimlanan calisan ihtiyaclarini tutan tablo. Hangi operasyonda hangi calisanin ne miktarda gerektigi bilgisini icerir.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": ["LG_XXX_OPERTION", "LG_XXX_EMPLOYEE"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": ""}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "OPREQREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "GROUP_", "length": "5 bytes", "type": "SmallInt", "property": ""},
+        {"field": "EMPREF", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "OPREQREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "LINENO_", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "OPREQREF", "type": "int", "description": "Operasyon karti referansi"},
+    {"name": "LINENO_", "type": "int", "description": "Satir no"},
+    {"name": "GROUP_", "type": "SmallInt", "description": "Calisan grubu"},
+    {"name": "EMPREF", "type": "int", "description": "Calisan karti referansi - EMPLOYEE tablosuna baglanti"},
+    {"name": "AMOUNT", "type": "Float", "description": "Calisan sayisi"}
+  ],
+  "commonQueries": []
+}

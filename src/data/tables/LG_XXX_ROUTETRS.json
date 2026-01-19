@@ -1,0 +1,38 @@
+{
+  "tableName": "LG_XXX_ROUTETRS",
+  "displayName": "Satis Rota Satirlari",
+  "description": "Satis rotalarina ait satir detaylari. Hangi cari hesaplarin rotaya dahil oldugunu gosterir.",
+  "category": "Satis",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [
+    "LG_XXX_ROUTE",
+    "LG_XXX_CLCARD"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["ROUTEREF", "LINENO_"],
+      "type": "Composite"
+    },
+    {
+      "no": 3,
+      "fields": ["CLIENTREF", "ROUTEREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "ROUTEREF", "type": "int", "description": "Rota referansi (ROUTE)"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Rota satiri numarasi"},
+    {"name": "CLIENTREF", "type": "int", "description": "Cari hesap referansi (CLCARD)"}
+  ],
+  "commonQueries": []
+}

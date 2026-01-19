@@ -1,0 +1,94 @@
+{
+  "tableName": "L_GTIP_CODE",
+  "displayName": "GTIP_CODE",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "GTIP_CODE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "GTIP_CODE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CODE"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "GTIP_CODE_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "LEVEL_"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LEVEL_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CODEEMPTY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SELECTABLE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXRATE1",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TAXRATE2",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TAXRATE3",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TAXRATE4",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TAXRATE5",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

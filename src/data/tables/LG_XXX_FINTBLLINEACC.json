@@ -1,0 +1,51 @@
+{
+  "tableName": "LG_XXX_FINTBLLINEACC",
+  "displayName": "FINTBLLINEACC",
+  "description": "",
+  "category": "Muhasebe",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_FINTBLLINEACC_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TBLREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LNREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TBLTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACCOUNTREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

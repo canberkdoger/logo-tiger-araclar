@@ -1,0 +1,57 @@
+{
+  "tableName": "LG_XXX_XX_ORDCMPRICE",
+  "displayName": "ORDCMPRICE",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_ORDCMPRICE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORDFICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENO_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRICETYPECODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PRICE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "DEFAULTFLG",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

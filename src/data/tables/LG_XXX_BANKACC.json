@@ -1,0 +1,67 @@
+{
+  "tableName": "LG_XXX_BANKACC",
+  "displayName": "Banka Hesaplari",
+  "description": "Firma banka hesaplarini tanimlar. Ticari hesap, kredi hesabi, dovizli hesap tipleri desteklenir.",
+  "category": "Banka",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 6,
+  "relatedTables": [
+    { "table": "LG_XXX_BNCARD", "description": "Banka kartlari", "field": "BANKREF" },
+    { "table": "LG_XXX_XX_BNFICHE", "description": "Banka fisleri" },
+    { "table": "LG_XXX_XX_BNFLINE", "description": "Banka hareketleri" }
+  ],
+  "indexes": [
+    { "no": 1, "fields": ["LOGICALREF"], "type": "Primary" },
+    { "no": 2, "fields": ["BANKREF", "CARDTYPE", "CODE"], "type": "Index" },
+    { "no": 3, "fields": ["CARDTYPE", "CODE"], "type": "Index" },
+    { "no": 4, "fields": ["BANKREF", "ACTIVE", "CARDTYPE", "CODE"], "type": "Index" },
+    { "no": 5, "fields": ["CARDTYPE", "CODE", "ACCOUNTNO", "ACTIVE", "LOGICALREF"], "type": "Index" },
+    { "no": 6, "fields": ["ACCOUNTNO", "LOGICALREF"], "type": "Index" }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres (Primary Key)", "isPrimaryKey": true },
+    { "name": "CARDTYPE", "type": "SmallInt", "description": "Kart tipi (1: Ticari hesap, 2: Kredi hesabi, 3: Dovizli ticari, 4: Dovizli kredi)" },
+    { "name": "CODE", "type": "VarChar", "length": 17, "description": "Banka hesabi kodu" },
+    { "name": "DEFINITION_", "type": "VarChar", "description": "Banka hesabi aciklamasi" },
+    { "name": "SPECODE", "type": "VarChar", "description": "Ozel kod" },
+    { "name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu" },
+    { "name": "BANKREF", "type": "Int", "description": "Banka referansi (BNCARD)" },
+    { "name": "CHECKMARGIN", "type": "Float", "description": "Cek kredi marji" },
+    { "name": "NOTEMARGIN", "type": "Float", "description": "Senet kredi marji" },
+    { "name": "CHECKLIMIT", "type": "Float", "description": "Cek kredi limiti" },
+    { "name": "NOTELIMIT", "type": "Float", "description": "Senet kredi limiti" },
+    { "name": "CUSTINTEREST", "type": "Float", "description": "Cari hesap faizi (yillik)" },
+    { "name": "SKINTEREST", "type": "Float", "description": "Senet karsiligi kredi faizi (aylik)" },
+    { "name": "CKINTEREST", "type": "Float", "description": "Cek karsiligi kredi faizi (aylik)" },
+    { "name": "STOPAJPER", "type": "Float", "description": "Stopaj orani" },
+    { "name": "FONPER", "type": "Float", "description": "Fon orani" },
+    { "name": "CURRENCY", "type": "SmallInt", "description": "Hesap dovizi" },
+    { "name": "EXTENREF", "type": "Int", "description": "Extra dosya referansi" },
+    { "name": "ACTIVE", "type": "SmallInt", "description": "Durum (0: Kulanimda, 1: Kullanim disi)" },
+    { "name": "ACCOUNTNO", "type": "VarChar", "description": "Muhasebe hesap numarasi" },
+    { "name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1: Evet, 0: Hayir)" },
+    { "name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi olusturan kullanici" },
+    { "name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin olusturuldugu tarih" },
+    { "name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin olusturuldugu saat" },
+    { "name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin olusturuldugu dakika" },
+    { "name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin olusturuldugu saniye" },
+    { "name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi degistiren kullanici" },
+    { "name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin degistirildigi tarih" },
+    { "name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin degistirildigi saat" },
+    { "name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin degistirildigi dakika" },
+    { "name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin degistirildigi saniye" }
+  ],
+  "commonQueries": [
+    {
+      "name": "Tum Banka Hesaplari",
+      "description": "Aktif banka hesaplarini listeler",
+      "sql": "SELECT ba.CODE, ba.DEFINITION_, ba.CARDTYPE, b.DEFINITION_ as BankaAdi FROM LG_{firmNo}_BANKACC ba JOIN LG_{firmNo}_BNCARD b ON ba.BANKREF = b.LOGICALREF WHERE ba.ACTIVE = 0 ORDER BY ba.CODE"
+    },
+    {
+      "name": "Banka Bazli Hesaplar",
+      "description": "Belirli bir bankanin hesaplarini listeler",
+      "sql": "SELECT CODE, DEFINITION_, CARDTYPE, CURRENCY FROM LG_{firmNo}_BANKACC WHERE BANKREF = {bankaRef} AND ACTIVE = 0 ORDER BY CODE"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "tableName": "LG_XXX_CRDACREF",
+  "displayName": "Kart Muhasebe Hesap Referanslari",
+  "description": "Cesitli kart turleri (stok, hizmet, cari hesap vb.) icin muhasebe hesap referanslarini iceren tablo.",
+  "category": "Muhasebe",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_CLCARD", "LG_XXX_EMUHACC", "LG_XXX_EMCENTER"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["TRCODE", "CARDREF", "TYP"],
+      "type": "SmallInt, int, SmallInt",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "TRCODE", "type": "SmallInt", "description": "Islem turu (1-stok karti, 3-hizmet karti, 4-hizmet satis, 5-cari hesap, 8-kasa islemi, 9-alis promosyon, 10-satis promosyon, 11-alis indirim, 12-alis masraf, 13-satis indirim, 14-satis masraf)"},
+    {"name": "CARDREF", "type": "Int", "description": "Cari kart referansi - CLCARD"},
+    {"name": "TYP", "type": "SmallInt", "description": "Islem Tipi (trCode=1 Icin: 1:Alim, 2:diger giris, 3:satis, 4:diger cikis, 5:sarf, 6:fire, 7:diger giris, 8:kullanici tanimli giris, 9:kullanici tanimli cikis, 10:alim iade, 11:satis iade, 12:alim indirim, 13:satis indirim, 14:alim masraf, 15:satis masraf, 16:alinan promosyon, 17:verilen promosyon, 18:prom KDV, 19:satista kar/zarar, 20:amortisman tukenme paylari, 21:yeniden degerlendirmeler, 22:sonraki yil indirelecek, 23:birikmis amortismanlar, 24:sabit kiymet giderleri) (trcode=3 icin: 1:hizmetler, 2:hizmet indirimleri, 3:hizmet masraflar, 4:hizmet promosyonlar, 5:hizmet iadeleri)"},
+    {"name": "ACCOUNTREF", "type": "Int", "description": "Muhasebe hesabi referansi - EMUHACC"},
+    {"name": "CENTERREF", "type": "int", "description": "Masraf merkezi referansi - EMCENTER"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir cari hesabin muhasebe hesaplarini listele",
+      "query": "SELECT cr.*, e.CODE AS MuhHesapKodu FROM LG_XXX_CRDACREF cr INNER JOIN LG_XXX_EMUHACC e ON cr.ACCOUNTREF = e.LOGICALREF WHERE cr.CARDREF = @CariRef AND cr.TRCODE = 5"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "tableName": "LG_XXX_CHARCODE",
+  "displayName": "Malzeme Karakteristik Kodlari",
+  "description": "Malzeme karakteristik kod tanimlarini iceren tablo. Malzemelere atanabilecek ozellik turlerini tanimlar.",
+  "category": "Stok",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_CHARVAL", "LG_XXX_CHARASGN"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CODE"],
+      "type": "ZString",
+      "properties": "Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["LOGICALREF", "NAME"],
+      "type": "Auto Increment, VarChar",
+      "properties": "Modif, Dup,Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["SITEID", "ORGLOGICREF", "LOGICALREF"],
+      "type": "int, int, int",
+      "properties": "Dup,Modif, Orjinal kayit referansi, Modif,Dup"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Karakteristik kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Karakteristik Aciklamasi"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel Kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki Kodu"},
+    {"name": "APPROVED", "type": "SmallInt", "description": "Onay bilgisi"},
+    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanimda, 1: Kullanim disi"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1:Evet, 0:Hayir)"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Tum aktif karakteristik kodlarini listele",
+      "query": "SELECT * FROM LG_XXX_CHARCODE WHERE ACTIVE = 0 ORDER BY CODE"
+    },
+    {
+      "description": "Belirli bir karakteristik kodunun degerlerini listele",
+      "query": "SELECT cv.* FROM LG_XXX_CHARVAL cv INNER JOIN LG_XXX_CHARCODE cc ON cv.CHARCODEREF = cc.LOGICALREF WHERE cc.CODE = @KarakteristikKodu"
+    }
+  ]
+}

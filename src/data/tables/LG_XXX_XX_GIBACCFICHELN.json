@@ -1,0 +1,227 @@
+{
+  "tableName": "LG_XXX_XX_GIBACCFICHELN",
+  "displayName": "GIBACCFICHELN",
+  "description": "",
+  "category": "Muhasebe",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_GIBACCFICHELN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VATACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VATINCLUDE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SIGN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LINENET",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VATRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "VATTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "LINEEXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "VATCALCDIFF",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBLINETYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBRECTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBSUBRECTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBINCMTAXREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBINCMTAXRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBINCMTAXTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBEXPSALESREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBPARTDEDUCTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBPARTDEDUCTRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBPARTDEDUCTTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBOTHEROPRREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBPARTEXCEPTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBFULLEXCEPTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NOVAT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GIBPAYMENTTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCUSTVATMATRAH",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCUSTSTOCKTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCUSTEXTPAYMENT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FAREGREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBFAREGEXPTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCOSTID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBSALESQUANTITY",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "GIBFAREGSALESREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PERIODICITY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PARENTPERCTYGIBID",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

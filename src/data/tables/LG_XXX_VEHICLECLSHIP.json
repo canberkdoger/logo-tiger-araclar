@@ -1,0 +1,71 @@
+{
+  "tableName": "LG_XXX_VEHICLECLSHIP",
+  "displayName": "VEHICLECLSHIP",
+  "description": "",
+  "category": "Dagitim",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_VEHICLECLSHIP_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VEHICLEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CLCARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SHIPINFOREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DAYNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SHIPBEGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SHIPENDTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CANGO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

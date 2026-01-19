@@ -1,0 +1,38 @@
+{
+  "tableName": "L_CITY",
+  "displayName": "Sehirler",
+  "description": "Ulkelere bagli sehir tanimlarinin tutuldugu tablo.",
+  "category": "Tanimlar",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 3,
+  "relatedTables": ["L_COUNTRY"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "COUNTRY", "length": "4 bytes", "type": "Integer" },
+        { "name": "NAME", "length": "41 bytes", "type": "VarChar" }
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        { "name": "NAME", "length": "41 bytes", "type": "VarChar" },
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "int", "description": "Fiziksel adres" },
+    { "name": "COUNTRY", "type": "int", "description": "Ulke" },
+    { "name": "NAME", "type": "VarChar", "description": "Sehir adi" }
+  ],
+  "commonQueries": []
+}

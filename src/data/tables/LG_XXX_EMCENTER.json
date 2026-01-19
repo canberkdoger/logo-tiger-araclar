@@ -1,0 +1,81 @@
+{
+  "tableName": "LG_XXX_EMCENTER",
+  "displayName": "Masraf Merkezleri",
+  "description": "Masraf merkezi tanimlarini iceren tablo. Maliyet muhasebesinde giderlerin izlenmesi ve dagitilmasi icin kullanilir.",
+  "category": "Muhasebe",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CODE"],
+      "type": "ZString",
+      "properties": "Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["DEFINITION_"],
+      "type": "ZString",
+      "properties": "Dup, Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["ACTIVE", "CODE"],
+      "type": "Integer, ZString",
+      "properties": "Dup, Modif, Modif"
+    },
+    {
+      "no": 5,
+      "fields": ["ACTIVE", "DEFINITION"],
+      "type": "Integer, ZString",
+      "properties": "Dup, Modif, Modif"
+    },
+    {
+      "no": 6,
+      "fields": ["SITEID", "ORGLOGICALREF"],
+      "type": "int, int",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "Masraf kodu"},
+    {"name": "DEFINITION_", "type": "VarChar", "description": "Masraf adi"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu"},
+    {"name": "UNITS", "type": "VarChar", "description": "Birim (2.27 de)"},
+    {"name": "ADDINFOREF", "type": "Int", "description": "Ek bilgi dosyasi referansi (2.27 de)"},
+    {"name": "EXTENREF", "type": "Int", "description": "Extra dosya referansi"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "ACTIVE", "type": "SmallInt", "description": "0: Kullanimda, 1: Kullanim disi"},
+    {"name": "SITEID", "type": "Int", "description": "Bolge no"},
+    {"name": "ORGLOGICALREF", "type": "Int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Tum aktif masraf merkezlerini listele",
+      "query": "SELECT * FROM LG_XXX_EMCENTER WHERE ACTIVE = 0 ORDER BY CODE"
+    },
+    {
+      "description": "Belirli bir koda gore masraf merkezi bul",
+      "query": "SELECT * FROM LG_XXX_EMCENTER WHERE CODE LIKE @Kod + '%'"
+    }
+  ]
+}

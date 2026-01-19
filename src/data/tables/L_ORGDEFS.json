@@ -1,0 +1,81 @@
+{
+  "tableName": "L_ORGDEFS",
+  "displayName": "ORGDEFS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "ORGDEFS_I3",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "ORGDEFS_I1",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CODE",
+        "REVDATE"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "ORGDEFS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CHARTID",
+        "REVDATE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CHARTID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REVDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EXP",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GROUPING",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

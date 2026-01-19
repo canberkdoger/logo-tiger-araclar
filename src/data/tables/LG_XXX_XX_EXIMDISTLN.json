@@ -1,0 +1,171 @@
+{
+  "tableName": "LG_XXX_XX_EXIMDISTLN",
+  "displayName": "EXIMDISTLN",
+  "description": "",
+  "category": "Dagitim",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_EXIMDISTLN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_EXIMDISTLN_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "SRVREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_EXIMDISTLN_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "SRVREF",
+        "DATE_",
+        "FTIME"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "I126_01_EXIMDISTLN_I4",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "EXIMDISTFCREF",
+        "LINENR"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "I126_01_EXIMDISTLN_I5",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "EXIMINFOREF",
+        "PROCESSNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRVREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DATE_",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "FTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SOURCEINDEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMINFOREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXIMDISTFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROCESSNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SRVTRANSREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SRVDISTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DISTTOTAL",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "SRVACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SRVCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WFSTATUS",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DISTTOTALUFRS",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 5
+}

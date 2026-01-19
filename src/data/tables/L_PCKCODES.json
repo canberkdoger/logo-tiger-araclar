@@ -1,0 +1,59 @@
+{
+  "tableName": "L_PCKCODES",
+  "displayName": "PCKCODES",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "PCKCODES_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "PCKCODES_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "PCODE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PDEF2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "EDICODE",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

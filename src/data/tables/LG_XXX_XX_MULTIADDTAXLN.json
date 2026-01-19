@@ -1,0 +1,162 @@
+{
+  "tableName": "LG_XXX_XX_MULTIADDTAXLN",
+  "displayName": "MULTIADDTAXLN",
+  "description": "",
+  "category": "Vergi",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_MULTIADDTAXLN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FICHETYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FICHEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXVATMATRAH",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXAMNTISUPD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "VATMATRAH",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXCONVFACT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXDISCAMOUNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXCONVF",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXAREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OTHRADDTAXAREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "OTHRADDTAXCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXAMOUNTX",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXVATMATRAHX",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXCONVFACTX",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "ADDTAXDISCAMOUNTX",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXAMNTX",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "EXADDTAXCONVFX",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

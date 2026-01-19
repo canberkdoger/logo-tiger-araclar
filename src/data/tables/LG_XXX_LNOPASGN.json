@@ -1,0 +1,53 @@
+{
+  "tableName": "LG_XXX_LNOPASGN",
+  "displayName": "Urun Recetesi Operasyon Atamalari",
+  "description": "Urun recetesi satirlarinin uretim rotalari ile eslesmesini saglayan tablo. Hangi recete satirinin hangi operasyona atandigini tutar.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_BOMASTER", "LG_XXX_BOMLINE", "LG_XXX_ROUTING", "LG_XXX_RTNGLINE", "LG_XXX_ITEMS", "LG_XXX_UNITSETL"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": ""}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "BOMREVREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "BOMLINEREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": ""}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "ROUTLINEREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "BOMLINEREF", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": ""},
+        {"field": "BOMREVREF", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "BOMREVREF", "type": "int", "description": "Urun recetesi kodu - BOMASTER tablosuna baglanti"},
+    {"name": "BOMLINEREF", "type": "int", "description": "Urun recetesi satiri referansi - BOMLINE tablosuna baglanti"},
+    {"name": "ROUTINGREF", "type": "int", "description": "Uretim rotalari karti - ROUTING tablosuna baglanti"},
+    {"name": "ROUTLINEREF", "type": "int", "description": "Uretim rotalari satirlari karti - RTNGLINE tablosuna baglanti"},
+    {"name": "ITEMREF", "type": "int", "description": "Malzeme karti referansi - ITEMS tablosuna baglanti"},
+    {"name": "UOMREF", "type": "int", "description": "Birim referansi - UNITSETL tablosuna baglanti"},
+    {"name": "AMOUNT", "type": "Float", "description": "Miktar"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,46 @@
+{
+  "tableName": "LG_XXX_TRGPAR",
+  "displayName": "Risk Parametreleri",
+  "description": "Musteri risk parametrelerinin tanimlandigi tablo",
+  "category": "Risk Yonetimi",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 1,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "RISKTYPE",
+      "type": "SmallInt",
+      "description": "Risk toplami (bakiye/irsaliye)"
+    },
+    {
+      "name": "RISKOVER",
+      "type": "SmallInt",
+      "description": "Genel musteri riski asildiginda"
+    },
+    {
+      "name": "ORDRISKOVER",
+      "type": "SmallInt",
+      "description": "Siparis musteri riski asildiginda"
+    },
+    {
+      "name": "DESPRISKOVER",
+      "type": "SmallInt",
+      "description": "Irsaliye musteri riski asildiginda"
+    }
+  ],
+  "commonQueries": []
+}

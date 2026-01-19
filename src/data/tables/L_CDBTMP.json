@@ -1,0 +1,36 @@
+{
+  "tableName": "L_CDBTMP",
+  "displayName": "Gecici Veritabani Verileri",
+  "description": "Sistem tarafindan ic kullanim amaciyla olusturulan gecici veritabani kayitlarini tutan tablo.",
+  "category": "Sistem",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "MODULE_", "length": "2 bytes", "type": "Integer" },
+        { "name": "INFOTYPE", "length": "2 bytes", "type": "Integer" },
+        { "name": "OBJID", "length": "2 bytes", "type": "Integer" },
+        { "name": "INSTID", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "LREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LREF", "type": "int", "description": "Fiziksel adres" },
+    { "name": "MODULE_", "type": "int", "description": "Ic kullanim" },
+    { "name": "INFOTYPE", "type": "SmallInt", "description": "Ic kullanim" },
+    { "name": "OBJID", "type": "int", "description": "Ic kullanim" },
+    { "name": "INSTID", "type": "int", "description": "Ic kullanim" },
+    { "name": "LDATA", "type": "image", "description": "Ic kullanim" }
+  ],
+  "commonQueries": []
+}

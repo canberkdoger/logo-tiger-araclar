@@ -1,0 +1,67 @@
+{
+  "tableName": "L_CAPIDOC",
+  "displayName": "CAPIDOC",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIDOC_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIDOC_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "INFOTYP",
+        "INFOREF",
+        "DOCTYP",
+        "DOCNR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INFOTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "INFOREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYP",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCNR",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

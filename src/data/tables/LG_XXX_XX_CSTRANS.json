@@ -1,0 +1,60 @@
+{
+  "tableName": "LG_XXX_XX_CSTRANS",
+  "displayName": "Cek Senet Hareketi",
+  "description": "Cek ya da senetlerle ilgili islemler bordrolar araciligi ila yapildiginda her cek ya da senet icin o anki akibetini belirten bir cek ya da senet hareketi olusmaktadir.",
+  "category": "Cek/Senet",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_XX_CSCARD", "LG_XXX_XX_CSROLL", "LG_XXX_XX_EMUHACC", "LG_XXX_XX_EMCENTER"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "CSREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, seg"},
+        {"name": "STATNO", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "ROLLREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "LINENO_", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "DATE_", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "CSREF", "type": "LongInt", "description": "Cek Senet karti referansi -> CSCARD"},
+    {"name": "ROLLREF", "type": "LongInt", "description": "Bordro referansi -> CSROLL"},
+    {"name": "TRCODE", "type": "Integer", "description": "Islem turu (1-12)"},
+    {"name": "ACCOUNTED", "type": "Byte", "description": "Muhasebelesmis"},
+    {"name": "DEVIR", "type": "Byte", "description": "Devir"},
+    {"name": "STATUS", "type": "Byte", "description": "Statu (1:Portfoyde, 2:Ciro edildi, 3:Teminata verildi, 4:Tahsile verildi, 5:Protestolu tahsile verildi, 6:Iade edildi, 7:Protesto edildi, 8:Tahsil edildi, 9:Kendi cekimiz, 10:Borc senedimiz, 11:Karsiligi yok, 12:Tahsil edilemiyor)"},
+    {"name": "CARDMD", "type": "Byte", "description": "Kart modul no"},
+    {"name": "CARDREF", "type": "LongInt", "description": "Kart referansi"},
+    {"name": "STATNO", "type": "Integer", "description": "Kacinci statu"},
+    {"name": "LINENO_", "type": "Integer", "description": "Bordronun kacinci satiri"},
+    {"name": "ACCREF", "type": "LongInt", "description": "Muhasebe hesabi referansi -> EMUHACC"},
+    {"name": "COSTREF", "type": "LongInt", "description": "Masraf merkezi referansi -> EMCENTER"},
+    {"name": "CRSACCREF", "type": "LongInt", "description": "Karsi hesabin muhasebe hesabi referansi -> EMUHACC"},
+    {"name": "CRSCOSTREF", "type": "LongInt", "description": "Karsi hesabin masraf merkezi referansi -> EMCENTER"},
+    {"name": "FROMCASH", "type": "Byte", "description": "Kasadan islem yapilmis (E/H)"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal edilmis"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Satir)"}
+  ],
+  "commonQueries": []
+}

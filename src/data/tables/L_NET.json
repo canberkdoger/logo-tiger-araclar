@@ -1,0 +1,30 @@
+{
+  "tableName": "L_NET",
+  "displayName": "Ag Kilitleri",
+  "description": "Ag uzerindeki kilit bilgilerinin tutuldugu tablo.",
+  "category": "Sistem",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 2,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "LOCKSTR", "length": "41 bytes", "type": "VarChar" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres" },
+    { "name": "LOCKSTR", "type": "VarChar", "description": "Lock aciklamasi" },
+    { "name": "COUNTER", "type": "Int", "description": "Sayac" }
+  ],
+  "commonQueries": []
+}

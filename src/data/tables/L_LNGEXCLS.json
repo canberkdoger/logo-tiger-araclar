@@ -1,0 +1,82 @@
+{
+  "tableName": "L_LNGEXCLS",
+  "displayName": "LNGEXCLS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "LNGEXCLS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "LNGEXCLS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "DOCID",
+        "DOCREF",
+        "FIELDID",
+        "LANGID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FIELDID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LANGID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FIELDCONT",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

@@ -1,0 +1,568 @@
+{
+  "tableName": "LG_XXX_TAXDECLHDR",
+  "displayName": "TAXDECLHDR",
+  "description": "",
+  "category": "Vergi",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_TAXDECLHDR_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_TAXDECLHDR_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "TYP",
+        "TAXDECLNO"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_TAXDECLHDR_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "TYP",
+        "BEGDT"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXOFFCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERIODTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PERIOD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MONTH_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "YEAR_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BEGDT",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "ENDDT",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_TAXIDNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_SURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_EMAILADD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_CITYTELCD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_TELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_IDENNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_TRDREGISNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PAYERINF_BAGKURNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_TAXIDNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_SURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_EMAILADD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_CITYTELCD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_TELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_IDENNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_TRDREGISNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "AGENTINF_BAGKURNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_TAXIDNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_SURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_EMAILADD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_CITYTELCD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_TELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_IDENNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_TRDREGISNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PERINF_BAGKURNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_TAXIDNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_SURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_EMAILADD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_CITYTELCD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_TELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_IDENNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_TRDREGISNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PREPINF_BAGKURNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_TAXIDNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_SURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_EMAILADD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_CITYTELCD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_TELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_IDENNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_TRDREGISNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SENDINF_BAGKURNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_TAXIDNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_SURNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_EMAILADD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_CITYTELCD",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_TELNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_IDENNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_TRDREGISNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "YMMINF_BAGKURNR",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLCHK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "OTHSERVTOT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "WORKERCNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVITYSUB",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVITYSUB2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PCTRIALTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANSFERSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILTO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILCC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILBCC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TCVRGNO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PATSAHDURUM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLRADIO",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLSGKCHK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLAPHBCHK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLBRANCHN",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BRANCH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLM19",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLM20",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TAXDECLVERS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BEGMONTH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KISTDT",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "KISTREASON",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BYNTYP",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

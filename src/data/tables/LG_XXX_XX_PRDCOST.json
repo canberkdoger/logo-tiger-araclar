@@ -1,0 +1,37 @@
+{
+  "tableName": "LG_XXX_XX_PRDCOST",
+  "displayName": "Urun Maliyet",
+  "description": "Urun maliyet bilgilerinin tutuldugu tablo.",
+  "category": "Maliyet",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 1,
+  "relatedTables": ["ITEMS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "int",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "PRDENDDATE", "type": "int", "description": ""},
+    {"name": "PRDENDTIME", "type": "int", "description": ""},
+    {"name": "PRDCOSTTYPE", "type": "SmallInt", "description": ""},
+    {"name": "ITEMREF", "type": "int", "description": "Malzeme karti referansi ITEMS"},
+    {"name": "LINENR", "type": "SmallInt", "description": ""},
+    {"name": "INVENCOSTTYPE", "type": "SmallInt", "description": ""},
+    {"name": "INVENCOSTGRPNR", "type": "SmallInt", "description": ""},
+    {"name": "INVENCOSTWSREF", "type": "int", "description": ""},
+    {"name": "STTRANSREF", "type": "int", "description": ""},
+    {"name": "TOTAMNT", "type": "Float", "description": ""},
+    {"name": "TOTVAL", "type": "Float", "description": ""},
+    {"name": "TOTCURR", "type": "Float", "description": ""},
+    {"name": "TOTDIFFVAL", "type": "Float", "description": ""},
+    {"name": "TOTDIFFCURR", "type": "Float", "description": ""},
+    {"name": "MAINUNITREF", "type": "int", "description": ""}
+  ],
+  "commonQueries": []
+}

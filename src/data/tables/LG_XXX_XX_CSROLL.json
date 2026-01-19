@@ -1,0 +1,100 @@
+{
+  "tableName": "LG_XXX_XX_CSROLL",
+  "displayName": "Bordro",
+  "description": "Cek ve senetlerle ilgili tum hareketler cek/senet bordrolari araciligi ile kaydedilmekte ve bu kayitlar CSROLL tablosunda tutulmaktadir.",
+  "category": "Cek/Senet",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 5,
+  "relatedTables": ["LG_XXX_CLCARD", "LG_XXX_BNCARD", "LG_XXX_XX_EMCENTER", "LG_XXX_XX_CLFICHE", "LG_XXX_XX_KSLINES", "LG_XXX_XX_EMUHACC"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "ROLLNO", "length": "9 bytes", "type": "ZString", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "DATE_", "length": "4 bytes", "type": "Integer", "property": "Modif, Seg"},
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif, Seg"},
+        {"name": "ROLLNO", "length": "9 bytes", "type": "ZString", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "ACCFICHEREF", "length": "4 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "SITEID", "length": "10 bytes", "type": "int", "property": ""},
+        {"name": "ORGLOGICREF", "length": "10 bytes", "type": "int", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "CARDREF", "type": "LongInt", "description": "Banka hesap karti referansi CLCARD ya da BNCARD"},
+    {"name": "CENTERREF", "type": "LongInt", "description": "Masraf merkezi referansi -> EMCENTER"},
+    {"name": "ROLLNO", "type": "ZString9", "description": "Bordro numarasi"},
+    {"name": "SPECODE", "type": "ZString11", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "ZString11", "description": "Yetki kodu"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "TRCODE", "type": "Integer", "description": "Islem turu (1:Cek girisi, 2:Senet girisi, 3:Cek cikis (cari hesaba), 4:Senet cikis (cari hesaba), 5:Cek cikis (banka tahsil), 6:Senet cikis (Banka tahsil), 7:Cek cikis (banka teminat), 8:Senet cikis (banka teminat), 9:Islem Bordrosu (musteri ceki), 10:Islem bordrosu (musteri senedi), 11:Islem bordrosu (kendi cekimiz), 12:Islem bordrosu (borc senedimiz))"},
+    {"name": "BRANCH", "type": "Integer", "description": "Is yeri"},
+    {"name": "DEPARTMENT", "type": "Integer", "description": "Bolum"},
+    {"name": "DESTBRANCH", "type": "Integer", "description": "Gonderilen is yeri"},
+    {"name": "DESTDEPARTMENT", "type": "Integer", "description": "Gonderilen bolum"},
+    {"name": "CARDMD", "type": "Byte", "description": "Kart modul numarasi 1-4: cari hesap (5) 5-8: banka(7)"},
+    {"name": "PROCTYPE", "type": "Byte", "description": "Islem bordrosu fis turu (Islem bordrolari icin gecerli. Diger bordrolar icin sifir (0) olur.)"},
+    {"name": "ONEPAYLINE", "type": "Byte", "description": "Tek satirda (ortalama) odeme"},
+    {"name": "FROMCASH", "type": "Byte", "description": "Kasadan"},
+    {"name": "ACCOUNTED", "type": "Byte", "description": "Muhasebelesmis"},
+    {"name": "AVERAGEAGE", "type": "LongInt", "description": "Ortalama yas"},
+    {"name": "DOCCNT", "type": "Integer", "description": "Bordrodaki cek/senet sayisi"},
+    {"name": "PRINTCNT", "type": "Integer", "description": "Kac kere basildigi"},
+    {"name": "TOTAL", "type": "Double", "description": "Tutar"},
+    {"name": "TRCURR", "type": "Byte", "description": "Islem doviz turu"},
+    {"name": "TRRATE", "type": "Double", "description": "Islem doviz kuru"},
+    {"name": "TRNET", "type": "Double", "description": "Islem doviz tutari"},
+    {"name": "REPORTRATE", "type": "Double", "description": "Raporlama doviz kuru"},
+    {"name": "REPORTNET", "type": "Double", "description": "Raporlama doviz tutari"},
+    {"name": "GENEXP1", "type": "ZString51", "description": "Aciklama"},
+    {"name": "GENEXP2", "type": "ZString51", "description": "Aciklama"},
+    {"name": "GENEXP3", "type": "ZString51", "description": "Aciklama"},
+    {"name": "GENEXP4", "type": "ZString51", "description": "Aciklama"},
+    {"name": "ACCFICHEREF", "type": "LongInt", "description": "Muhasebe fisi referansi -> CLFICHE"},
+    {"name": "CASHTRANSREF", "type": "LongInt", "description": "Kasa hareketleri referansi -> KSLINES"},
+    {"name": "ACCREF", "type": "LongInt", "description": "Muhasebe hesabi referansi -> EMUHACC"},
+    {"name": "CAPIBLOK_CREATEDBY", "type": "Integer", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_CREATEDDATE", "type": "LongInt", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOK_CREATEDHOUR", "type": "Integer", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOK_CREATEDMIN", "type": "Integer", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOK_CREATEDSEC", "type": "Integer", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOK_MODIFIEDBY", "type": "Integer", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOK_MODIFIEDDATE", "type": "LongInt", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOK_MODIFIEDHOUR", "type": "Integer", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOK_MODIFIEDMIN", "type": "Integer", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOK_MODIFIEDSEC", "type": "Integer", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal edilmis"},
+    {"name": "CANCELLEDACC", "type": "Byte", "description": "Muhasebelestirme iptal (0:Hayir 1:Evet)"},
+    {"name": "TRADINGGRP", "type": "VarChar", "description": "Ticari islem grubu"},
+    {"name": "GENEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Genel)"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Satir)"},
+    {"name": "TEXTINC", "type": "SmallInt", "description": "Detay aciklama var (1:Evet, 0:Hayir)"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,55 @@
+{
+  "tableName": "L_PRICEINDEX",
+  "displayName": "PRICEINDEX",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "PRICEINDEX_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "PRICEINDEX_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "IDXTYPREF",
+        "IDXDATE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "IDXTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "IDXDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "PRICEIDX",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

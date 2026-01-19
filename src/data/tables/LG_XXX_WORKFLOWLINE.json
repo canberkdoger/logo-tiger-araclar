@@ -1,0 +1,166 @@
+{
+  "tableName": "LG_XXX_WORKFLOWLINE",
+  "displayName": "Is Akisi Satirlari",
+  "description": "",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_WORKFLOWLINE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "WFCARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LEVEL_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ROLEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INFORM",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TASKTIMEAMNT",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "TASKTIMEUNIT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DELAYSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SENDWARN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WARNTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WARNUSERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WARNROLEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CONDITION",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TASKTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TASKDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PROCESSTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REMINDER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILTO",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILCC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BMAILBCC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "IMPORTANCE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NOTIFICATION",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "EMAIL",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SMS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MSGTEMPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MOBILE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

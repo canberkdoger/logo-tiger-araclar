@@ -1,0 +1,200 @@
+{
+  "tableName": "L_SMS",
+  "displayName": "SMS",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "SMS_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "SMS_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "BEGDATE",
+        "BEGTIME"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "BEGDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "BEGTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DEFINITION_",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "REPEATTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "REPTIME",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REPMONTH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPDAY36",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CARDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MISSEDSMSCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SMSSERVICE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SENDEDSMSCOUNT",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SMSFIRMS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SUPPLIERCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SMSUSERS",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SMSLOCK",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ISSMS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LASTSMSDAY",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "GRPCODE",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

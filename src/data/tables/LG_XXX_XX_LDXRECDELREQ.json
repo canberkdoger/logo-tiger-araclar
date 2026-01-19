@@ -1,0 +1,97 @@
+{
+  "tableName": "LG_XXX_XX_LDXRECDELREQ",
+  "displayName": "LDXRECDELREQ",
+  "description": "",
+  "category": "Diger",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_LDXRECDELREQ_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DOCTRCODE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "DOCNUMBER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DOCDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "DOCAUXCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DOCDESC",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ARPLID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGOID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PARAM1",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PARAM2",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PARAM3",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PARAM4",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

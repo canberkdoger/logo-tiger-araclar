@@ -1,0 +1,72 @@
+{
+  "tableName": "LG_XXX_ITMWSDEF",
+  "displayName": "Malzeme Is Istasyonu Tanimlari",
+  "description": "Malzeme kartlarinin is istasyonu bazli stok seviyesi parametrelerini icerir. Uretim ortaminda is istasyonundaki malzeme kontrolleri icin kullanilir.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_WORKSTAT"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "int",
+      "property": ""
+    },
+    {
+      "no": 2,
+      "fields": ["ITEMREF", "WSREF", "LOGICALREF"],
+      "type": "int",
+      "property": ""
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "Malzeme karti referansi - ITEMS"
+    },
+    {
+      "name": "WSREF",
+      "type": "int",
+      "description": "Is istasyonu referansi - WORKSTAT"
+    },
+    {
+      "name": "MINLEVEL",
+      "type": "Float",
+      "description": "Asgari stok seviyesi"
+    },
+    {
+      "name": "MAXLEVEL",
+      "type": "Float",
+      "description": "Azami stok seviyesi"
+    },
+    {
+      "name": "SAFELEVEL",
+      "type": "Float",
+      "description": "Guvenlik stok seviyesi"
+    },
+    {
+      "name": "MINLEVELCTRL",
+      "type": "SmallInt",
+      "description": "Asgari stok seviyesi kontrolu"
+    },
+    {
+      "name": "MAXLEVELCTRL",
+      "type": "SmallInt",
+      "description": "Azami stok seviyesi kontrolu"
+    },
+    {
+      "name": "SAFELEVELCTRL",
+      "type": "SmallInt",
+      "description": "Guvenlik stok seviyesi kontrolu"
+    }
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,33 @@
+{
+  "tableName": "LG_XXX_XX_STINVENS",
+  "displayName": "Ambar Toplamlari",
+  "description": "Stok hareketleri islendigi veri tabanina kaydedildigi zaman stok hareketinin ilgili ambarindaki toplami ve tum ambarlarin genel toplamini gosteren bir kayit guncellenir. Her ambar icin 15 adet toplam kaydi bulunabilir. Bu kayitlardan ilki (-1) tum ambarlarin o ayki toplamini gosteren kaydi gosterir.",
+  "category": "Stok",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": [
+    {"table": "LG_XXX_ITEMS", "field": "STOCKREF", "description": "Malzeme karti referansi"}
+  ],
+  "indexes": [
+    {"no": 1, "fields": [{"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}]},
+    {"no": 2, "fields": [
+      {"name": "STOCKREF", "length": "4 bytes", "type": "Integer", "property": "Modif, Seg"},
+      {"name": "INVENNO", "length": "2 bytes", "type": "Integer", "property": "Modif"},
+      {"name": "MONTH_", "length": "2 bytes", "type": "Integer", "property": "Modif"}
+    ]}
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "STOCKREF", "type": "LongInt", "description": "Malzeme karti referansi ITEMS"},
+    {"name": "INVENNO", "type": "Integer", "description": "Ambar numarasi (-1 = tum ambarlar)"},
+    {"name": "MONTH_", "type": "Integer", "description": "Ay"},
+    {"name": "SALES_AMOUNT", "type": "Double", "description": "Aylik toplam satis tutarlari (tum aylar icin)"},
+    {"name": "SALES_CASHAMNT", "type": "Double", "description": "Aylik toplam satis tutarlari (tum aylar icin)"},
+    {"name": "SALES_CURRAMNT", "type": "Double", "description": "Aylik toplam satis tutarlari (tum aylar icin)"},
+    {"name": "PURCHASES_AMOUNT", "type": "Double", "description": "Aylik toplam alim tutarlari (tum aylar icin)"},
+    {"name": "PURCHASES_CASHAMNT", "type": "Double", "description": "Aylik toplam alim tutarlari (tum aylar icin)"},
+    {"name": "PURCHASES_CURRAMNT", "type": "Double", "description": "Aylik toplam alim tutarlari (tum aylar icin)"}
+  ],
+  "commonQueries": []
+}

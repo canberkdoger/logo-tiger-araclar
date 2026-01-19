@@ -1,0 +1,132 @@
+{
+  "tableName": "LG_XXX_XX_BNFLINE",
+  "displayName": "Banka Hareketi",
+  "description": "BNFLINE tablosunda banka fislerinin (BNFICHE) satirlari bulunmaktadir. Banka fisinin her satiri icin bu tabloda bir kayit yer almaktadir. Bankada islem goren cekler icin kesilen bordrolardan sonra banka fisi ve hareketi olusmaktadir.",
+  "category": "Banka",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 9,
+  "relatedTables": ["LG_XXX_XX_BNFICHE", "LG_XXX_BNCARD", "LG_XXX_BANKACC", "LG_XXX_CLCARD", "LG_XXX_XX_EMUHACC", "LG_XXX_XX_EMCENTER"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Modif"},
+        {"name": "TRANNO", "length": "9 bytes", "type": "ZString", "property": "Modif"},
+        {"name": "LINENR", "length": "2 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "DATE_", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "TRANNO", "length": "9 bytes", "type": "ZString", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "BNACCREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "DATE_", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "MODULENR", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 5,
+      "fields": [
+        {"name": "MODULENR", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "SOURCEFREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 6,
+      "fields": [
+        {"name": "BANKREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "DATE_", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "MODULENR", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "TRCODE", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 7,
+      "fields": [
+        {"name": "ACCFICHEREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 8,
+      "fields": [
+        {"name": "SOURCEFREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"},
+        {"name": "LINENR", "length": "2 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    },
+    {
+      "no": 9,
+      "fields": [
+        {"name": "BNTRACKINGNO", "length": "21 bytes", "type": "VarChar", "property": "Dup, Modif"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Integer", "property": "Dup, Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "LongInt", "description": "Fiziksel adres"},
+    {"name": "BANKREF", "type": "LongInt", "description": "Banka referansi -> BNCARD"},
+    {"name": "BNACCREF", "type": "LongInt", "description": "Banka hesabi referansi -> BANKACC"},
+    {"name": "CLIENTREF", "type": "LongInt", "description": "Cari hesap referansi -> CLCARD"},
+    {"name": "ACCOUNTREF", "type": "LongInt", "description": "Muhasebe hesabi referansi -> EMUHACC"},
+    {"name": "CENTERREF", "type": "LongInt", "description": "Muhasebe Masraf merkezi referansi -> EMCENTER"},
+    {"name": "BNACCOUNTREF", "type": "LongInt", "description": "Banka muhasebe kodu referansi -> EMUHACC"},
+    {"name": "BNCENTERREF", "type": "LongInt", "description": "Banka masraf merkezi referansi -> EMCENTER"},
+    {"name": "VIRMANREF", "type": "LongInt", "description": "Virman satiri referansi"},
+    {"name": "SOURCEFREF", "type": "LongInt", "description": "Ilgili satirdaki ilgili fisin referansi -> BNFICHE"},
+    {"name": "TRANSTYPE", "type": "Integer", "description": "Hareket turu (ticari hesap: 1:Cari hesap 2:takas senetleri 3:takas cekleri 4:kesilen cekler, kredi hesabi: 1:teminat senetleri 2:teminat cekleri 3:senet karsiligi kredi 4:cek karsiligi kredi)"},
+    {"name": "DATE_", "type": "LongInt", "description": "Tarih"},
+    {"name": "DEPARTMENT", "type": "Integer", "description": "Bolum"},
+    {"name": "BRANCH", "type": "Integer", "description": "Is yeri"},
+    {"name": "SIGN", "type": "Integer", "description": "Borc / alacak"},
+    {"name": "TRCODE", "type": "Integer", "description": "Islem turu (1:banka Islem 2:virman islemi 3:gelen hava. 4:gond.hava. 5:acilis islemi)"},
+    {"name": "MODULENR", "type": "Integer", "description": "Modul numarasi (6: cek/senet 7:banka 10:kasa)"},
+    {"name": "LINENR", "type": "Integer", "description": "Satir No"},
+    {"name": "SPECODE", "type": "ZString11", "description": "Ozel kod"},
+    {"name": "CYPHCODE", "type": "ZString11", "description": "Yetki kodu"},
+    {"name": "TRANNO", "type": "ZString9", "description": "Islem no"},
+    {"name": "DOCODE", "type": "ZString9", "description": "Belge No"},
+    {"name": "LINEEXP", "type": "ZString51", "description": "Aciklama"},
+    {"name": "ACCOUNTED", "type": "Byte", "description": "Muhasebelesmis"},
+    {"name": "TRCURR", "type": "Byte", "description": "Hareket dovizi"},
+    {"name": "AMOUNT", "type": "Double", "description": "Tutar"},
+    {"name": "TRRATE", "type": "Double", "description": "Hareket dovizi kuru"},
+    {"name": "TRNET", "type": "Double", "description": "Hareket dovizi tutari"},
+    {"name": "REPORTRATE", "type": "Double", "description": "Raporlama dovizi kuru"},
+    {"name": "REPORTNET", "type": "Double", "description": "Raporlama dovizi tutari"},
+    {"name": "EXTENREF", "type": "LongInt", "description": "Extra dosya referansi"},
+    {"name": "ACCFICHEREF", "type": "LongInt", "description": "Muhasebe fisi Referansi -> EMFICHE"},
+    {"name": "PRINTCNT", "type": "Integer", "description": "Toplam kac kere basildigi"},
+    {"name": "CAPIBLOCK_CREATEDBY", "type": "Integer", "description": "Kaydi Olusturan Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_CREADEDDATE", "type": "LongInt", "description": "Kaydin Olusturuldugu Tarih"},
+    {"name": "CAPIBLOCK_CREATEDHOUR", "type": "Integer", "description": "Kaydin Olusturuldugu Saat"},
+    {"name": "CAPIBLOCK_CREATEDMIN", "type": "Integer", "description": "Kaydin Olusturuldugu Dakika"},
+    {"name": "CAPIBLOCK_CREATEDSEC", "type": "Integer", "description": "Kaydin Olusturuldugu Saniye"},
+    {"name": "CAPIBLOCK_MODIFIEDBY", "type": "Integer", "description": "Kaydi Degistiren Kullanicinin Kodu"},
+    {"name": "CAPIBLOCK_MODIFIEDDATE", "type": "LongInt", "description": "Kaydin Degistirildigi Tarih"},
+    {"name": "CAPIBLOCK_MODIFIEDHOUR", "type": "Integer", "description": "Kaydin Degistirildigi Saat"},
+    {"name": "CAPIBLOCK_MODIFIEDMIN", "type": "Integer", "description": "Kaydin Degistirildigi Dakika"},
+    {"name": "CAPIBLOCK_MODIFIEDSEC", "type": "Integer", "description": "Kaydin Degistirildigi Saniye"},
+    {"name": "CANCELLED", "type": "Byte", "description": "Iptal edilmis (0:Hayir 1:Evet)"},
+    {"name": "CLBNBRANCHNO", "type": "VarChar", "description": "Cari hesap banka no"},
+    {"name": "CLBNACCOUNTNO", "type": "VarChar", "description": "Cari hesap banka hesap numarasi"},
+    {"name": "BNTRACKINGNO", "type": "VarChar", "description": "Banka izleme numarasi"},
+    {"name": "TRNSTATE", "type": "VarChar", "description": "Islem durumu"},
+    {"name": "TRADINGGRP", "type": "VarChar", "description": "Ticari islem grubu"},
+    {"name": "LINEEXCTYP", "type": "SmallInt", "description": "Doviz Turu (Satir)"}
+  ],
+  "commonQueries": []
+}

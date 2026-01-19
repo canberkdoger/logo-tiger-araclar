@@ -1,0 +1,62 @@
+{
+  "tableName": "LG_XXX_XX_CASHFLOWLINE",
+  "displayName": "Nakit Akis Satirlari",
+  "description": "",
+  "category": "Kasa",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_CASHFLOWLINE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CFCARDREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INCEXPTYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CLIEREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "TRRATE",
+      "type": "float",
+      "description": "\r"
+    },
+    {
+      "name": "CARDTYPE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

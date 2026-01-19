@@ -1,0 +1,125 @@
+{
+  "tableName": "LG_XXX_CLCARD",
+  "displayName": "Cari Hesap Kartlari",
+  "description": "Firmanin calistigi alici ve satici firmalar ile borc/alacak iliskisi icindeki diger firmalarin cari hesap kartlari bilgilerini icerir.",
+  "category": "Cari Hesap",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 7,
+  "relatedTables": [
+    {
+      "table": "LG_XXX_XX_CLFICHE",
+      "description": "Cari hesap fisleri"
+    },
+    {
+      "table": "LG_XXX_XX_CLFLINE",
+      "description": "Cari hesap hareketleri"
+    },
+    {
+      "table": "LG_XXX_XX_CLTOTFIL",
+      "description": "Cari hesap toplumlari"
+    },
+    {
+      "table": "LG_XXX_CLINTEL",
+      "description": "Cari hesap istihbarat bilgileri"
+    },
+    {
+      "table": "LG_XXX_XX_CLRNUMS",
+      "description": "Cari hesap risk bilgileri"
+    }
+  ],
+  "indexes": [
+    { "no": 1, "fields": ["LOGICALREF"], "type": "Primary" },
+    { "no": 2, "fields": ["CODE"], "type": "Unique" },
+    { "no": 3, "fields": ["DEFINITION_", "LOGICALREF"], "type": "Index" },
+    { "no": 4, "fields": ["ACTIVE", "CODE"], "type": "Index" },
+    { "no": 5, "fields": ["ACTIVE", "DEFINITION_", "LOGICALREF"], "type": "Index" },
+    { "no": 6, "fields": ["SITEID", "ORGLOGICREF", "LOGICALREF"], "type": "Index" },
+    { "no": 7, "fields": ["EDINO", "LOGICALREF"], "type": "Index" }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres (Primary Key)", "isPrimaryKey": true },
+    { "name": "ACTIVE", "type": "SmallInt", "description": "Durum (0: Kullanımda, 1: Kullanım dışı)", "values": [{ "value": 0, "label": "Kullanımda" }, { "value": 1, "label": "Kullanım dışı" }] },
+    { "name": "CARDTYPE", "type": "SmallInt", "description": "Kart tipi", "values": [{ "value": 1, "label": "Alıcı" }, { "value": 2, "label": "Satıcı" }, { "value": 3, "label": "Alıcı+Satıcı" }] },
+    { "name": "CODE", "type": "VarChar", "length": 17, "description": "Cari hesap kodu" },
+    { "name": "DEFINITION_", "type": "VarChar", "length": 51, "description": "Cari hesap ünvanı" },
+    { "name": "SPECODE", "type": "VarChar", "description": "Özel kod" },
+    { "name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu" },
+    { "name": "ADDR1", "type": "VarChar", "description": "Adres 1. Satır" },
+    { "name": "ADDR2", "type": "VarChar", "description": "Adres 2. Satır" },
+    { "name": "CITY", "type": "VarChar", "description": "Şehir" },
+    { "name": "COUNTRY", "type": "VarChar", "description": "Ülke" },
+    { "name": "POSTCODE", "type": "VarChar", "description": "Posta kodu" },
+    { "name": "TELNRS1", "type": "VarChar", "description": "Telefon numarası 1" },
+    { "name": "TELNRS2", "type": "VarChar", "description": "Telefon numarası 2" },
+    { "name": "FAXNR", "type": "VarChar", "description": "Faks numarası" },
+    { "name": "TAXNR", "type": "VarChar", "description": "Vergi numarası" },
+    { "name": "TAXOFFICE", "type": "VarChar", "description": "Vergi dairesi" },
+    { "name": "INCHARGE", "type": "VarChar", "description": "İlgili kişi" },
+    { "name": "DISCRATE", "type": "Float", "description": "İndirim yüzdesi" },
+    { "name": "EXTENREF", "type": "Int", "description": "Extra dosya referansı" },
+    { "name": "PAYMENTREF", "type": "Int", "description": "Ödeme planı referansı", "referencesTable": "LG_XXX_PAYPLANS" },
+    { "name": "EMAILADDR", "type": "VarChar", "description": "E-mail adresi" },
+    { "name": "WEBADDR", "type": "VarChar", "description": "İnternet adresi" },
+    { "name": "WARNMETHOD", "type": "SmallInt", "description": "İhtar yöntemi" },
+    { "name": "WARNEMAILADDR", "type": "VarChar", "description": "İhtar için e-mail adresi" },
+    { "name": "WARNFAXNR", "type": "VarChar", "description": "İhtar için faks no" },
+    { "name": "CLANGUAGE", "type": "SmallInt", "description": "Yazışma dili" },
+    { "name": "VATNR", "type": "VarChar", "description": "KDV no" },
+    { "name": "BLOCKED", "type": "SmallInt", "description": "Bloke durumu", "values": [{ "value": 0, "label": "Bloke" }, { "value": 1, "label": "Bloke değil" }] },
+    { "name": "BANKBRANCHS1", "type": "VarChar", "description": "Banka Şube No 1" },
+    { "name": "BANKBRANCHS2", "type": "VarChar", "description": "Banka Şube No 2" },
+    { "name": "BANKBRANCHS3", "type": "VarChar", "description": "Banka Şube No 3" },
+    { "name": "BANKBRANCHS4", "type": "VarChar", "description": "Banka Şube No 4" },
+    { "name": "BANKBRANCHS5", "type": "VarChar", "description": "Banka Şube No 5" },
+    { "name": "BANKBRANCHS6", "type": "VarChar", "description": "Banka Şube No 6" },
+    { "name": "BANKBRANCHS7", "type": "VarChar", "description": "Banka Şube No 7" },
+    { "name": "BANKACCOUNTS1", "type": "VarChar", "description": "Banka Hesap No 1" },
+    { "name": "BANKACCOUNTS2", "type": "VarChar", "description": "Banka Hesap No 2" },
+    { "name": "BANKACCOUNTS3", "type": "VarChar", "description": "Banka Hesap No 3" },
+    { "name": "BANKACCOUNTS4", "type": "VarChar", "description": "Banka Hesap No 4" },
+    { "name": "BANKACCOUNTS5", "type": "VarChar", "description": "Banka Hesap No 5" },
+    { "name": "BANKACCOUNTS6", "type": "VarChar", "description": "Banka Hesap No 6" },
+    { "name": "BANKACCOUNTS7", "type": "VarChar", "description": "Banka Hesap No 7" },
+    { "name": "DELIVERYMETHOD", "type": "VarChar", "description": "Sevkiyat yöntemi" },
+    { "name": "DELIVERYFIRM", "type": "VarChar", "description": "Taşıyıcı firma" },
+    { "name": "CCURRENCY", "type": "SmallInt", "description": "Döviz türü" },
+    { "name": "TEXTINC", "type": "SmallInt", "description": "Detay açıklama var", "values": [{ "value": 0, "label": "Hayır" }, { "value": 1, "label": "Evet" }] },
+    { "name": "SITEID", "type": "Int", "description": "Bölge no" },
+    { "name": "ORGLOGICREF", "type": "Int", "description": "Orijinal kayıt referansı" },
+    { "name": "EDINO", "type": "VarChar", "length": 25, "description": "Veri aktarım no" },
+    { "name": "TRADINGGRP", "type": "VarChar", "description": "Ticari işlem grubu" },
+    { "name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydı oluşturan kullanıcının kodu" },
+    { "name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydın oluşturulduğu tarih" },
+    { "name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydın oluşturulduğu saat" },
+    { "name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydın oluşturulduğu dakika" },
+    { "name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydın oluşturulduğu saniye" },
+    { "name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydı değiştiren kullanıcının kodu" },
+    { "name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydın değiştirildiği tarih" },
+    { "name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydın değiştirildiği saat" },
+    { "name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydın değiştirildiği dakika" },
+    { "name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydın değiştirildiği saniye" }
+  ],
+  "commonQueries": [
+    {
+      "name": "Tüm Aktif Cari Hesaplar",
+      "description": "Kullanımda olan tüm cari hesapları listeler",
+      "sql": "SELECT CODE, DEFINITION_, CARDTYPE, CITY, TELNRS1 FROM LG_{firmNo}_CLCARD WHERE ACTIVE = 0 ORDER BY CODE"
+    },
+    {
+      "name": "Alıcı Cari Hesaplar",
+      "description": "Sadece alıcı tipindeki cari hesapları listeler",
+      "sql": "SELECT CODE, DEFINITION_, CITY, TELNRS1, EMAILADDR FROM LG_{firmNo}_CLCARD WHERE ACTIVE = 0 AND CARDTYPE IN (1, 3) ORDER BY DEFINITION_"
+    },
+    {
+      "name": "Satıcı Cari Hesaplar",
+      "description": "Sadece satıcı tipindeki cari hesapları listeler",
+      "sql": "SELECT CODE, DEFINITION_, CITY, TELNRS1, TAXNR FROM LG_{firmNo}_CLCARD WHERE ACTIVE = 0 AND CARDTYPE IN (2, 3) ORDER BY DEFINITION_"
+    },
+    {
+      "name": "Cari Hesap Detayı",
+      "description": "Belirli bir cari hesabın tüm bilgilerini getirir",
+      "sql": "SELECT * FROM LG_{firmNo}_CLCARD WHERE CODE = '{cariKod}'"
+    }
+  ]
+}

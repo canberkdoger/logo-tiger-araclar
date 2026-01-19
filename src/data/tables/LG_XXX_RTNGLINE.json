@@ -1,0 +1,46 @@
+{
+  "tableName": "LG_XXX_RTNGLINE",
+  "displayName": "Uretim Rota Satirlari",
+  "description": "Uretim rotalarina ait satir detaylari. Her satir bir operasyon adimini temsil eder.",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [
+    "LG_XXX_ROUTING",
+    "LG_XXX_OPERTION",
+    "LG_XXX_ITEMS"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["ROUTINGREF", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 3,
+      "fields": ["SITEID", "ORGLOGICREF", "LOGICALREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "ROUTINGREF", "type": "int", "description": "Rota ref (ROUTING)"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Satir No"},
+    {"name": "OPERATIONREF", "type": "int", "description": "Operasyon ref (OPERTION)"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel Kodu"},
+    {"name": "COSTRELATED", "type": "SmallInt", "description": "Maliyet hesaplanacak (0:Hayir 1:Evet)"},
+    {"name": "PLANRELATED", "type": "SmallInt", "description": "Planlama yapilacak (0:Hayir 1:Evet)"},
+    {"name": "OUTITEMREF", "type": "int", "description": "Malzeme referansi (ITEMS)"},
+    {"name": "LINEEXP", "type": "VarChar", "description": "Satir aciklamasi"},
+    {"name": "SITEID", "type": "int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": []
+}

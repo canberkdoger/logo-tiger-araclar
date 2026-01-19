@@ -1,0 +1,107 @@
+{
+  "tableName": "LG_XXX_AUTOCTEMPLATE",
+  "displayName": "AUTOCTEMPLATE",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_AUTOCTEMPLATE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_AUTOCTEMPLATE_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ITEMREF",
+        "LINENR"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "INCREMENT_",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "CHARREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "LENGTH",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SSTART",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "SEND",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CHARVALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CHARABBREV",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LINENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SITEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECSTATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ORGLOGICREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

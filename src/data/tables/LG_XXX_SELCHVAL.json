@@ -1,0 +1,32 @@
+{
+  "tableName": "LG_XXX_SELCHVAL",
+  "displayName": "Secili Ozellik Degerleri",
+  "description": "Malzeme ozellik atamasi ile ozellik degeri arasindaki iliskiyi tutan tablo.",
+  "category": "Stok",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": [
+    "LG_XXX_CHARCODE",
+    "LG_XXX_CHARVAL"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CHARASGNREF", "CHARVALREF"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CHARASGNREF", "type": "int", "description": "Malzeme Ozellik Ref (CHARCODE)"},
+    {"name": "CHARVALREF", "type": "int", "description": "Ozellik Degeri Ref. (CHARVAL)"}
+  ],
+  "commonQueries": []
+}

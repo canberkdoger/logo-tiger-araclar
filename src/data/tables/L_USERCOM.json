@@ -1,0 +1,69 @@
+{
+  "tableName": "L_USERCOM",
+  "displayName": "USERCOM",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "USERCOM_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "SENDERUSERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECEIVERUSERNR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "COMTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "STATUS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REQUESTDATE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "STARTDATE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "CONFIRMDATE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "INFO",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

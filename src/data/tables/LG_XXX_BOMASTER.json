@@ -1,0 +1,56 @@
+{
+  "tableName": "LG_XXX_BOMASTER",
+  "displayName": "Urun Receteleri",
+  "description": "Urun recetesi ana kayitlarini icerir. Uretim surecinde hangi malzemelerden hangi urunun uretilecegini tanimlar.",
+  "category": "Uretim",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": [
+    { "table": "LG_XXX_BOMLINE", "description": "Recete satirlari" },
+    { "table": "LG_XXX_BOMREVSN", "description": "Recete revizyonlari", "field": "VALIDREVREF" },
+    { "table": "LG_XXX_ITEMS", "description": "Ana urun", "field": "MAINPRODREF" }
+  ],
+  "indexes": [
+    { "no": 1, "fields": ["LOGICALREF"], "type": "Primary" },
+    { "no": 2, "fields": ["CODE"], "type": "Unique" },
+    { "no": 3, "fields": ["NAME", "LOGICALREF"], "type": "Index" },
+    { "no": 4, "fields": ["MAINPRODREF", "LOGICALREF"], "type": "Index" }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres (Primary Key)", "isPrimaryKey": true },
+    { "name": "CODE", "type": "VarChar", "length": 17, "description": "Urun recetesi kodu" },
+    { "name": "NAME", "type": "VarChar", "description": "Urun recetesi aciklamasi" },
+    { "name": "VALIDREVREF", "type": "Int", "description": "Gecerli revizyon referansi (BOMREVSN)" },
+    { "name": "MAINPRODREF", "type": "Int", "description": "Ana urun referansi (ITEMS)" },
+    { "name": "APPROVED", "type": "SmallInt", "description": "Onay bilgisi" },
+    { "name": "ACTIVE", "type": "SmallInt", "description": "Durum (0: Kulanimda, 1: Kullanim disi)" },
+    { "name": "DEMONTAJ", "type": "SmallInt", "description": "Demontaj mi (0: Hayir, 1: Evet)" },
+    { "name": "SPECODE", "type": "VarChar", "description": "Ozel kod" },
+    { "name": "CYPHCODE", "type": "VarChar", "description": "Yetki kodu" },
+    { "name": "CAPIBLOCK_CREATEDBY", "type": "SmallInt", "description": "Kaydi olusturan kullanici" },
+    { "name": "CAPIBLOCK_CREADEDDATE", "type": "DateTime", "description": "Kaydin olusturuldugu tarih" },
+    { "name": "CAPIBLOCK_CREATEDHOUR", "type": "SmallInt", "description": "Kaydin olusturuldugu saat" },
+    { "name": "CAPIBLOCK_CREATEDMIN", "type": "SmallInt", "description": "Kaydin olusturuldugu dakika" },
+    { "name": "CAPIBLOCK_CREATEDSEC", "type": "SmallInt", "description": "Kaydin olusturuldugu saniye" },
+    { "name": "CAPIBLOCK_MODIFIEDBY", "type": "SmallInt", "description": "Kaydi degistiren kullanici" },
+    { "name": "CAPIBLOCK_MODIFIEDDATE", "type": "DateTime", "description": "Kaydin degistirildigi tarih" },
+    { "name": "CAPIBLOCK_MODIFIEDHOUR", "type": "SmallInt", "description": "Kaydin degistirildigi saat" },
+    { "name": "CAPIBLOCK_MODIFIEDMIN", "type": "SmallInt", "description": "Kaydin degistirildigi dakika" },
+    { "name": "CAPIBLOCK_MODIFIEDSEC", "type": "SmallInt", "description": "Kaydin degistirildigi saniye" },
+    { "name": "SITEID", "type": "Int", "description": "Bolge no" },
+    { "name": "ORGLOGICREF", "type": "Int", "description": "Orijinal kayit referansi" }
+  ],
+  "commonQueries": [
+    {
+      "name": "Tum Urun Receteleri",
+      "description": "Aktif urun recetelerini listeler",
+      "sql": "SELECT bm.CODE, bm.NAME, i.CODE as UrunKod, i.NAME as UrunAd FROM LG_{firmNo}_BOMASTER bm LEFT JOIN LG_{firmNo}_ITEMS i ON bm.MAINPRODREF = i.LOGICALREF WHERE bm.ACTIVE = 0 ORDER BY bm.CODE"
+    },
+    {
+      "name": "Urun Recetesi",
+      "description": "Belirli bir urunun recetesini getirir",
+      "sql": "SELECT bm.CODE, bm.NAME, bm.APPROVED FROM LG_{firmNo}_BOMASTER bm WHERE bm.MAINPRODREF = {urunRef} AND bm.ACTIVE = 0"
+    }
+  ]
+}

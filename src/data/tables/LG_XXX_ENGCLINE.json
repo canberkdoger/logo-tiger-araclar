@@ -1,0 +1,184 @@
+{
+  "tableName": "LG_XXX_ENGCLINE",
+  "displayName": "Muhendislik Degisiklik Satirlari",
+  "description": "Urun recetesi revizyonlari ve muhendislik degisiklik islemleri icin kullanilan tablo. Recete revizyonlarinin takibini saglar.",
+  "category": "Uretim",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_BOMASTER", "LG_XXX_BOMREVSN", "LG_XXX_BOMLINE", "LG_XXX_ITEMS"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["FICHENO"],
+      "type": "VarChar",
+      "property": "Dup, Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["FICHENO"],
+      "type": "VarChar",
+      "property": ""
+    },
+    {
+      "no": 4,
+      "fields": ["DATE_", "FICHENO", "VALIDDATE"],
+      "type": "DateTime, VarChar, DateTime",
+      "property": "Dup, Modif"
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "FICHENO",
+      "type": "VarChar",
+      "description": "Fis No"
+    },
+    {
+      "name": "DATE_",
+      "type": "DateTime",
+      "description": "Tarih"
+    },
+    {
+      "name": "SPECODE",
+      "type": "VarChar",
+      "description": "Ozel Kod"
+    },
+    {
+      "name": "CYPHCODE",
+      "type": "VarChar",
+      "description": "Yetki Kodu"
+    },
+    {
+      "name": "APPSTATUS",
+      "type": "SmallInt",
+      "description": "Durumu"
+    },
+    {
+      "name": "REASON",
+      "type": "VarChar",
+      "description": "Nedeni"
+    },
+    {
+      "name": "BOMMASTERREF",
+      "type": "int",
+      "description": "Uretim recetesi referansi - BOMASTER"
+    },
+    {
+      "name": "OLDREVREF",
+      "type": "int",
+      "description": "Eski revizyon referansi - BOMREVSN"
+    },
+    {
+      "name": "NEWREVREF",
+      "type": "int",
+      "description": "Yeni revizyon referansi - BOMREVSN"
+    },
+    {
+      "name": "METHOD",
+      "type": "SmallInt",
+      "description": "Yontem (0: Tarih, 1: Tukenme, 2: Lot/Parti Seri No)"
+    },
+    {
+      "name": "DATEFROM",
+      "type": "DateTime",
+      "description": "Gecerlilik tarihi"
+    },
+    {
+      "name": "SERILOTFROM",
+      "type": "VarChar",
+      "description": "Lot parti/seri no"
+    },
+    {
+      "name": "BOMLINEREF",
+      "type": "int",
+      "description": "Urun recetesi satiri referansi - BOMLINE"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "Malzeme karti referansi - ITEMS"
+    },
+    {
+      "name": "VALIDDATE",
+      "type": "DateTime",
+      "description": "Gecerlilik tarihi"
+    },
+    {
+      "name": "VALIDSTATUS",
+      "type": "SmallInt",
+      "description": "Gecerlilik durumu"
+    },
+    {
+      "name": "APPROVED",
+      "type": "SmallInt",
+      "description": "Onay bilgisi"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "SmallInt",
+      "description": "0: Kullanim da, 1: Kullanim disi"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Olusturan Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_CREADEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Olusturuldugu Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saat"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_CREATEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Olusturuldugu Saniye"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDBY",
+      "type": "SmallInt",
+      "description": "Kaydi Degistiren Kullanicinin Kodu"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDDATE",
+      "type": "DateTime",
+      "description": "Kaydin Degistirildigi Tarih"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDHOUR",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saat"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDMIN",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Dakika"
+    },
+    {
+      "name": "CAPIBLOCK_MODIFIEDSEC",
+      "type": "SmallInt",
+      "description": "Kaydin Degistirildigi Saniye"
+    }
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,68 @@
+{
+  "tableName": "LG_XXX_BOMLINE",
+  "displayName": "Urun Recetesi Satirlari",
+  "description": "Urun recetesi (BOM - Bill of Materials) satir bilgilerini iceren tablo. Her satir, recetedeki bir malzemeyi ve onun ozelliklerini temsil eder.",
+  "category": "Uretim",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_BOMASTER", "LG_XXX_ITEMS", "LG_XXX_UNITSETL", "LG_XXX_UNITSETF"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["BOMREVREF", "LINENO_"],
+      "type": "Int, SmallInt",
+      "properties": ""
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "BOMREVREF", "type": "Int", "description": "Urun recetesi referansi - BOMASTER"},
+    {"name": "LINETYPE", "type": "SmallInt", "description": "Satir tipi"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Satir No"},
+    {"name": "OUTITEMREF", "type": "Int", "description": "Kosul Malzeme Sinif Kul. Ref."},
+    {"name": "ITEMREF", "type": "Int", "description": "Malzeme karti referansi - ITEMS"},
+    {"name": "UOMREF", "type": "Int", "description": "Birim referansi - UNITSETL"},
+    {"name": "USREF", "type": "Int", "description": "Birim seti referansi - UNITSETF"},
+    {"name": "UINFO1", "type": "Float", "description": "Cevrim katsayisi"},
+    {"name": "UINFO2", "type": "Float", "description": "Cevrim katsayisi"},
+    {"name": "UINFO3", "type": "Float", "description": "Boyut katsayisi"},
+    {"name": "UINFO4", "type": "Float", "description": "Boyut katsayisi"},
+    {"name": "UINFO5", "type": "Float", "description": "Boyut katsayisi"},
+    {"name": "UINFO6", "type": "Float", "description": "Boyut katsayisi"},
+    {"name": "UINFO7", "type": "Float", "description": "Boyut katsayisi"},
+    {"name": "UINFO8", "type": "Float", "description": "Boyut katsayisi"},
+    {"name": "AMOUNT", "type": "Float", "description": "Miktar"},
+    {"name": "SCRAPFACT", "type": "Float", "description": "Fire faktoru"},
+    {"name": "SCRAPCALC", "type": "SmallInt", "description": "Fire hesaplama metodu"},
+    {"name": "SCALABLE", "type": "SmallInt", "description": "Olceklenebilir"},
+    {"name": "ALTITEMUSE", "type": "SmallInt", "description": "Alternatif malzeme kullanimi"},
+    {"name": "TEMPINUSE", "type": "SmallInt", "description": "Konsinye kullanimi"},
+    {"name": "NEXTLEVELBOMREF", "type": "Int", "description": "Urun Recetesi Ref - BOMASTER"},
+    {"name": "SPECODE", "type": "VarChar", "description": "Ozel kod"},
+    {"name": "BOMLINEEXP", "type": "VarChar", "description": "Satir aciklamasi"},
+    {"name": "INVENNO", "type": "SmallInt", "description": "Ambar no"},
+    {"name": "ENGINEERING", "type": "SmallInt", "description": "Muhendislik"},
+    {"name": "PRODUCTION", "type": "SmallInt", "description": "Uretim"},
+    {"name": "COST", "type": "SmallInt", "description": "Maliyet"},
+    {"name": "COSTRATE", "type": "Float", "description": "Maliyet Orani"},
+    {"name": "SITEID", "type": "Int", "description": "Bolge no"},
+    {"name": "ORGLOGICREF", "type": "Int", "description": "Orjinal kayit referansi"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir urun recetesinin tum satirlarini listele",
+      "query": "SELECT * FROM LG_XXX_BOMLINE WHERE BOMREVREF = @ReceteRef ORDER BY LINENO_"
+    },
+    {
+      "description": "Bir malzemenin kullanildigi tum receteleri bul",
+      "query": "SELECT bl.*, bm.CODE AS ReceteKodu FROM LG_XXX_BOMLINE bl INNER JOIN LG_XXX_BOMASTER bm ON bl.BOMREVREF = bm.LOGICALREF WHERE bl.ITEMREF = @MalzemeRef"
+    }
+  ]
+}

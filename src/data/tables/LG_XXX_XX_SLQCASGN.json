@@ -1,0 +1,52 @@
+{
+  "tableName": "LG_XXX_XX_SLQCASGN",
+  "displayName": "Seri/Lot Kalite Kontrol Atamalari",
+  "description": "Seri/Lot kayitlarina ait kalite kontrol atamalarinin tutuldugu tablodur.",
+  "category": "Kalite Kontrol",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 3,
+  "relatedTables": [
+    {"table": "LG_XXX_ITEMS", "field": "ITEMREF", "description": "Malzeme karti referansi"},
+    {"table": "LG_XXX_XX_STFICHE", "field": "FICHEREF", "description": "Fis referansi"},
+    {"table": "LG_XXX_XX_STLINE", "field": "STTRANSREF", "description": "Malzeme hareketi referansi"},
+    {"table": "LG_XXX_XX_SLTRANS", "field": "SLTRANSREF", "description": "Seri/lot/yerlesim hareketi referansi"},
+    {"table": "LG_XXX_QCSET", "field": "QCSETREF", "description": "Kalite kontrol seti referansi"},
+    {"table": "LG_XXX_QCLVAL", "field": "QCVALREF", "description": "Kalite kontrol degerleri referansi"},
+    {"table": "LG_XXX_QASGN", "field": "QCASGNLOGICREF", "description": "Kalite kontrol atamasi referansi"}
+  ],
+  "indexes": [
+    {"no": 1, "fields": [{"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}]},
+    {"no": 2, "fields": [
+      {"name": "ASGNTYPE", "type": "SmallInt", "property": "Modif"},
+      {"name": "STTRANSREF", "type": "Int"},
+      {"name": "LINENR", "type": "SmallInt"}
+    ]},
+    {"no": 3, "fields": [
+      {"name": "ASGNTYPE", "type": "SmallInt"},
+      {"name": "SLTRANSREF", "type": "Int"},
+      {"name": "LINENR", "type": "SmallInt"}
+    ]}
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "ASGNTYPE", "type": "SmallInt", "description": "Atama turu"},
+    {"name": "ITEMREF", "type": "int", "description": "Malzeme karti referansi ITEMS"},
+    {"name": "FICHEREF", "type": "int", "description": "Fis referansi STFICHE"},
+    {"name": "STTRANSREF", "type": "int", "description": "Malzeme hareketi referansi STLINE"},
+    {"name": "SLTRANSREF", "type": "int", "description": "Seri/lot/yerlesim hareketi referansi SLTRANS"},
+    {"name": "QCSETREF", "type": "int", "description": "Kalite kontrol seti referansi QCSET"},
+    {"name": "QCCODEREF", "type": "int", "description": "Kalite kontrol kodu"},
+    {"name": "QCVALREF", "type": "int", "description": "Kalite kontrol degerleri referansi QCLVAL"},
+    {"name": "QCASGNLOGICREF", "type": "int", "description": "Kalite kontrol atamasi referansi QASGN"},
+    {"name": "QCREVNO", "type": "int", "description": "Kalite kontrol atamasi revizyon numarasi"},
+    {"name": "QTYPE", "type": "SmallInt", "description": "Turu (0: Nicel, 1: Nitel)"},
+    {"name": "LINENR", "type": "SmallInt", "description": "Satir numarasi"},
+    {"name": "AMOUNT", "type": "Float", "description": "Miktar"},
+    {"name": "QVALUE", "type": "Float", "description": "Kalite kontrol degeri"},
+    {"name": "CONFIRMED", "type": "SmallInt", "description": "Kalite kontrol degeri uygun (0: Hayir, 1: Evet)"},
+    {"name": "QDATE", "type": "DateTime", "description": "Kalite kontrol degerinin girildigi tarih"},
+    {"name": "CANCELLED", "type": "SmallInt", "description": "Iptal Edilmis (0: Hayir, 1: Evet)"}
+  ],
+  "commonQueries": []
+}

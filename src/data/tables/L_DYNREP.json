@@ -1,0 +1,139 @@
+{
+  "tableName": "L_DYNREP",
+  "displayName": "DYNREP",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "DYNREP_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "DYNREP_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "REPID"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REPID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODULEID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTGRPID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTOWNER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GETTFROMFILTER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PRNTTALLPAGES",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "GETSHWDETFILTER",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ENGINEVER",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTVER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "DONTPRNTMSTRDETNOTEX",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "NAME_LNGLISTID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TITLE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "TITLE_LNGLISTID",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "DBTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "USERCANSORTGRP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FLNAMEFORNAV",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

@@ -1,0 +1,49 @@
+{
+  "tableName": "LG_XXX_CHARVAL",
+  "displayName": "Malzeme Karakteristik Degerleri",
+  "description": "Malzeme karakteristik deger tanimlarini iceren tablo. Her karakteristik koduna ait olasi degerleri tanimlar.",
+  "category": "Stok",
+  "type": "firm-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": ["LG_XXX_CHARCODE", "LG_XXX_CHARASGN"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CHARCODEREF", "VALNO", "LOGICALREF"],
+      "type": "Int, SmallInt, Auto Increment",
+      "properties": "Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["CHARCODEREF", "CODE"],
+      "type": "Int, VarChar",
+      "properties": "Modif"
+    },
+    {
+      "no": 4,
+      "fields": ["NAME", "CHARCODEREF", "LOGICALREF"],
+      "type": "VarChar, Int, Auto Increment",
+      "properties": "Dup,Modif, , Modif"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Int", "description": "Fiziksel adres"},
+    {"name": "CHARCODEREF", "type": "Int", "description": "Karakteristik kod referansi"},
+    {"name": "VALNO", "type": "SmallInt", "description": "Deger No"},
+    {"name": "CODE", "type": "VarChar", "description": "Kod"},
+    {"name": "NAME", "type": "VarChar", "description": "Aciklama"}
+  ],
+  "commonQueries": [
+    {
+      "description": "Belirli bir karakteristik kodunun tum degerlerini listele",
+      "query": "SELECT * FROM LG_XXX_CHARVAL WHERE CHARCODEREF = @KarakteristikRef ORDER BY VALNO"
+    }
+  ]
+}

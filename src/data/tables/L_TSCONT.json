@@ -1,0 +1,69 @@
+{
+  "tableName": "L_TSCONT",
+  "displayName": "TSCONT",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "TSCONT_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PARAMNAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "REPORTTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "NEWPRINTER",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "ASCII_SKG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ASCII_KA",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ASCII_SS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "ASCII_AK",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "LDATA",
+      "type": "image",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

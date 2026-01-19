@@ -1,0 +1,40 @@
+{
+  "tableName": "LG_XXX_LOCATION",
+  "displayName": "Stok Yerleri",
+  "description": "Ambar icindeki stok yerlerinin tanimlarini tutan tablo. Her ambar icin ayri stok yeri kodlari ve aciklamalari tanimlanabilir.",
+  "category": "Stok",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 3,
+  "relatedTables": [],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": ""}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "INVENNR", "length": "5 bytes", "type": "SmallInt", "property": ""},
+        {"field": "CODE", "length": "12 bytes", "type": "VarChar", "property": ""}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"field": "INVENNR", "length": "5 bytes", "type": "SmallInt", "property": ""},
+        {"field": "NAME", "length": "12 bytes", "type": "VarChar", "property": ""},
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "int", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "INVENNR", "type": "SmallInt", "description": "Ambar no"},
+    {"name": "CODE", "type": "VarChar", "description": "Stok yeri kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Stok yeri aciklamasi"}
+  ],
+  "commonQueries": []
+}

@@ -1,0 +1,61 @@
+{
+  "tableName": "LG_XXX_WFTASKPER",
+  "displayName": "WFTASKPER",
+  "description": "",
+  "category": "Is Akisi",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_WFTASKPER_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PERIODTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PERIOD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "WEEKDAYS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MONTHDAYS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "PERIODENDDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "NONWORKDAYS",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

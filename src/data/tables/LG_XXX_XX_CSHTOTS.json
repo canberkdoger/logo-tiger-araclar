@@ -1,0 +1,35 @@
+{
+  "tableName": "LG_XXX_XX_CSHTOTS",
+  "displayName": "Kasa Toplamlari Karti",
+  "description": "CSHTOTS tablosunda kasa kartlarina (KSCARD) ait gunluk kasa toplamlari olusmaktadir. Veri tabaninda hareket olmayan gunlere ait kasa toplam kaydi bulunmamaktadir.",
+  "category": "Kasa",
+  "type": "period-dependent",
+  "placeholders": ["XXX", "XX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_KSCARD"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "property": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "CARDREF", "length": "4 bytes", "type": "Integer", "property": "Modif, Seg"},
+        {"name": "TOTTYPE", "length": "2 bytes", "type": "Integer", "property": "Modif, Seg"},
+        {"name": "DAY_", "length": "2 bytes", "type": "Integer", "property": "Modif"}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "Longint", "description": "Fiziksel adres"},
+    {"name": "CARDREF", "type": "Longint", "description": "Kasa Referansi -> KSCARD"},
+    {"name": "TOTTYPE", "type": "Integer", "description": "Toplam turu (TL ya da doviz)"},
+    {"name": "DAY_", "type": "Integer", "description": "Gun (Yilin kacinci gunune ait kasa toplami oldugunu gosterir)"},
+    {"name": "DEBIT", "type": "Double", "description": "Borc"},
+    {"name": "CREDIT", "type": "Double", "description": "Alacak"}
+  ],
+  "commonQueries": []
+}

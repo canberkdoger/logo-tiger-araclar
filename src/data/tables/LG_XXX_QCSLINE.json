@@ -1,0 +1,70 @@
+{
+  "tableName": "LG_XXX_QCSLINE",
+  "displayName": "Kalite Kontrol Seti Satirlari",
+  "description": "Kalite kontrol setlerine ait satir detaylari. Her satir bir kalite kontrol kriteri tanimlar.",
+  "category": "Kalite Kontrol",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 5,
+  "relatedTables": [
+    "LG_XXX_QCSET",
+    "LG_XXX_ITEMS"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "Auto Increment",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["CODE", "LOGICALREF"],
+      "type": "Composite",
+      "property": "Modif"
+    },
+    {
+      "no": 3,
+      "fields": ["NAME", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 4,
+      "fields": ["SETREF", "LINENO_", "LOGICALREF"],
+      "type": "Composite"
+    },
+    {
+      "no": 5,
+      "fields": ["SETREF", "CODE"],
+      "type": "Composite"
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "CODE", "type": "VarChar", "description": "K.K. Satir Kodu"},
+    {"name": "NAME", "type": "VarChar", "description": "Aciklamasi"},
+    {"name": "SETREF", "type": "int", "description": "Ref (QCSET)"},
+    {"name": "QTYPE", "type": "SmallInt", "description": "Turu (0: Nicel, 1: Nitel)"},
+    {"name": "QUNIT", "type": "VarChar", "description": "Birimi"},
+    {"name": "TOOLCODE", "type": "VarChar", "description": "Kontrol Ekipmani"},
+    {"name": "CONTROLLER", "type": "SmallInt", "description": "Kontrol Sorumlusu"},
+    {"name": "INSPPOINT", "type": "SmallInt", "description": "Kontrol"},
+    {"name": "INSPFICHES1", "type": "SmallInt", "description": "Malz. Yonetim Fisleri"},
+    {"name": "INSPFICHES2", "type": "SmallInt", "description": "Satinalma Irsaliyeleri"},
+    {"name": "INSPFICHES3", "type": "SmallInt", "description": "Satis ve Dag. Irsaliye"},
+    {"name": "IMPORTANCE", "type": "VarChar", "description": "Onem derecesi"},
+    {"name": "FREQUENCY", "type": "Float", "description": "Kontrol Sikligi"},
+    {"name": "COUNTER", "type": "Float", "description": "Kontrol Sayisi"},
+    {"name": "SAMPLESIZE", "type": "Float", "description": "Numune Miktari"},
+    {"name": "NOMVAL", "type": "Float", "description": "Nominal Deger"},
+    {"name": "MINVAL", "type": "Float", "description": "Asgari deger"},
+    {"name": "MAXVAL", "type": "Float", "description": "Azami deger"},
+    {"name": "MINTOL", "type": "Float", "description": "(-)Tolerans"},
+    {"name": "MAXTOL", "type": "Float", "description": "(+)Tolerans"},
+    {"name": "EXPLINE", "type": "VarChar", "description": "Aciklama Satiri"},
+    {"name": "CONFORMRATE", "type": "SmallInt", "description": "Kabul Orani"},
+    {"name": "LINENO_", "type": "SmallInt", "description": "Satir No"},
+    {"name": "TOOLREF", "type": "int", "description": "Arac referansi (ITEMS)"}
+  ],
+  "commonQueries": []
+}

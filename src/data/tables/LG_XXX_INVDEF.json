@@ -1,0 +1,92 @@
+{
+  "tableName": "LG_XXX_INVDEF",
+  "displayName": "Ambar Tanimlari",
+  "description": "Malzeme kartlarinin ambar bazli parametre tanimlarini icerir. Minimum, maximum ve guvenlik stok seviyeleri ile stok kontrol parametreleri.",
+  "category": "Stok",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_LOCATION"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": ["LOGICALREF"],
+      "type": "int",
+      "property": "Modif"
+    },
+    {
+      "no": 2,
+      "fields": ["ITYPE", "INVENNO"],
+      "type": "SmallInt",
+      "property": "Dup, Modif, Seg"
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "INVENNO",
+      "type": "SmallInt",
+      "description": "Ambar no"
+    },
+    {
+      "name": "ITEMREF",
+      "type": "int",
+      "description": "Malzeme karti referansi - ITEMS"
+    },
+    {
+      "name": "MINLEVEL",
+      "type": "Float",
+      "description": "Minimum stok seviyesi"
+    },
+    {
+      "name": "MAXLEVEL",
+      "type": "Float",
+      "description": "Maximum stok seviyesi"
+    },
+    {
+      "name": "SAFELEVEL",
+      "type": "Float",
+      "description": "Guvenlik stok seviyesi"
+    },
+    {
+      "name": "LOCATIONREF",
+      "type": "int",
+      "description": "Stok yeri ondegeri - LOCATION"
+    },
+    {
+      "name": "PERCLOSEDATE",
+      "type": "DateTime",
+      "description": "Donem kapama tarihi"
+    },
+    {
+      "name": "ABCCODE",
+      "type": "SmallInt",
+      "description": "ABC Kodu"
+    },
+    {
+      "name": "MINLEVELCTRL",
+      "type": "SmallInt",
+      "description": "Minimum stok seviyesi kontrolu (0: Yapilmayacak, 1: Kullanici uyarilacak, 2: Islem durdurulacak)"
+    },
+    {
+      "name": "MAXLEVELCTRL",
+      "type": "SmallInt",
+      "description": "Maximum stok seviyesi kontrolu (0: Yapilmayacak, 1: Kullanici uyarilacak, 2: Islem durdurulacak)"
+    },
+    {
+      "name": "SAFELEVELCTRL",
+      "type": "SmallInt",
+      "description": "Guvenlik stok seviyesi kontrolu (0: Yapilmayacak, 1: Kullanici uyarilacak, 2: Islem durdurulacak)"
+    },
+    {
+      "name": "NEGLEVELCTRL",
+      "type": "SmallInt",
+      "description": "Negatif stok seviyesi kontrolu (0: Yapilmayacak, 1: Kullanici uyarilacak, 2: Islem durdurulacak)"
+    }
+  ],
+  "commonQueries": []
+}

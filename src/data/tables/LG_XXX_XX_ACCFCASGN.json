@@ -1,0 +1,69 @@
+{
+  "tableName": "LG_XXX_XX_ACCFCASGN",
+  "displayName": "ACCFCASGN",
+  "description": "",
+  "category": "Muhasebe",
+  "type": "period-dependent",
+  "placeholders": [
+    "XXX",
+    "XX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_01_ACCFCASGN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_01_ACCFCASGN_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "ACCFCREF",
+        "FCREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_01_ACCFCASGN_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "FCREF",
+        "ACCFCREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCFCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "FCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

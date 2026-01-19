@@ -1,0 +1,55 @@
+{
+  "tableName": "L_REDISCINTRATES",
+  "displayName": "REDISCINTRATES",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "REDISCINTRATES_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "REDISCINTRATES_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "CRTYPE",
+        "RATEDATE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CRTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RATEDATE",
+      "type": "datetime",
+      "description": "\r"
+    },
+    {
+      "name": "RATE",
+      "type": "float",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

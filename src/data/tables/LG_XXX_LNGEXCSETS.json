@@ -1,0 +1,36 @@
+{
+  "tableName": "LG_XXX_LNGEXCSETS",
+  "displayName": "Dil Ayarlari",
+  "description": "Farkli kayit tipleri icin coklu dil destegi saglayan tablo. Malzeme, cari hesap, banka ve muhasebe kayitlari icin farkli dillerdeki aciklamalari tutar.",
+  "category": "Sistem",
+  "type": "period-independent",
+  "placeholders": ["XXX"],
+  "indexCount": 2,
+  "relatedTables": ["LG_XXX_ITEMS", "LG_XXX_CLCARD", "LG_XXX_BNCARD", "LG_XXX_EMUHACC"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"field": "LOGICALREF", "length": "4 bytes", "type": "Int", "property": ""}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"field": "DOCID", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "DOCREF", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "FIELDID", "length": "4 bytes", "type": "int", "property": ""},
+        {"field": "LANGID", "length": "5 bytes", "type": "SmallInt", "property": ""}
+      ]
+    }
+  ],
+  "fields": [
+    {"name": "LOGICALREF", "type": "int", "description": "Fiziksel adres"},
+    {"name": "DOCID", "type": "int", "description": "Kayit Tipi (1: Malzeme, 2: Cari Hesap, 3: Banka, 4: Muhasebe)"},
+    {"name": "DOCREF", "type": "int", "description": "Kayit referansi"},
+    {"name": "FIELDID", "type": "int", "description": "Alan tipi (1: Malzeme Aciklamasi, 2: Cari hesap unvani, 3: Banka adi, 4: Muhasebe hesabi aciklamasi)"},
+    {"name": "LANGID", "type": "SmallInt", "description": "Secilen dil"},
+    {"name": "FIELDCONT", "type": "VarChar", "description": "Aciklama"}
+  ],
+  "commonQueries": []
+}

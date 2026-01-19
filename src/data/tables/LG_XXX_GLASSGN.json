@@ -1,0 +1,95 @@
+{
+  "tableName": "LG_XXX_GLASSGN",
+  "displayName": "GLASSGN",
+  "description": "",
+  "category": "Diger",
+  "type": "period-independent",
+  "placeholders": [
+    "XXX"
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "I126_GLASSGN_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "I126_GLASSGN_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "MODULENR",
+        "TRANTYPE",
+        "TRANREF"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "I126_GLASSGN_I3",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": false,
+      "fields": [
+        "MODULENR",
+        "TRANREF",
+        "TRANTYPE"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "MODULENR",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TRANREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "CCENTERREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "PROJECTREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "ACCDISTTEMPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "EXPLAIN",
+      "type": "varchar",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 3
+}

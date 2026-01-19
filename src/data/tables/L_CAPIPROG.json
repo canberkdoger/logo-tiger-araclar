@@ -1,0 +1,115 @@
+{
+  "tableName": "L_CAPIPROG",
+  "displayName": "CAPIPROG",
+  "description": "",
+  "category": "Sistem",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "CAPIPROG_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "CAPIPROG_I2",
+      "type": "NONCLUSTERED",
+      "isPrimaryKey": false,
+      "isUnique": true,
+      "fields": [
+        "PROGID",
+        "TYP"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "NAME",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "PROGID",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SERIAL",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "VERSION",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KEYCHG",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KEYPERD",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "KEYWARN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MINKEYLEN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MINALPHALEN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MINNUMLEN",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "LASTKEYUSE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "TYP",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "MAXFAILEDLOGINS",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "FORCEUPLOWERCASE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "SUPERVISORCHK",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 2
+}

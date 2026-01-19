@@ -1,0 +1,81 @@
+{
+  "tableName": "LG_XXX_SRVUNITA",
+  "displayName": "Hizmet Birimleri",
+  "description": "Hizmet kartlarina ait birim tanimlarinin tutuldugu tablo",
+  "category": "Hizmet",
+  "type": "period-dependent",
+  "placeholders": ["XXX"],
+  "indexCount": 4,
+  "relatedTables": [
+    {
+      "tableName": "LG_XXX_SRVCRD",
+      "field": "SRVREF",
+      "description": "Hizmet karti referansi"
+    },
+    {
+      "tableName": "LG_XXX_UNITSETL",
+      "field": "UNITLINEREF",
+      "description": "Birim referansi"
+    }
+  ],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "Auto Increment", "feature": "Modif"}
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        {"name": "SRVREF", "length": "4 bytes", "type": "Int"},
+        {"name": "LINENR", "length": "5 bytes", "type": "SmallInt"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "int"}
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        {"name": "SRVREF", "length": "4 bytes", "type": "Int"},
+        {"name": "UNITLINEREF", "length": "4 bytes", "type": "Int"}
+      ]
+    },
+    {
+      "no": 4,
+      "fields": [
+        {"name": "UNITLINEREF", "length": "4 bytes", "type": "Int"},
+        {"name": "LOGICALREF", "length": "4 bytes", "type": "int"}
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "Fiziksel adres"
+    },
+    {
+      "name": "SRVREF",
+      "type": "int",
+      "description": "Hizmet karti referansi",
+      "relatedTable": "SRVCRD"
+    },
+    {
+      "name": "LINENR",
+      "type": "SmallInt",
+      "description": "Satir numarasi"
+    },
+    {
+      "name": "UNITLINEREF",
+      "type": "int",
+      "description": "Birim referansi",
+      "relatedTable": "UNITSETL"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "SmallInt",
+      "description": "Oncelik"
+    }
+  ],
+  "commonQueries": []
+}

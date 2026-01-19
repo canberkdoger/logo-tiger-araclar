@@ -1,0 +1,69 @@
+{
+  "tableName": "L_GIBSUBRECTYPE",
+  "displayName": "GIBSUBRECTYPE",
+  "description": "",
+  "category": "E-Belge",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "GIBSUBRECTYPE_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBDEF",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "FCTYPE",
+      "type": "smallint",
+      "description": "\r"
+    },
+    {
+      "name": "RECGIBCODE",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBCLIENTID",
+      "type": "varchar",
+      "description": "\r"
+    },
+    {
+      "name": "GIBRECTYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBUPDATE",
+      "type": "smallint",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}

@@ -1,0 +1,43 @@
+{
+  "tableName": "L_POSTCODE",
+  "displayName": "Posta Kodlari",
+  "description": "Ulke ve sehirlere bagli posta kodu tanimlarinin tutuldugu tablo.",
+  "category": "Tanimlar",
+  "type": "firm-independent",
+  "placeholders": [],
+  "indexCount": 3,
+  "relatedTables": ["L_COUNTRY", "L_CITY"],
+  "indexes": [
+    {
+      "no": 1,
+      "fields": [
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" },
+        { "name": "COUNTRY", "length": "4 bytes", "type": "Integer" },
+        { "name": "CITY", "length": "4 bytes", "type": "Integer" },
+        { "name": "POSTCODE", "length": "41 bytes", "type": "VarChar" }
+      ]
+    },
+    {
+      "no": 2,
+      "fields": [
+        { "name": "COUNTRY", "length": "4 bytes", "type": "Integer" },
+        { "name": "POSTCODE", "length": "41 bytes", "type": "VarChar" },
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    },
+    {
+      "no": 3,
+      "fields": [
+        { "name": "POSTCODE", "length": "41 bytes", "type": "VarChar" },
+        { "name": "LOGICALREF", "length": "4 bytes", "type": "Integer" }
+      ]
+    }
+  ],
+  "fields": [
+    { "name": "LOGICALREF", "type": "int", "description": "Fiziksel adres" },
+    { "name": "COUNTRY", "type": "int", "description": "Ulke" },
+    { "name": "CITY", "type": "int", "description": "Sehir" },
+    { "name": "POSTCODE", "type": "VarChar", "description": "Posta Kodu" }
+  ],
+  "commonQueries": []
+}

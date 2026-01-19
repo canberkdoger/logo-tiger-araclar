@@ -1,0 +1,1234 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-19",
+  "source": "Logo Objects REST Service Documentation",
+  "docsUrl": "https://docs.logo.com.tr/public/wua/logo-objects-rest-servis",
+  "baseUrl": "/api/v1",
+  "authentication": {
+    "type": "OAuth2",
+    "tokenEndpoint": "/token",
+    "grantType": "password",
+    "bodyFormat": "grant_type=password&username={{username}}&firmno={{firmNo}}&password={{password}}"
+  },
+  "methods": [
+    {
+      "name": "GET",
+      "description": "Verileri okumak icin kullanilir",
+      "color": "#61affe",
+      "usage": [
+        "Tekil kayit: /api/v1/{resource}/{code}",
+        "Alt sorgular: /api/v1/{resource}/{code}/{subResource}",
+        "Tam veri: /api/v1/{resource}/{code}?ExpandLevel=full"
+      ]
+    },
+    {
+      "name": "POST",
+      "description": "Yeni veri olusturmak icin kullanilir",
+      "color": "#49cc90",
+      "usage": [
+        "Yeni kayit: /api/v1/{resource} + JSON body"
+      ]
+    },
+    {
+      "name": "PUT",
+      "description": "Mevcut kaydi tamamen guncellemek icin kullanilir",
+      "color": "#fca130",
+      "usage": [
+        "GET ile veri alinir, degistirilir ve PUT ile geri gonderilir",
+        "Guncelleme: /api/v1/{resource}/{code} + JSON body"
+      ]
+    },
+    {
+      "name": "PATCH",
+      "description": "INTERNAL_REFERENCE ile belirli alanlari guncellemek icin kullanilir",
+      "color": "#50e3c2",
+      "usage": [
+        "Kismi guncelleme: /api/v1/{resource} + {\"INTERNAL_REFERENCE\":\"xxx\", \"FIELD\":\"value\"}"
+      ]
+    },
+    {
+      "name": "DELETE",
+      "description": "Kayit silmek icin kullanilir",
+      "color": "#f93e3e",
+      "usage": [
+        "Silme: /api/v1/{resource}/{code}"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "stok",
+      "name": "Stok / Malzeme",
+      "icon": "fa-boxes-stacked",
+      "color": "#27ae60"
+    },
+    {
+      "id": "cari",
+      "name": "Cari Hesap",
+      "icon": "fa-users",
+      "color": "#3498db"
+    },
+    {
+      "id": "satis",
+      "name": "Satis",
+      "icon": "fa-chart-line",
+      "color": "#16a085"
+    },
+    {
+      "id": "satin-alma",
+      "name": "Satin Alma",
+      "icon": "fa-cart-plus",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "fatura",
+      "name": "Fatura / Irsaliye",
+      "icon": "fa-file-invoice",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "siparis",
+      "name": "Siparis",
+      "icon": "fa-shopping-cart",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "finans",
+      "name": "Finans",
+      "icon": "fa-money-bill-wave",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "muhasebe",
+      "name": "Muhasebe",
+      "icon": "fa-calculator",
+      "color": "#f39c12"
+    },
+    {
+      "id": "banka",
+      "name": "Banka",
+      "icon": "fa-building-columns",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "kasa",
+      "name": "Kasa",
+      "icon": "fa-cash-register",
+      "color": "#e67e22"
+    },
+    {
+      "id": "cek-senet",
+      "name": "Cek / Senet",
+      "icon": "fa-money-check",
+      "color": "#8e44ad"
+    },
+    {
+      "id": "uretim",
+      "name": "Uretim",
+      "icon": "fa-industry",
+      "color": "#34495e"
+    },
+    {
+      "id": "kalite",
+      "name": "Kalite Kontrol",
+      "icon": "fa-check-circle",
+      "color": "#3498db"
+    },
+    {
+      "id": "sabit-kiymet",
+      "name": "Sabit Kiymet",
+      "icon": "fa-building",
+      "color": "#8e44ad"
+    },
+    {
+      "id": "dagitim",
+      "name": "Dagitim",
+      "icon": "fa-truck",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "dis-ticaret",
+      "name": "Dis Ticaret",
+      "icon": "fa-globe",
+      "color": "#3f51b5"
+    },
+    {
+      "id": "tanimlar",
+      "name": "Tanimlar",
+      "icon": "fa-list",
+      "color": "#95a5a6"
+    },
+    {
+      "id": "is-akisi",
+      "name": "Is Akisi",
+      "icon": "fa-random",
+      "color": "#673ab7"
+    },
+    {
+      "id": "teklif",
+      "name": "Teklif Yonetimi",
+      "icon": "fa-file-contract",
+      "color": "#00bcd4"
+    },
+    {
+      "id": "teminat",
+      "name": "Teminat",
+      "icon": "fa-shield-alt",
+      "color": "#ff5722"
+    },
+    {
+      "id": "diger",
+      "name": "Diger",
+      "icon": "fa-ellipsis-h",
+      "color": "#bdc3c7"
+    }
+  ],
+  "endpoints": [
+    {
+      "endpoint": "Items",
+      "name": "Malzeme",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+      "description": "Malzeme/urun karti islemleri",
+      "relatedTable": "LG_XXX_ITEMS"
+    },
+    {
+      "endpoint": "itemSlips",
+      "name": "Malzeme Fisi",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme fisleri (giris/cikis/transfer)",
+      "relatedTable": "LG_XXX_XX_STFICHE"
+    },
+    {
+      "endpoint": "itemBoms",
+      "name": "Malzeme Recetesi",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme recete tanimlari"
+    },
+    {
+      "endpoint": "ItemAlternatives",
+      "name": "Alternatifler",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme alternatifleri"
+    },
+    {
+      "endpoint": "serialAndLotNumbers",
+      "name": "Seri Lot Takibi",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Seri ve lot numarasi takibi",
+      "relatedTable": "LG_XXX_XX_SERILOTN"
+    },
+    {
+      "endpoint": "ItemCharacteristics",
+      "name": "Malzeme Ozellikleri",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme karakteristik ozellikleri"
+    },
+    {
+      "endpoint": "itemClassAssignments",
+      "name": "Malzeme Sinifi Atamasi",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme sinif atamalari"
+    },
+    {
+      "endpoint": "itemBrands",
+      "name": "Marka Tanimlari",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme marka tanimlari",
+      "relatedTable": "LG_XXX_MARK"
+    },
+    {
+      "endpoint": "characteristicSets",
+      "name": "Malzeme Ozellik Seti",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme karakteristik setleri"
+    },
+    {
+      "endpoint": "variants",
+      "name": "Malzeme Varyantlari",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme varyant tanimlari",
+      "relatedTable": "LG_XXX_VARIANT"
+    },
+    {
+      "endpoint": "ItemMLDescriptions",
+      "name": "Malzeme Farkli Dilde Aciklamalar",
+      "category": "stok",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme coklu dil aciklamalari"
+    },
+    {
+      "endpoint": "Arps",
+      "name": "Cari Kart",
+      "category": "cari",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+      "description": "Cari hesap karti islemleri",
+      "relatedTable": "LG_XXX_CLCARD"
+    },
+    {
+      "endpoint": "ArpSlips",
+      "name": "Cari Fis",
+      "category": "cari",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Cari hesap fisleri",
+      "relatedTable": "LG_XXX_XX_CLFICHE"
+    },
+    {
+      "endpoint": "ArpShipmentLocations",
+      "name": "Cari Sevkiyat Adresleri",
+      "category": "cari",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Cari sevkiyat adres tanimlari"
+    },
+    {
+      "endpoint": "ArpMLDescriptions",
+      "name": "Cari Kart Farkli Dilde Aciklamalar",
+      "category": "cari",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Cari kart coklu dil aciklamalari"
+    },
+    {
+      "endpoint": "ArpDocAssignments",
+      "name": "Grup Sirket",
+      "category": "cari",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Grup sirket atamalari"
+    },
+    {
+      "endpoint": "salesOrders",
+      "name": "Satis Siparisi",
+      "category": "siparis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis siparis islemleri",
+      "relatedTable": "LG_XXX_XX_ORFICHE"
+    },
+    {
+      "endpoint": "purchaseOrders",
+      "name": "Alim Siparisi",
+      "category": "siparis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alim siparis islemleri",
+      "relatedTable": "LG_XXX_XX_ORFICHE"
+    },
+    {
+      "endpoint": "salesInvoices",
+      "name": "Satis Fatura",
+      "category": "fatura",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis faturasi islemleri",
+      "relatedTable": "LG_XXX_XX_INVOICE"
+    },
+    {
+      "endpoint": "purchaseInvoices",
+      "name": "Alim Fatura",
+      "category": "fatura",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alim faturasi islemleri",
+      "relatedTable": "LG_XXX_XX_INVOICE"
+    },
+    {
+      "endpoint": "salesDispatches",
+      "name": "Satis Irsaliye",
+      "category": "fatura",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis irsaliyesi islemleri",
+      "relatedTable": "LG_XXX_XX_STFICHE"
+    },
+    {
+      "endpoint": "purchaseDispatches",
+      "name": "Alim Irsaliye",
+      "category": "fatura",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alim irsaliyesi islemleri",
+      "relatedTable": "LG_XXX_XX_STFICHE"
+    },
+    {
+      "endpoint": "paymentDifferenceInvoices",
+      "name": "Fiyat Farki Faturasi",
+      "category": "fatura",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Fiyat farki faturasi islemleri"
+    },
+    {
+      "endpoint": "purchasedServices",
+      "name": "Alinan Hizmet Karti",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alinan hizmet karti tanimlari",
+      "relatedTable": "LG_XXX_SRVCARD"
+    },
+    {
+      "endpoint": "purchaseDiscounts",
+      "name": "Alim Indirim Karti",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alim indirim karti tanimlari"
+    },
+    {
+      "endpoint": "purchaseExpenses",
+      "name": "Alim Masraf Karti",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alim masraf karti tanimlari"
+    },
+    {
+      "endpoint": "purchasePromotions",
+      "name": "Alim Promosyon",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alim promosyon tanimlari"
+    },
+    {
+      "endpoint": "purchasedItemPrices",
+      "name": "Mal Alim Fiyat Karti",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme alim fiyat karti"
+    },
+    {
+      "endpoint": "purchasedServicePrices",
+      "name": "Hizmet Alim Fiyat Karti",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Hizmet alim fiyat karti"
+    },
+    {
+      "endpoint": "purchaseCampaigns",
+      "name": "Alim Kampanyasi",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alim kampanyasi tanimlari",
+      "relatedTable": "LG_XXX_CAMPAIGN"
+    },
+    {
+      "endpoint": "purchaseConditionsForSlips",
+      "name": "Alis Kosullari (Fis Geneli)",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alis kosullari fis geneli"
+    },
+    {
+      "endpoint": "purchaseConditionsForSlipLines",
+      "name": "Alis Kosullari (Fis Satirlari)",
+      "category": "satin-alma",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Alis kosullari fis satirlari"
+    },
+    {
+      "endpoint": "soldServices",
+      "name": "Verilen Hizmet Karti",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Verilen hizmet karti tanimlari",
+      "relatedTable": "LG_XXX_SRVCARD"
+    },
+    {
+      "endpoint": "salesDiscounts",
+      "name": "Satis Indirim Karti",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis indirim karti tanimlari"
+    },
+    {
+      "endpoint": "salesExpenses",
+      "name": "Satis Masraf Karti",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis masraf karti tanimlari"
+    },
+    {
+      "endpoint": "salesPromotions",
+      "name": "Satis Promosyon",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis promosyon tanimlari"
+    },
+    {
+      "endpoint": "salesItemPrices",
+      "name": "Malzeme Satis Fiyati",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme satis fiyat karti"
+    },
+    {
+      "endpoint": "salesServicePrices",
+      "name": "Hizmet Satis Fiyati",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Hizmet satis fiyat karti"
+    },
+    {
+      "endpoint": "salesCampaigns",
+      "name": "Satis Kampanya",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis kampanyasi tanimlari",
+      "relatedTable": "LG_XXX_CAMPAIGN"
+    },
+    {
+      "endpoint": "salesConditionsForSlips",
+      "name": "Satis Kosullari (Fis Geneli)",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis kosullari fis geneli"
+    },
+    {
+      "endpoint": "salesConditionsForSlipLines",
+      "name": "Satis Kosullari (Fis Satirlari)",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis kosullari fis satirlari"
+    },
+    {
+      "endpoint": "salesmen",
+      "name": "Satici-Cari Baglantisi",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satici cari baglantilari",
+      "relatedTable": "LG_XXX_SLSCLREL"
+    },
+    {
+      "endpoint": "salesmanPositionCodes",
+      "name": "Satici Pozisyon Kodlari",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satici pozisyon kod tanimlari"
+    },
+    {
+      "endpoint": "customersOfSalesmen",
+      "name": "Satici-Cari Baglantisi (Satis Yonetimi)",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satici cari baglantisi (Satis Yonetimi Flagi Acikken)"
+    },
+    {
+      "endpoint": "salesmanRoutes",
+      "name": "Satici Rota Baglantisi",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satici rota baglantilari"
+    },
+    {
+      "endpoint": "salesmanDestinations",
+      "name": "Satici Hedef Baglantisi",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satici hedef baglantilari"
+    },
+    {
+      "endpoint": "salesActivities",
+      "name": "Satis Faaliyetleri",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis faaliyet kayitlari"
+    },
+    {
+      "endpoint": "opportunities",
+      "name": "Satis Firsatlari",
+      "category": "satis",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis firsati kayitlari"
+    },
+    {
+      "endpoint": "banks",
+      "name": "Banka Karti",
+      "category": "banka",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Banka karti tanimlari",
+      "relatedTable": "LG_XXX_BNCARD"
+    },
+    {
+      "endpoint": "bankAccounts",
+      "name": "Banka Hesap Karti",
+      "category": "banka",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Banka hesap karti tanimlari",
+      "relatedTable": "LG_XXX_BANKACC"
+    },
+    {
+      "endpoint": "bankSlips",
+      "name": "Banka Fisi",
+      "category": "banka",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Banka fisi islemleri",
+      "relatedTable": "LG_XXX_XX_BNFICHE"
+    },
+    {
+      "endpoint": "bankMLDescriptions",
+      "name": "Banka Karti Farkli Dilde Aciklamalar",
+      "category": "banka",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Banka karti coklu dil aciklamalari"
+    },
+    {
+      "endpoint": "bankCredits",
+      "name": "Banka Kredileri",
+      "category": "banka",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Banka kredi islemleri"
+    },
+    {
+      "endpoint": "GLAccounts",
+      "name": "Muhasebe Hesap Karti",
+      "category": "muhasebe",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Muhasebe hesap karti tanimlari",
+      "relatedTable": "LG_XXX_EMUHACC"
+    },
+    {
+      "endpoint": "GLSlips",
+      "name": "Muhasebe Fisi",
+      "category": "muhasebe",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Muhasebe fisi islemleri",
+      "relatedTable": "LG_XXX_XX_EMFICHE"
+    },
+    {
+      "endpoint": "GLAccountMLDescriptions",
+      "name": "Muhasebe Hesap Karti Farkli Dilde Aciklamalar",
+      "category": "muhasebe",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Muhasebe hesap karti coklu dil aciklamalari"
+    },
+    {
+      "endpoint": "GLIntegrationCodes",
+      "name": "Muhasebe Baglanti Kodlari",
+      "category": "muhasebe",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Muhasebe baglanti kod tanimlari"
+    },
+    {
+      "endpoint": "overheadAccounts",
+      "name": "Masraf Merkezi",
+      "category": "muhasebe",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Masraf merkezi tanimlari"
+    },
+    {
+      "endpoint": "costDistributionSlips",
+      "name": "Maliyet Dagitim Fisi",
+      "category": "muhasebe",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Maliyet dagitim fisi islemleri"
+    },
+    {
+      "endpoint": "safeDeposits",
+      "name": "Kasa Kartlari",
+      "category": "kasa",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Kasa karti tanimlari",
+      "relatedTable": "LG_XXX_KSCARD"
+    },
+    {
+      "endpoint": "safeDepositSlips",
+      "name": "Kasa Islemleri",
+      "category": "kasa",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Kasa fisi islemleri",
+      "relatedTable": "LG_XXX_XX_KSLINES"
+    },
+    {
+      "endpoint": "chequeAndPnotes",
+      "name": "Cek/Senet Devir",
+      "category": "cek-senet",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Cek ve senet devir islemleri",
+      "relatedTable": "LG_XXX_XX_CSCARD"
+    },
+    {
+      "endpoint": "chequeAndPnoteRolls",
+      "name": "Cek/Senet Bordrosu",
+      "category": "cek-senet",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Cek ve senet bordro islemleri",
+      "relatedTable": "LG_XXX_XX_CSROLL"
+    },
+    {
+      "endpoint": "paymentPlans",
+      "name": "Odeme Plani",
+      "category": "finans",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Odeme plani tanimlari",
+      "relatedTable": "LG_XXX_PAYPLANS"
+    },
+    {
+      "endpoint": "paymentPlanGroupCodes",
+      "name": "Odeme Plan Grup Kodu",
+      "category": "finans",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Odeme plani grup kodlari"
+    },
+    {
+      "endpoint": "repaymentPlans",
+      "name": "Geri Odeme Planlari",
+      "category": "finans",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Geri odeme plani tanimlari"
+    },
+    {
+      "endpoint": "demandPeggings",
+      "name": "Talep Karsilama",
+      "category": "finans",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Talep karsilama islemleri"
+    },
+    {
+      "endpoint": "demandSlips",
+      "name": "Talep",
+      "category": "finans",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Talep fisleri"
+    },
+    {
+      "endpoint": "additionalTaxes",
+      "name": "Ek Vergi Karti",
+      "category": "finans",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ek vergi karti tanimlari"
+    },
+    {
+      "endpoint": "projects",
+      "name": "Proje Karti",
+      "category": "finans",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Proje karti tanimlari",
+      "relatedTable": "LG_XXX_PROJECT"
+    },
+    {
+      "endpoint": "workstations",
+      "name": "Is Istasyonu",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Is istasyonu tanimlari",
+      "relatedTable": "LG_XXX_WORKSTAT"
+    },
+    {
+      "endpoint": "workstationGroups",
+      "name": "Is Istasyonu Grubu",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Is istasyonu grubu tanimlari"
+    },
+    {
+      "endpoint": "workstationCosts",
+      "name": "Is Istasyonu Maliyetleri",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Is istasyonu maliyet tanimlari"
+    },
+    {
+      "endpoint": "workstationStandardCosts",
+      "name": "Is Istasyonu Standart Maliyeti",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Is istasyonu standart maliyet tanimlari"
+    },
+    {
+      "endpoint": "employees",
+      "name": "Calisan",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Calisan tanimlari",
+      "relatedTable": "LG_XXX_EMPLOYEE"
+    },
+    {
+      "endpoint": "employeeGroups",
+      "name": "Calisan Gruplari",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Calisan grubu tanimlari",
+      "relatedTable": "LG_XXX_EMPGROUP"
+    },
+    {
+      "endpoint": "employeeCosts",
+      "name": "Calisan Maliyetleri",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Calisan maliyet tanimlari"
+    },
+    {
+      "endpoint": "employeeStandardCosts",
+      "name": "Calisan Standart Maliyeti",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Calisan standart maliyet tanimlari"
+    },
+    {
+      "endpoint": "shifts",
+      "name": "Vardiya",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Vardiya tanimlari",
+      "relatedTable": "LG_XXX_SHIFT"
+    },
+    {
+      "endpoint": "shiftAssignments",
+      "name": "Vardiya Atamalari",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Vardiya atama islemleri"
+    },
+    {
+      "endpoint": "Boms",
+      "name": "Urun Recetesi",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Urun recetesi tanimlari",
+      "relatedTable": "LG_XXX_BOMASTER"
+    },
+    {
+      "endpoint": "BomStandardCosts",
+      "name": "Standart Recete Maliyeti",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Standart recete maliyet tanimlari"
+    },
+    {
+      "endpoint": "operations",
+      "name": "Operasyonlar",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Operasyon tanimlari",
+      "relatedTable": "LG_XXX_OPERTION"
+    },
+    {
+      "endpoint": "productionRoutes",
+      "name": "Rota Tanimi",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Uretim rota tanimlari",
+      "relatedTable": "LG_XXX_ROUTING"
+    },
+    {
+      "endpoint": "productionParameters",
+      "name": "Recete Sablonlari",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Uretim parametre ve sablon tanimlari"
+    },
+    {
+      "endpoint": "productionLines",
+      "name": "Uretim Hatti",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Uretim hatti tanimlari"
+    },
+    {
+      "endpoint": "productionExceptions",
+      "name": "Is Istasyonu Istisnalari",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Is istasyonu istisna tanimlari"
+    },
+    {
+      "endpoint": "productionResourceUtilization",
+      "name": "Kaynak Kullanimi Girisi",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Planlanan/Gerceklesen kaynak kullanimi girisi"
+    },
+    {
+      "endpoint": "quickProductionSlips",
+      "name": "Hizli Uretim Fisi",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Hizli uretim fisi islemleri"
+    },
+    {
+      "endpoint": "characteristics",
+      "name": "Is Istasyonu Ozellikleri",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Is istasyonu karakteristik ozellikleri"
+    },
+    {
+      "endpoint": "stopCauses",
+      "name": "Durma Nedenleri",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Uretim durma nedeni tanimlari",
+      "relatedTable": "LG_XXX_STOPCAUSE"
+    },
+    {
+      "endpoint": "engineeringChanges",
+      "name": "Muhendislik Degisiklikleri",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Muhendislik degisikligi kayitlari"
+    },
+    {
+      "endpoint": "itemStandardCosts",
+      "name": "Malzeme Standart Maliyeti",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme standart maliyet tanimlari"
+    },
+    {
+      "endpoint": "standardCostPeriods",
+      "name": "Standart Maliyet Periodlari",
+      "category": "uretim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Standart maliyet period tanimlari"
+    },
+    {
+      "endpoint": "QCCriteriaSets",
+      "name": "Kalite Kontrol Seti",
+      "category": "kalite",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Kalite kontrol seti tanimlari",
+      "relatedTable": "LG_XXX_QCSET"
+    },
+    {
+      "endpoint": "QCCriteriaAssignments",
+      "name": "Kalite Kontrol Kriteri Atamalari",
+      "category": "kalite",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Malzeme karti kalite kontrol kriteri atamalari"
+    },
+    {
+      "endpoint": "FARregistries",
+      "name": "Sabit Kiymet Kayit",
+      "category": "sabit-kiymet",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Sabit kiymet kayit islemleri",
+      "relatedTable": "LG_XXX_FAREGIST"
+    },
+    {
+      "endpoint": "FAAssignmentSlips",
+      "name": "Zimmet Formu",
+      "category": "sabit-kiymet",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Sabit kiymet zimmet formu islemleri"
+    },
+    {
+      "endpoint": "vehicles",
+      "name": "Dagitim Araci",
+      "category": "dagitim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Dagitim araci tanimlari",
+      "relatedTable": "LG_XXX_DISTVEHICLE"
+    },
+    {
+      "endpoint": "distributionRoutes",
+      "name": "Dagitim Rotasi",
+      "category": "dagitim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Dagitim rota tanimlari",
+      "relatedTable": "LG_XXX_DISTROUTING"
+    },
+    {
+      "endpoint": "distributionOrders",
+      "name": "Dagitim Emri",
+      "category": "dagitim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Dagitim emri islemleri",
+      "relatedTable": "LG_XXX_XX_DISTORD"
+    },
+    {
+      "endpoint": "distributionTemplates",
+      "name": "Dagitim Sablonlari",
+      "category": "dagitim",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Dagitim sablon tanimlari"
+    },
+    {
+      "endpoint": "exportCredits",
+      "name": "Ihracat Kredisi (Doviz/Exim)",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ihracat kredisi islemleri"
+    },
+    {
+      "endpoint": "freeZones",
+      "name": "Serbest Bolge Tanimi",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Serbest bolge tanimlari"
+    },
+    {
+      "endpoint": "customsOffices",
+      "name": "Gumruk Tanimi",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Gumruk tanimlari"
+    },
+    {
+      "endpoint": "importOperationSlips",
+      "name": "Ithalat Operasyon Fisi",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ithalat operasyon fisi islemleri"
+    },
+    {
+      "endpoint": "exportOperationSlips",
+      "name": "Ihracat Operasyon Fisi",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ihracat operasyon fisi islemleri"
+    },
+    {
+      "endpoint": "exportTypedPurchaseInvoices",
+      "name": "Ihrac Kayitli Alim Faturalari",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ihracat / Ihrac kayitli alim faturalari"
+    },
+    {
+      "endpoint": "exportTypedSalesInvoices",
+      "name": "Ihrac Kayitli Satis Faturalari",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ihracat / Ihrac kayitli satis faturalari"
+    },
+    {
+      "endpoint": "inwardProcessingPermits",
+      "name": "Dahilde Isleme Izin Belgesi",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ihracat dahilde isleme izin belgesi"
+    },
+    {
+      "endpoint": "exportMovementSlips",
+      "name": "Malzeme Dolasim Fisi",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ithalat malzeme dolasim fisi"
+    },
+    {
+      "endpoint": "exportNationalizationSlips",
+      "name": "Millilestirme Fisleri",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ithalat millilestirme fisleri"
+    },
+    {
+      "endpoint": "importDistributionSlips",
+      "name": "Ithalat Dagitim Fisleri",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ithalat dagitim fisi islemleri"
+    },
+    {
+      "endpoint": "importCreditLetters",
+      "name": "Ithalat Akreditifleri",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ithalat akreditif islemleri"
+    },
+    {
+      "endpoint": "exportCreditLetters",
+      "name": "Ihracat Akreditifleri",
+      "category": "dis-ticaret",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ihracat akreditif islemleri"
+    },
+    {
+      "endpoint": "unitSets",
+      "name": "Birim Seti",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Birim seti tanimlari",
+      "relatedTable": "LG_XXX_UNITSETF"
+    },
+    {
+      "endpoint": "deliveryCodes",
+      "name": "Teslimat Kodu",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Teslimat kodu tanimlari"
+    },
+    {
+      "endpoint": "groupCodes",
+      "name": "Grup Kodlari",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Grup kodu tanimlari"
+    },
+    {
+      "endpoint": "specialCodes",
+      "name": "Ozel Kodlar",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ozel kod tanimlari",
+      "relatedTable": "LG_XXX_SPECODES"
+    },
+    {
+      "endpoint": "authorizationCodes",
+      "name": "Yetki Kodlari",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Yetki kodu tanimlari"
+    },
+    {
+      "endpoint": "locationCodes",
+      "name": "Stok Yeri Kodlari",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Stok yeri kod tanimlari",
+      "relatedTable": "LG_XXX_LOCATION"
+    },
+    {
+      "endpoint": "countries",
+      "name": "Ulke Bilgileri",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ulke tanimlari",
+      "relatedTable": "L_COUNTRY"
+    },
+    {
+      "endpoint": "cities",
+      "name": "Sehir Bilgileri",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Sehir tanimlari",
+      "relatedTable": "L_CITY"
+    },
+    {
+      "endpoint": "towns",
+      "name": "Ilce Bilgisi",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Ilce tanimlari",
+      "relatedTable": "L_TOWN"
+    },
+    {
+      "endpoint": "districts",
+      "name": "Semt",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Semt tanimlari",
+      "relatedTable": "L_DISTRICT"
+    },
+    {
+      "endpoint": "postCodes",
+      "name": "Posta Kodu Bilgisi",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Posta kodu tanimlari",
+      "relatedTable": "L_POSTCODE"
+    },
+    {
+      "endpoint": "customerMLDescriptions",
+      "name": "Musteri Yabanci Dil Aciklamalari",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Musteri coklu dil aciklamalari"
+    },
+    {
+      "endpoint": "extendedFields",
+      "name": "Tanimli Alanlar",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Tanimli alan islemleri"
+    },
+    {
+      "endpoint": "extendedFieldDefinitions",
+      "name": "Tanimli Alan Tanimlari",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Tanimli alan tanim islemleri"
+    },
+    {
+      "endpoint": "extendedFieldCategories",
+      "name": "Tanimli Alan Kategori Listeleri",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Tanimli alan kategori listeleri"
+    },
+    {
+      "endpoint": "mandatoryFields",
+      "name": "Zorunlu Alanlar",
+      "category": "tanimlar",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Zorunlu alan tanimlari"
+    },
+    {
+      "endpoint": "workflowRoles",
+      "name": "Is Akis Rol Tanimlari",
+      "category": "is-akisi",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Is akisi yonetimi rol tanimlari",
+      "relatedTable": "LG_XXX_WFLOWROLE"
+    },
+    {
+      "endpoint": "workflowDefinitions",
+      "name": "Is Akisi Kartlari",
+      "category": "is-akisi",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Is akisi kart tanimlari",
+      "relatedTable": "LG_XXX_WORKFLOWCARD"
+    },
+    {
+      "endpoint": "customers",
+      "name": "Musteriler (Teklif Yonetimi)",
+      "category": "teklif",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Teklif yonetimi musteri tanimlari"
+    },
+    {
+      "endpoint": "salesCategories",
+      "name": "Satis Kategorileri",
+      "category": "teklif",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis kategori tanimlari"
+    },
+    {
+      "endpoint": "relatedCustomers",
+      "name": "Ilgili Kisiler (Teklif Yonetimi)",
+      "category": "teklif",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Teklif yonetimi ilgili kisi tanimlari"
+    },
+    {
+      "endpoint": "purchaseProposalOrders",
+      "name": "Satinalma Teklif Yonetimi - Emir",
+      "category": "teklif",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satinalma teklif yonetimi emir islemleri"
+    },
+    {
+      "endpoint": "purchaseProposalOffers",
+      "name": "Satinalma Teklif Yonetimi - Teklif",
+      "category": "teklif",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satinalma teklif yonetimi teklif islemleri"
+    },
+    {
+      "endpoint": "purchaseProposalContracts",
+      "name": "Satinalma Teklif Yonetimi - Sozlesme",
+      "category": "teklif",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satinalma teklif yonetimi sozlesme islemleri"
+    },
+    {
+      "endpoint": "salesOffers",
+      "name": "Satis Teklif Formu",
+      "category": "teklif",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis teklif formu islemleri"
+    },
+    {
+      "endpoint": "salesContracts",
+      "name": "Satis Provizyon Dagitim Fisleri",
+      "category": "teklif",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Satis provizyon dagitim fisi islemleri"
+    },
+    {
+      "endpoint": "collateralRolls",
+      "name": "Teminat Bordrolari",
+      "category": "teminat",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "description": "Teminat bordro islemleri"
+    }
+  ]
+}

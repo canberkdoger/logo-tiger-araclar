@@ -1,0 +1,39 @@
+{
+  "tableName": "L_GIBLINERECTYPEREL",
+  "displayName": "GIBLINERECTYPEREL",
+  "description": "",
+  "category": "E-Belge",
+  "type": "program-independent",
+  "placeholders": [],
+  "indexes": [
+    {
+      "no": 1,
+      "name": "GIBLINERECTYPEREL_I1",
+      "type": "CLUSTERED",
+      "isPrimaryKey": true,
+      "isUnique": true,
+      "fields": [
+        "LOGICALREF"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "LOGICALREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBDOCLINETYPREF",
+      "type": "int",
+      "description": "\r"
+    },
+    {
+      "name": "GIBRECTYPREF",
+      "type": "int",
+      "description": "\r"
+    }
+  ],
+  "commonQueries": [],
+  "indexCount": 1
+}
