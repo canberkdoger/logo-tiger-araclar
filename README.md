@@ -38,6 +38,29 @@ Logo Tiger 3 ERP sistemi için geliştirilmiş açık kaynaklı geliştirici ara
 - Endpoint-tablo eşleştirmeleri
 - Örnek kullanımlar ve cURL komutları
 
+### LLM/AI Entegrasyonu
+Bu site, yapay zeka sistemlerinin Logo Tiger veritabanı hakkında bilgi edinmesi ve SQL sorgusu oluşturması için tasarlanmış API endpoint'leri sunar.
+
+**Keşif Dosyaları:**
+- `/llms.txt` - AI sistemleri için düz metin API kılavuzu
+- `/.well-known/ai-plugin.json` - OpenAI plugin formatı
+- JSON-LD structured data (ana sayfada)
+
+**API Endpoint'leri:**
+```
+GET /api/schema              # Genel bilgi ve kullanım kılavuzu
+GET /api/schema/tables       # Tüm tabloların listesi
+GET /api/schema/tables/{ad}  # Tablo detayları (örn: LG_XXX_XX_STLINE)
+GET /api/schema/categories   # Tablo kategorileri
+GET /api/schema/search?q=x   # Tablo ve alan arama
+GET /api/schema/relationships?table=x  # JOIN önerileri
+```
+
+**Örnek AI Kullanımı:**
+> "logo.canberkdoger.com adresindeki veritabanı dokümantasyonunu kullanarak 126 firma 01 dönem için satış irsaliyelerini malzeme bazlı listeleyen bir SQL sorgusu yaz."
+
+AI sistemi `/api/schema` endpoint'lerini kullanarak tablo yapılarını, alan açıklamalarını ve JOIN ilişkilerini öğrenir, ardından doğru SQL sorgusunu oluşturur.
+
 ### Tema Desteği
 - Aydınlık / Karanlık mod
 - Sistem tercihini otomatik algılama

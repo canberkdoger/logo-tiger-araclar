@@ -1,6 +1,6 @@
 {
   "name": "logo-tiger-araclar",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Logo Tiger 3 ERP için geliştirici araçları - SQL yardımcısı, REST API rehberi",
   "private": true,
   "scripts": {
