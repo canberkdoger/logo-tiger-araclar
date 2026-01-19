@@ -1,0 +1,17 @@
+# Logo Tiger 3 SQL Helper
+# Veritabani sema dokumantasyonu
+
+User-agent: *
+Allow: /
+
+# API Dokumantasyonu (AI sistemleri icin)
+# Ana endpoint: /api/schema
+# Arama: /api/schema/search?q=TERIM
+# Tablo detaylari: /api/schema/tables/TABLO_ADI
+# Iliskiler: /api/schema/relationships?table=TABLO_ADI
+
+# AI/LLM sistemleri icin
+# llms.txt: /llms.txt
+# AI Plugin: /.well-known/ai-plugin.json
+
+Sitemap: https://logo.canberkdoger.com/sitemap.xml

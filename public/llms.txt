@@ -1,0 +1,48 @@
+# Logo Tiger 3 SQL Helper - AI Dokumantasyonu
+
+Bu site Logo Tiger 3 ERP veritabani sema bilgilerini icermektedir.
+
+## API Endpoint (AI Sistemleri Icin)
+
+Tum veritabani sema bilgilerine asagidaki API uzerinden ulasabilirsiniz:
+
+Ana Endpoint: /api/schema
+Tam URL: https://logo.canberkdoger.com/api/schema
+
+## Mevcut API Endpoint'leri
+
+GET /api/schema - API dokumantasyonu ve kullanim kilavuzu
+GET /api/schema/tables - Tum tablolarin listesi
+GET /api/schema/tables/[tableName] - Belirli bir tablonun detaylari
+GET /api/schema/categories - Tablo kategorileri
+GET /api/schema/search?q=ARAMA_TERIMI - Tablo ve alan arama
+GET /api/schema/relationships?table=TABLO_ADI - Tablo iliskileri ve JOIN onerileri
+
+## Hizli Baslangiç
+
+1. Once /api/schema endpoint'ini cagirin - tum dokumantasyon ve kullanim kilavuzu orada
+2. Aranan bilgi icin /api/schema/search?q=TERIM kullanin
+3. Tablo detaylari icin /api/schema/tables/TABLO_ADI kullanin
+4. JOIN onerileri icin /api/schema/relationships?table=TABLO_ADI kullanin
+
+## Placeholder Bilgisi
+
+Logo Tiger tablolarinda iki placeholder kullanilir:
+- XXX = Firma numarasi (ornek: 001, 126)
+- XX = Donem numarasi (ornek: 01, 02)
+
+Ornek: LG_XXX_XX_STFICHE -> LG_126_01_STFICHE (Firma 126, Donem 01)
+
+## Ornek Senaryo
+
+Satis irsaliyelerini malzeme bazli getirmek icin:
+1. GET /api/schema/tables/LG_XXX_XX_STFICHE (Fis bilgileri)
+2. GET /api/schema/tables/LG_XXX_XX_STLINE (Satir bilgileri)
+3. GET /api/schema/relationships?table=LG_XXX_XX_STLINE (JOIN onerileri)
+
+SQL:
+SELECT sf.FICHENO, sf.DATE_, sl.AMOUNT, i.CODE, i.NAME
+FROM LG_126_01_STFICHE sf
+INNER JOIN LG_126_01_STLINE sl ON sf.LOGICALREF = sl.STFICHEREF
+INNER JOIN LG_126_ITEMS i ON sl.STOCKREF = i.LOGICALREF
+WHERE sf.TRCODE = 8  -- 8 = Satis irsaliyesi

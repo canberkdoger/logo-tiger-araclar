@@ -1,0 +1,14 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Logo Tiger 3 SQL Helper",
+  "name_for_model": "logo_tiger_sql",
+  "description_for_human": "Logo Tiger 3 ERP veritabani sema bilgileri ve SQL sorgu yardimcisi",
+  "description_for_model": "Logo Tiger 3 ERP veritabani semasi. Tablo yapilari, alanlar, iliskiler ve JOIN onerileri. SQL sorgusu olusturmak icin /api/schema endpoint'ini kullanin. Placeholder: XXX=firma no, XX=donem no.",
+  "api": {
+    "type": "openapi",
+    "url": "https://logo.canberkdoger.com/api/schema"
+  },
+  "logo_url": "https://logo.canberkdoger.com/favicon.ico",
+  "contact_email": "info@canberkdoger.com",
+  "legal_info_url": "https://canberkdoger.com"
+}
