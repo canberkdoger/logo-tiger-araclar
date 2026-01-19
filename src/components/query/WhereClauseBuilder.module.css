@@ -199,3 +199,42 @@
     align-self: flex-end;
   }
 }
+
+@media (max-width: 640px) {
+  .header {
+    padding: var(--spacing-sm);
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  .addButton {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .conditions {
+    padding: var(--spacing-sm);
+  }
+
+  .fieldSelect,
+  .operatorSelect,
+  .valueInput {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .empty {
+    padding: var(--spacing-md);
+  }
+
+  .empty p {
+    font-size: 12px;
+  }
+
+  .empty button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

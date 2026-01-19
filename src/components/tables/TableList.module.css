@@ -162,3 +162,19 @@
 .list::-webkit-scrollbar-thumb:hover {
   background: var(--border-hover);
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+    max-height: 400px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-height: none;
+  }
+}

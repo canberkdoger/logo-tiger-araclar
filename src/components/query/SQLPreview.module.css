@@ -138,7 +138,43 @@
 }
 
 @media (max-width: 640px) {
+  .header {
+    padding: var(--spacing-sm);
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  .actions {
+    gap: 4px;
+  }
+
+  .actionButton {
+    padding: 6px 8px;
+  }
+
   .actionButton span {
     display: none;
+  }
+
+  .codeBlock {
+    padding: var(--spacing-sm);
+  }
+
+  .code {
+    font-size: 11px;
+  }
+
+  .empty {
+    padding: var(--spacing-md);
+  }
+
+  .empty i {
+    font-size: 24px;
+  }
+
+  .empty p {
+    font-size: 12px;
   }
 }

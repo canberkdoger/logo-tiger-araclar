@@ -81,6 +81,11 @@
 }
 
 @media (max-width: 1024px) {
+  .container {
+    height: auto;
+    min-height: calc(100vh - 60px);
+  }
+
   .topBar {
     flex-direction: column;
     align-items: stretch;
@@ -93,5 +98,28 @@
   .categorySelect,
   .tableSelect {
     width: 100%;
+  }
+
+  .builderContainer {
+    flex: none;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: var(--spacing-sm);
+    height: auto;
+  }
+
+  .topBar {
+    padding: var(--spacing-sm);
+  }
+
+  .categorySelect,
+  .tableSelect {
+    padding: 8px 12px;
+    font-size: 13px;
   }
 }

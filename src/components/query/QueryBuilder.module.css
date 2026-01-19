@@ -332,11 +332,110 @@
 }
 
 @media (max-width: 1024px) {
+  .container {
+    height: auto;
+  }
+
   .builderGrid {
     grid-template-columns: 1fr;
   }
 
   .fieldsSection {
     max-height: 300px;
+  }
+
+  .optionsSection {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    gap: var(--spacing-sm);
+  }
+
+  .tableInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-sm);
+  }
+
+  .tableName {
+    font-size: 14px;
+  }
+
+  .displayName {
+    font-size: 12px;
+  }
+
+  .sectionHeader {
+    padding: var(--spacing-sm);
+  }
+
+  .sectionHeader h4 {
+    font-size: 13px;
+  }
+
+  .fieldsSection {
+    max-height: 250px;
+  }
+
+  .fieldItem {
+    padding: 6px 8px;
+  }
+
+  .fieldName {
+    font-size: 11px;
+  }
+
+  .fieldType {
+    font-size: 10px;
+  }
+
+  .orderByList {
+    padding: var(--spacing-sm);
+  }
+
+  .orderByRow select {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .optionsSection {
+    padding: var(--spacing-sm);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .option {
+    font-size: 12px;
+  }
+
+  .limitOption label {
+    font-size: 12px;
+  }
+
+  .limitOption input {
+    width: 60px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .empty {
+    padding: var(--spacing-md);
+  }
+
+  .empty i {
+    font-size: 40px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .empty h3 {
+    font-size: 16px;
+  }
+
+  .empty p {
+    font-size: 13px;
   }
 }

@@ -55,7 +55,7 @@ export default function IndexViewer({ indexes = [] }) {
             <div className={styles.fields}>
               {index.fields?.map((field, fi) => (
                 <span key={fi} className={styles.field}>
-                  <code>{field}</code>
+                  <code>{typeof field === 'object' ? field.name : field}</code>
                   {fi < index.fields.length - 1 && (
                     <span className={styles.separator}>+</span>
                   )}

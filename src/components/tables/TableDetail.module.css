@@ -273,6 +273,26 @@
   font-size: 14px;
 }
 
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+    min-height: 300px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .empty {
+    min-height: 200px;
+    height: auto;
+    padding: var(--spacing-lg);
+  }
+
+  .empty i {
+    font-size: 48px;
+  }
+}
+
 /* Scrollbar */
 .content::-webkit-scrollbar {
   width: 6px;
